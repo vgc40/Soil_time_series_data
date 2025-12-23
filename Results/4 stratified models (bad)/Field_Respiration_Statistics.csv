@@ -1,0 +1,3 @@
+"Comparison","Test","W_statistic","p_value","Significant"
+"Growing Season","Wilcoxon rank-sum test",1012,0.308181375104525,FALSE
+"Non-Growing Season","Wilcoxon rank-sum test",570,0.0771787500866053,FALSE
