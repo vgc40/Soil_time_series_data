@@ -1,0 +1,250 @@
+=======================================================
+COMPREHENSIVE MODEL SUMMARIES
+=======================================================
+
+BEST MODEL:
+=======================================================
+Linear mixed-effects model fit by maximum likelihood
+  Data: data 
+       AIC      BIC    logLik
+  1180.969 1203.723 -582.4846
+
+Random effects:
+ Formula: ~1 | Plot
+        (Intercept) Residual
+StdDev:  0.09616433 23.77138
+
+Correlation Structure: AR(1)
+ Formula: ~1 | Plot 
+ Parameter estimate(s):
+       Phi 
+0.04542692 
+Fixed effects:  Resp_rate_mg_C_m2_h ~ GWC + SoilTemp_mean + Season + MBC_ug_gdw_bgc 
+                      Value Std.Error  DF   t-value p-value
+(Intercept)        34.41951 15.443435 111  2.228747  0.0278
+GWC                 1.23742  0.470723 111  2.628763  0.0098
+SoilTemp_mean      -0.79466  0.833961 111 -0.952868  0.3427
+SeasonNon-Growing -54.59282 11.379779 111 -4.797353  0.0000
+MBC_ug_gdw_bgc      0.05727  0.025345 111  2.259658  0.0258
+ Correlation: 
+                  (Intr) GWC    SlTmp_ SsnN-G
+GWC               -0.320                     
+SoilTemp_mean     -0.881 -0.023              
+SeasonNon-Growing -0.725 -0.236  0.885       
+MBC_ug_gdw_bgc    -0.184  0.001 -0.099 -0.181
+
+Standardized Within-Group Residuals:
+        Min          Q1         Med          Q3         Max 
+-2.13244914 -0.54269601 -0.01735196  0.38002470  3.80724156 
+
+Number of Observations: 127
+Number of Groups: 12 
+
+Confidence Intervals:
+Approximate 95% confidence intervals
+
+ Fixed effects:
+                          lower         est.       upper
+(Intercept)         4.425765236  34.41950885  64.4132525
+GWC                 0.323196299   1.23742012   2.1516439
+SoilTemp_mean      -2.414348390  -0.79465518   0.8250380
+SeasonNon-Growing -76.694259362 -54.59281910 -32.4913788
+MBC_ug_gdw_bgc      0.008046899   0.05727181   0.1064967
+
+ Random Effects:
+  Level: Plot 
+                       lower       est.        upper
+sd((Intercept)) 9.061049e-39 0.09616433 1.020586e+36
+
+ Correlation structure:
+         lower       est.     upper
+Phi -0.1645649 0.04542692 0.2514794
+
+ Within-group standard error:
+   lower     est.    upper 
+21.01426 23.77138 26.89025 
+
+
+MODEL-AVERAGED RESULTS:
+=======================================================
+
+Call:
+model.avg(object = top_models)
+
+Component model call: 
+lme.formula(fixed = Resp_rate_mg_C_m2_h ~ <2 unique rhs>, data = 
+     data, random = ~1 | Plot, correlation = corAR1(form = ~1 | 
+     Plot), method = ML, na.action = na.omit, control = 
+     lmeControl(opt = "optim", maxIter = 100, msMaxIter = 100))
+
+Component models: 
+     df  logLik    AICc delta weight
+1234  8 -582.48 1182.19  0.00   0.69
+1345  8 -583.29 1183.80  1.61   0.31
+
+Term codes: 
+           GWC MBC_ug_gdw_bgc         Season  SoilTemp_mean 
+             1              2              3              4 
+    GWC:Season 
+             5 
+
+Model-averaged coefficients:  
+(full average) 
+                       Estimate Std. Error Adjusted SE z value Pr(>|z|)
+(Intercept)            37.31896   16.08654    16.25102   2.296  0.02165
+GWC                     1.30766    0.49341     0.49860   2.623  0.00873
+SoilTemp_mean          -0.83840    0.84223     0.85146   0.985  0.32479
+SeasonNon-Growing     -39.61874   28.74981    28.87470   1.372  0.17003
+MBC_ug_gdw_bgc          0.03959    0.03382     0.03397   1.165  0.24389
+GWC:SeasonNon-Growing  -0.92246    1.65637     1.66198   0.555  0.57887
+                        
+(Intercept)           * 
+GWC                   **
+SoilTemp_mean           
+SeasonNon-Growing       
+MBC_ug_gdw_bgc          
+GWC:SeasonNon-Growing   
+ 
+(conditional average) 
+                       Estimate Std. Error Adjusted SE z value Pr(>|z|)
+(Intercept)            37.31896   16.08654    16.25102   2.296  0.02165
+GWC                     1.30766    0.49341     0.49860   2.623  0.00873
+SoilTemp_mean          -0.83840    0.84223     0.85146   0.985  0.32479
+SeasonNon-Growing     -39.61874   28.74981    28.87470   1.372  0.17003
+MBC_ug_gdw_bgc          0.05727    0.02535     0.02562   2.235  0.02542
+GWC:SeasonNon-Growing  -2.98717    1.64826     1.66643   1.793  0.07304
+                        
+(Intercept)           * 
+GWC                   **
+SoilTemp_mean           
+SeasonNon-Growing       
+MBC_ug_gdw_bgc        * 
+GWC:SeasonNon-Growing . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+GROWING SEASON MODEL:
+=======================================================
+Linear mixed-effects model fit by maximum likelihood
+  Data: data_growing 
+       AIC      BIC    logLik
+  787.7799 811.6001 -383.8899
+
+Random effects:
+ Formula: ~1 | Plot
+        (Intercept) Residual
+StdDev:  0.00290951 29.43963
+
+Correlation Structure: AR(1)
+ Formula: ~1 | Plot 
+ Parameter estimate(s):
+       Phi 
+0.07893276 
+Fixed effects:  Resp_rate_mg_C_m2_h ~ GWC + SoilTemp_mean + Sum_Nitrogen + NAG_nmol_gdw_h +      SETN_ug_gdw + Roots_gdw 
+                  Value Std.Error DF    t-value p-value
+(Intercept)    43.98410 23.502473 62  1.8714668  0.0660
+GWC             1.25239  0.680317 62  1.8408969  0.0704
+SoilTemp_mean  -1.03750  1.231828 62 -0.8422447  0.4029
+Sum_Nitrogen   -0.00903  0.012276 62 -0.7358719  0.4646
+NAG_nmol_gdw_h  0.32043  0.301805 62  1.0617004  0.2925
+SETN_ug_gdw    -0.13636  0.152131 62 -0.8963336  0.3735
+Roots_gdw       0.13671  0.394565 62  0.3464729  0.7302
+ Correlation: 
+               (Intr) GWC    SlTmp_ Sm_Ntr NAG___ SETN__
+GWC            -0.305                                   
+SoilTemp_mean  -0.844 -0.028                            
+Sum_Nitrogen    0.082  0.106 -0.212                     
+NAG_nmol_gdw_h -0.146 -0.096 -0.081 -0.501              
+SETN_ug_gdw    -0.378  0.252  0.306 -0.087 -0.279       
+Roots_gdw      -0.129 -0.184  0.072  0.181 -0.136  0.052
+
+Standardized Within-Group Residuals:
+        Min          Q1         Med          Q3         Max 
+-1.87157801 -0.77843981 -0.09874391  0.49416735  3.63874491 
+
+Number of Observations: 80
+Number of Groups: 12 
+
+
+NON-GROWING SEASON MODEL:
+=======================================================
+Linear mixed-effects model fit by maximum likelihood
+  Data: data_nongrowing 
+       AIC     BIC    logLik
+  316.4997 333.151 -149.2498
+
+Random effects:
+ Formula: ~1 | Plot
+        (Intercept) Residual
+StdDev:    1.542816 5.837238
+
+Correlation Structure: AR(1)
+ Formula: ~1 | Plot 
+ Parameter estimate(s):
+       Phi 
+-0.3932128 
+Fixed effects:  Resp_rate_mg_C_m2_h ~ GWC + SoilTemp_mean + Sum_Carbon + BG_nmol_gdw_h +      MBC_ug_gdw_bgc 
+                   Value Std.Error DF    t-value p-value
+(Intercept)    18.884956  9.188167 30  2.0553562  0.0486
+GWC            -1.006680  0.430311 30 -2.3394247  0.0262
+SoilTemp_mean   0.514831  0.840111 30  0.6128138  0.5446
+Sum_Carbon     -0.031922  0.047902 30 -0.6663924  0.5103
+BG_nmol_gdw_h   0.027460  0.054164 30  0.5069840  0.6159
+MBC_ug_gdw_bgc  0.033337  0.013698 30  2.4337463  0.0211
+ Correlation: 
+               (Intr) GWC    SlTmp_ Sm_Crb BG_n__
+GWC            -0.868                            
+SoilTemp_mean  -0.716  0.377                     
+Sum_Carbon     -0.146  0.077  0.112              
+BG_nmol_gdw_h   0.103 -0.087 -0.043 -0.988       
+MBC_ug_gdw_bgc  0.312 -0.191 -0.549 -0.247  0.144
+
+Standardized Within-Group Residuals:
+        Min          Q1         Med          Q3         Max 
+-1.85604005 -0.54896091 -0.08248716  0.48043224  3.73935403 
+
+Number of Observations: 47
+Number of Groups: 12 
+
+
+IRRIGATION TREATMENT MODEL:
+=======================================================
+Linear mixed-effects model fit by maximum likelihood
+  Data: data 
+       AIC      BIC    logLik
+  1187.286 1212.884 -584.6431
+
+Random effects:
+ Formula: ~1 | Plot
+        (Intercept) Residual
+StdDev: 0.001540836 24.23291
+
+Correlation Structure: AR(1)
+ Formula: ~1 | Plot 
+ Parameter estimate(s):
+       Phi 
+0.08340951 
+Fixed effects:  Resp_rate_mg_C_m2_h ~ GWC * Irrigation_trmt_pct + SoilTemp_mean +      Season 
+                               Value Std.Error  DF   t-value p-value
+(Intercept)                 43.75236 17.076733 111  2.562104  0.0117
+GWC                          1.27626  0.870919 111  1.465422  0.1456
+Irrigation_trmt_pct100      -7.26722 13.844110  10 -0.524932  0.6111
+SoilTemp_mean               -0.70139  0.855810 111 -0.819565  0.4142
+SeasonNon-Growing          -51.78628 11.597792 111 -4.465184  0.0000
+GWC:Irrigation_trmt_pct100   0.25531  1.027214 111  0.248547  0.8042
+ Correlation: 
+                           (Intr) GWC    I__100 SlTmp_ SsnN-G
+GWC                        -0.485                            
+Irrigation_trmt_pct100     -0.341  0.543                     
+SoilTemp_mean              -0.859  0.030  0.029              
+SeasonNon-Growing          -0.644 -0.272 -0.067  0.858       
+GWC:Irrigation_trmt_pct100  0.392 -0.751 -0.914 -0.038  0.134
+
+Standardized Within-Group Residuals:
+        Min          Q1         Med          Q3         Max 
+-2.03629448 -0.51216429 -0.03819209  0.31633836  4.12712486 
+
+Number of Observations: 127
+Number of Groups: 12 
