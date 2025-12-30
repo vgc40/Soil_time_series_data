@@ -1,0 +1,3 @@
+"mtry","trees","min_n","tree_depth","learn_rate","loss_reduction","sample_size",".config","Season"
+1,984,10,5,0.0407359852467598,0.792545522514352,0.824278863497699,"pre0_mod18_post0","Growing"
+1,940,17,5,0.0389084430738565,1.59726457118884,0.614197729642813,"pre0_mod17_post0","Non-Growing"

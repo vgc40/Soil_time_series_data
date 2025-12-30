@@ -140,8 +140,7 @@ predictor_vars <- c(
   # Root Biomass (1)
   "Roots_gdw",
   
-  # Temporal (2) 
-  "Month",
+  # Temporal (1) 
   "SoilTemp_mean"
 )
 

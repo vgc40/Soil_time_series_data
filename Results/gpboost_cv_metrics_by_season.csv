@@ -1,0 +1,3 @@
+"Season","CV_TYPE","n","n_plots","n_dates","pooled_RMSE","pooled_R2_SSE"
+"Growing","date",80,12,7,1.54723830829435,-1.67946727668455
+"Non-Growing","date",47,12,4,1.3722164994615,-1.44688064872105
