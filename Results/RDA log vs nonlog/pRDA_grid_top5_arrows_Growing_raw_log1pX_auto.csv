@@ -1,0 +1,6 @@
+"Dataset","Resp_scale","Pred_transform","Variable","arrow_len","aligned_with_pos_RDA1","angle_deg","cor_with_RDA1","envfit_r2","envfit_p","envfit_p_fdr"
+"Growing","raw","log1pX_auto","AP_nmol_gdw_h",1.27177999801738,TRUE,87.3331617073466,0.264249539753398,0.36507859667829,0.001,0.001375
+"Growing","raw","log1pX_auto","NAG_nmol_gdw_h",1.19006436791994,TRUE,89.0975621592544,0.175364173871957,0.294615721618999,0.001,0.001375
+"Growing","raw","log1pX_auto","BG_nmol_gdw_h",1.08044438090697,TRUE,88.4427774667579,0.310179111453236,0.192125241162726,0.001,0.001375
+"Growing","raw","log1pX_auto","Leu_nmol_gdw_h",1.02622379368184,TRUE,85.1206486746739,0.342587062502249,0.161003435799506,0.001,0.001375
+"Growing","raw","log1pX_auto","CB_nmol_gdw_h",0.987720528257857,TRUE,84.4244720795745,0.268846619766345,0.130949203258114,0.001,0.001375
