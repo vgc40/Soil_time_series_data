@@ -191,6 +191,16 @@ permanova_result <- adonis2(
 )
 permanova_result
 
+adonis2(sir_matrix_ordered ~ Season * Irrigation_trmt_pct,
+        data=metadata, permutations=999, method="bray", by="term")
+
+adonis2(sir_matrix_ordered ~ Season + Irrigation_trmt_pct,
+        data=metadata, permutations=999, method="bray", by="term")
+
+bd <- betadisper(vegdist(sir_matrix, method="bray"), metadata$Irrigation_trmt_pct)
+permutest(bd, permutations=999)
+
+
 # Save PERMANOVA results
 capture.output(permanova_result, file = "Results/permanova_results.txt")
 
