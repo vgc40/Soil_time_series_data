@@ -235,7 +235,10 @@ message("Best k by average silhouette width, correlation + Ward.D2: ", best_k_si
 # 7. Export k = 2 and k = 3 cluster solutions
 # -----------------------------
 
-candidate_ks <- c(2, 3)
+# Always export k = 2 and k = 3 for comparison.
+# Also export the silhouette-selected best k, in case it is not 2 or 3.
+
+candidate_ks <- sort(unique(c(2, 3, best_k_silhouette)))
 
 cluster_solution_list <- list()
 
@@ -277,33 +280,36 @@ for (k in candidate_ks) {
   )
 }
 
-# Compare k = 2 and k = 3 assignments.
+# Compare k = 2 and k = 3 assignments, if both are available.
 
-cluster_compare <- cluster_solution_list$k2 %>%
-  select(
-    Substrate,
-    Substrate_category,
-    Cluster_k2 = Cluster_ID,
-    Silhouette_k2 = Silhouette_width
-  ) %>%
-  left_join(
-    cluster_solution_list$k3 %>%
-      select(
-        Substrate,
-        Cluster_k3 = Cluster_ID,
-        Silhouette_k3 = Silhouette_width
-      ),
-    by = "Substrate"
-  ) %>%
-  mutate(
-    delta_silhouette_k3_minus_k2 = Silhouette_k3 - Silhouette_k2
-  ) %>%
-  arrange(Silhouette_k2)
-
-write_csv(
-  cluster_compare,
-  "Results/Step3_k2_vs_k3_cluster_comparison_correlation_wardD2.csv"
-)
+if (all(c("k2", "k3") %in% names(cluster_solution_list))) {
+  
+  cluster_compare <- cluster_solution_list$k2 %>%
+    select(
+      Substrate,
+      Substrate_category,
+      Cluster_k2 = Cluster_ID,
+      Silhouette_k2 = Silhouette_width
+    ) %>%
+    left_join(
+      cluster_solution_list$k3 %>%
+        select(
+          Substrate,
+          Cluster_k3 = Cluster_ID,
+          Silhouette_k3 = Silhouette_width
+        ),
+      by = "Substrate"
+    ) %>%
+    mutate(
+      delta_silhouette_k3_minus_k2 = Silhouette_k3 - Silhouette_k2
+    ) %>%
+    arrange(Silhouette_k2)
+  
+  write_csv(
+    cluster_compare,
+    "Results/Step3_k2_vs_k3_cluster_comparison_correlation_wardD2.csv"
+  )
+}
 
 # -----------------------------
 # 8. Prepare labels and palettes
@@ -530,29 +536,22 @@ make_cluster_figures <- function(k, cluster_assignments) {
   )
 }
 
-# Generate figures for k = 2 and k = 3.
+# Generate figures for k  candiate values
 
-make_cluster_figures(
-  k = 2,
-  cluster_assignments = cluster_solution_list$k2
-)
-
-make_cluster_figures(
-  k = 3,
-  cluster_assignments = cluster_solution_list$k3
-)
+for (k in candidate_ks) {
+  make_cluster_figures(
+    k = k,
+    cluster_assignments = cluster_solution_list[[paste0("k", k)]]
+  )
+}
 
 # -----------------------------
-# 10. Optional: choose final k for comparison output
+# 10. Select final k from diagnostics
 # -----------------------------
-# Set manually after reviewing:
-# 1. silhouette diagnostics,
-# 2. k = 2 vs k = 3 assignments,
-# 3. dendrogram,
-# 4. heatmap,
-# 5. biological interpretability.
+# Final k is selected automatically as the k with the highest
+# average silhouette width.
 
-final_k <- 3
+final_k <- best_k_silhouette
 
 final_cluster_assignments <- cluster_solution_list[[paste0("k", final_k)]]
 
@@ -561,16 +560,19 @@ write_csv(
   "Results/Step3_cluster_assignments_FINAL_correlation_wardD2.csv"
 )
 
+final_cluster_category_summary <- final_cluster_assignments %>%
+  count(Cluster_ID, Substrate_category, name = "n_substrates") %>%
+  group_by(Cluster_ID) %>%
+  mutate(cluster_total = sum(n_substrates)) %>%
+  ungroup() %>%
+  arrange(Cluster_ID, desc(n_substrates), Substrate_category)
+
 write_csv(
-  final_cluster_assignments %>%
-    count(Cluster_ID, Substrate_category, name = "n_substrates") %>%
-    group_by(Cluster_ID) %>%
-    mutate(cluster_total = sum(n_substrates)) %>%
-    ungroup() %>%
-    arrange(Cluster_ID, desc(n_substrates), Substrate_category),
+  final_cluster_category_summary,
   "Results/Step3_cluster_category_summary_FINAL_correlation_wardD2.csv"
 )
 
+message("Final k selected from diagnostics: ", final_k)
 # -----------------------------
 # 11. Console summary
 # -----------------------------
@@ -579,21 +581,30 @@ cat("\nStep 3 complete: correlation distance + Ward.D2 version.\n")
 cat("Significant substrates clustered:", nrow(sig_substrates), "\n")
 cat("Temporally stable or excluded substrates:", nrow(stable_or_excluded_substrates), "\n")
 cat("Best k by average silhouette width:", best_k_silhouette, "\n")
-cat("Final k selected for comparison output:", final_k, "\n\n")
+cat("Final k selected for output:", final_k, "\n\n")
 
 cat("Silhouette diagnostics:\n")
 print(silhouette_results)
 
-cat("\nCluster sizes, k = 2:\n")
-print(cluster_solution_list$k2 %>% count(Cluster_ID, name = "n_substrates"))
+cat("\nFinal cluster sizes:\n")
+print(final_cluster_assignments %>% count(Cluster_ID, name = "n_substrates"))
 
-cat("\nCluster sizes, k = 3:\n")
-print(cluster_solution_list$k3 %>% count(Cluster_ID, name = "n_substrates"))
+if ("k2" %in% names(cluster_solution_list)) {
+  cat("\nCluster sizes, k = 2:\n")
+  print(cluster_solution_list$k2 %>% count(Cluster_ID, name = "n_substrates"))
+}
 
-cat("\nSubstrates with weakest k = 2 silhouette values:\n")
-print(cluster_compare %>% arrange(Silhouette_k2) %>% slice(1:10))
+if ("k3" %in% names(cluster_solution_list)) {
+  cat("\nCluster sizes, k = 3:\n")
+  print(cluster_solution_list$k3 %>% count(Cluster_ID, name = "n_substrates"))
+}
 
-cat("\nSubstrates with weakest k = 3 silhouette values:\n")
-print(cluster_compare %>% arrange(Silhouette_k3) %>% slice(1:10))
+if (exists("cluster_compare")) {
+  cat("\nSubstrates with weakest k = 2 silhouette values:\n")
+  print(cluster_compare %>% arrange(Silhouette_k2) %>% slice(1:min(10, n())))
+  
+  cat("\nSubstrates with weakest k = 3 silhouette values:\n")
+  print(cluster_compare %>% arrange(Silhouette_k3) %>% slice(1:min(10, n())))
+}
 
 cat("\nOutputs written to Results/ and Figures/.\n")
