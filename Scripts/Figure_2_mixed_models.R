@@ -24,7 +24,8 @@ suppressPackageStartupMessages({
 # ----------------------------
 # 0) Settings
 # ----------------------------
-infile <- "RF_final_cleaned_outliers_removed_zeros_replaced.csv"
+#infile <- "RF_final_cleaned_outliers_removed_zeros_replaced.csv"
+infile <- "RF_cleaned_with_PCA_season.csv"
 if (!file.exists(infile) && file.exists(file.path("Data", infile))) {
   infile <- file.path("Data", infile)
 }
@@ -330,8 +331,8 @@ panel_C <- coef_forest(m_nong_reml, imp_nong, "Non-Growing", "C", top_n = top_n_
 
 fig <- panel_A | (panel_B / panel_C) + plot_layout(widths = c(2, 1))
 
-png_file <- file.path(out_fig_dir, "Figure_ABC_RespGWC_TopDrivers_MixedModels.png")
-pdf_file <- file.path(out_fig_dir, "Figure_ABC_RespGWC_TopDrivers_MixedModels.pdf")
+png_file <- file.path(out_fig_dir, "Figure_ABC_RespGWC_TopDrivers_MixedModels2.png")
+pdf_file <- file.path(out_fig_dir, "Figure_ABC_RespGWC_TopDrivers_MixedModels2.pdf")
 
 ggsave(png_file, fig, width = 15, height = 10, dpi = 300, bg = "white")
 ggsave(pdf_file, fig, width = 15, height = 10, bg = "white")

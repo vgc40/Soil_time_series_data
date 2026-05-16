@@ -1,0 +1,5 @@
+NMDS stress was 0.087, which is considered good for a 2-dimensional solution.
+The temporal NMDS figure should be interpreted by looking for an ordered viridis color gradient and a coherent dashed centroid trajectory across months.
+Significant environmental vectors: GWC (R2 = 0.179, p = 0.001); pH (R2 = 0.095, p = 0.002); MBN (R2 = 0.059, p = 0.006); Soil Temp (R2 = 0.067, p = 0.007); SETN (R2 = 0.063, p = 0.007); SEOC:SETN (R2 = 0.052, p = 0.017)
+Irrigation PERMANOVA R2 was 0.021 with p = 0.026; visual overlap is shown in Figure 1B.
+Time_numeric PERMANOVA R2 was 0.055 with p = 0.002, compared with irrigation R2 = 0.021.

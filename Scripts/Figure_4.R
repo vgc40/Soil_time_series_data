@@ -33,22 +33,33 @@ complex_cols <- c("Complex" = "#D95F02", "Labile" = "#1B9E77")
 # ---- Data ----
 microresp <- read.csv("DataHub/Soil_Phenotypes/SoilSFA_A3.1_MicroResp.csv")
 names(microresp)[1] <- "Sample_cat"
-biogeochem <- read.csv("Data/RF_final_cleaned_outliers_removed_zeros_replaced.csv")
+#biogeochem <- read.csv("Data/RF_final_cleaned_outliers_removed_zeros_replaced.csv")
+biogeochem <- read.csv("Data/RF_cleaned_with_PCA_season.csv")
 
-define_season <- function(date) {
-  m <- month(mdy(date))
-  ifelse(m %in% 4:10, "Growing", "Non-Growing")
-}
 
+pca_season_lut <- biogeochem %>%
+  select(Sample_cat, Season) %>%
+  distinct()
+
+# ---- Prep microresp + join PCA season ----
 microresp_prep <- microresp %>%
   filter(Timepoint == 5,
          Normalization == "ngCO2-C_mgC_h",
          Substrate != "Water") %>%
   mutate(
-    Season = define_season(Collection_date),
-    Season = factor(Season, levels = c("Growing", "Non-Growing")),
+    Collection_date = as.Date(Collection_date, format = "%m/%d/%y"),
+    Month = as.integer(format(Collection_date, "%m")),
     Irrigation_trmt_pct = as.character(Irrigation_trmt_pct)
+  ) %>%
+  left_join(pca_season_lut, by = "Sample_cat") %>%
+  mutate(
+    Season = if_else(
+      is.na(Season) & Month == 7, "Growing",
+      if_else(is.na(Season) & Month == 1, "Non-Growing", as.character(Season))
+    ),
+    Season = factor(Season, levels = c("Growing", "Non-Growing"))
   )
+
 
 cat("\n=== Data Preparation Complete ===\n")
 cat("Total rows:", nrow(microresp_prep), "\n")
@@ -326,10 +337,10 @@ final_figure <- (panel_A + panel_B) / (panel_C + panel_D) +
 # SAVE FIGURE (sheet-of-paper friendly)
 # Letter landscape: 11 x 8.5 in
 # ==============================================================================
-ggsave("Figures/Figure_H2b_H3_MicroResp_Analysis_paper_v3.pdf",
+ggsave("Figures/Figure_H2b_H3_MicroResp_Analysis_paper_v4.pdf",
        final_figure, width = 11, height = 8.5, units = "in", dpi = 300)
 
-ggsave("Figures/Figure_H2b_H3_MicroResp_Analysis_paper_v3.png",
+ggsave("Figures/Figure_H2b_H3_MicroResp_Analysis_paper_v4.png",
        final_figure, width = 11, height = 8.5, units = "in", dpi = 300)
 
 cat("\n=== Figure saved successfully ===\n")

@@ -11,10 +11,16 @@ library(vegan)
 library(ggplot2)
 library(cowplot)
 library(corrplot)
+library(ggrepel)
 
 # Load your data
 microresp <- read.csv("DataHub/Soil_Phenotypes/SoilSFA_A3.1_MicroResp.csv")
 names(microresp)[1] = "Sample_cat"
+
+pca_season_lut <- read.csv("Data/RF_cleaned_with_PCA_season.csv") %>%
+  mutate(Collection_date = as.Date(Collection_date)) %>%
+  select(Collection_date, Plot, Season) %>%  
+  distinct()
 
 # Define your color palettes
 season_cols <- c("Growing" = "#E69F00", "Non-Growing" = "#56B4E9")
@@ -30,10 +36,14 @@ microresp_filtered <- microresp %>%
          Normalization == "ngCO2-C_mgC_h",
          Substrate != "Water") %>%
   mutate(
-    Month = as.numeric(format(as.Date(Collection_date, format="%m/%d/%y"), "%m")),
-    Season = case_when(
-      Month %in% c(6, 7, 8, 9, 10) ~ "Growing",
-      TRUE ~ "Non-Growing"
+    Collection_date = as.Date(Collection_date, format = "%m/%d/%y"),
+    Month = as.numeric(format(Collection_date, "%m"))
+  ) %>%
+  left_join(pca_season_lut, by = c("Collection_date", "Plot")) %>%
+  mutate(
+    Season = if_else(
+      is.na(Season) & Month == 7, "Growing",
+      if_else(is.na(Season) & Month == 1, "Non-Growing", as.character(Season))
     ),
     Season = factor(Season, levels = c("Growing", "Non-Growing"))
   )
@@ -123,7 +133,7 @@ p_ratio <- ggplot(complex_labile_ratios,
   theme(legend.position = "bottom",
         plot.title = element_text(hjust = 0.5, face = "bold"))
 
-ggsave("Figures/complex_labile_ratio_season.pdf", p_ratio, width = 10, height = 6)
+ggsave("Figures/complex_labile_ratio_season2.pdf", p_ratio, width = 10, height = 6)
 
 # Effect size calculation
 ratio_summary <- complex_labile_ratios %>%
@@ -391,13 +401,13 @@ final_figure <- plot_grid(
 )
 
 # Save figure
-ggsave("Figures/Figure_3_MicroResp_3panel_figure.pdf", 
+ggsave("Figures/Figure_3_MicroResp_3panel_figure2.pdf", 
        final_figure, 
        width = 14, 
        height = 12,
        units = "in")
 
-ggsave("Figures/Figure_3_MicroResp_3panel_figure.png", 
+ggsave("Figures/Figure_3_MicroResp_3panel_figure2.png", 
        final_figure, 
        width = 14, 
        height = 12,
@@ -431,8 +441,8 @@ print("Statistical results saved!")
 # OPTIONAL: CREATE INDIVIDUAL PANELS FOR PRESENTATIONS
 # ================================================================================
 
-ggsave("Figures/panel_A_categories.pdf", panel_a, width = 8, height = 6)
-ggsave("Figures/panel_B_NMDS.pdf", panel_b, width = 10, height = 8)
-ggsave("Figures/panel_C_heatmap.pdf", panel_c, width = 6, height = 8)
+ggsave("Figures/panel_A_categories2.pdf", panel_a, width = 8, height = 6)
+ggsave("Figures/panel_B_NMD2S.pdf", panel_b, width = 10, height = 8)
+ggsave("Figures/panel_C_heatmap2.pdf", panel_c, width = 6, height = 8)
 
 print("Individual panels saved!")

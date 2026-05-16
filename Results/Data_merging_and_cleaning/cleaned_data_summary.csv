@@ -1,0 +1,14 @@
+Metric,Value
+BGC source,DataHub March/Soil_Biogeochemistry/SoilMicrobiomeSFA_prosser-time-series_Soil_Biogeochemistry.csv
+EEA source,DataHub March/Soil_Phenotypes/SoilMicrobiomeSFA_prosser-time-series_EEA.csv
+BGC rows,168
+EEA rows,156
+Merged rows,168
+Rows with respiration before cleaning,156
+Outliers removed,4
+Rows in cleaned data,152
+Complete cases after cleaning,127
+Zero values replaced,138
+Negative respiration values replaced,3
+Date range start,2023-06-07
+Date range end,2024-06-05

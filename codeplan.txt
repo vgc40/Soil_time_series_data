@@ -1,0 +1,105 @@
+Code Script Plan
+Script 1: 01_data_preparation.R
+Purpose: Load, merge, QC all data streams
+•	Load MicroResp (5h, C-normalized), EEA, MBC/N/P, environmental data, field respiration
+•	Merge by sample ID and collection date
+•	Handle BDL values (half-min replacement)
+•	Remove outliers (July 2023 anomalies as documented SFA3-1-1_Storyboard_VGC.docx)
+•	Create time variables: numeric date (days since first sampling), month-year factor
+•	Create derived variables: SEOC:SETN ratio, biomass C:N
+•	Export clean merged dataset
+Script 2: 02_Q1_NMDS_envfit.R
+Purpose: Multivariate exploration of MicroResp temporal structure
+•	Bray-Curtis dissimilarity on MicroResp matrix (all samples, both irrigations)
+•	NMDS (k=2, trymax=200)
+•	envfit with environmental variables (temperature, GWC, SEOC, SETN, SEOC:SETN, MBC, pH, irrigation)
+•	PERMANOVA: adonis2(MicroResp ~ Month_numeric * Irrigation)
+•	Figures: NMDS colored by month (continuous color scale), vectors for significant envfit variables; supplementary version colored by irrigation showing overlap
+Script 3: 03_Q1_GAM_per_substrate.R
+Purpose: Test which substrates show significant temporal trends
+•	Loop over 31 substrates
+•	Fit: gamm(SIR ~ s(time_numeric, k=7) + Irrigation, random = list(Plot = ~1))
+•	Extract: p-value for smooth term, EDF, deviance explained
+•	Apply FDR correction across 31 tests
+•	Extract fitted values (predictions over time grid) for clustering
+•	Output: Table of substrate significance; fitted trajectory matrix
+Script 4: 04_Q1_trajectory_clustering.R
+Purpose: Define temporal trend groups
+•	Take fitted trajectories from Script 3
+•	Z-score normalize within each substrate (center, scale)
+•	Correlation-based distance matrix (1 - r)
+•	Hierarchical clustering (Ward's D2)
+•	Determine optimal number of clusters (silhouette, gap statistic)
+•	Figures: Dendrogram with substrate labels colored by chemical class; cluster-averaged trajectories (± SE band); heatmap of z-scored trajectories ordered by cluster
+Script 5: 05_Q1_environmental_attribution.R
+Purpose: Quantify how much environment explains beyond time
+•	Calculate per-sample trend-group scores: average z-scored SIR across substrates within each cluster
+•	Fit per-group GAMs:
+o	Model 1 (time only): score ~ s(time, k=7) + s(Plot, bs="re")
+o	Model 2 (time + environment): score ~ s(time, k=7) + SoilTemp + GWC + SEOC_SETN + MBC + s(Plot, bs="re")
+•	Compare deviance explained, AIC
+•	Report which environmental covariates are significant for which trend groups
+•	Figures: Partial effect plots; bar chart of additional variance explained per group
+Script 6: 06_Q1_supplementary_irrigation.R
+Purpose: Show that irrigation has minimal effect
+•	Fit GAMs with separate smooths by irrigation: s(time, by=Irrigation)
+•	Test whether separate smooths improve fit over shared smooth
+•	Visual comparison of fitted trajectories ± irrigation
+•	Figures: Trajectory plots split by irrigation (showing parallelism); formal test results table
+Script 7: 07_Q2_MEFISTO_preparation.R
+Purpose: Prepare multi-view input for MEFISTO
+•	Subset to 100% irrigation samples only
+•	Prepare four views:
+o	View 1: MicroResp (31 substrates × samples)
+o	View 2: EEA (7 enzymes × samples) + fraction EEA (C:N:P ratios)
+o	View 3: MBC, MBN (2 features × samples)
+o	View 4: Transcript KO abundances (filtered to expressed KOs × samples)
+•	Scale within views, center across groups
+•	Create long-format input with time as continuous covariate
+•	Output: MOFA-ready input object
+Script 8: 08_Q2_MEFISTO_fitting.R
+Purpose: Fit MEFISTO model and extract results
+•	Fit model with time covariate, multiple factors (start with 5–10)
+•	Assess convergence, variance explained per factor per view
+•	Extract:
+o	Factor scores over time (smooth interpolated trajectories)
+o	Feature weights per factor per view
+o	Top-weighted features
+•	Output: Model object, factor trajectories, weight matrices
+Script 9: 09_Q2_MEFISTO_interpretation.R
+Purpose: Interpret latent factors biologically
+•	For each factor:
+o	Plot temporal trajectory
+o	Identify top-weighted MicroResp substrates → map to trend groups from Q1
+o	Identify top-weighted EEA features
+o	Identify top-weighted transcript KOs → map to KEGG pathways
+•	Perform KEGG pathway enrichment (hypergeometric test) on top transcript features
+•	Cross-reference with the substrate–pathway mapping table VGC_Storyboard_v2.pptx
+•	Figures: Factor temporal trajectories (all views overlaid); weight bar plots per view; enrichment heatmap
+Script 10: 10_Q2_benchmarks.R
+Purpose: Non-integrative comparisons to demonstrate MEFISTO's value
+•	Mantel tests: pairwise between dissimilarity matrices of each view (Bray-Curtis or Euclidean)
+•	Procrustes analysis: MicroResp ↔ transcripts, EEA ↔ transcripts
+•	Compare correlation strength from raw Mantel vs. MEFISTO factor correlations
+•	Figures: Side-by-side comparison panel (raw correlation weak; MEFISTO factor correlation strong) — this is the "Key result #5" visualization VGC_Storyboard_v2.pptx
+Script 11: 11_Q2_pathway_temporal_profiles.R
+Purpose: Visualize expression patterns of enriched pathways over time
+•	For each significantly enriched pathway:
+o	Extract all KOs mapping to that pathway
+o	Plot their expression profiles over time (individual lines + aggregated mean)
+o	Overlay corresponding MicroResp substrate trajectory
+•	Figures: Multi-panel pathway-level temporal profiles; comparison to MicroResp trend groups
+Script 12: 12_figures_main.R
+Purpose: Generate publication-quality main figures
+•	Figure 1: Conceptual/study design + NMDS with temporal color gradient
+•	Figure 2: Trend group trajectories + environmental attribution
+•	Figure 3: MEFISTO factor trajectories (coordinated temporal patterns across views)
+•	Figure 4: Covariance at latent factor level vs. raw data level (the "before/after integration" comparison)
+•	Figure 5: Pathway enrichment linked to substrate trend groups
+Script 13: 13_figures_supplementary.R
+Purpose: Supporting figures
+•	Individual substrate GAM curves (31-panel figure)
+•	NMDS by irrigation (showing overlap)
+•	MEFISTO weight plots per view
+•	Environmental time series (temperature, GWC, SEOC, MBC over the year)
+All pathway expression profiles

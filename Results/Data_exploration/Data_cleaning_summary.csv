@@ -1,5 +1,0 @@
-"Step","N_samples","Notes"
-"Starting samples (complete cases)",131,"Complete cases from merged data"
-"After outlier removal",127,"Removed SM1082, SM1085, SM1087, SM1088"
-"After zero replacement",127,"8 variables treated"
-"After negative respiration replacement",127,"3 values replaced"

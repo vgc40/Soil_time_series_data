@@ -1,0 +1,7 @@
+Decision,Rule,Rationale,Affected
+Merge BGC and EEA,Left join EEA measurements to BGC records by Sample_cat.,Sample_cat is the shared sample identifier used by the existing analysis scripts.,BGC rows: 168; EEA rows: 156; merged rows: 168
+Parse Collection_date,"Parse common ymd/mdy/dmy formats, then derive Month, Year, Month_name, Season, and Irrigation_active.",Date formats can differ across source exports; robust parsing avoids silent date failures.,Parsed dates for 168 BGC records.
+Remove documented outliers,"Drop fixed sample list: SM1082, SM1085, SM1087, SM1088",These July 2023 samples were identified in the prior exploration workflow as extreme outliers.,4 samples removed.
+Replace zeros with LOD/2,"For selected below-detection variables, replace zero with half of that variable's minimum non-zero value.",The README documents converted negative analytical values as zeros/below detection; LOD/2 preserves sample size.,138 zero values replaced across 8 variables.
+Replace negative respiration,"If field respiration is negative, replace it with half of the minimum non-negative respiration value.",Negative field respiration is not meaningful for downstream positive-scale analyses.,3 values replaced.
+Keep complete-case output as a separate file,Do not drop incomplete rows from the main cleaned output; save a second complete-case dataset.,"Some analyses can use partial data, while RF/RDA-style workflows may require complete predictors.",127 complete cases saved separately.

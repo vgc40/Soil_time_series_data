@@ -1,0 +1,18 @@
+Cluster_ID,Substrate_category,n_substrates,cluster_total
+Cluster_1,carbohydrate,5,13
+Cluster_1,amino acid D,2,13
+Cluster_1,amino acid A,1,13
+Cluster_1,amino acid B,1,13
+Cluster_1,amino acid C,1,13
+Cluster_1,plant wax ester,1,13
+Cluster_1,protein,1,13
+Cluster_1,signaling molecule,1,13
+Cluster_2,polymer,4,12
+Cluster_2,carbohydrate,3,12
+Cluster_2,phenolic,2,12
+Cluster_2,amine,1,12
+Cluster_2,carboxylic acids,1,12
+Cluster_2,fatty acid ester,1,12
+Cluster_3,carboxylic acids,4,6
+Cluster_3,amine,1,6
+Cluster_3,amino acid A,1,6
