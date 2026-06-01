@@ -1,32 +1,32 @@
-Substrate,Substrate_category,Cluster_ID,Silhouette_width
-Phenylethylamine,amine,Cluster_1,0.4348579621688485
-L.Arginine,amino acid A,Cluster_1,0.779329822240581
-L.Glutamine,amino acid B,Cluster_1,0.7457026064675832
-Glycine,amino acid C,Cluster_1,0.7842693405113108
-L.Alanine,amino acid D,Cluster_1,0.8090274490075585
-L.Leucine,amino acid D,Cluster_1,0.8042436453214422
-Chitosan,carbohydrate,Cluster_1,0.5118948759175524
-D.Cellobiose,carbohydrate,Cluster_1,0.709311331746833
-D.Fructose,carbohydrate,Cluster_1,0.7966348301734238
-D.Glucose,carbohydrate,Cluster_1,-0.2453954624948282
-D.Trehalose,carbohydrate,Cluster_1,0.744890883845395
-D.Xylose,carbohydrate,Cluster_1,0.7985732437782705
-Glucosamine_hydrochloride,carbohydrate,Cluster_1,0.7176548232189623
-N.Acetyl.D.glucosamine,carbohydrate,Cluster_1,0.628033179645095
-Oxalic_acid,carboxylic acids,Cluster_1,-0.2762816335345878
-Tween40,fatty acid ester,Cluster_1,0.7940939377450655
-Salicylic_acid,phenolic,Cluster_1,0.7554122946540706
-Vanillic_acid,phenolic,Cluster_1,0.0876589218921492
-Methyl_oleate,plant wax ester,Cluster_1,0.6655665160075849
-Cellulose,polymer,Cluster_1,0.7163925197047214
-Chitin,polymer,Cluster_1,0.5925554123654059
-Hemicellulose,polymer,Cluster_1,-0.198387315290101
-Lignin,polymer,Cluster_1,0.5600629491231429
-BSA,protein,Cluster_1,0.8054729024467386
-GABA,signaling molecule,Cluster_1,0.68867556416389
-Diethylamine,amine,Cluster_2,0.729697603515959
-Glutamic_acid,amino acid A,Cluster_2,0.8054835476687114
-Citric_acid,carboxylic acids,Cluster_2,0.8992283830973141
-Lactic_acid,carboxylic acids,Cluster_2,0.9127593478697815
-Malic_acid,carboxylic acids,Cluster_2,0.895384642295187
-Succinic_acid,carboxylic acids,Cluster_2,0.8138213558599272
+Substrate,Substrate_category,Raw_cluster_ID,Cluster_ID,Silhouette_width
+Diethylamine,amine,Raw_cluster_2,Cluster_1,0.729697603515959
+Glutamic_acid,amino acid A,Raw_cluster_2,Cluster_1,0.8054835476687114
+Citric_acid,carboxylic acids,Raw_cluster_2,Cluster_1,0.8992283830973141
+Lactic_acid,carboxylic acids,Raw_cluster_2,Cluster_1,0.9127593478697815
+Malic_acid,carboxylic acids,Raw_cluster_2,Cluster_1,0.895384642295187
+Succinic_acid,carboxylic acids,Raw_cluster_2,Cluster_1,0.8138213558599272
+Phenylethylamine,amine,Raw_cluster_1,Cluster_2,0.4348579621688485
+L.Arginine,amino acid A,Raw_cluster_1,Cluster_2,0.779329822240581
+L.Glutamine,amino acid B,Raw_cluster_1,Cluster_2,0.7457026064675832
+Glycine,amino acid C,Raw_cluster_1,Cluster_2,0.7842693405113108
+L.Alanine,amino acid D,Raw_cluster_1,Cluster_2,0.8090274490075585
+L.Leucine,amino acid D,Raw_cluster_1,Cluster_2,0.8042436453214422
+Chitosan,carbohydrate,Raw_cluster_1,Cluster_2,0.5118948759175524
+D.Cellobiose,carbohydrate,Raw_cluster_1,Cluster_2,0.709311331746833
+D.Fructose,carbohydrate,Raw_cluster_1,Cluster_2,0.7966348301734238
+D.Glucose,carbohydrate,Raw_cluster_1,Cluster_2,-0.2453954624948282
+D.Trehalose,carbohydrate,Raw_cluster_1,Cluster_2,0.744890883845395
+D.Xylose,carbohydrate,Raw_cluster_1,Cluster_2,0.7985732437782705
+Glucosamine_hydrochloride,carbohydrate,Raw_cluster_1,Cluster_2,0.7176548232189623
+N.Acetyl.D.glucosamine,carbohydrate,Raw_cluster_1,Cluster_2,0.628033179645095
+Oxalic_acid,carboxylic acids,Raw_cluster_1,Cluster_2,-0.2762816335345878
+Tween40,fatty acid ester,Raw_cluster_1,Cluster_2,0.7940939377450655
+Salicylic_acid,phenolic,Raw_cluster_1,Cluster_2,0.7554122946540706
+Vanillic_acid,phenolic,Raw_cluster_1,Cluster_2,0.0876589218921492
+Methyl_oleate,plant wax ester,Raw_cluster_1,Cluster_2,0.6655665160075849
+Cellulose,polymer,Raw_cluster_1,Cluster_2,0.7163925197047214
+Chitin,polymer,Raw_cluster_1,Cluster_2,0.5925554123654059
+Hemicellulose,polymer,Raw_cluster_1,Cluster_2,-0.198387315290101
+Lignin,polymer,Raw_cluster_1,Cluster_2,0.5600629491231429
+BSA,protein,Raw_cluster_1,Cluster_2,0.8054729024467386
+GABA,signaling molecule,Raw_cluster_1,Cluster_2,0.68867556416389
