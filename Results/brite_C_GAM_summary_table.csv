@@ -1,0 +1,32 @@
+brite_level,brite_class,n_obs,n_plots,n_timepoints,edf,ref_df,F_statistic,p_value,adj_r_squared,deviance_explained,scale,AIC,converged,model_warning,model_error,p_adj_fdr,significant_time
+brite_C,00533 Glycosaminoglycan biosynthesis - keratan sulfate [PATH:ko00533],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,00534 Glycosaminoglycan biosynthesis - heparan sulfate / heparin [PATH:ko00534],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,00601 Glycosphingolipid biosynthesis - lacto and neolacto series [PATH:ko00601],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,00621 Dioxin degradation [PATH:ko00621],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,"Lapack routine dgesv: system is exactly singular: U[2,2] = 0",NA,No
+brite_C,00904 Diterpenoid biosynthesis [PATH:ko00904],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,00905 Brassinosteroid biosynthesis [PATH:ko00905],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04031 GTP-binding proteins [BR:ko04031],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04062 Chemokine signaling pathway [PATH:ko04062],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04130 SNARE interactions in vesicular transport [PATH:ko04130],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04136 Autophagy - other [PATH:ko04136],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04340 Hedgehog signaling pathway [PATH:ko04340],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04350 TGF-beta signaling pathway [PATH:ko04350],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04360 Axon guidance [PATH:ko04360],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04650 Natural killer cell mediated cytotoxicity [PATH:ko04650],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04660 T cell receptor signaling pathway [PATH:ko04660],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04662 B cell receptor signaling pathway [PATH:ko04662],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04664 Fc epsilon RI signaling pathway [PATH:ko04664],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04710 Circadian rhythm [PATH:ko04710],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04711 Circadian rhythm - fly [PATH:ko04711],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04742 Taste transduction [PATH:ko04742],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04927 Cortisol synthesis and secretion [PATH:ko04927],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04929 GnRH secretion [PATH:ko04929],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,"04935 Growth hormone synthesis, secretion and action [PATH:ko04935]",35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,04950 Maturity onset diabetes of the young [PATH:ko04950],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,05144 Malaria [PATH:ko05144],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,05216 Thyroid cancer [PATH:ko05216],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,05217 Basal cell carcinoma [PATH:ko05217],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,05220 Chronic myeloid leukemia [PATH:ko05220],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,05221 Acute myeloid leukemia [PATH:ko05221],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,05321 Inflammatory bowel disease [PATH:ko05321],35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
+brite_C,09113 Global maps only,35,5,7,NA,NA,NA,NA,NA,NA,NA,NA,No,NA,the leading minor of order 1 is not positive,NA,No
