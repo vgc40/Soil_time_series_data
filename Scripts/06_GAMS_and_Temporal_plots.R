@@ -1,5 +1,4 @@
 rm(list = ls())
-
 ## ---- Setup -----------------------------------------------------------------
 required_packages <- c("mgcv", "tidyverse", "broom", "readr")
 missing <- required_packages[!required_packages %in% rownames(installed.packages())]
@@ -9,7 +8,6 @@ if (length(missing) > 0) {
 suppressPackageStartupMessages({
   library(mgcv); library(tidyverse); library(broom); library(readr)
 })
-
 theme_set(theme_bw(base_size = 11))
 for (d in c("Figures", "Results", "Results/Step2_diagnostics")) {
   dir.create(d, showWarnings = FALSE, recursive = TRUE)
@@ -25,7 +23,13 @@ meta <- read.csv("Data/Data_merged_cleaned.csv", check.names = FALSE) %>%
   select(Sample_cat, Collection_date, Plot,
          Irrigation_trmt_pct, Irrigation_trmt_cat, time_numeric)
 
-## ---- Helper: build one summary row -----------------------------------------
+## ---- Helpers ---------------------------------------------------------------
+## Return x only if it is a single, non-NULL value; otherwise NA.
+## This guards against BOTH NULL and length-0 values (e.g. gamm's dev.expl),
+## which would otherwise collapse the whole tibble to 0 rows.
+safe_val <- function(x) if (length(x) == 1 && !is.null(x)) x else NA_real_
+
+## Build one summary row.
 ## gam_summary/smooth_row/model can be NULL when the model was not fitted.
 make_summary_row <- function(level_name, brite_category, data,
                              gam_summary = NULL, smooth_row = NULL,
@@ -37,14 +41,14 @@ make_summary_row <- function(level_name, brite_category, data,
     n_obs              = nrow(data),
     n_plots            = n_distinct(data$Plot),
     n_timepoints       = n_distinct(data$time_numeric),
-    edf                = smooth_row$edf        %||% NA_real_,
-    ref_df             = smooth_row$Ref.df     %||% NA_real_,
-    F_statistic        = smooth_row$F          %||% NA_real_,
-    p_value            = if (!is.null(smooth_row)) smooth_row[["p-value"]] else NA_real_,
-    adj_r_squared      = gam_summary$r.sq      %||% NA_real_,
-    deviance_explained = gam_summary$dev.expl  %||% NA_real_,
-    scale              = gam_summary$scale     %||% NA_real_,
-    AIC                = if (!is.null(model)) AIC(model$lme) else NA_real_,
+    edf                = safe_val(smooth_row$edf),
+    ref_df             = safe_val(smooth_row$Ref.df),
+    F_statistic        = safe_val(smooth_row$F),
+    p_value            = safe_val(smooth_row[["p-value"]]),
+    adj_r_squared      = safe_val(gam_summary$r.sq),
+    deviance_explained = safe_val(gam_summary$dev.expl),
+    scale              = safe_val(gam_summary$scale),
+    AIC                = if (!is.null(model)) safe_val(AIC(model$lme)) else NA_real_,
     converged          = converged,
     model_warning      = warning_msg,
     model_error        = error_msg
@@ -88,9 +92,13 @@ analyze_brite_level <- function(brite_table, brite_col, level_name) {
   summary_rows    <- list()
   prediction_list <- list()
   
-  cat("\n=== FITTING", level_name, "GAMMS ===\n")
+  cat("\n=== FITTING", level_name, "GAMMS (", length(brite_categories), "categories ) ===\n")
   
-  for (brite_category in brite_categories) {
+  for (i in seq_along(brite_categories)) {
+    brite_category <- brite_categories[i]
+    if (i %% 100 == 0) {
+      cat("  ", level_name, ":", i, "of", length(brite_categories), "\n")
+    }
     
     d <- model_data %>%
       filter(.data[[brite_col]] == brite_category) %>%
@@ -130,7 +138,7 @@ analyze_brite_level <- function(brite_table, brite_col, level_name) {
     ## Successful fit: extract stats
     gam_summary <- summary(model$gam)
     smooth_tbl  <- as.data.frame(gam_summary$s.table)
-    smooth_row  <- smooth_tbl[rownames(smooth_tbl) == "s(time_numeric)", , drop = FALSE]
+    smooth_row  <- smooth_tbl[1, , drop = FALSE]   # only one smooth term
     
     summary_rows[[brite_category]] <- make_summary_row(
       level_name, brite_category, d,
