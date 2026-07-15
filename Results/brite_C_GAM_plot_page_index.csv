@@ -1,0 +1,208 @@
+brite_class,page
+03021 Transcription machinery [BR:ko03021],1
+99998 Others,1
+00566 Sulfoquinovose metabolism [PATH:ko00566],1
+00360 Phenylalanine metabolism [PATH:ko00360],1
+04147 Exosome [BR:ko04147],1
+00410 beta-Alanine metabolism [PATH:ko00410],1
+01504 Antimicrobial resistance genes [BR:ko01504],1
+00550 Peptidoglycan biosynthesis [PATH:ko00550],1
+02025 Biofilm formation - Pseudomonas aeruginosa [PATH:ko02025],1
+04812 Cytoskeleton proteins [BR:ko04812],1
+04990 Domain-containing proteins not elsewhere classified [BR:ko04990],1
+04121 Ubiquitin system [BR:ko04121],1
+99978 Cell growth,1
+04144 Endocytosis [PATH:ko04144],1
+00770 Pantothenate and CoA biosynthesis [PATH:ko00770],1
+99975 Protein processing,1
+00565 Ether lipid metabolism [PATH:ko00565],1
+00983 Drug metabolism - other enzymes [PATH:ko00983],1
+00982 Drug metabolism - cytochrome P450 [PATH:ko00982],1
+00900 Terpenoid backbone biosynthesis [PATH:ko00900],1
+04518 Integrin signaling [PATH:ko04518],1
+00331 Clavulanic acid biosynthesis [PATH:ko00331],1
+00120 Primary bile acid biosynthesis [PATH:ko00120],1
+00514 Other types of O-glycan biosynthesis [PATH:ko00514],1
+00620 Pyruvate metabolism [PATH:ko00620],2
+00470 D-Amino acid metabolism [PATH:ko00470],2
+00984 Steroid degradation [PATH:ko00984],2
+04668 TNF signaling pathway [PATH:ko04668],2
+00333 Prodigiosin biosynthesis [PATH:ko00333],2
+00640 Propanoate metabolism [PATH:ko00640],2
+00571 Lipoarabinomannan (LAM) biosynthesis [PATH:ko00571],2
+00010 Glycolysis / Gluconeogenesis [PATH:ko00010],2
+00541 Biosynthesis of various nucleotide sugars [PATH:ko00541],2
+00564 Glycerophospholipid metabolism [PATH:ko00564],2
+04068 FoxO signaling pathway [PATH:ko04068],2
+03410 Base excision repair [PATH:ko03410],2
+00364 Fluorobenzoate degradation [PATH:ko00364],2
+00941 Flavonoid biosynthesis [PATH:ko00941],2
+"00945 Stilbenoid, diarylheptanoid and gingerol biosynthesis [PATH:ko00945]",2
+02000 Transporters [BR:ko02000],2
+04145 Phagosome [PATH:ko04145],2
+00552 Teichoic acid biosynthesis [PATH:ko00552],2
+00830 Retinol metabolism [PATH:ko00830],2
+04370 VEGF signaling pathway [PATH:ko04370],2
+00071 Fatty acid degradation [PATH:ko00071],2
+00561 Glycerolipid metabolism [PATH:ko00561],2
+01053 Biosynthesis of siderophore group nonribosomal peptides [PATH:ko01053],2
+01002 Peptidases and inhibitors [BR:ko01002],2
+02042 Bacterial toxins [BR:ko02042],3
+04139 Mitophagy - yeast [PATH:ko04139],3
+00525 Acarbose and validamycin biosynthesis [PATH:ko00525],3
+00340 Histidine metabolism [PATH:ko00340],3
+03036 Chromosome and associated proteins [BR:ko03036],3
+99977 Transport,3
+99980 Enzymes with EC numbers,3
+"00960 Tropane, piperidine and pyridine alkaloid biosynthesis [PATH:ko00960]",3
+00901 Indole alkaloid biosynthesis [PATH:ko00901],3
+00975 Biosynthesis of various siderophores [PATH:ko00975],3
+00626 Naphthalene degradation [PATH:ko00626],3
+04550 Signaling pathways regulating pluripotency of stem cells [PATH:ko04550],3
+00523 Polyketide sugar unit biosynthesis [PATH:ko00523],3
+04112 Cell cycle - Caulobacter [PATH:ko04112],3
+99981 Carbohydrate metabolism,3
+00790 Folate biosynthesis [PATH:ko00790],3
+00537 Glycosylphosphatidylinositol (GPI)-anchored proteins [BR:ko00537],3
+00401 Novobiocin biosynthesis [PATH:ko00401],3
+00515 Mannose type O-glycan biosynthesis [PATH:ko00515],3
+02030 Bacterial chemotaxis [PATH:ko02030],3
+02010 ABC transporters [PATH:ko02010],3
+99995 Signaling proteins,3
+00365 Furfural degradation [PATH:ko00365],3
+99983 Lipid metabolism,3
+"00522 Biosynthesis of 12-, 14- and 16-membered macrolides [PATH:ko00522]",4
+04820 Cytoskeleton in muscle cells [PATH:ko04820],4
+00440 Phosphonate and phosphinate metabolism [PATH:ko00440],4
+00622 Xylene degradation [PATH:ko00622],4
+00361 Chlorocyclohexane and chlorobenzene degradation [PATH:ko00361],4
+00643 Styrene degradation [PATH:ko00643],4
+01004 Lipid biosynthesis proteins [BR:ko01004],4
+03258 Virion - Bacteriophage lambda [PATH:ko03258],4
+00311 Penicillin and cephalosporin biosynthesis [PATH:ko00311],4
+02024 Quorum sensing [PATH:ko02024],4
+00532 Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate [PATH:ko00532],4
+00604 Glycosphingolipid biosynthesis - ganglio series [PATH:ko00604],4
+04216 Ferroptosis [PATH:ko04216],4
+00944 Flavone and flavonol biosynthesis [PATH:ko00944],4
+00906 Carotenoid biosynthesis [PATH:ko00906],4
+00363 Bisphenol degradation [PATH:ko00363],4
+04310 Wnt signaling pathway [PATH:ko04310],4
+00965 Betalain biosynthesis [PATH:ko00965],4
+00909 Sesquiterpenoid and triterpenoid biosynthesis [PATH:ko00909],4
+00623 Toluene degradation [PATH:ko00623],4
+01008 Polyketide biosynthesis proteins [BR:ko01008],4
+04080 Neuroactive ligand-receptor interaction [PATH:ko04080],4
+99993 Cell motility,4
+00053 Ascorbate and aldarate metabolism [PATH:ko00053],4
+02044 Secretion system [BR:ko02044],5
+04217 Necroptosis [PATH:ko04217],5
+01054 Nonribosomal peptide structures [PATH:ko01054],5
+04330 Notch signaling pathway [PATH:ko04330],5
+00531 Glycosaminoglycan degradation [PATH:ko00531],5
+04131 Membrane trafficking [BR:ko04131],5
+04540 Gap junction [PATH:ko04540],5
+00511 Other glycan degradation [PATH:ko00511],5
+03070 Bacterial secretion system [PATH:ko03070],5
+03083 Polycomb repressive complex [PATH:ko03083],5
+03200 Viral proteins [BR:ko03200],5
+03082 ATP-dependent chromatin remodeling [PATH:ko03082],5
+04081 Hormone signaling [PATH:ko04081],5
+00052 Galactose metabolism [PATH:ko00052],5
+04030 G protein-coupled receptors [BR:ko04030],5
+04012 ErbB signaling pathway [PATH:ko04012],5
+04630 JAK-STAT signaling pathway [PATH:ko04630],5
+04341 Hedgehog signaling pathway - fly [PATH:ko04341],5
+01040 Biosynthesis of unsaturated fatty acids [PATH:ko01040],5
+00350 Tyrosine metabolism [PATH:ko00350],5
+01009 Protein phosphatases and associated proteins [BR:ko01009],5
+00513 Various types of N-glycan biosynthesis [PATH:ko00513],5
+03016 Transfer RNA biogenesis [BR:ko03016],5
+04510 Focal adhesion [PATH:ko04510],5
+02040 Flagellar assembly [PATH:ko02040],6
+00603 Glycosphingolipid biosynthesis - globo and isoglobo series [PATH:ko00603],6
+04064 NF-kappa B signaling pathway [PATH:ko04064],6
+00536 Glycosaminoglycan binding proteins [BR:ko00536],6
+01057 Biosynthesis of type II polyketide products [PATH:ko01057],6
+04010 MAPK signaling pathway [PATH:ko04010],6
+04152 AMPK signaling pathway [PATH:ko04152],6
+04090 CD molecules [BR:ko04090],6
+00908 Zeatin biosynthesis [PATH:ko00908],6
+00563 Glycosylphosphatidylinositol (GPI)-anchor biosynthesis [PATH:ko00563],6
+00253 Tetracycline biosynthesis [PATH:ko00253],6
+00943 Isoflavonoid biosynthesis [PATH:ko00943],6
+04517 IgSF CAM signaling [PATH:ko04517],6
+03000 Transcription factors [BR:ko03000],6
+"00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",6
+03037 Cilium and associated proteins [BR:ko03037],6
+99987 Cofactor metabolism,6
+99984 Nucleotide metabolism,6
+00405 Phenazine biosynthesis [PATH:ko00405],6
+99976 Replication and repair,6
+04014 Ras signaling pathway [PATH:ko04014],6
+03051 Proteasome [BR:ko03051],6
+03032 DNA replication proteins [BR:ko03032],6
+04082 Neuroactive ligand signaling [PATH:ko04082],6
+01056 Biosynthesis of type II polyketide backbone [PATH:ko01056],7
+00402 Benzoxazinoid biosynthesis [PATH:ko00402],7
+04040 Ion channels [BR:ko04040],7
+00600 Sphingolipid metabolism [PATH:ko00600],7
+04519 Cadherin signaling [PATH:ko04519],7
+03272 Virion - Hepatitis viruses [PATH:ko03272],7
+01055 Biosynthesis of vancomycin group antibiotics [PATH:ko01055],7
+04512 ECM-receptor interaction [PATH:ko04512],7
+04392 Hippo signaling pathway - multiple species [PATH:ko04392],7
+05111 Biofilm formation - Vibrio cholerae [PATH:ko05111],7
+04390 Hippo signaling pathway [PATH:ko04390],7
+04151 PI3K-Akt signaling pathway [PATH:ko04151],7
+04011 MAPK signaling pathway - yeast [PATH:ko04011],7
+"00524 Neomycin, kanamycin and gentamicin biosynthesis [PATH:ko00524]",7
+00996 Biosynthesis of various alkaloids [PATH:ko00996],7
+04111 Cell cycle - yeast [PATH:ko04111],7
+04810 Regulation of actin cytoskeleton [PATH:ko04810],7
+04520 Adherens junction [PATH:ko04520],7
+03266 Virion - Herpesvirus [PATH:ko03266],7
+04050 Cytokine receptors [BR:ko04050],7
+04060 Cytokine-cytokine receptor interaction [PATH:ko04060],7
+04061 Viral protein interaction with cytokine and cytokine receptor [PATH:ko04061],7
+00404 Staurosporine biosynthesis [PATH:ko00404],7
+04371 Apelin signaling pathway [PATH:ko04371],7
+00062 Fatty acid elongation [PATH:ko00062],8
+99985 Amino acid metabolism,8
+00100 Steroid biosynthesis [PATH:ko00100],8
+04150 mTOR signaling pathway [PATH:ko04150],8
+04054 Pattern recognition receptors [BR:ko04054],8
+03260 Virion - Human immunodeficiency virus [PATH:ko03260],8
+03264 Virion - Flavivirus and Alphavirus [PATH:ko03264],8
+"03265 Virion - Ebolavirus, Lyssavirus and Morbillivirus [PATH:ko03265]",8
+03273 Virion - Lassa virus and SFTS virus [PATH:ko03273],8
+03040 Spliceosome [PATH:ko03040],8
+99992 Structural proteins,8
+03250 Viral life cycle - HIV-1 [PATH:ko03250],8
+04391 Hippo signaling pathway - fly [PATH:ko04391],8
+04146 Peroxisome [PATH:ko04146],8
+04114 Oocyte meiosis [PATH:ko04114],8
+00512 Mucin type O-glycan biosynthesis [PATH:ko00512],8
+04515 Cell adhesion molecules [BR:ko04515],8
+04091 Lectins [BR:ko04091],8
+00535 Proteoglycans [BR:ko00535],8
+99974 Translation,8
+04218 Cellular senescence [PATH:ko04218],8
+00199 Cytochrome P450 [BR:ko00199],8
+00624 Polycyclic aromatic hydrocarbon degradation [PATH:ko00624],8
+01052 Type I polyketide structures [PATH:ko01052],8
+04514 Cell adhesion molecule (CAM) interaction [PATH:ko04514],9
+04015 Rap1 signaling pathway [PATH:ko04015],9
+00140 Steroid hormone biosynthesis [PATH:ko00140],9
+00533 Glycosaminoglycan biosynthesis - keratan sulfate [PATH:ko00533],9
+00534 Glycosaminoglycan biosynthesis - heparan sulfate / heparin [PATH:ko00534],9
+00601 Glycosphingolipid biosynthesis - lacto and neolacto series [PATH:ko00601],9
+00621 Dioxin degradation [PATH:ko00621],9
+00904 Diterpenoid biosynthesis [PATH:ko00904],9
+00905 Brassinosteroid biosynthesis [PATH:ko00905],9
+04031 GTP-binding proteins [BR:ko04031],9
+04130 SNARE interactions in vesicular transport [PATH:ko04130],9
+04136 Autophagy - other [PATH:ko04136],9
+04340 Hedgehog signaling pathway [PATH:ko04340],9
+04350 TGF-beta signaling pathway [PATH:ko04350],9
+09113 Global maps only,9
