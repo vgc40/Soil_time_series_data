@@ -1,0 +1,7 @@
+brite_level,Cluster_ID,environmental_variable,n_complete,rho,p_value,p_adj_fdr,significance,environmental_label
+brite_C,Cluster_2,SoilTemp_mean,35,-0.6718858327341719,9.894871222692543e-6,2.9684613668077626e-4,***,Mean soil temperature
+brite_C,Cluster_2,pH,35,-0.5938750100222238,1.692794610446261e-4,0.0025391919156693915,**,pH
+brite_C,Cluster_1,Resp_rate_mg_C_m2_h,35,0.5509803921568628,6.034251721269133e-4,0.006034251721269133,**,Field respiration
+brite_C,Cluster_2,SETN_ug_gdw,35,0.48235294117647065,0.003341493179431114,0.025061198845733355,*,Salt-extractable total N
+brite_C,Cluster_3,pH,35,-0.44389949415633284,0.007558272742458464,0.043271545890707044,*,pH
+brite_C,Cluster_1,SoilTemp_mean,35,0.43707941539970335,0.008654309178141409,0.043271545890707044,*,Mean soil temperature

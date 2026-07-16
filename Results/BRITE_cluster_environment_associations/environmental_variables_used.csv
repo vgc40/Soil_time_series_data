@@ -1,0 +1,11 @@
+environmental_variable,environmental_label
+GWC,Gravimetric water content
+pH,pH
+SoilTemp_mean,Mean soil temperature
+SEOC_ug_gdw,Salt-extractable organic C
+SETN_ug_gdw,Salt-extractable total N
+SEOC_SETN_ratio,SEOC:SETN
+MBC_ug_gdw_bgc,Microbial biomass C
+MBN_ug_gdw_bgc,Microbial biomass N
+Roots_gdw,Root biomass
+Resp_rate_mg_C_m2_h,Field respiration
