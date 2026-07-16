@@ -12,7 +12,7 @@
 
 rm(list = ls())
 
-required_packages <- c("tidyverse", "readr")
+required_packages <- c("tidyverse", "readr", "ggforce")
 missing_packages <- required_packages[
   !required_packages %in% rownames(installed.packages())
 ]
@@ -28,6 +28,7 @@ if (length(missing_packages) > 0) {
 suppressPackageStartupMessages({
   library(tidyverse)
   library(readr)
+  library(ggforce)
 })
 
 theme_set(theme_bw(base_size = 11))
@@ -290,85 +291,44 @@ plot_lines <- target_predictions %>%
   left_join(pathway_labels, by = "pathway_code")
 
 n_target_pathways <- n_distinct(plot_lines$pathway_code)
-plot_height <- max(8, ceiling(n_target_pathways / 3) * 2.8)
 
-all_target_plot <- ggplot(plot_points, aes(Collection_date, Expression)) +
-  geom_point(alpha = 0.4, size = 1, color = "grey35") +
-  geom_ribbon(
-    data = plot_lines,
-    aes(Collection_date, ymin = lower, ymax = upper),
-    inherit.aes = FALSE,
-    fill = "#9ecae1",
-    alpha = 0.35
-  ) +
-  geom_line(
-    data = plot_lines,
-    aes(Collection_date, fitted),
-    inherit.aes = FALSE,
-    color = "#08519c",
-    linewidth = 0.9
-  ) +
-  facet_wrap(~ plot_label, scales = "free_y", ncol = 3) +
-  labs(
-    title = "BRITE C pathways linked to MicroResp substrates",
-    subtitle = paste0(
-      "All matched pathways are shown, regardless of temporal significance. ",
-      "Lines exclude Plot random effects."
-    ),
-    x = "Collection date",
-    y = "BRITE C expression"
-  ) +
-  theme(
-    panel.grid.minor = element_blank(),
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    strip.text = element_text(size = 7)
-  )
+# Build and save faceted plots as six panels per page: 2 rows x 3 columns.
+# The PDF is multi-page, while each page is also saved as a separate PNG.
+make_paginated_gam_plot <- function(
+    point_data,
+    line_data,
+    page_number,
+    plot_title,
+    plot_subtitle,
+    ribbon_color,
+    line_color) {
 
-ggsave(
-  file.path(figures_dir, "MicroResp_target_BRITE_C_all_temporal_GAMs.png"),
-  all_target_plot,
-  width = 14,
-  height = plot_height,
-  dpi = 300,
-  limitsize = FALSE
-)
-
-ggsave(
-  file.path(figures_dir, "MicroResp_target_BRITE_C_all_temporal_GAMs.pdf"),
-  all_target_plot,
-  width = 14,
-  height = plot_height,
-  limitsize = FALSE
-)
-
-significant_codes <- target_pathways %>%
-  filter(significant_time_microresp_targets == "Yes") %>%
-  pull(pathway_code)
-
-if (length(significant_codes) > 0) {
-  significant_plot <- ggplot(
-    filter(plot_points, pathway_code %in% significant_codes),
-    aes(Collection_date, Expression)
-  ) +
+  ggplot(point_data, aes(Collection_date, Expression)) +
     geom_point(alpha = 0.4, size = 1, color = "grey35") +
     geom_ribbon(
-      data = filter(plot_lines, pathway_code %in% significant_codes),
+      data = line_data,
       aes(Collection_date, ymin = lower, ymax = upper),
       inherit.aes = FALSE,
-      fill = "#a1d99b",
+      fill = ribbon_color,
       alpha = 0.35
     ) +
     geom_line(
-      data = filter(plot_lines, pathway_code %in% significant_codes),
+      data = line_data,
       aes(Collection_date, fitted),
       inherit.aes = FALSE,
-      color = "#238b45",
+      color = line_color,
       linewidth = 0.9
     ) +
-    facet_wrap(~ plot_label, scales = "free_y", ncol = 3) +
+    ggforce::facet_wrap_paginate(
+      ~ plot_label,
+      scales = "free_y",
+      ncol = 3,
+      nrow = 2,
+      page = page_number
+    ) +
     labs(
-      title = "Temporally significant MicroResp-linked BRITE C pathways",
-      subtitle = "Significance uses FDR across the targeted unique BRITE C pathway set",
+      title = plot_title,
+      subtitle = paste0(plot_subtitle, " | Page ", page_number),
       x = "Collection date",
       y = "BRITE C expression"
     ) +
@@ -377,32 +337,108 @@ if (length(significant_codes) > 0) {
       axis.text.x = element_text(angle = 45, hjust = 1),
       strip.text = element_text(size = 7)
     )
+}
 
-  significant_height <- max(7, ceiling(length(significant_codes) / 3) * 2.8)
+save_paginated_gam_plots <- function(
+    point_data,
+    line_data,
+    output_stem,
+    plot_title,
+    plot_subtitle,
+    ribbon_color,
+    line_color) {
 
-  ggsave(
-    file.path(
-      figures_dir,
-      "MicroResp_target_BRITE_C_significant_temporal_GAMs.png"
-    ),
-    significant_plot,
-    width = 14,
-    height = significant_height,
-    dpi = 300,
-    limitsize = FALSE
-  )
+  n_panels <- n_distinct(point_data$plot_label)
+  n_pages <- max(1L, ceiling(n_panels / 6))
+  pdf_file <- file.path(figures_dir, paste0(output_stem, ".pdf"))
 
-  ggsave(
-    file.path(
-      figures_dir,
-      "MicroResp_target_BRITE_C_significant_temporal_GAMs.pdf"
-    ),
-    significant_plot,
-    width = 14,
-    height = significant_height,
-    limitsize = FALSE
+  grDevices::pdf(pdf_file, width = 14, height = 8.5, onefile = TRUE)
+
+  for (page_number in seq_len(n_pages)) {
+    page_plot <- make_paginated_gam_plot(
+      point_data = point_data,
+      line_data = line_data,
+      page_number = page_number,
+      plot_title = plot_title,
+      plot_subtitle = plot_subtitle,
+      ribbon_color = ribbon_color,
+      line_color = line_color
+    )
+
+    print(page_plot)
+
+    ggsave(
+      file.path(
+        figures_dir,
+        paste0(output_stem, "_page_", sprintf("%02d", page_number), ".png")
+      ),
+      page_plot,
+      width = 14,
+      height = 8.5,
+      dpi = 300
+    )
+  }
+
+  grDevices::dev.off()
+
+  tibble(
+    output = output_stem,
+    n_panels = n_panels,
+    panels_per_page = 6L,
+    n_pages = n_pages,
+    layout = "2 rows x 3 columns"
   )
 }
+
+all_target_page_summary <- save_paginated_gam_plots(
+  point_data = plot_points,
+  line_data = plot_lines,
+  output_stem = "MicroResp_target_BRITE_C_all_temporal_GAMs",
+  plot_title = "BRITE C pathways linked to MicroResp substrates",
+  plot_subtitle = paste0(
+    "All matched pathways are shown, regardless of temporal significance. ",
+    "Lines exclude Plot random effects."
+  ),
+  ribbon_color = "#9ecae1",
+  line_color = "#08519c"
+)
+
+significant_codes <- target_pathways %>%
+  filter(significant_time_microresp_targets == "Yes") %>%
+  pull(pathway_code)
+
+if (length(significant_codes) > 0) {
+  significant_page_summary <- save_paginated_gam_plots(
+    point_data = filter(plot_points, pathway_code %in% significant_codes),
+    line_data = filter(plot_lines, pathway_code %in% significant_codes),
+    output_stem = "MicroResp_target_BRITE_C_significant_temporal_GAMs",
+    plot_title = "Temporally significant MicroResp-linked BRITE C pathways",
+    plot_subtitle = paste0(
+      "Significance uses FDR across the targeted unique BRITE C pathway set. ",
+      "Lines exclude Plot random effects."
+    ),
+    ribbon_color = "#a1d99b",
+    line_color = "#238b45"
+  )
+} else {
+  significant_page_summary <- tibble(
+    output = "MicroResp_target_BRITE_C_significant_temporal_GAMs",
+    n_panels = 0L,
+    panels_per_page = 6L,
+    n_pages = 0L,
+    layout = "2 rows x 3 columns"
+  )
+}
+
+plot_page_summary <- bind_rows(
+  all_target_page_summary,
+  significant_page_summary
+)
+
+write_csv(
+  plot_page_summary,
+  file.path(results_dir, "MicroResp_target_BRITE_C_plot_page_summary.csv")
+)
 
 # Heatmap of pathway-specific fitted shape. Each pathway is standardized across
 # dates so the heatmap compares temporal shape rather than expression magnitude.
@@ -490,4 +526,3 @@ cat(
 )
 cat("Results: ", results_dir, "\n", sep = "")
 cat("Figures: ", figures_dir, "\n", sep = "")
-
