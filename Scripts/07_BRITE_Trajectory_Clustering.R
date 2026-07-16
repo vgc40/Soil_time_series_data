@@ -2,10 +2,10 @@
 # BRITE C and BRITE D temporal trajectory clustering
 #
 # Input:
-#   Results/BRITE_temporal_txt_only_significant_only/
+#   Results/BRITE_temporal_gam_random_plot_all_pathways/
 #
 # The input files are produced by:
-#   Scripts/06_GAMS_and_Temporal_plots.R
+#   Scripts/09_BRITE_GAM_random_plot_all_pathways.R
 #
 # Workflow:
 #   1. Analyze BRITE C and BRITE D separately.
@@ -21,7 +21,8 @@ rm(list = ls())
 
 # ---- User settings ----------------------------------------------------------
 
-run_label <- "txt_only_significant_only"
+# Input produced by Scripts/09_BRITE_GAM_random_plot_all_pathways.R.
+run_label <- "gam_random_plot_all_pathways"
 
 # Leave as NA to use the automatically detected elbow.
 # Enter an integer, for example 3, to override one result after reviewing
@@ -76,8 +77,14 @@ input_dir <- file.path(
   paste0("BRITE_temporal_", run_label)
 )
 
-results_dir <- file.path("Results", "BRITE_clustering_elbow")
-figures_dir <- file.path("Figures", "BRITE_clustering_elbow")
+results_dir <- file.path(
+  "Results",
+  "BRITE_clustering_random_plot_elbow"
+)
+figures_dir <- file.path(
+  "Figures",
+  "BRITE_clustering_random_plot_elbow"
+)
 
 dir.create(results_dir, showWarnings = FALSE, recursive = TRUE)
 dir.create(figures_dir, showWarnings = FALSE, recursive = TRUE)
@@ -555,6 +562,8 @@ analyze_brite_clustering <- function(level_name) {
           p_value,
           p_adj_fdr,
           adj_r_squared,
+          deviance_explained_full,
+          time_variance_explained,
           F_statistic,
           edf
         ),
@@ -714,7 +723,9 @@ analyze_brite_clustering <- function(level_name) {
 
   top_assignments <- assignments %>%
     mutate(
-      strength_rank = coalesce(adj_r_squared, -Inf),
+      # Rank the readable heatmap by the temporal trajectory itself rather
+      # than by the full model, which also includes among-Plot differences.
+      strength_rank = coalesce(time_variance_explained, adj_r_squared, -Inf),
       f_rank = coalesce(F_statistic, -Inf)
     ) %>%
     arrange(desc(strength_rank), desc(f_rank), p_adj_fdr) %>%
