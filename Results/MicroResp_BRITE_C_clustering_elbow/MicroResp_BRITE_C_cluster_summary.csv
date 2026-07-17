@@ -1,0 +1,4 @@
+selected_k,automatic_elbow_k,Cluster_ID,n_pathways,n_temporally_significant,mean_time_variance_explained
+3,3,Cluster_1,12,11,0.33889952720083244
+3,3,Cluster_2,13,8,0.26010482611075925
+3,3,Cluster_3,6,1,0.17909545941263902

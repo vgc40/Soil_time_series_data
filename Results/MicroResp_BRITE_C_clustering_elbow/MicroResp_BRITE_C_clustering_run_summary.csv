@@ -1,0 +1,2 @@
+n_mapping_rows,n_unique_mapped_converged_pathways,n_clustered_pathways,n_target_FDR_significant,automatic_elbow_k,selected_k,manual_override_used,clustering_distance,clustering_method,trajectory_scale
+150,31,31,20,3,3,FALSE,1 - Pearson correlation,Ward.D2,Row z-score of population GAM fitted trajectories
