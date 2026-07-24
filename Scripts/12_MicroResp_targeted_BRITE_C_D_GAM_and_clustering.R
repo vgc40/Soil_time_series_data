@@ -127,8 +127,16 @@ make_paginated_gam_plots <- function(points, predictions, level, level_dir) {
   for (page in seq_len(n_pages)) {
     plot_page <- ggplot(points, aes(Collection_date, Expression)) +
       geom_point(alpha = 0.35, size = 0.9, color = "grey35") +
-      geom_ribbon(data = predictions, aes(ymin = lower, ymax = upper), inherit.aes = FALSE, fill = "#9ecae1", alpha = 0.35) +
-      geom_line(data = predictions, aes(y = fitted), inherit.aes = FALSE, color = "#08519c", linewidth = 0.8) +
+      geom_ribbon(
+        data = predictions,
+        aes(x = Collection_date, ymin = lower, ymax = upper),
+        inherit.aes = FALSE, fill = "#9ecae1", alpha = 0.35
+      ) +
+      geom_line(
+        data = predictions,
+        aes(x = Collection_date, y = fitted),
+        inherit.aes = FALSE, color = "#08519c", linewidth = 0.8
+      ) +
       ggforce::facet_wrap_paginate(~plot_label, scales = "free_y", ncol = 3, nrow = 2, page = page) +
       labs(title = paste0("MicroResp-linked ", str_replace(level, "_", " "), " GAMs"),
            subtitle = paste0("All mapped, converged features. Population time trend, page ", page, " of ", n_pages),
@@ -249,7 +257,11 @@ analyze_level <- function(level) {
   write_csv(as.data.frame(zmat) %>% rownames_to_column("feature_code"), file.path(results_dir, paste0(level, "_MicroResp_zscored_fitted_trajectories.csv")))
 
   correlation <- cor(t(zmat), use = "pairwise.complete.obs")
-  distance <- as.dist(pmax(0, 1 - correlation))
+  distance_matrix <- 1 - correlation
+  distance_matrix[distance_matrix < 0] <- 0
+  diag(distance_matrix) <- 0
+  distance <- as.dist(distance_matrix)
+  
   hc <- hclust(distance, method = "ward.D2")
   kmax <- min(max_k_to_test, nrow(zmat) - 1L)
   elbow <- map_dfr(1:kmax, function(k) {
