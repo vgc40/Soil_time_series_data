@@ -1,0 +1,9 @@
+Visual authority: MicroResp_BRITE_C_D_targeted_temporal_results.pptx.
+The reference uses a white 16:9 canvas, navy headline type, restrained blue accents, thin dividers, large evidence panels, and compact source footers.
+Reusable source patterns selected for this deck:
+- Slide 1: minimal title.
+- Slide 2: process/three-metric summary.
+- Slide 3: two evidence panels.
+- Slides 4 and 7: large figure plus three cluster statements and an interpretation callout.
+All output slides duplicate these source slides and rewrite or replace inherited elements in place.
+Narrative: MEFISTO Factor 1 selection -> BRITE aggregation -> temporal GAMs -> MicroResp intersection -> elbow-selected clustering -> BRITE C/D timing modes -> storyboard interpretation.

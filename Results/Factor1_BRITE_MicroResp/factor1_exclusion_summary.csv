@@ -1,0 +1,3 @@
+brite_level,starting_rows,removed_from_text,remaining_rows,exclusion_source,model
+brite_D,6789,451,6338,kegg_human_exclude_2026-07-13.txt,"Expression ~ s(time_numeric, k = 6) + s(Plot, bs = 're')"
+brite_C,516,168,348,kegg_human_exclude_2026-07-13.txt,"Expression ~ s(time_numeric, k = 6) + s(Plot, bs = 're')"

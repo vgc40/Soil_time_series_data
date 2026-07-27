@@ -1,0 +1,4 @@
+Output uses eight slides rather than all eleven source slides because the targeted MicroResp story is narrower.
+Figures are replaced with the July 24 MicroResp-targeted BRITE C/D outputs.
+Visible source lines are updated to repository-relative paths for reproducibility.
+No external claims or external visual assets are introduced.

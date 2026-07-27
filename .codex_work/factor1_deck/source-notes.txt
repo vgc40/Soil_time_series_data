@@ -1,0 +1,4 @@
+Storyboard source: SFA3-1-1_VGC_Storyboard_v2.docx, previously extracted for the companion deck.
+Analysis source: Scripts/13_Factor1_expression_MicroResp_BRITE_C_D.R.
+Primary results: Results/Factor1_BRITE_MicroResp and Figures/Factor1_BRITE_MicroResp.
+Visual source: MicroResp_BRITE_C_D_targeted_temporal_results.pptx.

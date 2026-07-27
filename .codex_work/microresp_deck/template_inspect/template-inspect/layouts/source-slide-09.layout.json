@@ -1,0 +1,614 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/udsvah03",
+    "id": "udsvah03",
+    "slide": 9,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/r2lgf6pc",
+      "id": "1",
+      "name": "Table 1",
+      "bbox": [
+        59.49,
+        14.87,
+        1134.43,
+        694.99
+      ],
+      "text": "Temporal pattern | MicroResp | Field transcripts | Interpretation\nWinter/early-spring activation | Broad Cluster 2 winter peak | BRITE C winter-high cluster and BRITE D late-activation cluster | Strongest evidence for a seasonal phenotype expressed across scales\nSpring rebound | Cluster 2 rebounds near June | BRITE C May-rebound pathways and BRITE D May-rebound KOs | Field transcription may accompany, or potentially precede, renewed substrate-use potential\nEarly-summer activity | Many MicroResp substrates are relatively low | Large BRITE C and D groups are highest in June–July | Field transcription and standardized substrate-use potential are decoupled during the growing season\nFall pulse | Clear MicroResp Cluster 1 peak in September–October | No comparably dominant BRITE trajectory | Fall potential may be transient, phenotype-specific, or poorly resolved by the transcript sampling",
+      "textPreview": "Temporal pattern | MicroResp | Field transcripts | Interpretation | Winter/early-spring activation | Broad Cluster 2 winter peak | BRITE ...",
+      "rows": 5,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            59.49,
+            14.87,
+            283.61,
+            44.59
+          ],
+          "text": "Temporal pattern",
+          "textPreview": "Temporal pattern",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Temporal pattern",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Temporal pattern",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            343.1,
+            14.87,
+            283.61,
+            44.59
+          ],
+          "text": "MicroResp",
+          "textPreview": "MicroResp",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "MicroResp",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "MicroResp",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            626.7,
+            14.87,
+            283.61,
+            44.59
+          ],
+          "text": "Field transcripts",
+          "textPreview": "Field transcripts",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Field transcripts",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Field transcripts",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            910.31,
+            14.87,
+            283.61,
+            44.59
+          ],
+          "text": "Interpretation",
+          "textPreview": "Interpretation",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Interpretation",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Interpretation",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            59.49,
+            59.47,
+            283.61,
+            112.02
+          ],
+          "text": "Winter/early-spring activation",
+          "textPreview": "Winter/early-spring activation",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Winter/early-spring activation",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Winter/early-spring activation",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            343.1,
+            59.47,
+            283.61,
+            112.02
+          ],
+          "text": "Broad Cluster 2 winter peak",
+          "textPreview": "Broad Cluster 2 winter peak",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Broad Cluster 2 winter peak",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Broad Cluster 2 winter peak",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            626.7,
+            59.47,
+            283.61,
+            112.02
+          ],
+          "text": "BRITE C winter-high cluster and BRITE D late-activation cluster",
+          "textPreview": "BRITE C winter-high cluster and BRITE D late-activation cluster",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "BRITE C winter-high cluster and BRITE D late-activation cluster",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "BRITE C winter-high cluster and BRITE D late-activation cluster",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            910.31,
+            59.47,
+            283.61,
+            112.02
+          ],
+          "text": "Strongest evidence for a seasonal phenotype expressed across scales",
+          "textPreview": "Strongest evidence for a seasonal phenotype expressed across scales",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Strongest evidence for a seasonal phenotype expressed across scales",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Strongest evidence for a seasonal phenotype expressed across scales",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            59.49,
+            171.49,
+            283.61,
+            179.46
+          ],
+          "text": "Spring rebound",
+          "textPreview": "Spring rebound",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Spring rebound",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Spring rebound",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            343.1,
+            171.49,
+            283.61,
+            179.46
+          ],
+          "text": "Cluster 2 rebounds near June",
+          "textPreview": "Cluster 2 rebounds near June",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Cluster 2 rebounds near June",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Cluster 2 rebounds near June",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            626.7,
+            171.49,
+            283.61,
+            179.46
+          ],
+          "text": "BRITE C May-rebound pathways and BRITE D May-rebound KOs",
+          "textPreview": "BRITE C May-rebound pathways and BRITE D May-rebound KOs",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "BRITE C May-rebound pathways and BRITE D May-rebound KOs",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "BRITE C May-rebound pathways and BRITE D May-rebound KOs",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            910.31,
+            171.49,
+            283.61,
+            179.46
+          ],
+          "text": "Field transcription may accompany, or potentially precede, renewed substrate-use potential",
+          "textPreview": "Field transcription may accompany, or potentially precede, renewed substrate-use potential",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Field transcription may accompany, or potentially precede, renewed substrate-use potential",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Field transcription may accompany, or potentially precede, renewed substrate-use potential",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            59.49,
+            350.95,
+            283.61,
+            179.46
+          ],
+          "text": "Early-summer activity",
+          "textPreview": "Early-summer activity",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Early-summer activity",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Early-summer activity",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            343.1,
+            350.95,
+            283.61,
+            179.46
+          ],
+          "text": "Many MicroResp substrates are relatively low",
+          "textPreview": "Many MicroResp substrates are relatively low",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Many MicroResp substrates are relatively low",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Many MicroResp substrates are relatively low",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            626.7,
+            350.95,
+            283.61,
+            179.46
+          ],
+          "text": "Large BRITE C and D groups are highest in June–July",
+          "textPreview": "Large BRITE C and D groups are highest in June–July",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Large BRITE C and D groups are highest in June–July",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Large BRITE C and D groups are highest in June–July",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            910.31,
+            350.95,
+            283.61,
+            179.46
+          ],
+          "text": "Field transcription and standardized substrate-use potential are decoupled during the growing season",
+          "textPreview": "Field transcription and standardized substrate-use potential are decoupled during the growing season",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Field transcription and standardized substrate-use potential are decoupled during the growing season",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Field transcription and standardized substrate-use potential are decoupled during the growing season",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            59.49,
+            530.4,
+            283.61,
+            179.46
+          ],
+          "text": "Fall pulse",
+          "textPreview": "Fall pulse",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Fall pulse",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fall pulse",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            343.1,
+            530.4,
+            283.61,
+            179.46
+          ],
+          "text": "Clear MicroResp Cluster 1 peak in September–October",
+          "textPreview": "Clear MicroResp Cluster 1 peak in September–October",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Clear MicroResp Cluster 1 peak in September–October",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Clear MicroResp Cluster 1 peak in September–October",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            626.7,
+            530.4,
+            283.61,
+            179.46
+          ],
+          "text": "No comparably dominant BRITE trajectory",
+          "textPreview": "No comparably dominant BRITE trajectory",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "No comparably dominant BRITE trajectory",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "No comparably dominant BRITE trajectory",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            910.31,
+            530.4,
+            283.61,
+            179.46
+          ],
+          "text": "Fall potential may be transient, phenotype-specific, or poorly resolved by the transcript sampling",
+          "textPreview": "Fall potential may be transient, phenotype-specific, or poorly resolved by the transcript sampling",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Fall potential may be transient, phenotype-specific, or poorly resolved by the transcript sampling",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fall potential may be transient, phenotype-specific, or poorly resolved by the transcript sampling",
+                  "fontSize": 20
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

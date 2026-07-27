@@ -1,0 +1,118 @@
+{"kind":"deck","id":"pr/41zon9","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/7giaov","slide":1,"title":"SOILS SFA | PROSSER TIME SERIES","textShapes":4}
+{"kind":"textbox","id":"sh/e1czul4z","slide":1,"name":"Rectangle 5","text":"SOILS SFA | PROSSER TIME SERIES","textPreview":"SOILS SFA | PROSSER TIME SERIES","textChars":31,"textLines":1,"bbox":[42,40,560,26]}
+{"kind":"textbox","id":"sh/6xszq1o3","slide":1,"name":"Rectangle 1","text":"MEFISTO Factor 1 genes contain three seasonal expression programs","textPreview":"MEFISTO Factor 1 genes contain three seasonal expression programs","textChars":65,"textLines":1,"bbox":[42,205,1020,190]}
+{"kind":"shape","id":"sh/rylgj65o","slide":1,"name":"Rectangle 2","bbox":[42,430,1196,5]}
+{"kind":"textbox","id":"sh/g3uhwvm5","slide":1,"name":"Rectangle 3","text":"Factor 1 gene selection, BRITE aggregation, temporal GAMs, MicroResp overlap, and trajectory clustering","textPreview":"Factor 1 gene selection, BRITE aggregation, temporal GAMs, MicroResp overlap, and trajectory clustering","textChars":103,"textLines":1,"bbox":[42,468,970,72]}
+{"kind":"textbox","id":"sh/1o3ypgnq","slide":1,"name":"Rectangle 4","text":"100% irrigation metatranscriptomes | Seven dates | July 2026","textPreview":"100% irrigation metatranscriptomes | Seven dates | July 2026","textChars":60,"textLines":1,"bbox":[42,622,1000,28]}
+{"kind":"notes","id":"nt/7giaov","slide":1,"text":"[Sources]\nScripts/13_Factor1_expression_MicroResp_BRITE_C_D.R\nSFA3-1-1_VGC_Storyboard_v2.docx"}
+{"kind":"slide","id":"sl/u32faz","slide":2,"title":"FACTOR 1 FOLLOW-ON ANALYSIS","textShapes":12}
+{"kind":"textbox","id":"sh/mpkv2tk7","slide":2,"name":"Rectangle 19","text":"FACTOR 1 FOLLOW-ON ANALYSIS","textPreview":"FACTOR 1 FOLLOW-ON ANALYSIS","textChars":27,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/s3mlkf2d","slide":2,"name":"Rectangle 1","text":"The workflow asks which Factor 1 transcripts align with MicroResp-linked functions","textPreview":"The workflow asks which Factor 1 transcripts align with MicroResp-linked functions","textChars":82,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/t4v2dk3y","slide":2,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/e543mpkj","slide":2,"name":"Rectangle 3","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"textbox","id":"sh/f6dkful4","slide":2,"name":"Rectangle 4","text":"MEFISTO Factor 1 features were filtered from the original expression matrix, annotated to KEGG, aggregated to BRITE C pathways and BRITE D KOs, modeled through time, intersected with the MicroResp map, and clustered by fitted trajectory shape.","textPreview":"MEFISTO Factor 1 features were filtered from the original expression matrix, annotated to KEGG, aggregated to BRITE C pathways and BRITE ...","textChars":243,"textLines":1,"bbox":[42,168,1150,70]}
+{"kind":"shape","id":"sh/g7mloz29","slide":2,"name":"Rectangle 5","bbox":[42,286,378,280]}
+{"kind":"shape","id":"sh/18f2h43u","slide":2,"name":"Rectangle 6","bbox":[42,286,378,8]}
+{"kind":"textbox","id":"sh/a9kja54z","slide":2,"name":"Rectangle 7","text":"770k","textPreview":"770k","textChars":4,"textLines":1,"bbox":[70,334,320,95]}
+{"kind":"textbox","id":"sh/vatk3alk","slide":2,"name":"Rectangle 8","text":"unique Factor 1 transcript features","textPreview":"unique Factor 1 transcript features","textChars":35,"textLines":1,"bbox":[70,456,315,70]}
+{"kind":"shape","id":"sh/fmxcrih8","slide":2,"name":"Rectangle 9","bbox":[451,286,378,280]}
+{"kind":"shape","id":"sh/u1ovyx0n","slide":2,"name":"Rectangle 10","bbox":[451,286,378,8]}
+{"kind":"textbox","id":"sh/hofutsze","slide":2,"name":"Rectangle 11","text":"516","textPreview":"516","textChars":3,"textLines":1,"bbox":[479,334,320,95]}
+{"kind":"textbox","id":"sh/gn6d0nit","slide":2,"name":"Rectangle 12","text":"unique BRITE C pathways represented","textPreview":"unique BRITE C pathways represented","textChars":35,"textLines":1,"bbox":[479,456,315,70]}
+{"kind":"shape","id":"sh/7ydcni1c","slide":2,"name":"Rectangle 13","bbox":[860,286,378,280]}
+{"kind":"shape","id":"sh/6x4vud0r","slide":2,"name":"Rectangle 14","bbox":[860,286,378,8]}
+{"kind":"textbox","id":"sh/t0fupsz2","slide":2,"name":"Rectangle 15","text":"6,789","textPreview":"6,789","textChars":5,"textLines":1,"bbox":[888,334,320,95]}
+{"kind":"textbox","id":"sh/sz6dwnih","slide":2,"name":"Rectangle 16","text":"unique BRITE D KOs represented","textPreview":"unique BRITE D KOs represented","textChars":30,"textLines":1,"bbox":[888,456,315,70]}
+{"kind":"textbox","id":"sh/judcjy10","slide":2,"name":"Rectangle 17","text":"GAM: Expression ~ s(time, k = 6) + s(Plot, random effect). Clustering: row z-score, 1 - Pearson correlation, Ward.D2.","textPreview":"GAM: Expression ~ s(time, k = 6) + s(Plot, random effect). Clustering: row z-score, 1 - Pearson correlation, Ward.D2.","textChars":117,"textLines":1,"bbox":[42,600,1170,44]}
+{"kind":"textbox","id":"sh/it4vqt0f","slide":2,"name":"Rectangle 18","text":"Source: factor1_gene_summary.csv and run_manifest.csv","textPreview":"Source: factor1_gene_summary.csv and run_manifest.csv","textChars":53,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"notes","id":"nt/u32faz","slide":2,"text":"[Sources]\nResults/Factor1_BRITE_MicroResp/factor1_gene_summary.csv\nResults/Factor1_BRITE_MicroResp/run_manifest.csv\nScripts/13_Factor1_expression_MicroResp_BRITE_C_D.R"}
+{"kind":"slide","id":"sl/0npbwd","slide":3,"title":"FACTOR 1 FUNCTIONAL BREADTH","textShapes":7}
+{"kind":"textbox","id":"sh/g3m1gbmx","slide":3,"name":"Rectangle 5","text":"FACTOR 1 FUNCTIONAL BREADTH","textPreview":"FACTOR 1 FUNCTIONAL BREADTH","textChars":27,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/szm1cbml","slide":3,"name":"Rectangle 1","text":"Factor 1 genes span broad pathway- and KO-level functional space","textPreview":"Factor 1 genes span broad pathway- and KO-level functional space","textChars":64,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/t0vilwn6","slide":3,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/e14je14r","slide":3,"name":"Rectangle 3","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/f2dkn65c","slide":3,"name":"Rectangle 4","bbox":[42,172,560,420]}
+{"kind":"shape","id":"sh/14v2pg3i","slide":3,"name":"Rectangle 6","bbox":[640,172,560,420]}
+{"kind":"textbox","id":"sh/36xkrql8","slide":3,"name":"Rectangle 8","text":"BRITE C","textPreview":"BRITE C","textChars":7,"textLines":1,"bbox":[50,147.01,140,26]}
+{"kind":"textbox","id":"sh/bqlgvmpo","slide":3,"name":"Rectangle 9","text":"BRITE D","textPreview":"BRITE D","textChars":7,"textLines":1,"bbox":[644,143,140,26]}
+{"kind":"textbox","id":"sh/qpczmh83","slide":3,"name":"Rectangle 10","text":"The most gene-rich annotations include central metabolism, biosynthesis, transport, energy conservation, and information-processing functions.","textPreview":"The most gene-rich annotations include central metabolism, biosynthesis, transport, energy conservation, and information-processing funct...","textChars":142,"textLines":1,"bbox":[42,610,1170,44]}
+{"kind":"textbox","id":"sh/ds3ixw7u","slide":3,"name":"Rectangle 11","text":"Bars count Factor 1 genes per annotation; they do not show loading sign or temporal significance.","textPreview":"Bars count Factor 1 genes per annotation; they do not show loading sign or temporal significance.","textChars":97,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/jmx0fypc","slide":3,"name":"Picture 17","bbox":[74.43,193.62,495.13,376.75]}
+{"kind":"image","id":"im/8bq1c36t","slide":3,"name":"Picture 19","bbox":[747.45,193.62,341.09,376.75]}
+{"kind":"notes","id":"nt/0npbwd","slide":3,"text":"[Sources]\nResults/Factor1_BRITE_MicroResp/factor1_brite_C_summary.csv\nResults/Factor1_BRITE_MicroResp/factor1_brite_D_summary.csv\nFigures/Factor1_BRITE_MicroResp/factor1_brite_C_gene_counts.png\nFigures/Factor1_BRITE_MicroResp/factor1_brite_D_gene_counts.png"}
+{"kind":"slide","id":"sl/77feqo","slide":4,"title":"MICRORESP OVERLAP AND CLUSTERING","textShapes":7}
+{"kind":"textbox","id":"sh/cr2xgfm1","slide":4,"name":"Rectangle 5","text":"MICRORESP OVERLAP AND CLUSTERING","textPreview":"MICRORESP OVERLAP AND CLUSTERING","textChars":32,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/onixcvmp","slide":4,"name":"Rectangle 1","text":"The MicroResp-linked Factor 1 subset supports three expression clusters","textPreview":"The MicroResp-linked Factor 1 subset supports three expression clusters","textChars":71,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/poryl03a","slide":4,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/ap0fe54v","slide":4,"name":"Rectangle 3","text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/bq9gnalg","slide":4,"name":"Rectangle 4","bbox":[42,172,560,420]}
+{"kind":"shape","id":"sh/xsbyp03m","slide":4,"name":"Rectangle 6","bbox":[640,172,560,420]}
+{"kind":"textbox","id":"sh/rupwb65w","slide":4,"name":"Rectangle 8","text":"BRITE C","textPreview":"BRITE C","textChars":7,"textLines":1,"bbox":[50,147.01,140,26]}
+{"kind":"textbox","id":"sh/3q5036xg","slide":4,"name":"Rectangle 9","text":"BRITE D","textPreview":"BRITE D","textChars":7,"textLines":1,"bbox":[644,143,140,26]}
+{"kind":"textbox","id":"sh/ipwju1wv","slide":4,"name":"Rectangle 10","text":"MicroResp mapping matched 31/516 Factor 1 pathways and 1,113/6,789 Factor 1 KOs. After model matching, 31 pathways and 985 KOs were clustered; both elbows selected k = 3.","textPreview":"MicroResp mapping matched 31/516 Factor 1 pathways and 1,113/6,789 Factor 1 KOs. After model matching, 31 pathways and 985 KOs were clust...","textChars":170,"textLines":1,"bbox":[42,610,1170,44]}
+{"kind":"textbox","id":"sh/5sni5wfm","slide":4,"name":"Rectangle 11","text":"Target-set FDR significance: 20 BRITE C pathways and 230 BRITE D KOs.","textPreview":"Target-set FDR significance: 20 BRITE C pathways and 230 BRITE D KOs.","textChars":69,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/zepgv6xc","slide":4,"name":"Picture 17","bbox":[74.43,193.62,495.13,376.75]}
+{"kind":"image","id":"im/o3ihsve9","slide":4,"name":"Picture 19","bbox":[747.45,193.62,341.09,376.75]}
+{"kind":"notes","id":"nt/77feqo","slide":4,"text":"[Sources]\nResults/Factor1_BRITE_MicroResp/factor1_microresp_overlap_summary.csv\nResults/Factor1_BRITE_MicroResp/clustering/Factor1_MicroResp_clustering_run_summary.csv\nResults/Factor1_BRITE_MicroResp/clustering/brite_C_Factor1_MicroResp_elbow_diagnostics.csv\nResults/Factor1_BRITE_MicroResp/clustering/brite_D_Factor1_MicroResp_elbow_diagnostics.csv"}
+{"kind":"slide","id":"sl/54pgrs","slide":5,"title":"FACTOR 1 | BRITE C","textShapes":9}
+{"kind":"textbox","id":"sh/sf29srqp","slide":5,"name":"Rectangle 5","text":"FACTOR 1 | BRITE C","textPreview":"FACTOR 1 | BRITE C","textChars":18,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/g3mtwbql","slide":5,"name":"Rectangle 1","text":"Pathway clusters separate early-high, rebound, and late-activation modes","textPreview":"Pathway clusters separate early-high, rebound, and late-activation modes","textChars":72,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/14va5w76","slide":5,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/6dkrqh8j","slide":5,"name":"Rectangle 3","text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/retszm94","slide":5,"name":"Rectangle 4","bbox":[42,174,730,438]}
+{"kind":"shape","id":"sh/t0ba1wra","slide":5,"name":"Rectangle 6","bbox":[810,202,14,14]}
+{"kind":"textbox","id":"sh/i90rmh8n","slide":5,"name":"Rectangle 7","text":"Cluster 1 | 12 pathways: highest in Jun-Jul, minimum in Jan","textPreview":"Cluster 1 | 12 pathways: highest in Jun-Jul, minimum in Jan","textChars":59,"textLines":1,"bbox":[834,198,420,28]}
+{"kind":"shape","id":"sh/jatsvm98","slide":5,"name":"Rectangle 8","bbox":[810,244,14,14]}
+{"kind":"textbox","id":"sh/3ix836hc","slide":5,"name":"Rectangle 9","text":"Cluster 2 | 13 pathways: early-high, Jan minimum, strong May rebound","textPreview":"Cluster 2 | 13 pathways: early-high, Jan minimum, strong May rebound","textChars":68,"textLines":1,"bbox":[834,240,420,28]}
+{"kind":"shape","id":"sh/2hora1gr","slide":5,"name":"Rectangle 10","bbox":[810,286,14,14]}
+{"kind":"textbox","id":"sh/p4zq5gz2","slide":5,"name":"Rectangle 11","text":"Cluster 3 | 6 pathways: low through Oct, then rises to a May maximum","textPreview":"Cluster 3 | 6 pathways: low through Oct, then rises to a May maximum","textChars":68,"textLines":1,"bbox":[834,282,420,28]}
+{"kind":"shape","id":"sh/4369cbyx","slide":5,"name":"Rectangle 12","bbox":[804,382,394,208]}
+{"kind":"shape","id":"sh/r6hs76h8","slide":5,"name":"Rectangle 13","bbox":[804,382,7,208]}
+{"kind":"textbox","id":"sh/q58re1gn","slide":5,"name":"Rectangle 14","text":"Connection to Factor 1","textPreview":"Connection to Factor 1","textChars":22,"textLines":1,"bbox":[828,400,352,30]}
+{"kind":"textbox","id":"sh/d8za9gze","slide":5,"name":"Rectangle 15","text":"Cluster 3 most closely resembles the winter/early-spring activation described in the storyboard. Clusters 1 and 2 show that Factor 1 membership also contains early-season and rebound programs.","textPreview":"Cluster 3 most closely resembles the winter/early-spring activation described in the storyboard. Clusters 1 and 2 show that Factor 1 memb...","textChars":192,"textLines":1,"bbox":[828,439,352,134]}
+{"kind":"textbox","id":"sh/c7q9gbyt","slide":5,"name":"Rectangle 16","text":"Source: brite_C Factor 1 cluster assignments and average trajectories","textPreview":"Source: brite_C Factor 1 cluster assignments and average trajectories","textChars":69,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/oj6xszit","slide":5,"name":"Picture 22","bbox":[58.45,180,697.09,426]}
+{"kind":"notes","id":"nt/54pgrs","slide":5,"text":"[Sources]\nResults/Factor1_BRITE_MicroResp/clustering/brite_C_Factor1_MicroResp_cluster_assignments.csv\nResults/Factor1_BRITE_MicroResp/clustering/brite_C_Factor1_MicroResp_cluster_average_trajectories.csv"}
+{"kind":"slide","id":"sl/px0vew","slide":6,"title":"FACTOR 1 | BRITE D","textShapes":9}
+{"kind":"textbox","id":"sh/jypg7ad0","slide":6,"name":"Rectangle 5","text":"FACTOR 1 | BRITE D","textPreview":"FACTOR 1 | BRITE D","textChars":18,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/va5g3qdo","slide":6,"name":"Rectangle 1","text":"KO-level clusters resolve a large sustained late-activation program","textPreview":"KO-level clusters resolve a large sustained late-activation program","textChars":67,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/a9wzalwj","slide":6,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/507i90v6","slide":6,"name":"Rectangle 3","text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/kzyhgvel","slide":6,"name":"Rectangle 4","bbox":[42,174,730,438]}
+{"kind":"shape","id":"sh/ixgze5wf","slide":6,"name":"Rectangle 6","bbox":[810,202,14,14]}
+{"kind":"textbox","id":"sh/l43yxgvm","slide":6,"name":"Rectangle 7","text":"Cluster 1 | 477 KOs: highest in Jun-Jul, sustained decline afterward","textPreview":"Cluster 1 | 477 KOs: highest in Jun-Jul, sustained decline afterward","textChars":68,"textLines":1,"bbox":[834,198,420,28]}
+{"kind":"shape","id":"sh/03uh4be1","slide":6,"name":"Rectangle 8","bbox":[810,244,14,14]}
+{"kind":"textbox","id":"sh/udo3ql07","slide":6,"name":"Rectangle 9","text":"Cluster 2 | 245 KOs: early-high, Jan minimum, strong May rebound","textPreview":"Cluster 2 | 245 KOs: early-high, Jan minimum, strong May rebound","textChars":64,"textLines":1,"bbox":[834,240,420,28]}
+{"kind":"shape","id":"sh/vexkz6hs","slide":6,"name":"Rectangle 10","bbox":[810,286,14,14]}
+{"kind":"textbox","id":"sh/gf6lsbid","slide":6,"name":"Rectangle 11","text":"Cluster 3 | 263 KOs: low in summer, increases from Jan through May","textPreview":"Cluster 3 | 263 KOs: low in summer, increases from Jan through May","textChars":66,"textLines":1,"bbox":[834,282,420,28]}
+{"kind":"shape","id":"sh/hgf21gzy","slide":6,"name":"Rectangle 12","bbox":[804,382,394,208]}
+{"kind":"shape","id":"sh/2ho3ul0j","slide":6,"name":"Rectangle 13","bbox":[804,382,7,208]}
+{"kind":"textbox","id":"sh/3ix43qh4","slide":6,"name":"Rectangle 14","text":"Functional examples","textPreview":"Functional examples","textChars":19,"textLines":1,"bbox":[828,400,352,30]}
+{"kind":"textbox","id":"sh/4jqlwvip","slide":6,"name":"Rectangle 15","text":"Late/rebound groups include nitrate and nitrite reduction, storage-carbon, amino-acid, sugar-use, and N-oxide functions. Early-high genes include urease, polyamine, TCA, and aromatic-use functions.","textPreview":"Late/rebound groups include nitrate and nitrite reduction, storage-carbon, amino-acid, sugar-use, and N-oxide functions. Early-high genes...","textChars":197,"textLines":1,"bbox":[828,439,352,134]}
+{"kind":"textbox","id":"sh/pkzm50zu","slide":6,"name":"Rectangle 16","text":"Source: brite_D Factor 1 cluster assignments and average trajectories","textPreview":"Source: brite_D Factor 1 cluster assignments and average trajectories","textChars":69,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/9sbql0ru","slide":6,"name":"Picture 22","bbox":[58.45,180,697.09,426]}
+{"kind":"notes","id":"nt/px0vew","slide":6,"text":"[Sources]\nResults/Factor1_BRITE_MicroResp/clustering/brite_D_Factor1_MicroResp_cluster_assignments.csv\nResults/Factor1_BRITE_MicroResp/clustering/brite_D_Factor1_MicroResp_cluster_average_trajectories.csv"}
+{"kind":"slide","id":"sl/y483rz","slide":7,"title":"STORYBOARD SYNTHESIS","textShapes":12}
+{"kind":"textbox","id":"sh/hofyxsju","slide":7,"name":"Rectangle 19","text":"STORYBOARD SYNTHESIS","textPreview":"STORYBOARD SYNTHESIS","textChars":20,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/xc7m54j2","slide":7,"name":"Rectangle 1","text":"Factor 1 supports partial coordination, with an important sign-specific caveat","textPreview":"Factor 1 supports partial coordination, with an important sign-specific caveat","textChars":78,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/cby5cj2h","slide":7,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/zep47e1s","slide":7,"name":"Rectangle 3","text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"textbox","id":"sh/ydgne9kn","slide":7,"name":"Rectangle 4","text":"The late-activation clusters support the storyboard's interpretation that part of the Factor 1 transcript signal tracks the winter/early-spring MicroResp phenotype. Other clusters reveal early-high and rebound programs within the same Factor 1 feature set.","textPreview":"The late-activation clusters support the storyboard's interpretation that part of the Factor 1 transcript signal tracks the winter/early-...","textChars":256,"textLines":1,"bbox":[42,168,1150,70]}
+{"kind":"shape","id":"sh/lg769ojy","slide":7,"name":"Rectangle 5","bbox":[42,286,378,280]}
+{"kind":"shape","id":"sh/kfy5gj2d","slide":7,"name":"Rectangle 6","bbox":[42,286,378,8]}
+{"kind":"textbox","id":"sh/fil4vu1o","slide":7,"name":"Rectangle 7","text":"Support","textPreview":"Support","textChars":7,"textLines":1,"bbox":[70,334,320,95]}
+{"kind":"textbox","id":"sh/ehc32pk3","slide":7,"name":"Rectangle 8","text":"263 KOs and 6 pathways rise from winter toward May","textPreview":"263 KOs and 6 pathways rise from winter toward May","textChars":50,"textLines":1,"bbox":[70,456,315,70]}
+{"kind":"shape","id":"sh/czyhsbqt","slide":7,"name":"Rectangle 9","bbox":[451,286,378,280]}
+{"kind":"shape","id":"sh/x07i1gry","slide":7,"name":"Rectangle 10","bbox":[451,286,378,8]}
+{"kind":"textbox","id":"sh/axgzq18n","slide":7,"name":"Rectangle 11","text":"Caveat","textPreview":"Caveat","textChars":6,"textLines":1,"bbox":[479,334,320,95]}
+{"kind":"textbox","id":"sh/byp0z698","slide":7,"name":"Rectangle 12","text":"This analysis combines positive and negative Factor 1 loadings","textPreview":"This analysis combines positive and negative Factor 1 loadings","textChars":62,"textLines":1,"bbox":[479,456,315,70]}
+{"kind":"shape","id":"sh/k3yhwvqp","slide":7,"name":"Rectangle 13","bbox":[860,286,378,280]}
+{"kind":"shape","id":"sh/l4ri5g7a","slide":7,"name":"Rectangle 14","bbox":[860,286,378,8]}
+{"kind":"textbox","id":"sh/y1gzul8j","slide":7,"name":"Rectangle 15","text":"Next","textPreview":"Next","textChars":4,"textLines":1,"bbox":[888,334,320,95]}
+{"kind":"textbox","id":"sh/z2p03qp4","slide":7,"name":"Rectangle 16","text":"Repeat clustering separately by loading sign","textPreview":"Repeat clustering separately by loading sign","textChars":44,"textLines":1,"bbox":[888,456,315,70]}
+{"kind":"textbox","id":"sh/07ehkrql","slide":7,"name":"Rectangle 17","text":"Factor 1 membership is broader than the sign-specific reconstructed trajectory. Separating loading direction would provide the cleanest direct test of the storyboard's negative-weight winter signal.","textPreview":"Factor 1 membership is broader than the sign-specific reconstructed trajectory. Separating loading direction would provide the cleanest d...","textChars":198,"textLines":1,"bbox":[42,600,1170,44]}
+{"kind":"textbox","id":"sh/18nytwr6","slide":7,"name":"Rectangle 18","text":"Source: Factor 1 cluster outputs and manuscript storyboard","textPreview":"Source: Factor 1 cluster outputs and manuscript storyboard","textChars":58,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"notes","id":"nt/y483rz","slide":7,"text":"[Sources]\nSFA3-1-1_VGC_Storyboard_v2.docx\nData/factor1_all_omic_genes.csv\nResults/Factor1_BRITE_MicroResp/clustering/Factor1_MicroResp_clustering_run_summary.csv\nScripts/13_Factor1_expression_MicroResp_BRITE_C_D.R"}

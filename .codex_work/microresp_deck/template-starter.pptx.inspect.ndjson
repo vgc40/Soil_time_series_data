@@ -1,0 +1,158 @@
+{"kind":"deck","id":"pr/ceptve","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/tbtajt","slide":1,"title":"SOILS SFA | PROSSER TIME SERIES","textShapes":4}
+{"kind":"textbox","id":"sh/kjad0fet","slide":1,"name":"Rectangle 5","text":"SOILS SFA | PROSSER TIME SERIES","textPreview":"SOILS SFA | PROSSER TIME SERIES","textChars":31,"textLines":1,"bbox":[42,40,560,26]}
+{"kind":"textbox","id":"sh/wfqtwvex","slide":1,"name":"Rectangle 1","text":"Temporal clustering of significant BRITE pathways and KOs","textPreview":"Temporal clustering of significant BRITE pathways and KOs","textChars":57,"textLines":1,"bbox":[42,205,1020,190]}
+{"kind":"shape","id":"sh/xgzu50fi","slide":1,"name":"Rectangle 2","bbox":[42,430,1196,5]}
+{"kind":"textbox","id":"sh/yh8by5wn","slide":1,"name":"Rectangle 3","text":"GAM-fitted metatranscriptomic trajectories after KEGG exclusion filtering","textPreview":"GAM-fitted metatranscriptomic trajectories after KEGG exclusion filtering","textChars":73,"textLines":1,"bbox":[42,468,970,72]}
+{"kind":"textbox","id":"sh/jihc7ad8","slide":1,"name":"Rectangle 4","text":"BRITE C and BRITE D analyzed separately | Seven sampling dates | July 2026","textPreview":"BRITE C and BRITE D analyzed separately | Seven sampling dates | July 2026","textChars":74,"textLines":1,"bbox":[42,622,1000,28]}
+{"kind":"notes","id":"nt/tbtajt","slide":1,"text":""}
+{"kind":"slide","id":"sl/cvatf6","slide":2,"title":"BRITE TEMPORAL CLUSTERING","textShapes":12}
+{"kind":"textbox","id":"sh/hgzm9crq","slide":2,"name":"Rectangle 19","text":"BRITE TEMPORAL CLUSTERING","textPreview":"BRITE TEMPORAL CLUSTERING","textChars":25,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/hsrq14vy","slide":2,"name":"Rectangle 1","text":"Two functional resolutions reveal the same three timing modes","textPreview":"Two functional resolutions reveal the same three timing modes","textChars":61,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/w7i98jed","slide":2,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/72p8vudw","slide":2,"name":"Rectangle 3","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"textbox","id":"sh/m1gr2pwb","slide":2,"name":"Rectangle 4","text":"Only converged, FDR-significant GAM trajectories were clustered. Each feature was z-scored, so the analysis compares temporal shape rather than absolute expression.","textPreview":"Only converged, FDR-significant GAM trajectories were clustered. Each feature was z-scored, so the analysis compares temporal shape rathe...","textChars":164,"textLines":1,"bbox":[42,168,1150,70]}
+{"kind":"shape","id":"sh/947qx4v2","slide":2,"name":"Rectangle 5","bbox":[42,286,378,280]}
+{"kind":"shape","id":"sh/83y94zeh","slide":2,"name":"Rectangle 6","bbox":[42,286,378,8]}
+{"kind":"textbox","id":"sh/zy58rux0","slide":2,"name":"Rectangle 7","text":"155","textPreview":"155","textChars":3,"textLines":1,"bbox":[70,334,320,95]}
+{"kind":"textbox","id":"sh/yxw7ypwf","slide":2,"name":"Rectangle 8","text":"significant BRITE C pathways","textPreview":"significant BRITE C pathways","textChars":28,"textLines":1,"bbox":[70,456,315,70]}
+{"kind":"shape","id":"sh/cra587it","slide":2,"name":"Rectangle 9","bbox":[451,286,378,280]}
+{"kind":"shape","id":"sh/xsjmhcje","slide":2,"name":"Rectangle 10","bbox":[451,286,378,8]}
+{"kind":"textbox","id":"sh/a58n6x03","slide":2,"name":"Rectangle 11","text":"995","textPreview":"995","textChars":3,"textLines":1,"bbox":[479,334,320,95]}
+{"kind":"textbox","id":"sh/bq14f218","slide":2,"name":"Rectangle 12","text":"significant BRITE D KOs","textPreview":"significant BRITE D KOs","textChars":23,"textLines":1,"bbox":[479,456,315,70]}
+{"kind":"shape","id":"sh/o3q54nix","slide":2,"name":"Rectangle 13","bbox":[860,286,378,280]}
+{"kind":"shape","id":"sh/p4zmdsji","slide":2,"name":"Rectangle 14","bbox":[860,286,378,8]}
+{"kind":"textbox","id":"sh/218n2d0r","slide":2,"name":"Rectangle 15","text":"k = 3","textPreview":"k = 3","textChars":5,"textLines":1,"bbox":[888,334,320,95]}
+{"kind":"textbox","id":"sh/n2h4bi1c","slide":2,"name":"Rectangle 16","text":"elbow-selected clusters at both levels","textPreview":"elbow-selected clusters at both levels","textChars":38,"textLines":1,"bbox":[888,456,315,70]}
+{"kind":"textbox","id":"sh/8zu5gri1","slide":2,"name":"Rectangle 17","text":"Inputs: GAM-fitted expression at Jun, Jul, Sep, Oct, Jan, Mar, and May. Distance: 1 − Pearson correlation. Linkage: Ward.D2.","textPreview":"Inputs: GAM-fitted expression at Jun, Jul, Sep, Oct, Jan, Mar, and May. Distance: 1 − Pearson correlation. Linkage: Ward.D2.","textChars":124,"textLines":1,"bbox":[42,600,1170,44]}
+{"kind":"textbox","id":"sh/9036pwzm","slide":2,"name":"Rectangle 18","text":"Source: Results/BRITE_clustering_elbow/BRITE_clustering_run_summary.csv","textPreview":"Source: Results/BRITE_clustering_elbow/BRITE_clustering_run_summary.csv","textChars":71,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"notes","id":"nt/cvatf6","slide":2,"text":""}
+{"kind":"slide","id":"sl/c72spz","slide":3,"title":"BRITE TEMPORAL CLUSTERING","textShapes":7}
+{"kind":"textbox","id":"sh/sn6tgrut","slide":3,"name":"Rectangle 5","text":"BRITE TEMPORAL CLUSTERING","textPreview":"BRITE TEMPORAL CLUSTERING","textChars":25,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/grqtkbup","slide":3,"name":"Rectangle 1","text":"Both annotation levels show a reproducible elbow at three clusters","textPreview":"Both annotation levels show a reproducible elbow at three clusters","textChars":66,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/1szadgva","slide":3,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/6lobehcn","slide":3,"name":"Rectangle 3","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/rmxs7md8","slide":3,"name":"Rectangle 4","bbox":[42,172,560,420]}
+{"kind":"shape","id":"sh/tofa9wvy","slide":3,"name":"Rectangle 6","bbox":[640,172,560,420]}
+{"kind":"textbox","id":"sh/jixs3mdw","slide":3,"name":"Rectangle 8","text":"BRITE C","textPreview":"BRITE C","textChars":7,"textLines":1,"bbox":[50,147.01,140,26]}
+{"kind":"textbox","id":"sh/ripczip4","slide":3,"name":"Rectangle 9","text":"BRITE D","textPreview":"BRITE D","textChars":7,"textLines":1,"bbox":[644,143,140,26]}
+{"kind":"textbox","id":"sh/6hgvqd8j","slide":3,"name":"Rectangle 10","text":"Most of the reduction in within-cluster dissimilarity occurs by k = 3. Additional clusters provide progressively smaller gains and would subdivide the main temporal modes.","textPreview":"Most of the reduction in within-cluster dissimilarity occurs by k = 3. Additional clusters provide progressively smaller gains and would ...","textChars":171,"textLines":1,"bbox":[42,610,1170,44]}
+{"kind":"textbox","id":"sh/tk7u187a","slide":3,"name":"Rectangle 11","text":"Source: elbow_diagnostics.csv for BRITE C and BRITE D. Automatic selection, no manual override.","textPreview":"Source: elbow_diagnostics.csv for BRITE C and BRITE D. Automatic selection, no manual override.","textChars":95,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/bidgb2xo","slide":3,"name":"Picture 17","bbox":[48,193.62,548,376.75]}
+{"kind":"image","id":"im/0n6xo7e5","slide":3,"name":"Picture 19","bbox":[644,193.62,548,376.75]}
+{"kind":"notes","id":"nt/c72spz","slide":3,"text":""}
+{"kind":"slide","id":"sl/9ws2ke","slide":4,"title":"BRITE TEMPORAL CLUSTERING","textShapes":9}
+{"kind":"textbox","id":"sh/q5knmdcb","slide":4,"name":"Rectangle 5","text":"BRITE TEMPORAL CLUSTERING","textPreview":"BRITE TEMPORAL CLUSTERING","textChars":25,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/210nidcf","slide":4,"name":"Rectangle 1","text":"BRITE C separates early activity, winter activation, and a May rebound","textPreview":"BRITE C separates early activity, winter activation, and a May rebound","textChars":70,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/3294ryd0","slide":4,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/c725onuh","slide":4,"name":"Rectangle 3","text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/d8b6xsv2","slide":4,"name":"Rectangle 4","bbox":[42,174,730,438]}
+{"kind":"shape","id":"sh/b6t4vidw","slide":4,"name":"Rectangle 6","bbox":[810,202,14,14]}
+{"kind":"textbox","id":"sh/sby5cjud","slide":4,"name":"Rectangle 7","text":"Cluster 1 | 104 pathways (67%): high in Jun–Jul, lowest in Jan","textPreview":"Cluster 1 | 104 pathways (67%): high in Jun–Jul, lowest in Jan","textChars":62,"textLines":1,"bbox":[834,198,420,28]}
+{"kind":"shape","id":"sh/tc7mlovy","slide":4,"name":"Rectangle 8","bbox":[810,244,14,14]}
+{"kind":"textbox","id":"sh/dovaxkf6","slide":4,"name":"Rectangle 9","text":"Cluster 2 | 25 pathways (16%): low through Oct, highest in Jan–Mar","textPreview":"Cluster 2 | 25 pathways (16%): low through Oct, highest in Jan–Mar","textChars":66,"textLines":1,"bbox":[834,240,420,28]}
+{"kind":"shape","id":"sh/cnm9ofel","slide":4,"name":"Rectangle 10","bbox":[810,286,14,14]}
+{"kind":"textbox","id":"sh/rmd8vax0","slide":4,"name":"Rectangle 11","text":"Cluster 3 | 26 pathways (17%): declines to Jan, then peaks sharply in May","textPreview":"Cluster 3 | 26 pathways (17%): declines to Jan, then peaks sharply in May","textChars":73,"textLines":1,"bbox":[834,282,420,28]}
+{"kind":"shape","id":"sh/ql4rm5wf","slide":4,"name":"Rectangle 12","bbox":[804,382,394,208]}
+{"kind":"shape","id":"sh/1cfa1kf2","slide":4,"name":"Rectangle 13","bbox":[804,382,7,208]}
+{"kind":"textbox","id":"sh/0r69szeh","slide":4,"name":"Rectangle 14","text":"High-level meaning","textPreview":"High-level meaning","textChars":18,"textLines":1,"bbox":[828,400,352,30]}
+{"kind":"textbox","id":"sh/zqxszuxw","slide":4,"name":"Rectangle 15","text":"Most significant pathways share an early-high trajectory, but one-third follow winter or late-spring activation patterns. The pathway-level response is therefore structured, not a single seasonal shift.","textPreview":"Most significant pathways share an early-high trajectory, but one-third follow winter or late-spring activation patterns. The pathway-lev...","textChars":202,"textLines":1,"bbox":[828,439,352,134]}
+{"kind":"textbox","id":"sh/ep4rqpwr","slide":4,"name":"Rectangle 16","text":"Source: brite_C/cluster_average_trajectories.csv and cluster_summary.csv","textPreview":"Source: brite_C/cluster_average_trajectories.csv and cluster_summary.csv","textChars":72,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/e1cf61sb","slide":4,"name":"Picture 22","bbox":[58.45,180,697.09,426]}
+{"kind":"notes","id":"nt/9ws2ke","slide":4,"text":""}
+{"kind":"slide","id":"sl/opm0y2","slide":5,"title":"BRITE TEMPORAL CLUSTERING","textShapes":11}
+{"kind":"textbox","id":"sh/yhsrqtwr","slide":5,"name":"Rectangle 5","text":"BRITE TEMPORAL CLUSTERING","textPreview":"BRITE TEMPORAL CLUSTERING","textChars":25,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/m5cbudwn","slide":5,"name":"Rectangle 1","text":"Pathway identities suggest distinct functional programs across the year","textPreview":"Pathway identities suggest distinct functional programs across the year","textChars":71,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/76lsnyd8","slide":5,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/kja9s3ex","slide":5,"name":"Rectangle 3","text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/lkjal8v2","slide":5,"name":"Rectangle 4","bbox":[42,170,500,480]}
+{"kind":"shape","id":"sh/zi1sjydc","slide":5,"name":"Rectangle 6","bbox":[578,174,620,120]}
+{"kind":"shape","id":"sh/4fetone1","slide":5,"name":"Rectangle 7","bbox":[578,174,7,120]}
+{"kind":"textbox","id":"sh/5gnaxsvm","slide":5,"name":"Rectangle 8","text":"Early-high group","textPreview":"Early-high group","textChars":16,"textLines":1,"bbox":[602,192,578,30]}
+{"kind":"textbox","id":"sh/1gv6xsvm","slide":5,"name":"Rectangle 9","text":"Ribosome and translation, oxidative phosphorylation, arginine biosynthesis, glutathione metabolism, and lipopolysaccharide biosynthesis.","textPreview":"Ribosome and translation, oxidative phosphorylation, arginine biosynthesis, glutathione metabolism, and lipopolysaccharide biosynthesis.","textChars":136,"textLines":1,"bbox":[602,231,578,46]}
+{"kind":"shape","id":"sh/0fm5onu1","slide":5,"name":"Rectangle 10","bbox":[578,312,620,120]}
+{"kind":"shape","id":"sh/zedovidg","slide":5,"name":"Rectangle 11","bbox":[578,312,7,120]}
+{"kind":"textbox","id":"sh/etknmdcv","slide":5,"name":"Rectangle 12","text":"Winter-high group","textPreview":"Winter-high group","textChars":17,"textLines":1,"bbox":[602,330,578,30]}
+{"kind":"textbox","id":"sh/dsbmtsva","slide":5,"name":"Rectangle 13","text":"Energy metabolism, transcription, RNA processing and degradation, chaperones, and protein processing.","textPreview":"Energy metabolism, transcription, RNA processing and degradation, chaperones, and protein processing.","textChars":101,"textLines":1,"bbox":[602,369,578,46]}
+{"kind":"shape","id":"sh/cr25knup","slide":5,"name":"Rectangle 14","bbox":[578,450,620,120]}
+{"kind":"shape","id":"sh/rqt4rid4","slide":5,"name":"Rectangle 15","bbox":[578,450,7,120]}
+{"kind":"textbox","id":"sh/qpknidcz","slide":5,"name":"Rectangle 16","text":"May-rebound group","textPreview":"May-rebound group","textChars":17,"textLines":1,"bbox":[602,468,578,30]}
+{"kind":"textbox","id":"sh/xof65cve","slide":5,"name":"Rectangle 17","text":"Nitrogen, methane, and sulfur metabolism, two-component signaling, proteasome activity, and arginine/proline metabolism.","textPreview":"Nitrogen, methane, and sulfur metabolism, two-component signaling, proteasome activity, and arginine/proline metabolism.","textChars":120,"textLines":1,"bbox":[602,507,578,46]}
+{"kind":"textbox","id":"sh/wn65w7u9","slide":5,"name":"Rectangle 18","text":"Interpretation caution: KEGG pathway names such as apoptosis or animal signaling reflect orthology-based labels. They should not be treated as organism-specific functions without checking the contributing KOs and taxonomy.","textPreview":"Interpretation caution: KEGG pathway names such as apoptosis or animal signaling reflect orthology-based labels. They should not be treat...","textChars":222,"textLines":1,"bbox":[578,590,620,58]}
+{"kind":"textbox","id":"sh/wrepsv25","slide":5,"name":"Rectangle 19","text":"Heatmap shows the 60 significant pathways with highest adjusted R²; it is not a complete functional enrichment analysis.","textPreview":"Heatmap shows the 60 significant pathways with highest adjusted R²; it is not a complete functional enrichment analysis.","textChars":120,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/ypgrip0j","slide":5,"name":"Picture 25","bbox":[97,176,390,468]}
+{"kind":"notes","id":"nt/opm0y2","slide":5,"text":""}
+{"kind":"slide","id":"sl/ac20vx","slide":6,"title":"BRITE TEMPORAL CLUSTERING","textShapes":9}
+{"kind":"textbox","id":"sh/lcn6toni","slide":6,"name":"Rectangle 5","text":"BRITE TEMPORAL CLUSTERING","textPreview":"BRITE TEMPORAL CLUSTERING","textChars":25,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/tgn6xone","slide":6,"name":"Rectangle 1","text":"KO-level clustering resolves a larger late-season activation group","textPreview":"KO-level clustering resolves a larger late-season activation group","textChars":66,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/8fepo3m9","slide":6,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/ja5ore5c","slide":6,"name":"Rectangle 3","text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/y9wni94r","slide":6,"name":"Rectangle 4","bbox":[42,174,730,438]}
+{"kind":"shape","id":"sh/kbe5kjmx","slide":6,"name":"Rectangle 6","bbox":[810,202,14,14]}
+{"kind":"textbox","id":"sh/36po3ilw","slide":6,"name":"Rectangle 7","text":"Cluster 1 | 449 KOs (45%): high in Jun–Jul, sustained decline afterward","textPreview":"Cluster 1 | 449 KOs (45%): high in Jun–Jul, sustained decline afterward","textChars":71,"textLines":1,"bbox":[834,198,420,28]}
+{"kind":"shape","id":"sh/i5g7ud4b","slide":6,"name":"Rectangle 8","bbox":[810,244,14,14]}
+{"kind":"textbox","id":"sh/0z2h4vq9","slide":6,"name":"Rectangle 9","text":"Cluster 2 | 299 KOs (30%): early-high, Jan minimum, strong May rebound","textPreview":"Cluster 2 | 299 KOs (30%): early-high, Jan minimum, strong May rebound","textChars":70,"textLines":1,"bbox":[834,240,420,28]}
+{"kind":"shape","id":"sh/10bix07u","slide":6,"name":"Rectangle 10","bbox":[810,286,14,14]}
+{"kind":"textbox","id":"sh/edkz2l8j","slide":6,"name":"Rectangle 11","text":"Cluster 3 | 247 KOs (25%): low through Oct, increases from Jan to May","textPreview":"Cluster 3 | 247 KOs (25%): low through Oct, increases from Jan to May","textChars":69,"textLines":1,"bbox":[834,282,420,28]}
+{"kind":"shape","id":"sh/zyt0vqp4","slide":6,"name":"Rectangle 12","bbox":[804,382,394,208]}
+{"kind":"shape","id":"sh/cbih0bqd","slide":6,"name":"Rectangle 13","bbox":[804,382,7,208]}
+{"kind":"textbox","id":"sh/dcbitg7y","slide":6,"name":"Rectangle 14","text":"High-level meaning","textPreview":"High-level meaning","textChars":18,"textLines":1,"bbox":[828,400,352,30]}
+{"kind":"textbox","id":"sh/q90zyl87","slide":6,"name":"Rectangle 15","text":"At finer resolution, 55% of significant KOs belong to rebound or late-activation trajectories. Aggregated pathways can therefore mask heterogeneous behavior among their constituent genes.","textPreview":"At finer resolution, 55% of significant KOs belong to rebound or late-activation trajectories. Aggregated pathways can therefore mask het...","textChars":187,"textLines":1,"bbox":[828,439,352,134]}
+{"kind":"textbox","id":"sh/ra90rqps","slide":6,"name":"Rectangle 16","text":"Source: brite_D/cluster_average_trajectories.csv and cluster_summary.csv","textPreview":"Source: brite_D/cluster_average_trajectories.csv and cluster_summary.csv","textChars":72,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/z6hwfi10","slide":6,"name":"Picture 22","bbox":[58.45,180,697.09,426]}
+{"kind":"notes","id":"nt/ac20vx","slide":6,"text":""}
+{"kind":"slide","id":"sl/owshb2","slide":7,"title":"BRITE TEMPORAL CLUSTERING","textShapes":11}
+{"kind":"textbox","id":"sh/md8j2dgr","slide":7,"name":"Rectangle 5","text":"BRITE TEMPORAL CLUSTERING","textPreview":"BRITE TEMPORAL CLUSTERING","textChars":25,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/y98jydgf","slide":7,"name":"Rectangle 1","text":"The strongest KO signals span growth machinery, respiration, and stress response","textPreview":"The strongest KO signals span growth machinery, respiration, and stress response","textChars":80,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/zahk7ih0","slide":7,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/8fa14nyh","slide":7,"name":"Rectangle 3","text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/9gj2dsz2","slide":7,"name":"Rectangle 4","bbox":[42,170,500,480]}
+{"kind":"shape","id":"sh/ne1kbihc","slide":7,"name":"Rectangle 6","bbox":[578,174,620,120]}
+{"kind":"shape","id":"sh/4j61s3id","slide":7,"name":"Rectangle 7","bbox":[578,174,7,120]}
+{"kind":"textbox","id":"sh/pkf21ozy","slide":7,"name":"Rectangle 8","text":"Early-high group","textPreview":"Early-high group","textChars":16,"textLines":1,"bbox":[602,192,578,30]}
+{"kind":"textbox","id":"sh/p4vut0ji","slide":7,"name":"Rectangle 9","text":"Many ribosomal proteins, ATPase subunits, urease subunits, polyamine transport, and osmotic or oxidative stress proteins.","textPreview":"Many ribosomal proteins, ATPase subunits, urease subunits, polyamine transport, and osmotic or oxidative stress proteins.","textChars":121,"textLines":1,"bbox":[602,231,578,46]}
+{"kind":"shape","id":"sh/o3md0v2x","slide":7,"name":"Rectangle 10","bbox":[578,312,620,120]}
+{"kind":"shape","id":"sh/n2dcrq1c","slide":7,"name":"Rectangle 11","bbox":[578,312,7,120]}
+{"kind":"textbox","id":"sh/214vylkr","slide":7,"name":"Rectangle 12","text":"May-rebound group","textPreview":"May-rebound group","textChars":17,"textLines":1,"bbox":[602,330,578,30]}
+{"kind":"textbox","id":"sh/x8fex0je","slide":7,"name":"Rectangle 13","text":"Nitrate/nitrite and sulfur-related reductases, RNA polymerase components, proteasome and chaperonin functions, and phosphate response.","textPreview":"Nitrate/nitrite and sulfur-related reductases, RNA polymerase components, proteasome and chaperonin functions, and phosphate response.","textChars":134,"textLines":1,"bbox":[602,369,578,46]}
+{"kind":"shape","id":"sh/c76d4f2t","slide":7,"name":"Rectangle 14","bbox":[578,450,620,120]}
+{"kind":"shape","id":"sh/b6xcva1o","slide":7,"name":"Rectangle 15","bbox":[578,450,7,120]}
+{"kind":"textbox","id":"sh/a5ov25k3","slide":7,"name":"Rectangle 16","text":"Late-activation group","textPreview":"Late-activation group","textChars":21,"textLines":1,"bbox":[602,468,578,30]}
+{"kind":"textbox","id":"sh/lwze1kjq","slide":7,"name":"Rectangle 17","text":"Nitric oxide reductase, Fe–S cluster assembly proteins (Isc/Suf), HSP20 and GroES chaperones, and selected carbon-use genes.","textPreview":"Nitric oxide reductase, Fe–S cluster assembly proteins (Isc/Suf), HSP20 and GroES chaperones, and selected carbon-use genes.","textChars":124,"textLines":1,"bbox":[602,507,578,46]}
+{"kind":"textbox","id":"sh/kv6d8f25","slide":7,"name":"Rectangle 18","text":"These examples come from the top 75 features ranked primarily by adjusted R². They illustrate the strongest trajectories, not the proportional functional composition of each full cluster.","textPreview":"These examples come from the top 75 features ranked primarily by adjusted R². They illustrate the strongest trajectories, not the proport...","textChars":187,"textLines":1,"bbox":[578,590,620,58]}
+{"kind":"textbox","id":"sh/kfex4jah","slide":7,"name":"Rectangle 19","text":"Source: brite_D/top_75_heatmap_features.csv","textPreview":"Source: brite_D/top_75_heatmap_features.csv","textChars":43,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/a18rml8r","slide":7,"name":"Picture 25","bbox":[136,176,312,468]}
+{"kind":"notes","id":"nt/owshb2","slide":7,"text":""}
+{"kind":"slide","id":"sl/f9oh6p","slide":8,"title":"BRITE TEMPORAL CLUSTERING","textShapes":16}
+{"kind":"textbox","id":"sh/f69oj2t8","slide":8,"name":"Rectangle 39","text":"BRITE TEMPORAL CLUSTERING","textPreview":"BRITE TEMPORAL CLUSTERING","textChars":25,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/9wfe1cri","slide":8,"name":"Rectangle 1","text":"BRITE C and D agree on timing modes, but not on their prevalence","textPreview":"BRITE C and D agree on timing modes, but not on their prevalence","textChars":64,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/ov6d87qx","slide":8,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/byxw3m9o","slide":8,"name":"Rectangle 3","text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/x0fe5cru","slide":8,"name":"Rectangle 5","bbox":[239.41,248,260,54]}
+{"kind":"textbox","id":"sh/wz6dcrq9","slide":8,"name":"Rectangle 6","text":"Temporal mode","textPreview":"Temporal mode","textChars":13,"textLines":1,"bbox":[253.41,263,232,26]}
+{"kind":"shape","id":"sh/j2hw7m9k","slide":8,"name":"Rectangle 7","bbox":[507.41,248,237,54]}
+{"kind":"textbox","id":"sh/y18feh8z","slide":8,"name":"Rectangle 8","text":"BRITE C pathways","textPreview":"BRITE C pathways","textChars":16,"textLines":1,"bbox":[521.41,263,209,26]}
+{"kind":"shape","id":"sh/wrylgjeh","slide":8,"name":"Rectangle 9","bbox":[752.41,248,237,54]}
+{"kind":"textbox","id":"sh/hsr2pof2","slide":8,"name":"Rectangle 10","text":"BRITE D KOs","textPreview":"BRITE D KOs","textChars":11,"textLines":1,"bbox":[766.41,263,209,26]}
+{"kind":"shape","id":"sh/4vilk3ed","slide":8,"name":"Rectangle 13","bbox":[239.41,302,260,100]}
+{"kind":"textbox","id":"sh/5wr2t8vy","slide":8,"name":"Rectangle 14","text":"Early-high","textPreview":"Early-high","textChars":10,"textLines":1,"bbox":[253.41,320,232,64]}
+{"kind":"shape","id":"sh/it03itwn","slide":8,"name":"Rectangle 15","bbox":[507.41,302,237,100]}
+{"kind":"textbox","id":"sh/ju9kryds","slide":8,"name":"Rectangle 16","text":"104 | 67%","textPreview":"104 | 67%","textChars":9,"textLines":1,"bbox":[521.41,320,209,64]}
+{"kind":"shape","id":"sh/sj2lo3ep","slide":8,"name":"Rectangle 17","bbox":[752.41,302,237,100]}
+{"kind":"textbox","id":"sh/tkbmx8va","slide":8,"name":"Rectangle 18","text":"449 | 45%","textPreview":"449 | 45%","textChars":9,"textLines":1,"bbox":[766.41,320,209,64]}
+{"kind":"shape","id":"sh/fepkfy58","slide":8,"name":"Rectangle 21","bbox":[239.41,402,260,100]}
+{"kind":"textbox","id":"sh/edw36ton","slide":8,"name":"Rectangle 22","text":"Winter/late activation","textPreview":"Winter/late activation","textChars":22,"textLines":1,"bbox":[253.41,420,232,64]}
+{"kind":"shape","id":"sh/p472lsna","slide":8,"name":"Rectangle 23","bbox":[507.41,402,237,100]}
+{"kind":"textbox","id":"sh/o3ylcn6p","slide":8,"name":"Rectangle 24","text":"25 | 16%","textPreview":"25 | 16%","textChars":8,"textLines":1,"bbox":[521.41,420,209,64]}
+{"kind":"shape","id":"sh/nipkji54","slide":8,"name":"Rectangle 25","bbox":[752.41,402,237,100]}
+{"kind":"textbox","id":"sh/2hg3adoz","slide":8,"name":"Rectangle 26","text":"247 | 25%","textPreview":"247 | 25%","textChars":9,"textLines":1,"bbox":[766.41,420,209,64]}
+{"kind":"shape","id":"sh/uh8ru507","slide":8,"name":"Rectangle 29","bbox":[239.41,502,260,100]}
+{"kind":"textbox","id":"sh/v218nqhs","slide":8,"name":"Rectangle 30","text":"Late-spring rebound","textPreview":"Late-spring rebound","textChars":19,"textLines":1,"bbox":[253.41,520,232,64]}
+{"kind":"shape","id":"sh/w3a9wvid","slide":8,"name":"Rectangle 31","bbox":[507.41,502,237,100]}
+{"kind":"textbox","id":"sh/h4jqp0zy","slide":8,"name":"Rectangle 32","text":"26 | 17%","textPreview":"26 | 17%","textChars":8,"textLines":1,"bbox":[521.41,520,209,64]}
+{"kind":"shape","id":"sh/i5sry503","slide":8,"name":"Rectangle 33","bbox":[752.41,502,237,100]}
+{"kind":"textbox","id":"sh/j618raho","slide":8,"name":"Rectangle 34","text":"299 | 30%","textPreview":"299 | 30%","textChars":9,"textLines":1,"bbox":[766.41,520,209,64]}
+{"kind":"textbox","id":"sh/zah8f6hk","slide":8,"name":"Rectangle 38","text":"Percentages calculated from 155 BRITE C pathways and 995 BRITE D KOs.","textPreview":"Percentages calculated from 155 BRITE C pathways and 995 BRITE D KOs.","textChars":69,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"notes","id":"nt/f9oh6p","slide":8,"text":""}

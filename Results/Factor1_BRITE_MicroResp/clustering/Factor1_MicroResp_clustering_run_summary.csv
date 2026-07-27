@@ -1,0 +1,3 @@
+brite_level,n_mapping_rows,n_unique_requested_features,n_matched_features,n_converged_features,n_clustered_features,n_target_FDR_significant,automatic_elbow_k,selected_k,heatmap_display_rule
+brite_C,150,31,31,31,31,20,3,3,"All mapped, converged Factor 1 BRITE C pathways"
+brite_D,7512,1113,1039,985,985,230,3,3,Top 15 Factor 1 BRITE D KOs per cluster ranked by time-only variance explained

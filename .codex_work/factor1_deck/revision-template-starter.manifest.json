@@ -1,0 +1,89 @@
+{
+  "sourcePptx": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\MEFISTO_Factor1_gene_expression_BRITE_clustering_results.pptx",
+  "mapPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-frame-map.json",
+  "output": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-template-starter.pptx",
+  "outputBytes": 786840,
+  "sourceSlideCount": 9,
+  "slideCount": 7,
+  "previewDir": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-preview",
+  "layoutDir": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-layout",
+  "slides": [
+    {
+      "outputSlide": 1,
+      "sourceSlide": 1,
+      "narrativeRole": "title",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 0,
+      "previewPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-preview\\starter-slide-01.png",
+      "previewRelativePath": "revision-starter-preview/starter-slide-01.png",
+      "layoutPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-layout\\starter-slide-01.layout.json",
+      "layoutRelativePath": "revision-starter-layout/starter-slide-01.layout.json"
+    },
+    {
+      "outputSlide": 2,
+      "sourceSlide": 2,
+      "narrativeRole": "workflow",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 1,
+      "previewPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-preview\\starter-slide-02.png",
+      "previewRelativePath": "revision-starter-preview/starter-slide-02.png",
+      "layoutPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-layout\\starter-slide-02.layout.json",
+      "layoutRelativePath": "revision-starter-layout/starter-slide-02.layout.json"
+    },
+    {
+      "outputSlide": 3,
+      "sourceSlide": 3,
+      "narrativeRole": "functional breadth",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 1,
+      "previewPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-preview\\starter-slide-03.png",
+      "previewRelativePath": "revision-starter-preview/starter-slide-03.png",
+      "layoutPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-layout\\starter-slide-03.layout.json",
+      "layoutRelativePath": "revision-starter-layout/starter-slide-03.layout.json"
+    },
+    {
+      "outputSlide": 4,
+      "sourceSlide": 5,
+      "narrativeRole": "filtering and cluster selection",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 5,
+      "previewPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-preview\\starter-slide-04.png",
+      "previewRelativePath": "revision-starter-preview/starter-slide-04.png",
+      "layoutPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-layout\\starter-slide-04.layout.json",
+      "layoutRelativePath": "revision-starter-layout/starter-slide-04.layout.json"
+    },
+    {
+      "outputSlide": 5,
+      "sourceSlide": 6,
+      "narrativeRole": "BRITE C cluster trends",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 5,
+      "previewPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-preview\\starter-slide-05.png",
+      "previewRelativePath": "revision-starter-preview/starter-slide-05.png",
+      "layoutPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-layout\\starter-slide-05.layout.json",
+      "layoutRelativePath": "revision-starter-layout/starter-slide-05.layout.json"
+    },
+    {
+      "outputSlide": 6,
+      "sourceSlide": 7,
+      "narrativeRole": "BRITE D cluster trends",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 5,
+      "previewPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-preview\\starter-slide-06.png",
+      "previewRelativePath": "revision-starter-preview/starter-slide-06.png",
+      "layoutPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-layout\\starter-slide-06.layout.json",
+      "layoutRelativePath": "revision-starter-layout/starter-slide-06.layout.json"
+    },
+    {
+      "outputSlide": 7,
+      "sourceSlide": 9,
+      "narrativeRole": "storyboard synthesis",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 1,
+      "previewPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-preview\\starter-slide-07.png",
+      "previewRelativePath": "revision-starter-preview/starter-slide-07.png",
+      "layoutPath": "C:\\Users\\gara009\\OneDrive - PNNL\\Documents\\GitHub\\Soil_time_series_data\\.codex_work\\factor1_deck\\revision-starter-layout\\starter-slide-07.layout.json",
+      "layoutRelativePath": "revision-starter-layout/starter-slide-07.layout.json"
+    }
+  ]
+}

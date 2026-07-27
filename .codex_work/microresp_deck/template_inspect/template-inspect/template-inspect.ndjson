@@ -1,0 +1,142 @@
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"SOILS SFA | PROSSER TIME SERIES","textShapes":4}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"textChars":31,"textLines":1}
+{"kind":"textbox","id":"sh/547294r6","slide":1,"textChars":57,"textLines":1}
+{"kind":"shape","id":"sh/k3yl0zql","slide":1,"name":"Rectangle 2","bbox":[42,430,1196,5]}
+{"kind":"textbox","id":"sh/7qp4be9c","slide":1,"textChars":73,"textLines":1}
+{"kind":"textbox","id":"sh/65g3298r","slide":1,"textChars":74,"textLines":1}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"BRITE TEMPORAL CLUSTERING","textShapes":12}
+{"kind":"textbox","id":"sh/t8byxkn2","slide":2,"textChars":25,"textLines":1}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"textChars":61,"textLines":1}
+{"kind":"shape","id":"sh/ozy1ofad","slide":2,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"textChars":1,"textLines":1}
+{"kind":"textbox","id":"sh/a10jqpsj","slide":2,"textChars":164,"textLines":1}
+{"kind":"shape","id":"sh/x4r21kru","slide":2,"name":"Rectangle 5","bbox":[42,286,378,280]}
+{"kind":"shape","id":"sh/w3i1sfa9","slide":2,"name":"Rectangle 6","bbox":[42,286,378,8]}
+{"kind":"textbox","id":"sh/r65knqtk","slide":2,"textChars":3,"textLines":1}
+{"kind":"textbox","id":"sh/q5wjelsz","slide":2,"textChars":28,"textLines":1}
+{"kind":"shape","id":"sh/ove9o7yd","slide":2,"name":"Rectangle 9","bbox":[451,286,378,280]}
+{"kind":"shape","id":"sh/9wnqhczy","slide":2,"name":"Rectangle 10","bbox":[451,286,378,8]}
+{"kind":"textbox","id":"sh/mtwrmxg7","slide":2,"textChars":3,"textLines":1}
+{"kind":"textbox","id":"sh/nu58f2hs","slide":2,"textChars":23,"textLines":1}
+{"kind":"shape","id":"sh/wjy9sry9","slide":2,"name":"Rectangle 13","bbox":[860,286,378,280]}
+{"kind":"shape","id":"sh/xk7qlczu","slide":2,"name":"Rectangle 14","bbox":[860,286,378,8]}
+{"kind":"textbox","id":"sh/ahwrqhgj","slide":2,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/bip8jmho","slide":2,"textChars":38,"textLines":1}
+{"kind":"textbox","id":"sh/cnupgny5","slide":2,"textChars":124,"textLines":1}
+{"kind":"textbox","id":"sh/do3q9szq","slide":2,"textChars":71,"textLines":1}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"BRITE TEMPORAL CLUSTERING","textShapes":7}
+{"kind":"textbox","id":"sh/obq90bml","slide":3,"textChars":25,"textLines":1}
+{"kind":"textbox","id":"sh/cza94vmx","slide":3,"textChars":66,"textLines":1}
+{"kind":"shape","id":"sh/d0jax03i","slide":3,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/298ryl4v","slide":3,"textChars":1,"textLines":1}
+{"kind":"shape","id":"sh/3ah8rqlg","slide":3,"name":"Rectangle 4","bbox":[42,172,560,420]}
+{"kind":"shape","id":"sh/pcjqtg36","slide":3,"name":"Rectangle 6","bbox":[640,172,560,420]}
+{"kind":"textbox","id":"sh/n6ls3alk","slide":3,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/n2l4fq98","slide":3,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/m1c3mlsn","slide":3,"textChars":171,"textLines":1}
+{"kind":"textbox","id":"sh/943mhgre","slide":3,"textChars":95,"textLines":1}
+{"kind":"image","id":"im/3q5onqdc","slide":3,"name":"Picture 17","bbox":[48,193.62,548,376.75]}
+{"kind":"image","id":"im/gne5cvel","slide":3,"name":"Picture 19","bbox":[644,193.62,548,376.75]}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"BRITE TEMPORAL CLUSTERING","textShapes":9}
+{"kind":"textbox","id":"sh/doj29oba","slide":4,"textChars":25,"textLines":1}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"textChars":70,"textLines":1}
+{"kind":"shape","id":"sh/0ba143al","slide":4,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/rm1k7yt4","slide":4,"textChars":1,"textLines":1}
+{"kind":"shape","id":"sh/ql8jytsj","slide":4,"name":"Rectangle 4","bbox":[42,174,730,438]}
+{"kind":"shape","id":"sh/sna103ap","slide":4,"name":"Rectangle 6","bbox":[810,202,14,14]}
+{"kind":"textbox","id":"sh/3ihk3et8","slide":4,"textChars":62,"textLines":1}
+{"kind":"shape","id":"sh/ih8ju9sn","slide":4,"name":"Rectangle 8","bbox":[810,244,14,14]}
+{"kind":"textbox","id":"sh/kbm987y5","slide":4,"textChars":66,"textLines":1}
+{"kind":"shape","id":"sh/5cva1cfq","slide":4,"name":"Rectangle 10","bbox":[810,286,14,14]}
+{"kind":"textbox","id":"sh/i94r6xgz","slide":4,"textChars":73,"textLines":1}
+{"kind":"shape","id":"sh/jadsz2xk","slide":4,"name":"Rectangle 12","bbox":[804,382,394,208]}
+{"kind":"shape","id":"sh/w72947yt","slide":4,"name":"Rectangle 13","bbox":[804,382,7,208]}
+{"kind":"textbox","id":"sh/x8vaxsfe","slide":4,"textChars":18,"textLines":1}
+{"kind":"textbox","id":"sh/a5kr2xg3","slide":4,"textChars":202,"textLines":1}
+{"kind":"textbox","id":"sh/v6tsv2xo","slide":4,"textChars":72,"textLines":1}
+{"kind":"image","id":"im/b6xofahg","slide":4,"name":"Picture 22","bbox":[58.45,180,697.09,426]}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"BRITE TEMPORAL CLUSTERING","textShapes":11}
+{"kind":"textbox","id":"sh/l4bupwny","slide":5,"textChars":25,"textLines":1}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":5,"textChars":71,"textLines":1}
+{"kind":"shape","id":"sh/cf2tcr61","slide":5,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/z2tcnm5s","slide":5,"textChars":1,"textLines":1}
+{"kind":"shape","id":"sh/yhkbe1o7","slide":5,"name":"Rectangle 4","bbox":[42,170,500,480]}
+{"kind":"shape","id":"sh/032tgr6d","slide":5,"name":"Rectangle 6","bbox":[578,174,620,120]}
+{"kind":"shape","id":"sh/n6dcr65o","slide":5,"name":"Rectangle 7","bbox":[578,174,7,120]}
+{"kind":"textbox","id":"sh/m5kbi1oj","slide":5,"textChars":16,"textLines":1}
+{"kind":"textbox","id":"sh/w32dkbuh","slide":5,"textChars":136,"textLines":1}
+{"kind":"shape","id":"sh/x4vedgvm","slide":5,"name":"Rectangle 10","bbox":[578,312,620,120]}
+{"kind":"shape","id":"sh/ahkvi1cb","slide":5,"name":"Rectangle 11","bbox":[578,312,7,120]}
+{"kind":"textbox","id":"sh/v2twb6dw","slide":5,"textChars":17,"textLines":1}
+{"kind":"textbox","id":"sh/k7mxovud","slide":5,"textChars":101,"textLines":1}
+{"kind":"shape","id":"sh/58vehgvy","slide":5,"name":"Rectangle 14","bbox":[578,450,620,120]}
+{"kind":"shape","id":"sh/i54fmlc7","slide":5,"name":"Rectangle 15","bbox":[578,450,7,120]}
+{"kind":"textbox","id":"sh/j6dwfqds","slide":5,"textChars":17,"textLines":1}
+{"kind":"textbox","id":"sh/sb6xsvu9","slide":5,"textChars":120,"textLines":1}
+{"kind":"textbox","id":"sh/tcfel0vu","slide":5,"textChars":222,"textLines":1}
+{"kind":"textbox","id":"sh/hgrmpwj2","slide":5,"textChars":120,"textLines":1}
+{"kind":"image","id":"im/zu9wb6pc","slide":5,"name":"Picture 25","bbox":[97,176,390,468]}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"BRITE TEMPORAL CLUSTERING","textShapes":9}
+{"kind":"textbox","id":"sh/ml07i9sv","slide":6,"textChars":25,"textLines":1}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"textChars":66,"textLines":1}
+{"kind":"shape","id":"sh/zi98nu94","slide":6,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/87ipkzal","slide":6,"textChars":1,"textLines":1}
+{"kind":"shape","id":"sh/98rqt4r6","slide":6,"name":"Rectangle 4","bbox":[42,174,730,438]}
+{"kind":"shape","id":"sh/7m98ru9g","slide":6,"name":"Rectangle 6","bbox":[810,202,14,14]}
+{"kind":"textbox","id":"sh/oryp8fah","slide":6,"textChars":71,"textLines":1}
+{"kind":"shape","id":"sh/pc76hkr2","slide":6,"name":"Rectangle 8","bbox":[810,244,14,14]}
+{"kind":"textbox","id":"sh/h4bupgn6","slide":6,"textChars":70,"textLines":1}
+{"kind":"shape","id":"sh/w32twb6l","slide":6,"name":"Rectangle 10","bbox":[810,286,14,14]}
+{"kind":"textbox","id":"sh/v2tcn650","slide":6,"textChars":69,"textLines":1}
+{"kind":"shape","id":"sh/u1kbu1ov","slide":6,"name":"Rectangle 12","bbox":[804,382,394,208]}
+{"kind":"shape","id":"sh/5svutgni","slide":6,"name":"Rectangle 13","bbox":[804,382,7,208]}
+{"kind":"textbox","id":"sh/47mt0b6x","slide":6,"textChars":18,"textLines":1}
+{"kind":"textbox","id":"sh/j6dcr65c","slide":6,"textChars":187,"textLines":1}
+{"kind":"textbox","id":"sh/i54bylor","slide":6,"textChars":72,"textLines":1}
+{"kind":"image","id":"im/a5sbipcr","slide":6,"name":"Picture 22","bbox":[58.45,180,697.09,426]}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"BRITE TEMPORAL CLUSTERING","textShapes":11}
+{"kind":"textbox","id":"sh/kzmdova1","slide":7,"textChars":25,"textLines":1}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"textChars":80,"textLines":1}
+{"kind":"shape","id":"sh/dcbud0ra","slide":7,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/ydkbm5sv","slide":7,"textChars":1,"textLines":1}
+{"kind":"shape","id":"sh/zedcfa9g","slide":7,"name":"Rectangle 4","bbox":[42,170,500,480]}
+{"kind":"shape","id":"sh/l0vuh0rm","slide":7,"name":"Rectangle 6","bbox":[578,174,620,120]}
+{"kind":"shape","id":"sh/eh0ba1sr","slide":7,"name":"Rectangle 7","bbox":[578,174,7,120]}
+{"kind":"textbox","id":"sh/fi9c369c","slide":7,"textChars":16,"textLines":1}
+{"kind":"textbox","id":"sh/baxkjqlk","slide":7,"textChars":121,"textLines":1}
+{"kind":"shape","id":"sh/a9ojq5kz","slide":7,"name":"Rectangle 10","bbox":[578,312,620,120]}
+{"kind":"shape","id":"sh/xcz2l03q","slide":7,"name":"Rectangle 11","bbox":[578,312,7,120]}
+{"kind":"textbox","id":"sh/cbq1sv25","slide":7,"textChars":17,"textLines":1}
+{"kind":"textbox","id":"sh/n6x0fqlo","slide":7,"textChars":134,"textLines":1}
+{"kind":"shape","id":"sh/25ojml43","slide":7,"name":"Rectangle 14","bbox":[578,450,620,120]}
+{"kind":"shape","id":"sh/p8fih03e","slide":7,"name":"Rectangle 15","bbox":[578,450,7,120]}
+{"kind":"textbox","id":"sh/o761ov2t","slide":7,"textChars":21,"textLines":1}
+{"kind":"textbox","id":"sh/f2d0b6lc","slide":7,"textChars":124,"textLines":1}
+{"kind":"textbox","id":"sh/eh4jil4r","slide":7,"textChars":187,"textLines":1}
+{"kind":"textbox","id":"sh/id4ju1oz","slide":7,"textChars":43,"textLines":1}
+{"kind":"image","id":"im/gb25wj6t","slide":7,"name":"Picture 25","bbox":[136,176,312,468]}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"BRITE TEMPORAL CLUSTERING","textShapes":16}
+{"kind":"textbox","id":"sh/3u18fepo","slide":8,"textChars":25,"textLines":1}
+{"kind":"textbox","id":"sh/18byd4zy","slide":8,"textChars":64,"textLines":1}
+{"kind":"shape","id":"sh/g72x4zyd","slide":8,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/ri9g7uhw","slide":8,"textChars":1,"textLines":1}
+{"kind":"shape","id":"sh/tkby9kzm","slide":8,"name":"Rectangle 5","bbox":[239.41,248,260,54]}
+{"kind":"textbox","id":"sh/sjix0zy1","slide":8,"textChars":13,"textLines":1}
+{"kind":"shape","id":"sh/je9g3ahk","slide":8,"name":"Rectangle 7","bbox":[507.41,248,237,54]}
+{"kind":"textbox","id":"sh/id0fu50z","slide":8,"textChars":16,"textLines":1}
+{"kind":"shape","id":"sh/o7ydoret","slide":8,"name":"Rectangle 9","bbox":[752.41,248,237,54]}
+{"kind":"textbox","id":"sh/98rehwve","slide":8,"textChars":11,"textLines":1}
+{"kind":"shape","id":"sh/0jydkreh","slide":8,"name":"Rectangle 13","bbox":[239.41,302,260,100]}
+{"kind":"textbox","id":"sh/1k7edwv2","slide":8,"textChars":10,"textLines":1}
+{"kind":"shape","id":"sh/ehgvihwr","slide":8,"name":"Rectangle 15","bbox":[507.41,302,237,100]}
+{"kind":"textbox","id":"sh/zipwbmdc","slide":8,"textChars":9,"textLines":1}
+{"kind":"shape","id":"sh/kfixwbe1","slide":8,"name":"Rectangle 17","bbox":[752.41,302,237,100]}
+{"kind":"textbox","id":"sh/lgbepgvm","slide":8,"textChars":9,"textLines":1}
+{"kind":"shape","id":"sh/7u5w765k","slide":8,"name":"Rectangle 21","bbox":[239.41,402,260,100]}
+{"kind":"textbox","id":"sh/6twve1oz","slide":8,"textChars":22,"textLines":1}
+{"kind":"shape","id":"sh/5sne5wne","slide":8,"name":"Rectangle 23","bbox":[507.41,402,237,100]}
+{"kind":"textbox","id":"sh/kredcr6t","slide":8,"textChars":8,"textLines":1}
+{"kind":"shape","id":"sh/jq5w365o","slide":8,"name":"Rectangle 25","bbox":[752.41,402,237,100]}
+{"kind":"textbox","id":"sh/i5wva1o3","slide":8,"textChars":9,"textLines":1}
+{"kind":"shape","id":"sh/m9sb2x4v","slide":8,"name":"Rectangle 29","bbox":[239.41,502,260,100]}
+{"kind":"notice","message":"Truncated: omitted 12 lines. Increase maxChars or narrow target."}

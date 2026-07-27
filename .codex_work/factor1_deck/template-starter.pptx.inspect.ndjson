@@ -1,0 +1,146 @@
+{"kind":"deck","id":"pr/8mgtri","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/35uq0x","slide":1,"title":"SOILS SFA | PROSSER TIME SERIES","textShapes":4}
+{"kind":"textbox","id":"sh/jqx4z2hc","slide":1,"name":"Rectangle 5","text":"SOILS SFA | PROSSER TIME SERIES","textPreview":"SOILS SFA | PROSSER TIME SERIES","textChars":31,"textLines":1,"bbox":[42,40,560,26]}
+{"kind":"textbox","id":"sh/bmd4v2hg","slide":1,"name":"Rectangle 1","text":"MicroResp-linked expression resolves three seasonal programs","textPreview":"MicroResp-linked expression resolves three seasonal programs","textChars":60,"textLines":1,"bbox":[42,205,1020,190]}
+{"kind":"shape","id":"sh/al4n2xgv","slide":1,"name":"Rectangle 2","bbox":[42,430,1196,5]}
+{"kind":"textbox","id":"sh/lsfm1czi","slide":1,"name":"Rectangle 3","text":"Targeted BRITE C pathways and BRITE D KOs: GAM review, temporal clustering, and storyboard synthesis","textPreview":"Targeted BRITE C pathways and BRITE D KOs: GAM review, temporal clustering, and storyboard synthesis","textChars":100,"textLines":1,"bbox":[42,468,970,72]}
+{"kind":"textbox","id":"sh/kr6587yx","slide":1,"name":"Rectangle 4","text":"100% irrigation metatranscriptomes | Seven dates | July 2026","textPreview":"100% irrigation metatranscriptomes | Seven dates | July 2026","textChars":60,"textLines":1,"bbox":[42,622,1000,28]}
+{"kind":"notes","id":"nt/35uq0x","slide":1,"text":"[Sources]\nStoryboard: SFA3-1-1_VGC_Storyboard_v2.docx\nAnalysis: Scripts/12_MicroResp_targeted_BRITE_C_D_GAM_and_clustering.R"}
+{"kind":"slide","id":"sl/mizp82","slide":2,"title":"MICRORESP-LINKED EXPRESSION","textShapes":12}
+{"kind":"textbox","id":"sh/ri10jit4","slide":2,"name":"Rectangle 19","text":"MICRORESP-LINKED EXPRESSION","textPreview":"MICRORESP-LINKED EXPRESSION","textChars":27,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/bu9s7qx8","slide":2,"name":"Rectangle 1","text":"Filtering narrows the transcriptome to functions tied to assayed substrates","textPreview":"Filtering narrows the transcriptome to functions tied to assayed substrates","textChars":75,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/qt0belgn","slide":2,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/l0bad0fa","slide":2,"name":"Rectangle 3","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"textbox","id":"sh/0z2tkvyp","slide":2,"name":"Rectangle 4","text":"The explicit MicroResp-to-KEGG map was joined to previously fitted random-plot GAMs. All mapped, converged trajectories were clustered after within-feature z-scoring; targeted-set FDR identifies the strongest time-varying subset.","textPreview":"The explicit MicroResp-to-KEGG map was joined to previously fitted random-plot GAMs. All mapped, converged trajectories were clustered af...","textChars":229,"textLines":1,"bbox":[42,168,1150,70]}
+{"kind":"shape","id":"sh/zytsbqx4","slide":2,"name":"Rectangle 5","bbox":[42,286,378,280]}
+{"kind":"shape","id":"sh/yx0bilgj","slide":2,"name":"Rectangle 6","bbox":[42,286,378,8]}
+{"kind":"textbox","id":"sh/147a1wfq","slide":2,"name":"Rectangle 7","text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[70,334,320,95]}
+{"kind":"textbox","id":"sh/g3y98byl","slide":2,"name":"Rectangle 8","text":"BRITE C pathways mapped and clustered","textPreview":"BRITE C pathways mapped and clustered","textChars":37,"textLines":1,"bbox":[70,456,315,70]}
+{"kind":"shape","id":"sh/ilojetwj","slide":2,"name":"Rectangle 9","bbox":[451,286,378,280]}
+{"kind":"shape","id":"sh/jmxknyd4","slide":2,"name":"Rectangle 10","bbox":[451,286,378,8]}
+{"kind":"textbox","id":"sh/kn61g3up","slide":2,"name":"Rectangle 11","text":"985","textPreview":"985","textChars":3,"textLines":1,"bbox":[479,334,320,95]}
+{"kind":"textbox","id":"sh/5oz2p8vu","slide":2,"name":"Rectangle 12","text":"BRITE D KOs clustered from 1,312 requested","textPreview":"BRITE D KOs clustered from 1,312 requested","textChars":42,"textLines":1,"bbox":[479,456,315,70]}
+{"kind":"shape","id":"sh/6p8jidcf","slide":2,"name":"Rectangle 13","bbox":[860,286,378,280]}
+{"kind":"shape","id":"sh/7qhkryd0","slide":2,"name":"Rectangle 14","bbox":[860,286,378,8]}
+{"kind":"textbox","id":"sh/srqlk3ul","slide":2,"name":"Rectangle 15","text":"k = 3","textPreview":"k = 3","textChars":5,"textLines":1,"bbox":[888,334,320,95]}
+{"kind":"textbox","id":"sh/tcz2t8v6","slide":2,"name":"Rectangle 16","text":"automatic elbow at both annotation levels","textPreview":"automatic elbow at both annotation levels","textChars":41,"textLines":1,"bbox":[888,456,315,70]}
+{"kind":"textbox","id":"sh/ud83mdcr","slide":2,"name":"Rectangle 17","text":"Significant within the targeted set: 20 BRITE C pathways and 230 BRITE D KOs. Distance: 1 - Pearson correlation; linkage: Ward.D2.","textPreview":"Significant within the targeted set: 20 BRITE C pathways and 230 BRITE D KOs. Distance: 1 - Pearson correlation; linkage: Ward.D2.","textChars":130,"textLines":1,"bbox":[42,600,1170,44]}
+{"kind":"textbox","id":"sh/fehkvidc","slide":2,"name":"Rectangle 18","text":"Source: Results/MicroResp_targeted_BRITE_C_D/*_run_summary.csv","textPreview":"Source: Results/MicroResp_targeted_BRITE_C_D/*_run_summary.csv","textChars":62,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"notes","id":"nt/mizp82","slide":2,"text":"[Sources]\nResults/MicroResp_targeted_BRITE_C_D/MicroResp_BRITE_C_D_run_summary.csv\nData/MicroResp_all_BRITE_C_D_complete.csv\nScripts/12_MicroResp_targeted_BRITE_C_D_GAM_and_clustering.R"}
+{"kind":"slide","id":"sl/ufpa4a","slide":3,"title":"MICRORESP-LINKED EXPRESSION","textShapes":7}
+{"kind":"textbox","id":"sh/cbyh472p","slide":3,"name":"Rectangle 5","text":"MICRORESP-LINKED EXPRESSION","textPreview":"MICRORESP-LINKED EXPRESSION","textChars":27,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/47yx0n2d","slide":3,"name":"Rectangle 1","text":"Both functional resolutions support three temporal expression clusters","textPreview":"Both functional resolutions support three temporal expression clusters","textChars":70,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/p87yts3y","slide":3,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/q9gz2xkj","slide":3,"name":"Rectangle 3","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/rapgv2l4","slide":3,"name":"Rectangle 4","bbox":[42,172,560,420]}
+{"kind":"shape","id":"sh/dc7yxc3a","slide":3,"name":"Rectangle 6","bbox":[640,172,560,420]}
+{"kind":"textbox","id":"sh/ze9gzml0","slide":3,"name":"Rectangle 8","text":"BRITE C","textPreview":"BRITE C","textChars":7,"textLines":1,"bbox":[50,147.01,140,26]}
+{"kind":"textbox","id":"sh/zmdsveps","slide":3,"name":"Rectangle 9","text":"BRITE D","textPreview":"BRITE D","textChars":7,"textLines":1,"bbox":[644,143,140,26]}
+{"kind":"textbox","id":"sh/y14r2987","slide":3,"name":"Rectangle 10","text":"Within-cluster dissimilarity drops sharply through k = 3 at both levels. Higher k values continue to subdivide trajectories but add progressively smaller gains.","textPreview":"Within-cluster dissimilarity drops sharply through k = 3 at both levels. Higher k values continue to subdivide trajectories but add progr...","textChars":160,"textLines":1,"bbox":[42,610,1170,44]}
+{"kind":"textbox","id":"sh/lovaxo7y","slide":3,"name":"Rectangle 11","text":"Source: MicroResp-targeted BRITE C/D elbow diagnostics; automatic selection, no manual override.","textPreview":"Source: MicroResp-targeted BRITE C/D elbow diagnostics; automatic selection, no manual override.","textChars":96,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/bi9kvmxw","slide":3,"name":"Picture 17","bbox":[48,193.62,548,376.75]}
+{"kind":"image","id":"im/4fi1k7y5","slide":3,"name":"Picture 19","bbox":[644,193.62,548,376.75]}
+{"kind":"notes","id":"nt/ufpa4a","slide":3,"text":"[Sources]\nResults/MicroResp_targeted_BRITE_C_D/brite_C_MicroResp_elbow_diagnostics.csv\nResults/MicroResp_targeted_BRITE_C_D/brite_D_MicroResp_elbow_diagnostics.csv"}
+{"kind":"slide","id":"sl/eye60c","slide":4,"title":"MICRORESP-LINKED EXPRESSION","textShapes":7}
+{"kind":"textbox","id":"sh/9ojuhoru","slide":4,"name":"Rectangle 5","text":"MICRORESP-LINKED EXPRESSION","textPreview":"MICRORESP-LINKED EXPRESSION","textChars":27,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/l0zadori","slide":4,"name":"Rectangle 1","text":"Both functional resolutions support three temporal expression clusters","textPreview":"Both functional resolutions support three temporal expression clusters","textChars":70,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/0zqt4jqx","slide":4,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/n2hsfy9o","slide":4,"name":"Rectangle 3","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/m18b6t83","slide":4,"name":"Rectangle 4","bbox":[42,172,560,420]}
+{"kind":"shape","id":"sh/83qt83q9","slide":4,"name":"Rectangle 6","bbox":[640,172,560,420]}
+{"kind":"textbox","id":"sh/25obup8z","slide":4,"name":"Rectangle 8","text":"BRITE C","textPreview":"BRITE C","textChars":7,"textLines":1,"bbox":[50,147.01,140,26]}
+{"kind":"textbox","id":"sh/czqt8zyd","slide":4,"name":"Rectangle 9","text":"BRITE D","textPreview":"BRITE D","textChars":7,"textLines":1,"bbox":[644,143,140,26]}
+{"kind":"textbox","id":"sh/d0zuh4zy","slide":4,"name":"Rectangle 10","text":"Within-cluster dissimilarity drops sharply through k = 3 at both levels. Higher k values continue to subdivide trajectories but add progressively smaller gains.","textPreview":"Within-cluster dissimilarity drops sharply through k = 3 at both levels. Higher k values continue to subdivide trajectories but add progr...","textChars":160,"textLines":1,"bbox":[42,610,1170,44]}
+{"kind":"textbox","id":"sh/qxob69g7","slide":4,"name":"Rectangle 11","text":"Source: MicroResp-targeted BRITE C/D elbow diagnostics; automatic selection, no manual override.","textPreview":"Source: MicroResp-targeted BRITE C/D elbow diagnostics; automatic selection, no manual override.","textChars":96,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/gruxgbq5","slide":4,"name":"Picture 17","bbox":[48,193.62,548,376.75]}
+{"kind":"image","id":"im/721wj69o","slide":4,"name":"Picture 19","bbox":[644,193.62,548,376.75]}
+{"kind":"notes","id":"nt/eye60c","slide":4,"text":"[Sources]\nResults/MicroResp_targeted_BRITE_C_D/brite_C_MicroResp_elbow_diagnostics.csv\nResults/MicroResp_targeted_BRITE_C_D/brite_D_MicroResp_elbow_diagnostics.csv"}
+{"kind":"slide","id":"sl/wfkq2r","slide":5,"title":"MICRORESP-LINKED EXPRESSION","textShapes":7}
+{"kind":"textbox","id":"sh/i9gje90r","slide":5,"name":"Rectangle 5","text":"MICRORESP-LINKED EXPRESSION","textPreview":"MICRORESP-LINKED EXPRESSION","textChars":27,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/u5gjap0v","slide":5,"name":"Rectangle 1","text":"Both functional resolutions support three temporal expression clusters","textPreview":"Both functional resolutions support three temporal expression clusters","textChars":70,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/v6p0ju10","slide":5,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/4bi1gjix","slide":5,"name":"Rectangle 3","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/5crip4ji","slide":5,"name":"Rectangle 4","bbox":[42,172,560,420]}
+{"kind":"shape","id":"sh/jap0ne1c","slide":5,"name":"Rectangle 6","bbox":[640,172,560,420]}
+{"kind":"textbox","id":"sh/t0ritoje","slide":5,"name":"Rectangle 8","text":"BRITE C","textPreview":"BRITE C","textChars":7,"textLines":1,"bbox":[50,147.01,140,26]}
+{"kind":"textbox","id":"sh/hsv65kva","slide":5,"name":"Rectangle 9","text":"BRITE D","textPreview":"BRITE D","textChars":7,"textLines":1,"bbox":[644,143,140,26]}
+{"kind":"textbox","id":"sh/wrmpcfup","slide":5,"name":"Rectangle 10","text":"Within-cluster dissimilarity drops sharply through k = 3 at both levels. Higher k values continue to subdivide trajectories but add progressively smaller gains.","textPreview":"Within-cluster dissimilarity drops sharply through k = 3 at both levels. Higher k values continue to subdivide trajectories but add progr...","textChars":160,"textLines":1,"bbox":[42,610,1170,44]}
+{"kind":"textbox","id":"sh/vqdo3ad4","slide":5,"name":"Rectangle 11","text":"Source: MicroResp-targeted BRITE C/D elbow diagnostics; automatic selection, no manual override.","textPreview":"Source: MicroResp-targeted BRITE C/D elbow diagnostics; automatic selection, no manual override.","textChars":96,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/dofip0na","slide":5,"name":"Picture 17","bbox":[48,193.62,548,376.75]}
+{"kind":"image","id":"im/ih4zal4n","slide":5,"name":"Picture 19","bbox":[644,193.62,548,376.75]}
+{"kind":"notes","id":"nt/wfkq2r","slide":5,"text":"[Sources]\nResults/MicroResp_targeted_BRITE_C_D/brite_C_MicroResp_elbow_diagnostics.csv\nResults/MicroResp_targeted_BRITE_C_D/brite_D_MicroResp_elbow_diagnostics.csv"}
+{"kind":"slide","id":"sl/tzsq9y","slide":6,"title":"MICRORESP-LINKED BRITE C","textShapes":9}
+{"kind":"textbox","id":"sh/1cv2pknu","slide":6,"name":"Rectangle 5","text":"MICRORESP-LINKED BRITE C","textPreview":"MICRORESP-LINKED BRITE C","textChars":24,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/p0v2tknq","slide":6,"name":"Rectangle 1","text":"Twenty of 31 mapped pathways show targeted-set temporal significance","textPreview":"Twenty of 31 mapped pathways show targeted-set temporal significance","textChars":68,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/ozmlkf65","slide":6,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/fadkna5o","slide":6,"name":"Rectangle 3","text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/e9k3e5o3","slide":6,"name":"Rectangle 4","bbox":[42,174,730,438]}
+{"kind":"shape","id":"sh/gbmlgf69","slide":6,"name":"Rectangle 6","bbox":[810,202,14,14]}
+{"kind":"textbox","id":"sh/z6xkze5s","slide":6,"name":"Rectangle 7","text":"Cluster 1 | 12 pathways: biosynthesis, glycan use, and aromatic degradation","textPreview":"Cluster 1 | 12 pathways: biosynthesis, glycan use, and aromatic degradation","textChars":75,"textLines":1,"bbox":[834,198,420,28]}
+{"kind":"shape","id":"sh/y5o3q94n","slide":6,"name":"Rectangle 8","bbox":[810,244,14,14]}
+{"kind":"textbox","id":"sh/cbupkny1","slide":6,"name":"Rectangle 9","text":"Cluster 2 | 13 pathways: TCA, N cycling, amino-acid and fatty-acid metabolism","textPreview":"Cluster 2 | 13 pathways: TCA, N cycling, amino-acid and fatty-acid metabolism","textChars":77,"textLines":1,"bbox":[834,240,420,28]}
+{"kind":"shape","id":"sh/dc3qd8zm","slide":6,"name":"Rectangle 10","bbox":[810,286,14,14]}
+{"kind":"textbox","id":"sh/q9c7idgv","slide":6,"name":"Rectangle 11","text":"Cluster 3 | 6 pathways: glycolysis, pyruvate, lipid, butanoate functions","textPreview":"Cluster 3 | 6 pathways: glycolysis, pyruvate, lipid, butanoate functions","textChars":72,"textLines":1,"bbox":[834,282,420,28]}
+{"kind":"shape","id":"sh/bal8bihg","slide":6,"name":"Rectangle 12","bbox":[804,382,394,208]}
+{"kind":"shape","id":"sh/o7upg3i5","slide":6,"name":"Rectangle 13","bbox":[804,382,7,208]}
+{"kind":"textbox","id":"sh/p83q98za","slide":6,"name":"Rectangle 14","text":"GAM evidence","textPreview":"GAM evidence","textChars":12,"textLines":1,"bbox":[828,400,352,30]}
+{"kind":"textbox","id":"sh/25s7et0z","slide":6,"name":"Rectangle 15","text":"The mapped pathway set contains broad, nonlinear time trends rather than a single synchronized response. Strong signals include arginine biosynthesis, N metabolism, amino-sugar metabolism, and aromatic-compound degradation.","textPreview":"The mapped pathway set contains broad, nonlinear time trends rather than a single synchronized response. Strong signals include arginine ...","textChars":223,"textLines":1,"bbox":[828,439,352,134]}
+{"kind":"textbox","id":"sh/36l87yhk","slide":6,"name":"Rectangle 16","text":"Source: brite_C_MicroResp_GAM_statistics.csv and targeted GAM panels","textPreview":"Source: brite_C_MicroResp_GAM_statistics.csv and targeted GAM panels","textChars":68,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/7618rylo","slide":6,"name":"Picture 22","bbox":[58.45,180,697.09,426]}
+{"kind":"notes","id":"nt/tzsq9y","slide":6,"text":"[Sources]\nResults/MicroResp_targeted_BRITE_C_D/brite_C_MicroResp_GAM_statistics.csv\nFigures/MicroResp_targeted_BRITE_C_D/brite_C/brite_C_targeted_GAMs_page_01.png"}
+{"kind":"slide","id":"sl/q5gsac","slide":7,"title":"MICRORESP-LINKED BRITE D","textShapes":9}
+{"kind":"textbox","id":"sh/lk761wji","slide":7,"name":"Rectangle 5","text":"MICRORESP-LINKED BRITE D","textPreview":"MICRORESP-LINKED BRITE D","textChars":24,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/9o765gje","slide":7,"name":"Rectangle 1","text":"KO-level GAMs reveal strong but heterogeneous seasonal expression","textPreview":"KO-level GAMs reveal strong but heterogeneous seasonal expression","textChars":65,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/8ny5wb2t","slide":7,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/zipoz6lc","slide":7,"name":"Rectangle 3","text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/yhgnq1kr","slide":7,"name":"Rectangle 4","bbox":[42,174,730,438]}
+{"kind":"shape","id":"sh/kjy5sr2x","slide":7,"name":"Rectangle 6","bbox":[810,202,14,14]}
+{"kind":"textbox","id":"sh/je9obq1g","slide":7,"name":"Rectangle 7","text":"Cluster 1 | 477 KOs (48%): includes urease, polyamine, TCA, and aromatic-use genes","textPreview":"Cluster 1 | 477 KOs (48%): includes urease, polyamine, TCA, and aromatic-use genes","textChars":82,"textLines":1,"bbox":[834,198,420,28]}
+{"kind":"shape","id":"sh/id072lkv","slide":7,"name":"Rectangle 8","bbox":[810,244,14,14]}
+{"kind":"textbox","id":"sh/8fqhorut","slide":7,"name":"Rectangle 9","text":"Cluster 2 | 245 KOs (25%): includes nitrate reduction and storage-carbon functions","textPreview":"Cluster 2 | 245 KOs (25%): includes nitrate reduction and storage-carbon functions","textChars":82,"textLines":1,"bbox":[834,240,420,28]}
+{"kind":"shape","id":"sh/90jihcbe","slide":7,"name":"Rectangle 10","bbox":[810,286,14,14]}
+{"kind":"textbox","id":"sh/md8zmhcn","slide":7,"name":"Rectangle 11","text":"Cluster 3 | 263 KOs (27%): includes sugar, amino-acid, and N-oxide functions","textPreview":"Cluster 3 | 263 KOs (27%): includes sugar, amino-acid, and N-oxide functions","textChars":76,"textLines":1,"bbox":[834,282,420,28]}
+{"kind":"shape","id":"sh/neh0fmt8","slide":7,"name":"Rectangle 12","bbox":[804,382,394,208]}
+{"kind":"shape","id":"sh/0bqhk7uh","slide":7,"name":"Rectangle 13","bbox":[804,382,7,208]}
+{"kind":"textbox","id":"sh/lczitcb2","slide":7,"name":"Rectangle 14","text":"Resolution matters","textPreview":"Resolution matters","textChars":18,"textLines":1,"bbox":[828,400,352,30]}
+{"kind":"textbox","id":"sh/y98zixcr","slide":7,"name":"Rectangle 15","text":"Of 1,312 mapped KOs requested; 230 were temporally significant, 985 converged and were clustered within the targeted set. KO diversity shows that pathway-level averages can conceal opposing constituent trajectories.","textPreview":"Of 1,312 mapped KOs requested; 230 were temporally significant, 985 converged and were clustered within the targeted set. KO diversity sh...","textChars":215,"textLines":1,"bbox":[828,439,352,134]}
+{"kind":"textbox","id":"sh/zah0r2tc","slide":7,"name":"Rectangle 16","text":"Source: brite_D_MicroResp_GAM_statistics.csv and targeted GAM panels","textPreview":"Source: brite_D_MicroResp_GAM_statistics.csv and targeted GAM panels","textChars":68,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/7qdgbix4","slide":7,"name":"Picture 22","bbox":[58.45,180,697.09,426]}
+{"kind":"notes","id":"nt/q5gsac","slide":7,"text":"[Sources]\nResults/MicroResp_targeted_BRITE_C_D/brite_D_MicroResp_GAM_statistics.csv\nFigures/MicroResp_targeted_BRITE_C_D/brite_D/brite_D_targeted_GAMs_page_01.png"}
+{"kind":"slide","id":"sl/27d4jd","slide":8,"title":"MICRORESP-LINKED EXPRESSION","textShapes":7}
+{"kind":"textbox","id":"sh/uhoju9cv","slide":8,"name":"Rectangle 5","text":"MICRORESP-LINKED EXPRESSION","textPreview":"MICRORESP-LINKED EXPRESSION","textChars":27,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/md4jqpcj","slide":8,"name":"Rectangle 1","text":"Both functional resolutions support three temporal expression clusters","textPreview":"Both functional resolutions support three temporal expression clusters","textChars":70,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/7edkjut4","slide":8,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/wj6lwju1","slide":8,"name":"Rectangle 3","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"shape","id":"sh/hkf2p4b6","slide":8,"name":"Rectangle 4","bbox":[42,172,560,420]}
+{"kind":"shape","id":"sh/vixknetg","slide":8,"name":"Rectangle 6","bbox":[640,172,560,420]}
+{"kind":"textbox","id":"sh/xov2dkv2","slide":8,"name":"Rectangle 8","text":"BRITE C","textPreview":"BRITE C","textChars":7,"textLines":1,"bbox":[50,147.01,140,26]}
+{"kind":"textbox","id":"sh/psfetw3m","slide":8,"name":"Rectangle 9","text":"BRITE D","textPreview":"BRITE D","textChars":7,"textLines":1,"bbox":[644,143,140,26]}
+{"kind":"textbox","id":"sh/or6d0rm1","slide":8,"name":"Rectangle 10","text":"Within-cluster dissimilarity drops sharply through k = 3 at both levels. Higher k values continue to subdivide trajectories but add progressively smaller gains.","textPreview":"Within-cluster dissimilarity drops sharply through k = 3 at both levels. Higher k values continue to subdivide trajectories but add progr...","textChars":160,"textLines":1,"bbox":[42,610,1170,44]}
+{"kind":"textbox","id":"sh/3qxwrmlg","slide":8,"name":"Rectangle 11","text":"Source: MicroResp-targeted BRITE C/D elbow diagnostics; automatic selection, no manual override.","textPreview":"Source: MicroResp-targeted BRITE C/D elbow diagnostics; automatic selection, no manual override.","textChars":96,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"image","id":"im/1szu5kz6","slide":8,"name":"Picture 17","bbox":[48,193.62,548,376.75]}
+{"kind":"image","id":"im/mtsbe50r","slide":8,"name":"Picture 19","bbox":[644,193.62,548,376.75]}
+{"kind":"notes","id":"nt/27d4jd","slide":8,"text":"[Sources]\nResults/MicroResp_targeted_BRITE_C_D/brite_C_MicroResp_elbow_diagnostics.csv\nResults/MicroResp_targeted_BRITE_C_D/brite_D_MicroResp_elbow_diagnostics.csv"}
+{"kind":"slide","id":"sl/og7xsv","slide":9,"title":"MICRORESP-LINKED EXPRESSION","textShapes":12}
+{"kind":"textbox","id":"sh/tkjy1svi","slide":9,"name":"Rectangle 19","text":"MICRORESP-LINKED EXPRESSION","textPreview":"MICRORESP-LINKED EXPRESSION","textChars":27,"textLines":1,"bbox":[42,28,430,24]}
+{"kind":"textbox","id":"sh/lw3qdovm","slide":9,"name":"Rectangle 1","text":"Filtering narrows the transcriptome to functions tied to assayed substrates","textPreview":"Filtering narrows the transcriptome to functions tied to assayed substrates","textChars":75,"textLines":1,"bbox":[42,58,1158,74]}
+{"kind":"shape","id":"sh/0vap4je1","slide":9,"name":"Rectangle 2","bbox":[42,142,1196,1]}
+{"kind":"textbox","id":"sh/nyl8fyds","slide":9,"name":"Rectangle 3","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[1185,674,52,18]}
+{"kind":"textbox","id":"sh/mxc76tw7","slide":9,"name":"Rectangle 4","text":"The explicit MicroResp-to-KEGG map was joined to previously fitted random-plot GAMs. All mapped, converged trajectories were clustered after within-feature z-scoring; targeted-set FDR identifies the strongest time-varying subset.","textPreview":"The explicit MicroResp-to-KEGG map was joined to previously fitted random-plot GAMs. All mapped, converged trajectories were clustered af...","textChars":229,"textLines":1,"bbox":[42,168,1150,70]}
+{"kind":"shape","id":"sh/903qh8vy","slide":9,"name":"Rectangle 5","bbox":[42,286,378,280]}
+{"kind":"shape","id":"sh/8zu983ed","slide":9,"name":"Rectangle 6","bbox":[42,286,378,8]}
+{"kind":"textbox","id":"sh/v2l8jydo","slide":9,"name":"Rectangle 7","text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[70,334,320,95]}
+{"kind":"textbox","id":"sh/a1cradw3","slide":9,"name":"Rectangle 8","text":"BRITE C pathways mapped and clustered","textPreview":"BRITE C pathways mapped and clustered","textChars":37,"textLines":1,"bbox":[70,456,315,70]}
+{"kind":"shape","id":"sh/o7upw7qh","slide":9,"name":"Rectangle 9","bbox":[451,286,378,280]}
+{"kind":"shape","id":"sh/9836pc72","slide":9,"name":"Rectangle 10","bbox":[451,286,378,8]}
+{"kind":"textbox","id":"sh/m5c7ux8r","slide":9,"name":"Rectangle 11","text":"985","textPreview":"985","textChars":3,"textLines":1,"bbox":[479,334,320,95]}
+{"kind":"textbox","id":"sh/n6lon2pc","slide":9,"name":"Rectangle 12","text":"BRITE D KOs clustered from 1,312 requested","textPreview":"BRITE D KOs clustered from 1,312 requested","textChars":42,"textLines":1,"bbox":[479,456,315,70]}
+{"kind":"shape","id":"sh/wbep0rqt","slide":9,"name":"Rectangle 13","bbox":[860,286,378,280]}
+{"kind":"shape","id":"sh/xwn6tw7e","slide":9,"name":"Rectangle 14","bbox":[860,286,378,8]}
+{"kind":"textbox","id":"sh/a9c7yh8n","slide":9,"name":"Rectangle 15","text":"k = 3","textPreview":"k = 3","textChars":5,"textLines":1,"bbox":[888,334,320,95]}
+{"kind":"textbox","id":"sh/ba5ormp8","slide":9,"name":"Rectangle 16","text":"automatic elbow at both annotation levels","textPreview":"automatic elbow at both annotation levels","textChars":41,"textLines":1,"bbox":[888,456,315,70]}
+{"kind":"textbox","id":"sh/kzep4rqp","slide":9,"name":"Rectangle 17","text":"Significant within the targeted set: 20 BRITE C pathways and 230 BRITE D KOs. Distance: 1 - Pearson correlation; linkage: Ward.D2.","textPreview":"Significant within the targeted set: 20 BRITE C pathways and 230 BRITE D KOs. Distance: 1 - Pearson correlation; linkage: Ward.D2.","textChars":130,"textLines":1,"bbox":[42,600,1170,44]}
+{"kind":"textbox","id":"sh/l0nqxw7a","slide":9,"name":"Rectangle 18","text":"Source: Results/MicroResp_targeted_BRITE_C_D/*_run_summary.csv","textPreview":"Source: Results/MicroResp_targeted_BRITE_C_D/*_run_summary.csv","textChars":62,"textLines":1,"bbox":[42,674,1080,20]}
+{"kind":"notes","id":"nt/og7xsv","slide":9,"text":"[Sources]\nResults/MicroResp_targeted_BRITE_C_D/MicroResp_BRITE_C_D_run_summary.csv\nData/MicroResp_all_BRITE_C_D_complete.csv\nScripts/12_MicroResp_targeted_BRITE_C_D_GAM_and_clustering.R"}

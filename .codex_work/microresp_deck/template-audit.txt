@@ -1,0 +1,12 @@
+Reference deck: BRITE_temporal_clustering_results.pptx
+Slide size: widescreen 16:9, white background, dark navy typography, thin gray divider rules, blue accent.
+Typography: inherited from the source deck; all output slides duplicate and edit source slides in place.
+Reusable patterns:
+- Slide 1: minimal title slide.
+- Slide 2: three headline metrics with short methods summary.
+- Slide 3: paired figure panels.
+- Slides 4 and 6: large left figure plus cluster bullets and interpretation callout.
+- Slides 5 and 7: tall heatmap plus three interpretation blocks.
+- Slide 8: compact comparison table.
+Insertion contract: replace only inherited text and image objects identified in the frame map. Preserve decorative rectangles, dividers, numbering, and source-deck chrome.
+Narrative: targeted filtering -> GAM evidence -> elbow selection -> BRITE C clusters -> BRITE D clusters -> cross-scale synthesis tied to storyboard.

@@ -1,0 +1,23 @@
+
+Factor 1 expression, BRITE, GAM, and MicroResp clustering analysis complete.
+# A tibble: 1 × 5
+  n_factor1_genes n_factor1_genes_with…¹ n_factor1_genes_with…² n_unique_brite_C
+            <int>                  <int>                  <int>            <int>
+1          770408                1426583                1056636              516
+# ℹ abbreviated names: ¹​n_factor1_genes_with_expression,
+#   ²​n_factor1_genes_with_annotation
+# ℹ 1 more variable: n_unique_brite_D <int>
+# A tibble: 2 × 7
+  brite_level n_features n_converged n_warning n_failed n_skipped
+  <chr>            <int>       <int>     <int>    <int>     <int>
+1 brite_C            348         337         0        0        11
+2 brite_D           6338        5784         0        0       554
+# ℹ 1 more variable: n_significant_time <int>
+# A tibble: 2 × 10
+  brite_level n_mapping_rows n_unique_requested_features n_matched_features
+  <chr>                <int>                       <int>              <int>
+1 brite_C                150                          31                 31
+2 brite_D               7512                        1113               1039
+# ℹ 6 more variables: n_converged_features <int>, n_clustered_features <int>,
+#   n_target_FDR_significant <int>, automatic_elbow_k <int>, selected_k <int>,
+#   heatmap_display_rule <chr>

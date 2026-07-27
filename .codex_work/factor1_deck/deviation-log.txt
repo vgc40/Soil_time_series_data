@@ -1,0 +1,4 @@
+The output uses nine slides built from selected reference patterns.
+Slides 3, 4, 5, and 8 reuse the paired-evidence source pattern for different Factor 1 results.
+The closing slide reuses the three-metric summary pattern to separate evidence, limitation, and implication.
+No external assets or claims are introduced; all figures and statistics come from repository outputs and the supplied storyboard.

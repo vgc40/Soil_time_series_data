@@ -1,0 +1,36 @@
+{
+  "outputSlides": [
+    {"outputSlide":1,"sourceSlide":1,"narrativeRole":"title","reuseMode":"duplicate-slide","editTargets":[]},
+    {"outputSlide":2,"sourceSlide":2,"narrativeRole":"workflow","reuseMode":"duplicate-slide","editTargets":[{"shapeId":"sh/b29kza94","action":"rewrite"}]},
+    {"outputSlide":3,"sourceSlide":3,"narrativeRole":"functional breadth","reuseMode":"duplicate-slide","editTargets":[{"shapeId":"sh/298ryl4v","action":"rewrite"}]},
+    {
+      "outputSlide":4,"sourceSlide":5,"narrativeRole":"filtering and cluster selection","reuseMode":"duplicate-slide",
+      "editTargets":[
+        {"shapeId":"sh/l4bupwny","action":"rewrite"},{"shapeId":"sh/dgbulwnm","action":"rewrite"},
+        {"shapeId":"sh/z2tcnm5s","action":"rewrite"},{"shapeId":"sh/x4vedgvm","action":"rewrite"},
+        {"shapeId":"sh/ahkvi1cb","action":"rewrite"}
+      ]
+    },
+    {
+      "outputSlide":5,"sourceSlide":6,"narrativeRole":"BRITE C cluster trends","reuseMode":"duplicate-slide",
+      "editTargets":[
+        {"shapeId":"sh/ml07i9sv","action":"rewrite"},{"shapeId":"sh/yhg7epsj","action":"rewrite"},
+        {"shapeId":"sh/87ipkzal","action":"rewrite"},{"shapeId":"sh/47mt0b6x","action":"rewrite"},
+        {"shapeId":"sh/j6dcr65c","action":"rewrite"}
+      ]
+    },
+    {
+      "outputSlide":6,"sourceSlide":7,"narrativeRole":"BRITE D cluster trends","reuseMode":"duplicate-slide",
+      "editTargets":[
+        {"shapeId":"sh/kzmdova1","action":"rewrite"},{"shapeId":"sh/cb2tkvap","action":"rewrite"},
+        {"shapeId":"sh/ydkbm5sv","action":"rewrite"},{"shapeId":"sh/25ojml43","action":"rewrite"},
+        {"shapeId":"sh/p8fih03e","action":"rewrite"}
+      ]
+    },
+    {"outputSlide":7,"sourceSlide":9,"narrativeRole":"storyboard synthesis","reuseMode":"duplicate-slide","editTargets":[{"shapeId":"sh/nex4jq5k","action":"rewrite"}]}
+  ],
+  "omittedSourceSlides": [
+    {"sourceSlide":4,"reason":"dense GAM mosaic removed to simplify flow"},
+    {"sourceSlide":8,"reason":"heatmap comparison removed to center trajectory plots"}
+  ]
+}
