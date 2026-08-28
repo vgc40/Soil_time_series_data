@@ -1,2 +1,0 @@
-mapping_file,all_pathway_gam_directory,model,clustering,inclusion,BRITE_D_heatmap
-Data/MicroResp_all_BRITE_C_D_complete.csv,Results/BRITE_temporal_gam_random_plot_all_pathways,"Expression ~ s(time_numeric, k = 6) + s(Plot, bs = 're') fit in Script 09","Population GAM trajectories, row z-score, 1 - Pearson correlation, Ward.D2","All mapped features with converged GAMs, regardless of target FDR significance",Top time-only trajectories within each cluster; display selection only

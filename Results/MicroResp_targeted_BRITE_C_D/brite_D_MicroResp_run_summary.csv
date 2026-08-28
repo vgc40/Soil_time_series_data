@@ -1,2 +1,0 @@
-brite_level,n_mapping_rows,n_unique_requested_features,n_matched_features,n_converged_features,n_clustered_features,n_target_FDR_significant,automatic_elbow_k,selected_k,heatmap_display_rule
-brite_D,8507,1312,1219,985,985,230,3,3,"Top 15 BRITE D KOs per cluster, ranked by time-only variance explained"

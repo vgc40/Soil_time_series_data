@@ -1,2 +1,0 @@
-run_label,exclusion_source,model_method,model_formula,full_deviance_definition,time_variance_definition,fdr_scope,results_dir,figures_dir,run_date
-gam_random_plot_all_pathways,kegg_human_exclude_2026-07-13.txt,mgcv::gam REML,"Expression ~ s(time_numeric, k = 6) + s(Plot, bs = 're')",Time smooth plus Plot random effect,Population time smooth only; Plot random effect excluded,Separately within all converged BRITE C and BRITE D features,Results/BRITE_temporal_gam_random_plot_all_pathways,Figures/BRITE_temporal_gam_random_plot_all_pathways,2026-07-16

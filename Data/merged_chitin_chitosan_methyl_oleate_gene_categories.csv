@@ -1,0 +1,32 @@
+KO,KEGG_Name_1,EC_number,Zip_category,Image_category,Zip_evidence,Image_evidence,Figure_ID,Unique_gene_count,Source
+ko:K13381,chiA; bifunctional chitinase/lysozyme [EC:3.2.1.14 3.2.1.17],3.2.1.14;3.2.1.17,Chitin degradation,,Direct,,,37,ZIP annotation
+ko:K20547,CHIB; basic endochitinase B [EC:3.2.1.14],3.2.1.14,Chitin degradation,,Direct,,,1,ZIP annotation
+ko:K21606,endo_I; endo-chitodextinase [EC:3.2.1.202],3.2.1.202,Chitin degradation,,Direct,,,104,ZIP annotation
+ko:K01183,E3.2.1.14; chitinase [EC:3.2.1.14],3.2.1.14,Chitin degradation,Chitin degradation (chitinase; chitin -> chitobiose/GlcNAc),Direct,Direct/figure pathway,1,820,ZIP annotation + image
+ko:K03791,K03791; putative chitinase,,Chitin degradation,Chitin degradation (putative chitinase),Direct,Direct/figure pathway,1,295,ZIP annotation + image
+ko:K01207,nagZ; beta-N-acetylhexosaminidase [EC:3.2.1.52],3.2.1.52,"Chitin degradation, downstream oligomer processing",Chitobiose/GlcNAc oligomer processing (NagZ),Associated,Associated/figure pathway,2,1488,ZIP annotation + image
+ko:K00884,NAGK; N-acetylglucosamine kinase [EC:2.7.1.59],2.7.1.59,,GlcNAc phosphorylation to GlcNAc-6P (NagK),,Associated/figure pathway,3,110,Image + matched annotation
+ko:K01443,"nagA, AMDHD2; N-acetylglucosamine-6-phosphate deacetylase [EC:3.5.1.25]",3.5.1.25,,GlcNAc-6P deacetylation to GlcN-6P (NagA),,Associated/figure pathway,4,804,Image + matched annotation
+ko:K02564,"nagB, GNPDA; glucosamine-6-phosphate deaminase [EC:3.5.99.6]",3.5.99.6,,GlcN-6P conversion to Fru-6P (NagB),,Associated/figure pathway,5,438,Image + matched annotation
+ko:K01452,E3.5.1.41; chitin deacetylase [EC:3.5.1.41],3.5.1.41,Chitin -> chitosan conversion,Chitin/chitosan deacetylation step shown in figure,Direct,Figure-supported,6,257,ZIP annotation + image
+ko:K18676,gspK; glucosamine kinase [EC:2.7.1.8],2.7.1.8,,GlcN phosphorylation to GlcN-6P (GspK),,Associated/figure pathway,7,207,Image + matched annotation
+ko:K02803,nagE; N-acetylglucosamine PTS system EIICBA or EIICB component [EC:2.7.1.193],2.7.1.193,,GlcNAc transport/phosphorylation (NagE PTS),,Associated/figure pathway,8,83,Image + matched annotation
+ko:K02803,nagEb; N-acetylglucosamine PTS system EIIB component [EC:2.7.1.193],2.7.1.193,,GlcNAc transport/phosphorylation (NagE PTS),,Associated/figure pathway,8,110,Image + matched annotation
+ko:K02804,nagE; N-acetylglucosamine PTS system EIICBA or EIICB component [EC:2.7.1.193],2.7.1.193,,GlcNAc transport/phosphorylation (NagE PTS),,Associated/figure pathway,8,122,Image + matched annotation
+ko:K02804,nagEb; N-acetylglucosamine PTS system EIIB component [EC:2.7.1.193],2.7.1.193,,GlcNAc transport/phosphorylation (NagE PTS),,Associated/figure pathway,8,83,Image + matched annotation
+ko:K01233,csn; chitosanase [EC:3.2.1.132],3.2.1.132,Chitosan metabolism,,Direct,,,127,ZIP annotation
+ko:K01044,CES1; carboxylesterase 1 [EC:3.1.1.1],3.1.1.1,Methyl oleate ester hydrolysis candidate,,Candidate,,,2,ZIP annotation
+ko:K01046,"lip, TGL2; triacylglycerol lipase [EC:3.1.1.3]",3.1.1.3,Methyl oleate ester hydrolysis candidate,,Candidate,,,397,ZIP annotation
+ko:K03927,CES2; carboxylesterase 2 [EC:3.1.1.1 3.1.1.84 3.1.1.56],3.1.1.1;3.1.1.84;3.1.1.56,Methyl oleate ester hydrolysis candidate,,Candidate,,,3,ZIP annotation
+ko:K03928,yvaK; carboxylesterase [EC:3.1.1.1],3.1.1.1,Methyl oleate ester hydrolysis candidate,,Candidate,,,199,ZIP annotation
+ko:K06999,K06999; phospholipase/carboxylesterase,,Methyl oleate ester hydrolysis candidate,,Candidate,,,1417,ZIP annotation
+ko:K12686,"apeE, estA, lip-1; outer membrane lipase/esterase",,Methyl oleate ester hydrolysis candidate,,Candidate,,,39,ZIP annotation
+ko:K15743,CES3_5; carboxylesterase 3/5 [EC:3.1.1.1],3.1.1.1,Methyl oleate ester hydrolysis candidate,,Candidate,,,2,ZIP annotation
+ko:K19311,lipV; lipase [EC:3.1.1.-],3.1.1.-,Methyl oleate ester hydrolysis candidate,,Candidate,,,193,ZIP annotation
+ko:K00255,ACADL; long-chain-acyl-CoA dehydrogenase [EC:1.3.8.8],1.3.8.8,Oleate beta-oxidation,,Associated,,,126,ZIP annotation
+ko:K00632,"fadA, fadI; acetyl-CoA acyltransferase [EC:2.3.1.16]",2.3.1.16,Oleate beta-oxidation,,Associated,,,1692,ZIP annotation
+ko:K01782,fadJ; 3-hydroxyacyl-CoA dehydrogenase / enoyl-CoA hydratase / 3-hydroxybutyryl-CoA epimerase [EC:1.1.1.35 4.2.1.17 5.1.2.3],1.1.1.35;4.2.1.17;5.1.2.3,Oleate beta-oxidation,,Associated,,,829,ZIP annotation
+ko:K01825,fadB; 3-hydroxyacyl-CoA dehydrogenase / enoyl-CoA hydratase / 3-hydroxybutyryl-CoA epimerase / enoyl-CoA isomerase [EC:1.1.1.35 4.2.1.17 5.1.2.3 5.3.3.8],1.1.1.35;4.2.1.17;5.1.2.3;5.3.3.8,Oleate beta-oxidation,,Associated,,,165,ZIP annotation
+ko:K01897,"ACSL, fadD; long-chain-fatty-acid---CoA ligase [EC:6.2.1.3]",6.2.1.3,Oleate activation for beta-oxidation,,Associated,,,5149,ZIP annotation
+ko:K06445,fadE; acyl-CoA dehydrogenase [EC:1.3.99.-],1.3.99.-,Oleate beta-oxidation,,Associated,,,333,ZIP annotation
+ko:K15013,ACSBG; long-chain-fatty-acid---CoA ligase [EC:6.2.1.3],6.2.1.3,Oleate activation for beta-oxidation,,Associated,,,2,ZIP annotation

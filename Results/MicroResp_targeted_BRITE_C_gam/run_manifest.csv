@@ -1,2 +1,0 @@
-mapping_file,all_pathway_gam_directory,match_key,inclusion_rule,targeted_fdr_scope,results_dir,figures_dir,run_date
-Data/Microresp_pathways.csv,Results/BRITE_temporal_gam_random_plot_all_pathways,Exact ko##### pathway code extracted from brite_C,All matched MicroResp-linked BRITE C pathways,"Unique matched, converged BRITE C pathways",Results/MicroResp_targeted_BRITE_C_gam,Figures/MicroResp_targeted_BRITE_C_gam,2026-07-16

@@ -1,6 +1,7 @@
 # History files
 .Rhistory
 .Rapp.history
+*.Rhistory
 
 # Session Data files
 .RData
@@ -48,10 +49,14 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-Results/Archive
-Figures/Archive
+# Local archives and superseded manuscript work
 Archive/
-Scripts/Archive
 DataHub March/
 
+# Generated Codex and temporary workspace files
+.codex_work/
+tmp/
+*.inspect.ndjson
+
+# Large local query export
 Data/Query_expression.csv
