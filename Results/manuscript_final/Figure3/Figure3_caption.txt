@@ -1,3 +1,8 @@
-Panel B: the 40 functions were selected by abundance and prevalence, not temporal significance. Panel C: contrasting seasonal trajectories for pre-curated substrate families and transcript
-gene sets. Exploratory date-level correlations (n = 7 per family): chitin family Pearson r = -0.77 (p = 0.042); Spearman rho = -0.93 (p = 0.0025); methyl oleate Pearson r = -0.24 (p =
-0.599); Spearman rho = -0.29 (p = 0.5345). These correlations are descriptive and do not establish mechanistic linkage.
+Figure 3. Seasonal field gene expression is structured but does not necessarily track laboratory substrate-response capacity. (A) Bray-Curtis NMDS of BRITE C transcript composition for the
+100% irrigation treatment. Field-expressed functional composition differed between plant-active and plant-dormant samples (PERMANOVA R2 = 0.234, p = 0.001; stress = 0.089). Multivariate
+dispersion did not differ between seasons (p = 0.92). (B) Temporal expression of BRITE C pathways biologically linked a priori to substrates included in the MicroResp assay. Rows show
+pathway-specific z-scores calculated from date-mean transcript expression, so colors represent expression relative to each pathway's own temporal mean rather than absolute expression. Row
+annotations indicate the associated biological MicroResp substrate group. (C) Temporal comparison of the three strongest FDR-supported MicroResp responses identified independently in Figure
+2 (Methyl oleate, Chitosan, L Glutamine) with expression of their mapped BRITE C functions. MicroResp responses were standardized separately within substrate and transcript expression was
+standardized separately within mapped pathway before date-level summarization. Z-scores therefore show relative temporal changes within each measurement and should not be interpreted as
+equivalent absolute magnitudes between MicroResp and transcript expression.

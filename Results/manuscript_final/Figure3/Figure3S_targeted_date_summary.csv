@@ -1,0 +1,29 @@
+target_family,measure,Sampling_Date,Season,n,mean_standardized_value,se_standardized_value,lower_se,upper_se
+Chitin / chitosan / N-acetylglucosamine,Potential substrate-response capacity (MicroResp),2023-06-07,"Plant-active, Apr-Oct",5,-0.43943641126183164,0.17656848187441163,-0.6160048931362433,-0.26286792938742
+Chitin / chitosan / N-acetylglucosamine,Potential substrate-response capacity (MicroResp),2023-07-05,"Plant-active, Apr-Oct",5,-1.0319817087275072,0.46804230388606527,-1.5000240126135724,-0.5639394048414419
+Chitin / chitosan / N-acetylglucosamine,Potential substrate-response capacity (MicroResp),2023-09-06,"Plant-active, Apr-Oct",5,0.22336118588843434,0.4260356504286113,-0.20267446454017696,0.6493968363170457
+Chitin / chitosan / N-acetylglucosamine,Potential substrate-response capacity (MicroResp),2023-10-04,"Plant-active, Apr-Oct",5,0.05660131963126591,0.26643293006237184,-0.20983161043110593,0.32303424969363775
+Chitin / chitosan / N-acetylglucosamine,Potential substrate-response capacity (MicroResp),2024-01-02,"Plant-dormant, Nov-Mar",5,0.8154279592818827,0.27640566353684537,0.5390222957450373,1.091833622818728
+Chitin / chitosan / N-acetylglucosamine,Potential substrate-response capacity (MicroResp),2024-03-06,"Plant-dormant, Nov-Mar",5,0.3259937840601811,0.19109287624501084,0.13490090781517025,0.5170866603051919
+Chitin / chitosan / N-acetylglucosamine,Potential substrate-response capacity (MicroResp),2024-05-08,"Plant-active, Apr-Oct",5,0.050033871127574264,0.15181592211861944,-0.10178205099104518,0.2018497932461937
+Chitin / chitosan / N-acetylglucosamine,Field transcript expression,2023-06-07,"Plant-active, Apr-Oct",5,0.6978778056748721,0.550014422234068,0.14786338344080407,1.2478922279089402
+Chitin / chitosan / N-acetylglucosamine,Field transcript expression,2023-07-05,"Plant-active, Apr-Oct",5,0.2555054098378153,0.5747623707648211,-0.3192569609270058,0.8302677806026364
+Chitin / chitosan / N-acetylglucosamine,Field transcript expression,2023-09-06,"Plant-active, Apr-Oct",5,-0.025425009695096014,0.3360706252763814,-0.3614956349714774,0.31064561558128534
+Chitin / chitosan / N-acetylglucosamine,Field transcript expression,2023-10-04,"Plant-active, Apr-Oct",5,-0.1298414172776632,0.36041476410090334,-0.4902561813785665,0.23057334682324013
+Chitin / chitosan / N-acetylglucosamine,Field transcript expression,2024-01-02,"Plant-dormant, Nov-Mar",5,-0.9113424697805814,0.25323374013101535,-1.1645762099115968,-0.658108729649566
+Chitin / chitosan / N-acetylglucosamine,Field transcript expression,2024-03-06,"Plant-dormant, Nov-Mar",5,-0.13919225304371347,0.24755590313036185,-0.3867481561740753,0.10836365008664839
+Chitin / chitosan / N-acetylglucosamine,Field transcript expression,2024-05-08,"Plant-active, Apr-Oct",5,0.25241793428436826,0.5727257778193534,-0.32030784353498515,0.8251437121037217
+Methyl oleate,Potential substrate-response capacity (MicroResp),2023-06-07,"Plant-active, Apr-Oct",5,0.2167836686089873,0.14936309197106112,0.06742057663792617,0.3661467605800484
+Methyl oleate,Potential substrate-response capacity (MicroResp),2023-07-05,"Plant-active, Apr-Oct",5,-1.0896279759033276,0.06173517566005288,-1.1513631515633804,-1.0278928002432748
+Methyl oleate,Potential substrate-response capacity (MicroResp),2023-09-06,"Plant-active, Apr-Oct",5,-0.8492991107329863,0.083777982499144,-0.9330770932321303,-0.7655211282338422
+Methyl oleate,Potential substrate-response capacity (MicroResp),2023-10-04,"Plant-active, Apr-Oct",5,-0.9667857843747548,0.04824670800169333,-1.0150324923764482,-0.9185390763730615
+Methyl oleate,Potential substrate-response capacity (MicroResp),2024-01-02,"Plant-dormant, Nov-Mar",5,1.3385641469368017,0.3687107483062863,0.9698533986305153,1.707274895243088
+Methyl oleate,Potential substrate-response capacity (MicroResp),2024-03-06,"Plant-dormant, Nov-Mar",5,0.5156885106662502,0.29332586990573617,0.22236264076051404,0.8090143805719864
+Methyl oleate,Potential substrate-response capacity (MicroResp),2024-05-08,"Plant-active, Apr-Oct",5,0.8346765447990291,0.17715774326883682,0.6575188015301923,1.011834288067866
+Methyl oleate,Field transcript expression,2023-06-07,"Plant-active, Apr-Oct",5,0.7712089731252713,0.49872896892108204,0.2724800042041892,1.2699379420463532
+Methyl oleate,Field transcript expression,2023-07-05,"Plant-active, Apr-Oct",5,0.33528231542585857,0.6748848805191735,-0.33960256509331493,1.010167195945032
+Methyl oleate,Field transcript expression,2023-09-06,"Plant-active, Apr-Oct",5,-0.15091323414661179,0.19167464350050717,-0.34258787764711895,0.040761409353895384
+Methyl oleate,Field transcript expression,2023-10-04,"Plant-active, Apr-Oct",5,-0.2938005716292093,0.24608462008353096,-0.5398851917127403,-0.04771595154567834
+Methyl oleate,Field transcript expression,2024-01-02,"Plant-dormant, Nov-Mar",5,-0.8157712661246854,0.2714186488820973,-1.0871899150067827,-0.5443526172425881
+Methyl oleate,Field transcript expression,2024-03-06,"Plant-dormant, Nov-Mar",5,-0.0929442635723683,0.40772965951509665,-0.500673923087465,0.31478539594272836
+Methyl oleate,Field transcript expression,2024-05-08,"Plant-active, Apr-Oct",5,0.24693804692174376,0.5203352043621746,-0.27339715744043086,0.7672732512839184

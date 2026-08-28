@@ -1,0 +1,4 @@
+Figure S3. Global correspondence between MicroResp substrate-response profiles and field BRITE C transcript composition. Procrustes analysis compared Bray-Curtis NMDS configurations for
+matched 100% irrigation samples. Each segment connects the MicroResp and transcript positions for the same sample after optimal rotation and scaling of the two ordinations; shorter segments
+indicate greater agreement between the two multivariate configurations. Procrustes correlation = 0.335; exploratory PROTEST p = 0.083; n = 35 matched samples. Permutations were performed as
+cyclic shifts within plots while preserving chronological sample order. Because only seven nonstationary seasonal dates were available, the permutation p-value is treated as exploratory.

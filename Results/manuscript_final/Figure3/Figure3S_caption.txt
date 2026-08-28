@@ -1,0 +1,4 @@
+Targeted examples were chosen before inspecting transcript correspondence: each substrate had a supported Figure 2 temporal GAM pattern and an interpretable Microresp_pathways mapping.
+Potential substrate-response capacity was measured by MicroResp under standardized laboratory conditions; field transcript expression was measured in situ. Exploratory date-level
+correlations (n = 7 per family): chitin family Pearson r = -0.77 (p = 0.042); Spearman rho = -0.93 (p = 0.0025); methyl oleate Pearson r = -0.24 (p = 0.599); Spearman rho = -0.29 (p =
+0.5345). These correlations are descriptive and do not establish mechanistic linkage.

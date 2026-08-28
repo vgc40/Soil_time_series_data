@@ -1,0 +1,43 @@
+Substrate,display_name,display_order,Sampling_Date,Season,n_samples,mean_standardized_value,se_standardized_value,lower_se,upper_se,Measurement
+Methyl_oleate,Methyl oleate,1,2023-06-07,"Plant-active, Apr-Oct",5,0.2167836686089873,0.14936309197106112,0.06742057663792617,0.3661467605800484,Potential substrate-response capacity (MicroResp)
+Methyl_oleate,Methyl oleate,1,2023-07-05,"Plant-active, Apr-Oct",5,-1.0896279759033276,0.06173517566005288,-1.1513631515633804,-1.0278928002432748,Potential substrate-response capacity (MicroResp)
+Methyl_oleate,Methyl oleate,1,2023-09-06,"Plant-active, Apr-Oct",5,-0.8492991107329863,0.083777982499144,-0.9330770932321303,-0.7655211282338422,Potential substrate-response capacity (MicroResp)
+Methyl_oleate,Methyl oleate,1,2023-10-04,"Plant-active, Apr-Oct",5,-0.9667857843747548,0.04824670800169333,-1.0150324923764482,-0.9185390763730615,Potential substrate-response capacity (MicroResp)
+Methyl_oleate,Methyl oleate,1,2024-01-02,"Plant-dormant, Nov-Mar",5,1.3385641469368017,0.3687107483062863,0.9698533986305153,1.707274895243088,Potential substrate-response capacity (MicroResp)
+Methyl_oleate,Methyl oleate,1,2024-03-06,"Plant-dormant, Nov-Mar",5,0.5156885106662502,0.29332586990573617,0.22236264076051404,0.8090143805719864,Potential substrate-response capacity (MicroResp)
+Methyl_oleate,Methyl oleate,1,2024-05-08,"Plant-active, Apr-Oct",5,0.8346765447990291,0.17715774326883682,0.6575188015301923,1.011834288067866,Potential substrate-response capacity (MicroResp)
+Methyl_oleate,Methyl oleate,1,2023-06-07,"Plant-active, Apr-Oct",5,0.569057140453486,0.5704438277362937,-0.0013866872828076637,1.1395009681897796,Related field transcript expression
+Methyl_oleate,Methyl oleate,1,2023-07-05,"Plant-active, Apr-Oct",5,-0.035176153448019,0.4003627895818886,-0.4355389430299076,0.3651866361338696,Related field transcript expression
+Methyl_oleate,Methyl oleate,1,2023-09-06,"Plant-active, Apr-Oct",5,-0.3846447484277343,0.24905070351941863,-0.6336954519471529,-0.13559404490831564,Related field transcript expression
+Methyl_oleate,Methyl oleate,1,2023-10-04,"Plant-active, Apr-Oct",5,-0.09239338560604982,0.22228933108355786,-0.3146827166896077,0.12989594547750805,Related field transcript expression
+Methyl_oleate,Methyl oleate,1,2024-01-02,"Plant-dormant, Nov-Mar",5,-0.6660782879520775,0.33112974901967,-0.9972080369717475,-0.33494853893240745,Related field transcript expression
+Methyl_oleate,Methyl oleate,1,2024-03-06,"Plant-dormant, Nov-Mar",5,0.06212845437662776,0.22603195888037614,-0.16390350450374838,0.2881604132570039,Related field transcript expression
+Methyl_oleate,Methyl oleate,1,2024-05-08,"Plant-active, Apr-Oct",5,0.5471069806037663,0.3752634449362583,0.17184353566750799,0.9223704255400246,Related field transcript expression
+Chitosan,Chitosan,2,2023-06-07,"Plant-active, Apr-Oct",5,-0.23892343895296883,0.145571718262323,-0.3844951572152918,-0.09335172069064582,Potential substrate-response capacity (MicroResp)
+Chitosan,Chitosan,2,2023-07-05,"Plant-active, Apr-Oct",5,-1.1995793263358252,0.2284769068633497,-1.4280562331991749,-0.9711024194724756,Potential substrate-response capacity (MicroResp)
+Chitosan,Chitosan,2,2023-09-06,"Plant-active, Apr-Oct",5,0.39662275623340965,0.42080081183070356,-0.024178055597293913,0.8174235680641132,Potential substrate-response capacity (MicroResp)
+Chitosan,Chitosan,2,2023-10-04,"Plant-active, Apr-Oct",5,0.6454099642732878,0.246638494645028,0.3987714696282598,0.8920484589183157,Potential substrate-response capacity (MicroResp)
+Chitosan,Chitosan,2,2024-01-02,"Plant-dormant, Nov-Mar",5,0.08809678460426448,0.2208160871056648,-0.13271930250140032,0.3089128717099293,Potential substrate-response capacity (MicroResp)
+Chitosan,Chitosan,2,2024-03-06,"Plant-dormant, Nov-Mar",5,1.3610016916239052,0.26749098293553053,1.0935107086883746,1.6284926745594357,Potential substrate-response capacity (MicroResp)
+Chitosan,Chitosan,2,2024-05-08,"Plant-active, Apr-Oct",5,-1.0526284314460734,0.0942293530734354,-1.146857784519509,-0.958399078372638,Potential substrate-response capacity (MicroResp)
+Chitosan,Chitosan,2,2023-06-07,"Plant-active, Apr-Oct",5,0.6012137477277795,0.4826099377702211,0.11860380995755837,1.0838236854980006,Related field transcript expression
+Chitosan,Chitosan,2,2023-07-05,"Plant-active, Apr-Oct",5,0.30952734687302874,0.29168748854305704,0.017839858329971703,0.6012148354160858,Related field transcript expression
+Chitosan,Chitosan,2,2023-09-06,"Plant-active, Apr-Oct",5,-0.2806456326687728,0.1521319751566445,-0.4327776078254173,-0.1285136575121283,Related field transcript expression
+Chitosan,Chitosan,2,2023-10-04,"Plant-active, Apr-Oct",5,-0.22729487878999455,0.21886433353163695,-0.44615921232163147,-0.008430545258357597,Related field transcript expression
+Chitosan,Chitosan,2,2024-01-02,"Plant-dormant, Nov-Mar",5,-0.7505804669000857,0.3150192905590695,-1.0655997574591551,-0.4355611763410162,Related field transcript expression
+Chitosan,Chitosan,2,2024-03-06,"Plant-dormant, Nov-Mar",5,-0.21703208368833835,0.21417424716883035,-0.4312063308571687,-0.0028578365195079947,Related field transcript expression
+Chitosan,Chitosan,2,2024-05-08,"Plant-active, Apr-Oct",5,0.5648119674463827,0.34095682870978894,0.2238551387365938,0.9057687961561717,Related field transcript expression
+L.Glutamine,L Glutamine,3,2023-06-07,"Plant-active, Apr-Oct",5,-0.44185794145512,0.1499982040364879,-0.5918561454916078,-0.2918597374186321,Potential substrate-response capacity (MicroResp)
+L.Glutamine,L Glutamine,3,2023-07-05,"Plant-active, Apr-Oct",5,-1.141720026893472,0.23426073272382686,-1.3759807596172988,-0.9074592941696451,Potential substrate-response capacity (MicroResp)
+L.Glutamine,L Glutamine,3,2023-09-06,"Plant-active, Apr-Oct",5,-0.26928817090572876,0.27669250850637,-0.5459806794120987,0.007404337600641242,Potential substrate-response capacity (MicroResp)
+L.Glutamine,L Glutamine,3,2023-10-04,"Plant-active, Apr-Oct",5,-0.5354923196215933,0.2596700811683135,-0.7951624007899067,-0.27582223845327974,Potential substrate-response capacity (MicroResp)
+L.Glutamine,L Glutamine,3,2024-01-02,"Plant-dormant, Nov-Mar",5,1.1981437104001575,0.6066151038776986,0.591528606522459,1.8047588142778561,Potential substrate-response capacity (MicroResp)
+L.Glutamine,L Glutamine,3,2024-03-06,"Plant-dormant, Nov-Mar",5,0.5750328211736554,0.20411385311497918,0.3709189680586762,0.7791466742886346,Potential substrate-response capacity (MicroResp)
+L.Glutamine,L Glutamine,3,2024-05-08,"Plant-active, Apr-Oct",5,0.6151819273021003,0.261377174628219,0.3538047526738813,0.8765591019303194,Potential substrate-response capacity (MicroResp)
+L.Glutamine,L Glutamine,3,2023-06-07,"Plant-active, Apr-Oct",5,0.6648978589023699,0.41570965135549054,0.24918820754687931,1.0806075102578605,Related field transcript expression
+L.Glutamine,L Glutamine,3,2023-07-05,"Plant-active, Apr-Oct",5,0.6415007914377068,0.32268980267266745,0.3188109887650393,0.9641905941103742,Related field transcript expression
+L.Glutamine,L Glutamine,3,2023-09-06,"Plant-active, Apr-Oct",5,-0.15589447906602913,0.25500391549825974,-0.4108983945642889,0.09910943643223061,Related field transcript expression
+L.Glutamine,L Glutamine,3,2023-10-04,"Plant-active, Apr-Oct",5,-0.042130246029396495,0.25780155164070256,-0.29993179767009903,0.21567130561130607,Related field transcript expression
+L.Glutamine,L Glutamine,3,2024-01-02,"Plant-dormant, Nov-Mar",5,-1.2226941771355568,0.2557574572738815,-1.4784516344094383,-0.9669367198616754,Related field transcript expression
+L.Glutamine,L Glutamine,3,2024-03-06,"Plant-dormant, Nov-Mar",5,-0.505362997782301,0.2013959810262519,-0.7067589788085529,-0.3039670167560491,Related field transcript expression
+L.Glutamine,L Glutamine,3,2024-05-08,"Plant-active, Apr-Oct",5,0.6196832496732066,0.3657989322905326,0.25388431738267403,0.9854821819637393,Related field transcript expression

@@ -7,9 +7,10 @@ Substrates,31
 NMDS stress,0.0904840710718383
 Envfit samples with complete field data,76
 PERMANOVA permutation restriction,Permutations restricted within Plot_ID
-Selected plant-active substrate,Hemicellulose
-Selected plant-dormant substrate,Oxalic_acid
-Selected stable substrate,Malic_acid
+Top temporal substrate 1,Methyl_oleate
+Top temporal substrate 2,Chitosan
+Top temporal substrate 3,L.Glutamine
+FDR-significant temporal substrates,29
 Significant substrates clustered,29
 Zero-variance trajectories removed,0
 Silhouette-selected cluster number,2
