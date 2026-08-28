@@ -880,11 +880,6 @@ microresp_pathway_mapping <- read_csv(
 # =============================================================================
 # Biological MicroResp group annotation only
 # =============================================================================
-#
-# Temporal trajectory clusters are intentionally NOT included here.
-# The heatmap annotation is restricted to the biological MicroResp substrate
-# group to keep the figure interpretable.
-# =============================================================================
 
 mapping_with_groups <- microresp_pathway_mapping
 
