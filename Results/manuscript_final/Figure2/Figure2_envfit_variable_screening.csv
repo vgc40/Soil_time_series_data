@@ -1,0 +1,6 @@
+variable,maximum_absolute_correlation_with_retained,retained,decision
+soil_temperature,0,TRUE,Retained for final envfit
+gravimetric_water_content,0.17343281569600275,TRUE,Retained for final envfit
+root_biomass,0.1978395665447214,TRUE,Retained for final envfit
+total_soil_respiration,0.5898243401813417,TRUE,Retained for final envfit
+microbial_biomass_C,0.30707727687583,TRUE,Retained for final envfit

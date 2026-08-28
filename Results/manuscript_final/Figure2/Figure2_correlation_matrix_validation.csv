@@ -1,0 +1,5 @@
+check,passed
+square,TRUE
+symmetric,TRUE
+finite,TRUE
+diagonal_equals_one,TRUE

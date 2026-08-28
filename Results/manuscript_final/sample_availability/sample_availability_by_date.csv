@@ -1,0 +1,14 @@
+Sampling_Date,Season,total_field_soil_respiration,root_biomass,microresp,metatranscriptomes,matched_root_and_field_respiration,matched_microresp_and_transcripts
+2023-06-07,"Plant-active, Apr-Oct",6,6,6,5,6,5
+2023-07-05,"Plant-active, Apr-Oct",5,5,6,5,5,5
+2023-08-02,"Plant-active, Apr-Oct",6,6,6,0,6,0
+2023-09-06,"Plant-active, Apr-Oct",6,6,6,5,6,5
+2023-10-04,"Plant-active, Apr-Oct",6,6,6,5,6,5
+2023-11-01,"Plant-dormant, Nov-Mar",6,6,6,0,6,0
+2023-12-04,"Plant-dormant, Nov-Mar",6,6,6,0,6,0
+2024-01-02,"Plant-dormant, Nov-Mar",6,6,7,5,6,5
+2024-02-12,"Plant-dormant, Nov-Mar",6,6,5,0,6,0
+2024-03-06,"Plant-dormant, Nov-Mar",6,6,6,5,6,5
+2024-04-03,"Plant-active, Apr-Oct",6,6,6,0,6,0
+2024-05-08,"Plant-active, Apr-Oct",6,6,6,5,6,5
+2024-06-05,"Plant-active, Apr-Oct",6,6,6,0,6,0

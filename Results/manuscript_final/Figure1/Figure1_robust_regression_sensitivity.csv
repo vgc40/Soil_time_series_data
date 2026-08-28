@@ -1,0 +1,5 @@
+term,estimate,standard_error,statistic,lower_95,upper_95,analysis_note
+(Intercept),32.9989397509494,3.5668607970096393,9.251535630046124,26.007892588810506,39.98998691308829,Marginal robust-regression sensitivity only; primary inference uses the mixed model.
+root_biomass,0.6724177922182426,0.26959423815489164,2.494184582060371,0.14401308543465496,1.2008224990018301,Marginal robust-regression sensitivity only; primary inference uses the mixed model.
+"SeasonPlant-dormant, Nov-Mar",-27.996358081039133,8.1337846407525891,-3.4419841829557876,-43.93857597691421,-12.054140185164059,Marginal robust-regression sensitivity only; primary inference uses the mixed model.
+"root_biomass:SeasonPlant-dormant, Nov-Mar",-0.48996590231358783,0.921023734935961,-0.5319796697179093,-2.295172422788071,1.3152406181608958,Marginal robust-regression sensitivity only; primary inference uses the mixed model.

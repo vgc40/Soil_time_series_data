@@ -1,0 +1,23 @@
+item,value
+Matched transcript samples,35
+Transcript plots,5
+Transcript sampling dates,7
+BRITE C functions in NMDS after exclusions,325
+BRITE C functions in compact heatmap,40
+NMDS stress,0.08919392107587663
+PERMANOVA R2,0.2340736487854548
+PERMANOVA F,10.08508245952267
+PERMANOVA p-value,0.001
+Dispersion p-value,0.919
+Targeted substrate families,2
+Curated KOs,29
+Curated KOs present in BRITE D,29
+Curated KOs detected in any transcript sample,25
+Chitin family exploratory date-level Pearson r,-0.7729010558897383
+Chitin family exploratory date-level Pearson p-value,0.04159121703774534
+Chitin family exploratory date-level Spearman rho,-0.9285714285714283
+Chitin family exploratory date-level Spearman p-value,0.0025194724037947234
+Methyl oleate exploratory date-level Pearson r,-0.24321136067113716
+Methyl oleate exploratory date-level Pearson p-value,0.5992139837589978
+Methyl oleate exploratory date-level Spearman rho,-0.28571428571428564
+Methyl oleate exploratory date-level Spearman p-value,0.5345092286010411

@@ -1,0 +1,3 @@
+Panel B: the 40 functions were selected by abundance and prevalence, not temporal significance. Panel C: contrasting seasonal trajectories for pre-curated substrate families and transcript
+gene sets. Exploratory date-level correlations (n = 7 per family): chitin family Pearson r = -0.77 (p = 0.042); Spearman rho = -0.93 (p = 0.0025); methyl oleate Pearson r = -0.24 (p =
+0.599); Spearman rho = -0.29 (p = 0.5345). These correlations are descriptive and do not establish mechanistic linkage.

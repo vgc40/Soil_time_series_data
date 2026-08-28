@@ -1,0 +1,3 @@
+model,formula,singular,model_change,n_observations,n_plots,n_dates
+Requested crossed model,total_soil_respiration ~ root_biomass * Season + (1 | Plot_ID) + (1 | Sampling_Date_factor),TRUE,Initial requested structure,77,6,13
+Primary model,total_soil_respiration ~ root_biomass * Season + (1 | Sampling_Date_factor),FALSE,The requested crossed model was singular because Plot_ID variance was estimated as zero. The zero-variance Plot_ID term was removed and the sampling-date random intercept was retained.,77,6,13
