@@ -1,0 +1,7 @@
+Plot_ID,n,n_flagged_whole,n_flagged_within_plot,n_flagged_either
+1,13,1,1,1
+25,13,2,1,2
+27,13,0,2,2
+40,13,1,1,1
+46,13,0,1,1
+57,12,0,0,0
