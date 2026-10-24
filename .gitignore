@@ -60,3 +60,7 @@ tmp/
 
 # Large local query export
 Data/Query_expression.csv
+
+# Storyboard generator and generated documents (override docs/ above)
+!/Docs/
+!/Scripts/docs/
