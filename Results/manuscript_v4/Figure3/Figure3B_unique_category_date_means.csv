@@ -1,0 +1,141 @@
+compound_class,brite_C_name,brite_C,Sampling_Date,mean_proportion,z,Season
+Lipid-like,"Cutin, suberine and wax biosynthesis","00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",2023-06-07,7.340705774266957e-6,0.660258585980742,Plant-active
+Lipid-like,"Cutin, suberine and wax biosynthesis","00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",2023-07-05,3.1855778333751653e-6,-1.3449004010362817,Plant-active
+Lipid-like,"Cutin, suberine and wax biosynthesis","00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",2023-09-06,5.811935755821422e-6,-0.0774869143203463,Plant-active
+Lipid-like,"Cutin, suberine and wax biosynthesis","00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",2023-10-04,4.27042062504511e-6,-0.8213828814407821,Plant-active
+Lipid-like,"Cutin, suberine and wax biosynthesis","00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",2024-01-02,5.365939750558215e-6,-0.29271323486904,Plant-dormant
+Lipid-like,"Cutin, suberine and wax biosynthesis","00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",2024-03-06,9.540784965194773e-6,1.7219608066086916,Plant-dormant
+Lipid-like,"Cutin, suberine and wax biosynthesis","00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",2024-05-08,6.292174414214409e-6,0.15426403907701725,Plant-active
+Lipid-like,Fatty acid degradation,00071 Fatty acid degradation [PATH:ko00071],2023-06-07,0.0017378635858421377,-0.5989959782206903,Plant-active
+Lipid-like,Fatty acid degradation,00071 Fatty acid degradation [PATH:ko00071],2023-07-05,0.0016347580523102111,-0.9610111050179375,Plant-active
+Lipid-like,Fatty acid degradation,00071 Fatty acid degradation [PATH:ko00071],2023-09-06,0.001694741246744015,-0.7504033617203048,Plant-active
+Lipid-like,Fatty acid degradation,00071 Fatty acid degradation [PATH:ko00071],2023-10-04,0.0021936653014595327,1.0013751194424603,Plant-active
+Lipid-like,Fatty acid degradation,00071 Fatty acid degradation [PATH:ko00071],2024-01-02,0.0016884575373399039,-0.7724661723063336,Plant-dormant
+Lipid-like,Fatty acid degradation,00071 Fatty acid degradation [PATH:ko00071],2024-03-06,0.0020793087079326988,0.5998562553467817,Plant-dormant
+Lipid-like,Fatty acid degradation,00071 Fatty acid degradation [PATH:ko00071],2024-05-08,0.00233045104219062,1.4816452424760265,Plant-active
+Lipid-like,Glycerolipid metabolism,00561 Glycerolipid metabolism [PATH:ko00561],2023-06-07,6.532131223944057e-4,-0.896229966206526,Plant-active
+Lipid-like,Glycerolipid metabolism,00561 Glycerolipid metabolism [PATH:ko00561],2023-07-05,5.918632693876481e-4,-1.1940959180264397,Plant-active
+Lipid-like,Glycerolipid metabolism,00561 Glycerolipid metabolism [PATH:ko00561],2023-09-06,6.986846829516554e-4,-0.6754563375455068,Plant-active
+Lipid-like,Glycerolipid metabolism,00561 Glycerolipid metabolism [PATH:ko00561],2023-10-04,9.966760292296711e-4,0.7713519536401574,Plant-active
+Lipid-like,Glycerolipid metabolism,00561 Glycerolipid metabolism [PATH:ko00561],2024-01-02,7.938620305465454e-4,-0.21335105377369454,Plant-dormant
+Lipid-like,Glycerolipid metabolism,00561 Glycerolipid metabolism [PATH:ko00561],2024-03-06,9.942642601835335e-4,0.7596423268474335,Plant-dormant
+Lipid-like,Glycerolipid metabolism,00561 Glycerolipid metabolism [PATH:ko00561],2024-05-08,0.0011360702273734368,1.448138995064575,Plant-active
+Lipid-like,Glycerophospholipid metabolism,00564 Glycerophospholipid metabolism [PATH:ko00564],2023-06-07,7.32847412911684e-4,-1.184738572060159,Plant-active
+Lipid-like,Glycerophospholipid metabolism,00564 Glycerophospholipid metabolism [PATH:ko00564],2023-07-05,7.790369607183989e-4,-0.9075235811620923,Plant-active
+Lipid-like,Glycerophospholipid metabolism,00564 Glycerophospholipid metabolism [PATH:ko00564],2023-09-06,8.401829793440695e-4,-0.5405446042797064,Plant-active
+Lipid-like,Glycerophospholipid metabolism,00564 Glycerophospholipid metabolism [PATH:ko00564],2023-10-04,9.31309412137161e-4,0.006367293256508857,Plant-active
+Lipid-like,Glycerophospholipid metabolism,00564 Glycerophospholipid metabolism [PATH:ko00564],2024-01-02,9.309464286370732e-4,0.004188781613700031,Plant-dormant
+Lipid-like,Glycerophospholipid metabolism,00564 Glycerophospholipid metabolism [PATH:ko00564],2024-03-06,0.0011244337194721914,1.1654380277029035,Plant-dormant
+Lipid-like,Glycerophospholipid metabolism,00564 Glycerophospholipid metabolism [PATH:ko00564],2024-05-08,0.0011729825451699512,1.4568126549288438,Plant-active
+Aromatic,Aminobenzoate degradation,00627 Aminobenzoate degradation [PATH:ko00627],2023-06-07,6.147663695722036e-4,-0.5543719369521763,Plant-active
+Aromatic,Aminobenzoate degradation,00627 Aminobenzoate degradation [PATH:ko00627],2023-07-05,6.41528623139564e-4,-0.1727903529710172,Plant-active
+Aromatic,Aminobenzoate degradation,00627 Aminobenzoate degradation [PATH:ko00627],2023-09-06,6.33896386561541e-4,-0.2816123142991484,Plant-active
+Aromatic,Aminobenzoate degradation,00627 Aminobenzoate degradation [PATH:ko00627],2023-10-04,7.210944416139853e-4,0.9616750599587655,Plant-active
+Aromatic,Aminobenzoate degradation,00627 Aminobenzoate degradation [PATH:ko00627],2024-01-02,6.031700237923707e-4,-0.7197149630887559,Plant-dormant
+Aromatic,Aminobenzoate degradation,00627 Aminobenzoate degradation [PATH:ko00627],2024-03-06,5.832708410620192e-4,-1.003441505289925,Plant-dormant
+Aromatic,Aminobenzoate degradation,00627 Aminobenzoate degradation [PATH:ko00627],2024-05-08,7.77804328552664e-4,1.7702560126422575,Plant-active
+Aromatic,Benzoate degradation,00362 Benzoate degradation [PATH:ko00362],2023-06-07,0.0012857576794080127,-0.0831526766294152,Plant-active
+Aromatic,Benzoate degradation,00362 Benzoate degradation [PATH:ko00362],2023-07-05,0.0012596855397755773,-0.27577555200215637,Plant-active
+Aromatic,Benzoate degradation,00362 Benzoate degradation [PATH:ko00362],2023-09-06,0.001195284313153468,-0.7515765266965927,Plant-active
+Aromatic,Benzoate degradation,00362 Benzoate degradation [PATH:ko00362],2023-10-04,0.0013730012209735832,0.5614089923006951,Plant-active
+Aromatic,Benzoate degradation,00362 Benzoate degradation [PATH:ko00362],2024-01-02,0.0010975645749962378,-1.4735371026172572,Plant-dormant
+Aromatic,Benzoate degradation,00362 Benzoate degradation [PATH:ko00362],2024-03-06,0.0013472212111571757,0.3709443933846899,Plant-dormant
+Aromatic,Benzoate degradation,00362 Benzoate degradation [PATH:ko00362],2024-05-08,0.0015205741340290674,1.6516884722600318,Plant-active
+Aromatic,Naphthalene degradation,00626 Naphthalene degradation [PATH:ko00626],2023-06-07,2.1283911143735933e-4,-1.1281722291699328,Plant-active
+Aromatic,Naphthalene degradation,00626 Naphthalene degradation [PATH:ko00626],2023-07-05,2.1246485406077524e-4,-1.131940463375775,Plant-active
+Aromatic,Naphthalene degradation,00626 Naphthalene degradation [PATH:ko00626],2023-09-06,2.590814092759158e-4,-0.6625787115152458,Plant-active
+Aromatic,Naphthalene degradation,00626 Naphthalene degradation [PATH:ko00626],2023-10-04,4.6885340435263534e-4,1.4495239663014314,Plant-active
+Aromatic,Naphthalene degradation,00626 Naphthalene degradation [PATH:ko00626],2024-01-02,3.7416835492952265e-4,0.4961815224608188,Plant-dormant
+Aromatic,Naphthalene degradation,00626 Naphthalene degradation [PATH:ko00626],2024-03-06,3.434142434347325e-4,0.1865317943440473,Plant-dormant
+Aromatic,Naphthalene degradation,00626 Naphthalene degradation [PATH:ko00626],2024-05-08,4.0339522478334734e-4,0.7904541209546558,Plant-active
+Aromatic,Phenylalanine metabolism,00360 Phenylalanine metabolism [PATH:ko00360],2023-06-07,0.0015336895713275829,-0.16576031404165192,Plant-active
+Aromatic,Phenylalanine metabolism,00360 Phenylalanine metabolism [PATH:ko00360],2023-07-05,0.0014300625020811826,-0.5147958964003871,Plant-active
+Aromatic,Phenylalanine metabolism,00360 Phenylalanine metabolism [PATH:ko00360],2023-09-06,0.0014626435454368173,-0.40505677587726013,Plant-active
+Aromatic,Phenylalanine metabolism,00360 Phenylalanine metabolism [PATH:ko00360],2023-10-04,0.0019224444718918565,1.1436397693538058,Plant-active
+Aromatic,Phenylalanine metabolism,00360 Phenylalanine metabolism [PATH:ko00360],2024-01-02,0.0011146219537338461,-1.5772593655754155,Plant-dormant
+Aromatic,Phenylalanine metabolism,00360 Phenylalanine metabolism [PATH:ko00360],2024-03-06,0.0016466632091203621,0.21475628017397835,Plant-dormant
+Aromatic,Phenylalanine metabolism,00360 Phenylalanine metabolism [PATH:ko00360],2024-05-08,0.00197019610349133,1.304476302366931,Plant-active
+Aromatic,Phenylpropanoid biosynthesis,00940 Phenylpropanoid biosynthesis [PATH:ko00940],2023-06-07,1.2016061503505214e-4,0.4870262324823143,Plant-active
+Aromatic,Phenylpropanoid biosynthesis,00940 Phenylpropanoid biosynthesis [PATH:ko00940],2023-07-05,1.4337436638451917e-4,1.5899681611392482,Plant-active
+Aromatic,Phenylpropanoid biosynthesis,00940 Phenylpropanoid biosynthesis [PATH:ko00940],2023-09-06,8.735986045125379e-5,-1.0714175958086238,Plant-active
+Aromatic,Phenylpropanoid biosynthesis,00940 Phenylpropanoid biosynthesis [PATH:ko00940],2023-10-04,9.010148822027337e-5,-0.9411561755969661,Plant-active
+Aromatic,Phenylpropanoid biosynthesis,00940 Phenylpropanoid biosynthesis [PATH:ko00940],2024-01-02,1.1195725166877307e-4,0.09726443670581177,Plant-dormant
+Aromatic,Phenylpropanoid biosynthesis,00940 Phenylpropanoid biosynthesis [PATH:ko00940],2024-03-06,9.205184842747471e-5,-0.8484898065934154,Plant-dormant
+Aromatic,Phenylpropanoid biosynthesis,00940 Phenylpropanoid biosynthesis [PATH:ko00940],2024-05-08,1.243653774582359e-4,0.6868047476716298,Plant-active
+Aromatic,Tyrosine metabolism,00350 Tyrosine metabolism [PATH:ko00350],2023-06-07,0.00119872270078654,-0.770150701718776,Plant-active
+Aromatic,Tyrosine metabolism,00350 Tyrosine metabolism [PATH:ko00350],2023-07-05,0.0010883054355530755,-1.1696644234643583,Plant-active
+Aromatic,Tyrosine metabolism,00350 Tyrosine metabolism [PATH:ko00350],2023-09-06,0.001350640714872092,-0.22047822903809855,Plant-active
+Aromatic,Tyrosine metabolism,00350 Tyrosine metabolism [PATH:ko00350],2023-10-04,0.0018254356324449116,1.497433224250775,Plant-active
+Aromatic,Tyrosine metabolism,00350 Tyrosine metabolism [PATH:ko00350],2024-01-02,0.0012290852708488017,-0.6602923082719984,Plant-dormant
+Aromatic,Tyrosine metabolism,00350 Tyrosine metabolism [PATH:ko00350],2024-03-06,0.001465307846381041,0.19441243479212858,Plant-dormant
+Aromatic,Tyrosine metabolism,00350 Tyrosine metabolism [PATH:ko00350],2024-05-08,0.0017235365112507014,1.1287400034503299,Plant-active
+Amino sugar,Amino sugar and nucleotide sugar metabolism,00520 Amino sugar and nucleotide sugar metabolism [PATH:ko00520],2023-06-07,0.0023266713619345693,-0.9299983028000656,Plant-active
+Amino sugar,Amino sugar and nucleotide sugar metabolism,00520 Amino sugar and nucleotide sugar metabolism [PATH:ko00520],2023-07-05,0.002301296815554613,-1.0188902426377484,Plant-active
+Amino sugar,Amino sugar and nucleotide sugar metabolism,00520 Amino sugar and nucleotide sugar metabolism [PATH:ko00520],2023-09-06,0.0026569456139241055,0.22701623051117087,Plant-active
+Amino sugar,Amino sugar and nucleotide sugar metabolism,00520 Amino sugar and nucleotide sugar metabolism [PATH:ko00520],2023-10-04,0.0026077786852373662,0.05477497735215444,Plant-active
+Amino sugar,Amino sugar and nucleotide sugar metabolism,00520 Amino sugar and nucleotide sugar metabolism [PATH:ko00520],2024-01-02,0.002499702620107595,-0.323836365509047,Plant-dormant
+Amino sugar,Amino sugar and nucleotide sugar metabolism,00520 Amino sugar and nucleotide sugar metabolism [PATH:ko00520],2024-03-06,0.002594031616970126,0.006616340462341915,Plant-dormant
+Amino sugar,Amino sugar and nucleotide sugar metabolism,00520 Amino sugar and nucleotide sugar metabolism [PATH:ko00520],2024-05-08,0.0031585739860993394,1.9843173626211952,Plant-active
+Amino acid,"Alanine, aspartate and glutamate metabolism","00250 Alanine, aspartate and glutamate metabolism [PATH:ko00250]",2023-06-07,0.004913776162634958,0.18037210982281632,Plant-active
+Amino acid,"Alanine, aspartate and glutamate metabolism","00250 Alanine, aspartate and glutamate metabolism [PATH:ko00250]",2023-07-05,0.004768828011049732,-0.0048866579994450016,Plant-active
+Amino acid,"Alanine, aspartate and glutamate metabolism","00250 Alanine, aspartate and glutamate metabolism [PATH:ko00250]",2023-09-06,0.004836767424732329,0.0819469575227529,Plant-active
+Amino acid,"Alanine, aspartate and glutamate metabolism","00250 Alanine, aspartate and glutamate metabolism [PATH:ko00250]",2023-10-04,0.005634680141383067,1.10176214729779,Plant-active
+Amino acid,"Alanine, aspartate and glutamate metabolism","00250 Alanine, aspartate and glutamate metabolism [PATH:ko00250]",2024-01-02,0.0033259615105797466,-1.8490196606332738,Plant-dormant
+Amino acid,"Alanine, aspartate and glutamate metabolism","00250 Alanine, aspartate and glutamate metabolism [PATH:ko00250]",2024-03-06,0.0043562026390817285,-0.5322646697021176,Plant-dormant
+Amino acid,"Alanine, aspartate and glutamate metabolism","00250 Alanine, aspartate and glutamate metabolism [PATH:ko00250]",2024-05-08,0.005572343748766432,1.0220897736914782,Plant-active
+Amino acid,Arginine and proline metabolism,00330 Arginine and proline metabolism [PATH:ko00330],2023-06-07,0.0027104165415092756,-0.2690313285857772,Plant-active
+Amino acid,Arginine and proline metabolism,00330 Arginine and proline metabolism [PATH:ko00330],2023-07-05,0.0030761376372940557,0.39530167603226507,Plant-active
+Amino acid,Arginine and proline metabolism,00330 Arginine and proline metabolism [PATH:ko00330],2023-09-06,0.0028037916023347952,-0.09941536869290118,Plant-active
+Amino acid,Arginine and proline metabolism,00330 Arginine and proline metabolism [PATH:ko00330],2023-10-04,0.0032283588650472124,0.6718118001827528,Plant-active
+Amino acid,Arginine and proline metabolism,00330 Arginine and proline metabolism [PATH:ko00330],2024-01-02,0.001855598071366027,-1.8218105617734945,Plant-dormant
+Amino acid,Arginine and proline metabolism,00330 Arginine and proline metabolism [PATH:ko00330],2024-03-06,0.00271363889142374,-0.2631779243789098,Plant-dormant
+Amino acid,Arginine and proline metabolism,00330 Arginine and proline metabolism [PATH:ko00330],2024-05-08,0.003621702781927491,1.386321707216067,Plant-active
+Amino acid,Arginine biosynthesis,00220 Arginine biosynthesis [PATH:ko00220],2023-06-07,0.004252285065220912,0.28548228077483523,Plant-active
+Amino acid,Arginine biosynthesis,00220 Arginine biosynthesis [PATH:ko00220],2023-07-05,0.004901396260950419,0.8784550380937775,Plant-active
+Amino acid,Arginine biosynthesis,00220 Arginine biosynthesis [PATH:ko00220],2023-09-06,0.004523821024303556,0.5335344287392884,Plant-active
+Amino acid,Arginine biosynthesis,00220 Arginine biosynthesis [PATH:ko00220],2023-10-04,0.0047738907560277944,0.7619768578917846,Plant-active
+Amino acid,Arginine biosynthesis,00220 Arginine biosynthesis [PATH:ko00220],2024-01-02,0.0021532813264998896,-1.631988936422958,Plant-dormant
+Amino acid,Arginine biosynthesis,00220 Arginine biosynthesis [PATH:ko00220],2024-03-06,0.002612570591171206,-1.2124213438888893,Plant-dormant
+Amino acid,Arginine biosynthesis,00220 Arginine biosynthesis [PATH:ko00220],2024-05-08,0.004361182459944367,0.3849616748121629,Plant-active
+Amino acid,Butanoate metabolism,00650 Butanoate metabolism [PATH:ko00650],2023-06-07,0.005301660846082136,-0.9832024763377132,Plant-active
+Amino acid,Butanoate metabolism,00650 Butanoate metabolism [PATH:ko00650],2023-07-05,0.005670936770886471,-0.7348325945081311,Plant-active
+Amino acid,Butanoate metabolism,00650 Butanoate metabolism [PATH:ko00650],2023-09-06,0.005624665413203722,-0.7659540699897726,Plant-active
+Amino acid,Butanoate metabolism,00650 Butanoate metabolism [PATH:ko00650],2023-10-04,0.006687727401839145,-0.05095327313359611,Plant-active
+Amino acid,Butanoate metabolism,00650 Butanoate metabolism [PATH:ko00650],2024-01-02,0.006414004408658695,-0.23505557416037046,Plant-dormant
+Amino acid,Butanoate metabolism,00650 Butanoate metabolism [PATH:ko00650],2024-03-06,0.008939564040630076,1.463600918755228,Plant-dormant
+Amino acid,Butanoate metabolism,00650 Butanoate metabolism [PATH:ko00650],2024-05-08,0.008705833620358126,1.3063970693743556,Plant-active
+Amino acid,Cysteine and methionine metabolism,00270 Cysteine and methionine metabolism [PATH:ko00270],2023-06-07,0.004678532719540672,-0.12473352309085756,Plant-active
+Amino acid,Cysteine and methionine metabolism,00270 Cysteine and methionine metabolism [PATH:ko00270],2023-07-05,0.004840413552716573,0.1935669831028562,Plant-active
+Amino acid,Cysteine and methionine metabolism,00270 Cysteine and methionine metabolism [PATH:ko00270],2023-09-06,0.004771383592812433,0.05783583600563227,Plant-active
+Amino acid,Cysteine and methionine metabolism,00270 Cysteine and methionine metabolism [PATH:ko00270],2023-10-04,0.004729600358413858,-0.02432104692210518,Plant-active
+Amino acid,Cysteine and methionine metabolism,00270 Cysteine and methionine metabolism [PATH:ko00270],2024-01-02,0.0037926060697612753,-1.866699483748281,Plant-dormant
+Amino acid,Cysteine and methionine metabolism,00270 Cysteine and methionine metabolism [PATH:ko00270],2024-03-06,0.004849080979949069,0.21060943600710438,Plant-dormant
+Amino acid,Cysteine and methionine metabolism,00270 Cysteine and methionine metabolism [PATH:ko00270],2024-05-08,0.005532169387597157,1.5537417986456477,Plant-active
+Amino acid,"Glycine, serine and threonine metabolism","00260 Glycine, serine and threonine metabolism [PATH:ko00260]",2023-06-07,0.0026234610807555785,0.23430560405650233,Plant-active
+Amino acid,"Glycine, serine and threonine metabolism","00260 Glycine, serine and threonine metabolism [PATH:ko00260]",2023-07-05,0.0026297285717331092,0.2533863682868514,Plant-active
+Amino acid,"Glycine, serine and threonine metabolism","00260 Glycine, serine and threonine metabolism [PATH:ko00260]",2023-09-06,0.0025939938423809204,0.1445954744429021,Plant-active
+Amino acid,"Glycine, serine and threonine metabolism","00260 Glycine, serine and threonine metabolism [PATH:ko00260]",2023-10-04,0.0025824169759112135,0.10935083501276434,Plant-active
+Amino acid,"Glycine, serine and threonine metabolism","00260 Glycine, serine and threonine metabolism [PATH:ko00260]",2024-01-02,0.0019837290760088633,-1.7132960114770373,Plant-dormant
+Amino acid,"Glycine, serine and threonine metabolism","00260 Glycine, serine and threonine metabolism [PATH:ko00260]",2024-03-06,0.0023432267803131356,-0.6188403574085678,Plant-dormant
+Amino acid,"Glycine, serine and threonine metabolism","00260 Glycine, serine and threonine metabolism [PATH:ko00260]",2024-05-08,0.0030689319250347775,1.590498087086581,Plant-active
+Amino acid,One carbon pool by folate,00670 One carbon pool by folate [PATH:ko00670],2023-06-07,0.0027872202456633746,0.6532108038243647,Plant-active
+Amino acid,One carbon pool by folate,00670 One carbon pool by folate [PATH:ko00670],2023-07-05,0.002733122516549333,0.42474736265568486,Plant-active
+Amino acid,One carbon pool by folate,00670 One carbon pool by folate [PATH:ko00670],2023-09-06,0.002756619038103892,0.5239769654091078,Plant-active
+Amino acid,One carbon pool by folate,00670 One carbon pool by folate [PATH:ko00670],2023-10-04,0.00263373679332783,0.00502541310107783,Plant-active
+Amino acid,One carbon pool by folate,00670 One carbon pool by folate [PATH:ko00670],2024-01-02,0.002196500264491157,-1.8414950161039048,Plant-dormant
+Amino acid,One carbon pool by folate,00670 One carbon pool by folate [PATH:ko00670],2024-03-06,0.002442023307050758,-0.8046115811056853,Plant-dormant
+Amino acid,One carbon pool by folate,00670 One carbon pool by folate [PATH:ko00670],2024-05-08,0.002878605635012465,1.0391460522193605,Plant-active
+Amino acid,"Valine, leucine and isoleucine degradation","00280 Valine, leucine and isoleucine degradation [PATH:ko00280]",2023-06-07,0.0024452387120909675,-0.3237134131312073,Plant-active
+Amino acid,"Valine, leucine and isoleucine degradation","00280 Valine, leucine and isoleucine degradation [PATH:ko00280]",2023-07-05,0.0024223705351428043,-0.38520662410070716,Plant-active
+Amino acid,"Valine, leucine and isoleucine degradation","00280 Valine, leucine and isoleucine degradation [PATH:ko00280]",2023-09-06,0.00236561367082134,-0.5378275277957619,Plant-active
+Amino acid,"Valine, leucine and isoleucine degradation","00280 Valine, leucine and isoleucine degradation [PATH:ko00280]",2023-10-04,0.0026963402475127197,0.3515061169369891,Plant-active
+Amino acid,"Valine, leucine and isoleucine degradation","00280 Valine, leucine and isoleucine degradation [PATH:ko00280]",2024-01-02,0.0020662148560434005,-1.3429198848687114,Plant-dormant
+Amino acid,"Valine, leucine and isoleucine degradation","00280 Valine, leucine and isoleucine degradation [PATH:ko00280]",2024-03-06,0.0027154443526105775,0.4028776262544566,Plant-dormant
+Amino acid,"Valine, leucine and isoleucine degradation","00280 Valine, leucine and isoleucine degradation [PATH:ko00280]",2024-05-08,0.0032481294278071497,1.8352837067049443,Plant-active
+Amino acid,beta-Alanine metabolism,00410 beta-Alanine metabolism [PATH:ko00410],2023-06-07,8.381984410714396e-4,-0.7040718249540837,Plant-active
+Amino acid,beta-Alanine metabolism,00410 beta-Alanine metabolism [PATH:ko00410],2023-07-05,8.115015863264704e-4,-0.84691959605788,Plant-active
+Amino acid,beta-Alanine metabolism,00410 beta-Alanine metabolism [PATH:ko00410],2023-09-06,9.06941946338901e-4,-0.3362436070188081,Plant-active
+Amino acid,beta-Alanine metabolism,00410 beta-Alanine metabolism [PATH:ko00410],2023-10-04,0.0011850596240064902,1.1518901352852604,Plant-active
+Amino acid,beta-Alanine metabolism,00410 beta-Alanine metabolism [PATH:ko00410],2024-01-02,8.125468223082541e-4,-0.841326816245366,Plant-dormant
+Amino acid,beta-Alanine metabolism,00410 beta-Alanine metabolism [PATH:ko00410],2024-03-06,9.60956822640001e-4,-0.04722436637161527,Plant-dormant
+Amino acid,beta-Alanine metabolism,00410 beta-Alanine metabolism [PATH:ko00410],2024-05-08,0.0012732729291468853,1.623896075362492,Plant-active

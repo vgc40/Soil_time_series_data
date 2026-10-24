@@ -1,0 +1,21 @@
+compound_class,brite_C_name,brite_C,mean_share_pct,n_samples_nonzero,dormant_to_active_ratio,note
+Lipid-like,"Cutin, suberine and wax biosynthesis","00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",5.972505588353721e-4,30,1.3853413964154966,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Lipid-like,Fatty acid degradation,00071 Fatty acid degradation [PATH:ko00071],0.19084636391170168,35,0.9820607842372313,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Lipid-like,Glycerolipid metabolism,00561 Glycerolipid metabolism [PATH:ko00561],0.08378048031524138,35,1.0966043633629963,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Lipid-like,Glycerophospholipid metabolism,00564 Glycerophospholipid metabolism [PATH:ko00564],0.093024849405579,35,1.153060157967569,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Aromatic,Aminobenzoate degradation,00627 Aminobenzoate degradation [PATH:ko00627],0.06536472877563354,35,0.8751912847836517,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Aromatic,Benzoate degradation,00362 Benzoate degradation [PATH:ko00362],0.12970126676418745,35,0.9212670221986764,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Aromatic,Naphthalene degradation,00626 Naphthalene degradation [PATH:ko00626],0.0324888086039184,35,1.1524587612788142,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Aromatic,Phenylalanine metabolism,00360 Phenylalanine metabolism [PATH:ko00360],0.15829030510118539,35,0.8298092165922466,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Aromatic,Phenylpropanoid biosynthesis,00940 Phenylpropanoid biosynthesis [PATH:ko00940],0.010991011537794032,35,0.9021176061806663,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Aromatic,Tyrosine metabolism,00350 Tyrosine metabolism [PATH:ko00350],0.14115763017338803,35,0.9372922340002702,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Amino sugar,Amino sugar and nucleotide sugar metabolism,00520 Amino sugar and nucleotide sugar metabolism [PATH:ko00520],0.25921429571182447,35,0.975716466217263,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Amino acid,"Alanine, aspartate and glutamate metabolism","00250 Alanine, aspartate and glutamate metabolism [PATH:ko00250]",0.47726513768897133,35,0.7465255046199174,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Amino acid,Arginine and proline metabolism,00330 Arginine and proline metabolism [PATH:ko00330],0.28585206272717995,35,0.7398180689310075,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Amino acid,Arginine biosynthesis,00220 Arginine biosynthesis [PATH:ko00220],0.39397753548740205,35,0.5222834115978507,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Amino acid,Butanoate metabolism,00650 Butanoate metabolism [PATH:ko00650],0.6763484643094053,35,1.199841587712361,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Amino acid,Cysteine and methionine metabolism,00270 Cysteine and methionine metabolism [PATH:ko00270],0.47419695229701486,35,0.8799336092024321,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Amino acid,"Glycine, serine and threonine metabolism","00260 Glycine, serine and threonine metabolism [PATH:ko00260]",0.2546498321733942,35,0.8013752401822788,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Amino acid,One carbon pool by folate,00670 One carbon pool by folate [PATH:ko00670],0.263254682859983,35,0.8409640353539644,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Amino acid,"Valine, leucine and isoleucine degradation","00280 Valine, leucine and isoleucine degradation [PATH:ko00280]",0.2565621686004137,35,0.9071503176242579,Descriptive: 5 active and 2 dormant dates; no per-category test.
+Amino acid,beta-Alanine metabolism,00410 beta-Alanine metabolism [PATH:ko00410],0.09697825959769202,35,0.8841040146060394,Descriptive: 5 active and 2 dormant dates; no per-category test.

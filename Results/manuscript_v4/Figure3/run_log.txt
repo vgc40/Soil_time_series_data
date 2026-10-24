@@ -1,0 +1,52 @@
+Warning message:
+Vectorized input to `element_text()` is not officially supported.
+ℹ Results may be unexpected or may change in future versions of ggplot2. 
+# A tibble: 11 × 2
+   item                                            value            
+   <chr>                                           <chr>            
+ 1 Samples (plots x dates)                         35 (5 x 7)       
+ 2 Dates active / dormant                          5 / 2            
+ 3 BRITE C categories                              325              
+ 4 Per-sample total expression range (as provided) 402730 to 1186227
+ 5 NMDS stress                                     0.065            
+ 6 H2 date-level PERMANOVA R2                      0.518            
+ 7 H2 date-level p (exact, 21 label sets)          0.048            
+ 8 H2 sample-level p (labels permuted by date)     0.048            
+ 9 H2 date-level dispersion p                      1.000            
+10 Unique categories                               20               
+11 Unique categories with dormant/active ratio < 1 15               
+# A tibble: 8 × 5
+  analysis                                  level    R2 p_permanova p_dispersion
+  <chr>                                     <chr> <dbl>       <dbl>        <dbl>
+1 Primary: 325 categories, proportions      Date… 0.518      0.0476        1    
+2 Primary: 325 categories, proportions      Samp… 0.315      0.0476        0.905
+3 Metabolism only (181 categories, KEGG ma… Date… 0.506      0.0476        0.143
+4 Metabolism only (181 categories, KEGG ma… Samp… 0.204      0.0476        0.286
+5 Values as provided (no within-sample nor… Date… 0.519      0.0476        0.238
+6 Values as provided (no within-sample nor… Samp… 0.234      0.0476        1    
+7 Transition date (Oct 2023) excluded       Date… 0.533      0.0667        0.933
+8 Transition date (Oct 2023) excluded       Samp… 0.327      0.0667        0.933
+# A tibble: 20 × 5
+   compound_class brite_C_name                  mean_share_pct n_samples_nonzero
+   <fct>          <chr>                                  <dbl>             <int>
+ 1 Lipid-like     Cutin, suberine and wax bios…       0.000597                30
+ 2 Lipid-like     Fatty acid degradation              0.191                   35
+ 3 Lipid-like     Glycerolipid metabolism             0.0838                  35
+ 4 Lipid-like     Glycerophospholipid metaboli…       0.0930                  35
+ 5 Aromatic       Aminobenzoate degradation           0.0654                  35
+ 6 Aromatic       Benzoate degradation                0.130                   35
+ 7 Aromatic       Naphthalene degradation             0.0325                  35
+ 8 Aromatic       Phenylalanine metabolism            0.158                   35
+ 9 Aromatic       Phenylpropanoid biosynthesis        0.0110                  35
+10 Aromatic       Tyrosine metabolism                 0.141                   35
+11 Amino sugar    Amino sugar and nucleotide s…       0.259                   35
+12 Amino acid     Alanine, aspartate and gluta…       0.477                   35
+13 Amino acid     Arginine and proline metabol…       0.286                   35
+14 Amino acid     Arginine biosynthesis               0.394                   35
+15 Amino acid     Butanoate metabolism                0.676                   35
+16 Amino acid     Cysteine and methionine meta…       0.474                   35
+17 Amino acid     Glycine, serine and threonin…       0.255                   35
+18 Amino acid     One carbon pool by folate           0.263                   35
+19 Amino acid     Valine, leucine and isoleuci…       0.257                   35
+20 Amino acid     beta-Alanine metabolism             0.0970                  35
+# ℹ 1 more variable: dormant_to_active_ratio <dbl>

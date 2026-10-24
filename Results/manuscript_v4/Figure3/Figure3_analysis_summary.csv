@@ -1,0 +1,12 @@
+item,value
+Samples (plots x dates),35 (5 x 7)
+Dates active / dormant,5 / 2
+BRITE C categories,325
+Per-sample total expression range (as provided),402730 to 1186227
+NMDS stress,0.065
+H2 date-level PERMANOVA R2,0.518
+"H2 date-level p (exact, 21 label sets)",0.048
+H2 sample-level p (labels permuted by date),0.048
+H2 date-level dispersion p,1.000
+Unique categories,20
+Unique categories with dormant/active ratio < 1,15

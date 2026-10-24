@@ -157,8 +157,8 @@ load_field_100 <- function() {
 }
 
 # BRITE C transcript expression for the 100% treatment, long format.
-# Rows without a KEGG pathway code and curated human/non-soil pathways are
-# removed (325 categories remain). `proportion` is each category's share of a
+# Rows without a KEGG pathway code, curated human/non-soil pathways, and
+# categories with zero expression in every sample are removed (325 remain). `proportion` is each category's share of a
 # sample's total expression over the retained categories (decision D5).
 load_brite_c <- function() {
   wide <- read_csv(input_files$brite_c, show_col_types = FALSE) %>%
@@ -181,6 +181,8 @@ load_brite_c <- function() {
                  values_to = "expression") %>%
     mutate(Sample_cat = str_remove(Sample_mt, "_MT$")) %>%
     left_join(metadata, by = "Sample_cat") %>%
+    group_by(brite_C) %>%
+    filter(sum(expression) > 0) %>%
     group_by(Sample_cat) %>%
     mutate(proportion = expression / sum(expression)) %>%
     ungroup()
@@ -204,7 +206,7 @@ season_label_sets <- function(date_season) {
 }
 
 pseudo_f <- function(dist_matrix, groups) {
-  fit <- adonis2(dist_matrix ~ groups, permutations = 0)
+  fit <- suppressMessages(adonis2(dist_matrix ~ groups, permutations = 0))
   c(F = fit$F[1], R2 = fit$R2[1])
 }
 
