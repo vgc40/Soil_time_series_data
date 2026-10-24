@@ -1,0 +1,38 @@
+There were 42 warnings (use warnings() to see them)
+Warning message:
+Unknown or uninitialised column: `weights`. 
+boundary (singular) fit: see help('isSingular')
+There were 50 or more warnings (use warnings() to see the first 50)
+# A tibble: 15 × 2
+   item                                                   value                 
+   <chr>                                                  <chr>                 
+ 1 Samples                                                77                    
+ 2 Sampling dates (active / dormant)                      13 (8 / 5)            
+ 3 Substrates                                             31                    
+ 4 NMDS stress                                            0.091                 
+ 5 H1a date-level PERMANOVA R2                            0.172                 
+ 6 H1a date-level PERMANOVA p (exact, 1287 label sets)    0.112                 
+ 7 H1a date-level dispersion p                            0.037                 
+ 8 Substrates higher in dormancy (FDR < 0.05)             0                     
+ 9 Substrates higher in active period (FDR < 0.05)        0                     
+10 Substrates with dormant > active point estimate        31 of 31              
+11 Overall shift, all substrates (dormant - active, log2) 0.418 [0.010, 0.825],…
+12 Steady substrates (GAM FDR > 0.05)                     Glutamic acid; Hemice…
+13 H1b interaction (complex - readily available), log2    0.157 [-0.132, 0.447]…
+14 H1b exact permutation p (two-sided)                    0.249                 
+15 Class model singular                                   FALSE                 
+# A tibble: 3 × 8
+  availability      contrast         estimate    SE    df   lower upper      p
+  <fct>             <chr>               <dbl> <dbl> <dbl>   <dbl> <dbl>  <dbl>
+1 Readily available Dormant - active    0.410 0.204  15.6 -0.0228 0.843 0.0617
+2 Complex           Dormant - active    0.568 0.206  16.4  0.131  1.00  0.0140
+3 Other             Dormant - active    0.341 0.202  15.1 -0.0894 0.771 0.112 
+# A tibble: 6 × 10
+  contrast     estimate    SE    df   lower upper      p analysis singular n_obs
+  <chr>           <dbl> <dbl> <dbl>   <dbl> <dbl>  <dbl> <chr>    <lgl>    <int>
+1 (Dormant - …   0.157  0.142  30.6 -0.132  0.447 0.276  Primary… FALSE     2387
+2 (Dormant - …   0.180  0.116  31.3 -0.0562 0.415 0.131  Amino a… FALSE     2387
+3 (Dormant - …   0.124  0.164  27.9 -0.211  0.460 0.454  Within-… FALSE     2387
+4 (Dormant - …   0.208  0.149  23.9 -0.0995 0.515 0.176  Transit… FALSE     2015
+5 (Dormant - …   0.320  0.127  31.2  0.0609 0.579 0.0171 24-h in… FALSE     2387
+6 (Dormant - …  -0.0732 0.112  24.3 -0.304  0.157 0.519  Per g d… FALSE     2387

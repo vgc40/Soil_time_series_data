@@ -1,0 +1,6 @@
+variable,r2,p,NMDS1_direction,NMDS2_direction,n_dates,note
+Soil temperature,0.32959606169661054,0.145,-0.5951341782612051,0.8036263496584468,13,Exploratory; date-mean scores and conditions; 9999 free permutations of dates.
+Gravimetric water content,0.4534646708500589,0.048,0.4047984470944179,0.9144059367862545,13,Exploratory; date-mean scores and conditions; 9999 free permutations of dates.
+Root biomass,0.3160793980398808,0.1466,-0.3414368506748371,0.9399047169799974,13,Exploratory; date-mean scores and conditions; 9999 free permutations of dates.
+Field soil respiration,0.22808675921883662,0.2765,-0.42118521038958073,0.9069746515471557,13,Exploratory; date-mean scores and conditions; 9999 free permutations of dates.
+Microbial biomass C,0.26384741445505816,0.2121,0.7461830466132381,-0.6657408361719943,13,Exploratory; date-mean scores and conditions; 9999 free permutations of dates.
