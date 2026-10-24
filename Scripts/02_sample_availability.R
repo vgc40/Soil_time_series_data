@@ -4,7 +4,8 @@
 #
 # This script does not modify source data. It inventories the 100% irrigation
 # samples used to connect field respiration, root biomass, MicroResp, and
-# metatranscriptomes.
+# metatranscriptomes. Inputs: cleaned field table (Scripts/01), MicroResp v3
+# (DataHub March), and the sample columns of Data/brite_C_expression.csv.
 
 rm(list = ls())
 
@@ -25,16 +26,16 @@ suppressPackageStartupMessages({
   library(lubridate)
 })
 
-result_dir <- file.path("Results", "manuscript_final", "sample_availability")
+result_dir <- file.path("Results", "manuscript_v4", "sample_availability")
 dir.create(result_dir, recursive = TRUE, showWarnings = FALSE)
 
 field_file <- file.path("Data", "Data_merged_cleaned.csv")
 microresp_file <- file.path(
   "DataHub March",
   "Soil_Phenotypes",
-  "SoilMicrobiomeSFA_prosser-time-series_MicroResp.csv"
+  "SoilMicrobiomeSFA_prosser-time-series_MicroResp_v3.csv"
 )
-transcript_file <- file.path("Data", "Query_expression.csv")
+transcript_file <- file.path("Data", "brite_C_expression.csv")
 
 required_files <- c(field_file, microresp_file, transcript_file)
 missing_files <- required_files[!file.exists(required_files)]
@@ -95,7 +96,7 @@ missing_expected_field_records <- expected_field_design %>%
 
 # ---- MicroResp --------------------------------------------------------------
 
-microresp_100 <- read_csv(microresp_file, show_col_types = FALSE) %>%
+microresp_100 <- read_csv(microresp_file, show_col_types = FALSE, na = c("", "NA", "na")) %>%
   rename(
     Irrigation_trmt_cat = any_of("Irrigaiton_trmt_cat")
   ) %>%
@@ -128,6 +129,27 @@ microresp_duplicate_measurements <- microresp_100 %>%
   count(Sample_cat, Substrate, name = "record_count") %>%
   filter(record_count > 1)
 
+# The original MicroResp release had January 2024 Sample_cat labels shifted by
+# one plot. Stop if any MicroResp sample disagrees with the field table on
+# plot or date, so a mislabelled release cannot silently enter the analysis.
+microresp_label_conflicts <- microresp_sample_table %>%
+  inner_join(
+    field_sample_table %>% select(Sample_cat, field_date = Sampling_Date,
+                                  field_plot = Plot_ID),
+    by = "Sample_cat"
+  ) %>%
+  filter(Sampling_Date != field_date | Plot_ID != field_plot)
+
+write_csv(
+  microresp_label_conflicts,
+  file.path(result_dir, "microresp_label_conflicts_with_field_table.csv")
+)
+
+if (nrow(microresp_label_conflicts) > 0) {
+  stop("MicroResp Sample_cat labels disagree with the field table; see ",
+       "microresp_label_conflicts_with_field_table.csv")
+}
+
 missing_expected_microresp_records <- expected_field_design %>%
   anti_join(
     microresp_sample_table %>% select(Sampling_Date, Plot_ID),
@@ -141,7 +163,7 @@ transcript_columns <- names(
 )
 
 transcript_sample_table <- tibble(
-  Sample_mt = setdiff(transcript_columns, "Query"),
+  Sample_mt = transcript_columns[-1],
   Sample_cat = str_remove(Sample_mt, "_MT$")
 ) %>%
   left_join(
@@ -150,6 +172,37 @@ transcript_sample_table <- tibble(
     by = "Sample_cat"
   ) %>%
   arrange(Sampling_Date, Plot_ID)
+
+# ---- One-month lag pairs (Q3) ----------------------------------------------
+# Transcript samples paired with MicroResp from the same plot at the next
+# sampling date.
+
+sampling_dates <- sort(unique(microresp_sample_table$Sampling_Date))
+
+lag_pairs <- transcript_sample_table %>%
+  filter(!is.na(Sampling_Date)) %>%
+  mutate(
+    next_date = sampling_dates[match(Sampling_Date, sampling_dates) + 1]
+  ) %>%
+  left_join(
+    microresp_sample_table %>%
+      select(next_date = Sampling_Date, Plot_ID, next_Sample_cat = Sample_cat),
+    by = c("next_date", "Plot_ID")
+  )
+
+lag_pair_summary <- lag_pairs %>%
+  group_by(transcript_date = Sampling_Date, next_date) %>%
+  summarise(
+    days_between = as.numeric(first(next_date) - first(transcript_date)),
+    n_transcript_plots = n(),
+    n_pairs = sum(!is.na(next_Sample_cat)),
+    plots_without_next_microresp = paste(Plot_ID[is.na(next_Sample_cat)],
+                                         collapse = "; "),
+    .groups = "drop"
+  )
+
+write_csv(lag_pairs, file.path(result_dir, "lag_pairs_transcript_to_next_microresp.csv"))
+write_csv(lag_pair_summary, file.path(result_dir, "lag_pair_summary.csv"))
 
 # ---- Counts by date ---------------------------------------------------------
 

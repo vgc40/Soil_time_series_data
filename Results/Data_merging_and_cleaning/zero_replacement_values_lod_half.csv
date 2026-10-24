@@ -1,0 +1,9 @@
+Variable,n_zeros,pct_zeros,min_nonzero,LOD_half
+MBP_OP_ug_gdw,50,32.7,0.39,0.195
+Oslon_OP_ug_gdw,38,24.8,0.11,0.055
+Olson_IP_ug_gdw,20,13.1,1.25,0.625
+MBP_IP_ug_gdw,15,9.8,2.13,1.065
+SEOC_ug_gdw,7,4.6,0.53,0.265
+MBC_ug_gdw_bgc,4,2.6,0.14,0.07
+SETN_ug_gdw,3,2,2.15,1.075
+MBN_ug_gdw_bgc,1,0.7,4.78,2.39

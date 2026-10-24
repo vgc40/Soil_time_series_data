@@ -10,8 +10,11 @@
 #   1. Merge soil biogeochemistry and EEA data by Sample_cat.
 #   2. Parse Collection_date robustly and create Month, Year, Month_name,
 #      irrigation-based Season, and Irrigation_active.
-#   3. Remove the July 2023 outlier samples identified in the prior
-#      exploration workflow: SM1082, SM1085, SM1087, SM1088.
+#   3. Remove the July 2023 25% irrigation outlier samples identified in the
+#      prior exploration workflow: SM1085, SM1087, SM1088. SM1082 (100%
+#      irrigation, plot 57) is retained; only its SEOC value (2410 ug/g dry
+#      soil, ~60x the July median) is set to NA as a variable-level
+#      analytical outlier (decision D6, 2026-10-23).
 #   4. Treat zeros in selected C, N, P, and microbial biomass variables as
 #      below detection limit values. Replace those zeros with LOD/2, where
 #      LOD/2 is half of the minimum non-zero value for that variable.
@@ -36,13 +39,12 @@ library(lubridate)
 # 1. File paths and output folders
 # ----------------------------------------------------------------------------
 
+# Only the March DataHub release is used; older releases live in Archive/.
 bgc_source_candidates <- c(
-  "DataHub/Soil_Biogeochemistry/SoilSFA_A3.1_Soil_Biogeochemistry.csv",
   "DataHub March/Soil_Biogeochemistry/SoilMicrobiomeSFA_prosser-time-series_Soil_Biogeochemistry.csv"
 )
 
 eea_source_candidates <- c(
-  "DataHub/Soil_Phenotypes/SoilSFA_A3.1_EEA.csv",
   "DataHub March/Soil_Phenotypes/SoilMicrobiomeSFA_prosser-time-series_EEA.csv"
 )
 
@@ -304,7 +306,7 @@ write_csv(missing_summary, "Results/Data_merging_and_cleaning/missing_data_summa
 # 7. Remove documented outlier samples
 # ----------------------------------------------------------------------------
 
-outlier_samples <- c("SM1082", "SM1085", "SM1087", "SM1088")
+outlier_samples <- c("SM1085", "SM1087", "SM1088")
 
 outliers_removed <- rf_analysis %>%
   filter(Sample_cat %in% outlier_samples) %>%
@@ -316,6 +318,28 @@ rf_no_outliers <- rf_analysis %>%
   filter(!Sample_cat %in% outlier_samples)
 
 write_csv(outliers_removed, "Results/Data_merging_and_cleaning/outlier_samples_removed.csv")
+
+# Variable-level outliers: set a single value to NA and keep the sample.
+variable_outliers <- tibble(
+  Sample_cat = "SM1082",
+  Variable = "SEOC_ug_gdw",
+  Reason = "SEOC ~60x the July 2023 median; all other variables within range."
+)
+
+variable_outliers <- variable_outliers %>%
+  rowwise() %>%
+  mutate(
+    Original_value = rf_no_outliers[[Variable]][rf_no_outliers$Sample_cat == Sample_cat]
+  ) %>%
+  ungroup()
+
+for (i in seq_len(nrow(variable_outliers))) {
+  rf_no_outliers[[variable_outliers$Variable[i]]][
+    rf_no_outliers$Sample_cat == variable_outliers$Sample_cat[i]
+  ] <- NA
+}
+
+write_csv(variable_outliers, "Results/Data_merging_and_cleaning/variable_outliers_set_to_NA.csv")
 
 cat("\n=== OUTLIER REMOVAL ===\n")
 cat("Outlier samples requested for removal:", paste(outlier_samples, collapse = ", "), "\n")
@@ -485,6 +509,7 @@ cleaning_decisions <- tibble(
     "Merge BGC and EEA",
     "Parse Collection_date",
     "Remove documented outliers",
+    "Set variable-level outliers to NA",
     "Replace zeros with LOD/2",
     "Replace negative respiration",
     "Keep complete-case output as a separate file"
@@ -493,6 +518,7 @@ cleaning_decisions <- tibble(
     "Left join EEA measurements to BGC records by Sample_cat.",
     "Parse common ymd/mdy/dmy formats, then derive Month, Year, Month_name, Season, and Irrigation_active.",
     paste("Drop fixed sample list:", paste(outlier_samples, collapse = ", ")),
+    "SM1082 SEOC_ug_gdw set to NA; sample retained.",
     "For selected below-detection variables, replace zero with half of that variable's minimum non-zero value.",
     "If field respiration is negative, replace it with half of the minimum non-negative respiration value.",
     "Do not drop incomplete rows from the main cleaned output; save a second complete-case dataset."
@@ -500,7 +526,8 @@ cleaning_decisions <- tibble(
   Rationale = c(
     "Sample_cat is the shared sample identifier used by the existing analysis scripts.",
     "Date formats can differ across source exports; robust parsing avoids silent date failures.",
-    "These July 2023 samples were identified in the prior exploration workflow as extreme outliers.",
+    "These July 2023 25% irrigation samples were identified in the prior exploration workflow as extreme outliers.",
+    "Only SEOC was extreme for SM1082; dropping the whole sample would discard valid respiration, root, and EEA data.",
     "The README documents converted negative analytical values as zeros/below detection; LOD/2 preserves sample size.",
     "Negative field respiration is not meaningful for downstream positive-scale analyses.",
     "Some analyses can use partial data, while RF/RDA-style workflows may require complete predictors."
@@ -510,6 +537,7 @@ cleaning_decisions <- tibble(
            "; merged rows: ", nrow(rf_data)),
     paste0("Parsed dates for ", nrow(bgc_data), " BGC records."),
     paste0(nrow(outliers_removed), " samples removed."),
+    paste0(nrow(variable_outliers), " values set to NA."),
     paste0(sum(zero_replacement_values$n_zeros), " zero values replaced across ",
            nrow(zero_replacement_values), " variables."),
     paste0(n_negative_respiration, " values replaced."),

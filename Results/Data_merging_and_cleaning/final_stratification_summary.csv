@@ -1,0 +1,5 @@
+Season,Irrigation_trmt_pct,N,N_months,Mean_respiration,Min_respiration,Max_respiration
+Growing,25,45,7,38.416,0.657,142.186
+Growing,100,48,7,45.366,2.391,143.18
+Non-Growing,25,30,5,9.769,0.146,39.34
+Non-Growing,100,30,5,6.343,0.146,14.638

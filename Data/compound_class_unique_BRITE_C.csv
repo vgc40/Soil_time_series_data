@@ -1,0 +1,21 @@
+compound_class,brite_C_ID,brite_C_name,brite_C,linked_substrates
+Lipid-like,00071,Fatty acid degradation,00071 Fatty acid degradation [PATH:ko00071],Methyl_oleate; Tween40
+Lipid-like,00073,"Cutin, suberine and wax biosynthesis","00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",Methyl_oleate
+Lipid-like,00561,Glycerolipid metabolism,00561 Glycerolipid metabolism [PATH:ko00561],Methyl_oleate; Tween40
+Lipid-like,00564,Glycerophospholipid metabolism,00564 Glycerophospholipid metabolism [PATH:ko00564],Tween40
+Aromatic,00350,Tyrosine metabolism,00350 Tyrosine metabolism [PATH:ko00350],Lignin; Phenylethylamine; Vanillic_acid
+Aromatic,00360,Phenylalanine metabolism,00360 Phenylalanine metabolism [PATH:ko00360],Lignin; Phenylethylamine; Vanillic_acid
+Aromatic,00362,Benzoate degradation,00362 Benzoate degradation [PATH:ko00362],Lignin; Phenylethylamine; Salicylic_acid; Vanillic_acid
+Aromatic,00626,Naphthalene degradation,00626 Naphthalene degradation [PATH:ko00626],Salicylic_acid
+Aromatic,00627,Aminobenzoate degradation,00627 Aminobenzoate degradation [PATH:ko00627],Lignin; Salicylic_acid; Vanillic_acid
+Aromatic,00940,Phenylpropanoid biosynthesis,00940 Phenylpropanoid biosynthesis [PATH:ko00940],Lignin
+Amino sugar,00520,Amino sugar and nucleotide sugar metabolism,00520 Amino sugar and nucleotide sugar metabolism [PATH:ko00520],Chitin; Chitosan; Glucosamine_hydrochloride; N.Acetyl.D.glucosamine
+Amino acid,00220,Arginine biosynthesis,00220 Arginine biosynthesis [PATH:ko00220],Glutamic_acid; L.Arginine
+Amino acid,00250,"Alanine, aspartate and glutamate metabolism","00250 Alanine, aspartate and glutamate metabolism [PATH:ko00250]",BSA; GABA; Glutamic_acid; Glycine; L.Alanine; L.Arginine; L.Glutamine; L.Leucine
+Amino acid,00260,"Glycine, serine and threonine metabolism","00260 Glycine, serine and threonine metabolism [PATH:ko00260]",BSA; Glutamic_acid; Glycine; L.Alanine; L.Arginine; L.Glutamine; L.Leucine
+Amino acid,00270,Cysteine and methionine metabolism,00270 Cysteine and methionine metabolism [PATH:ko00270],BSA
+Amino acid,00280,"Valine, leucine and isoleucine degradation","00280 Valine, leucine and isoleucine degradation [PATH:ko00280]",BSA; L.Leucine
+Amino acid,00330,Arginine and proline metabolism,00330 Arginine and proline metabolism [PATH:ko00330],BSA; GABA; Glutamic_acid; Glycine; L.Alanine; L.Arginine; L.Glutamine; L.Leucine
+Amino acid,00410,beta-Alanine metabolism,00410 beta-Alanine metabolism [PATH:ko00410],GABA
+Amino acid,00650,Butanoate metabolism,00650 Butanoate metabolism [PATH:ko00650],GABA
+Amino acid,00670,One carbon pool by folate,00670 One carbon pool by folate [PATH:ko00670],Glycine
