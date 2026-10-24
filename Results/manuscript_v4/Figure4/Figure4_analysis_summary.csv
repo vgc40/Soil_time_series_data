@@ -1,0 +1,17 @@
+comparison,compound_class,scale,rho,n
+Concurrent,Lipid-like,Date means (n = 7),0.5714285714285713,7
+One-month lag,Lipid-like,Date means (n = 7),0.7499999999999998,7
+Concurrent,Lipid-like,Plot-dates (n = 34-35),0.23333333333333336,35
+One-month lag,Lipid-like,Plot-dates (n = 34-35),0.4606569900687547,34
+Concurrent,Aromatic,Date means (n = 7),-0.42857142857142844,7
+One-month lag,Aromatic,Date means (n = 7),0.14285714285714282,7
+Concurrent,Aromatic,Plot-dates (n = 34-35),0.11988795518207285,35
+One-month lag,Aromatic,Plot-dates (n = 34-35),0.4300993124522536,34
+Concurrent,Amino sugar,Date means (n = 7),0.32142857142857134,7
+One-month lag,Amino sugar,Date means (n = 7),0.7499999999999998,7
+Concurrent,Amino sugar,Plot-dates (n = 34-35),0.2831932773109244,35
+One-month lag,Amino sugar,Plot-dates (n = 34-35),0.5428571428571428,34
+Concurrent,Amino acid,Date means (n = 7),-0.07142857142857141,7
+One-month lag,Amino acid,Date means (n = 7),0.3571428571428571,7
+Concurrent,Amino acid,Plot-dates (n = 34-35),-0.029131652661064426,35
+One-month lag,Amino acid,Plot-dates (n = 34-35),0.24186401833460655,34

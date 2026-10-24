@@ -1,0 +1,58 @@
+Warning message:
+Vectorized input to `element_text()` is not officially supported.
+ℹ Results may be unexpected or may change in future versions of ggplot2. 
+# A tibble: 16 × 5
+   comparison    compound_class scale                      rho     n
+   <fct>         <fct>          <chr>                    <dbl> <int>
+ 1 Concurrent    Lipid-like     Date means (n = 7)      0.571      7
+ 2 One-month lag Lipid-like     Date means (n = 7)      0.75       7
+ 3 Concurrent    Lipid-like     Plot-dates (n = 34-35)  0.233     35
+ 4 One-month lag Lipid-like     Plot-dates (n = 34-35)  0.461     34
+ 5 Concurrent    Aromatic       Date means (n = 7)     -0.429      7
+ 6 One-month lag Aromatic       Date means (n = 7)      0.143      7
+ 7 Concurrent    Aromatic       Plot-dates (n = 34-35)  0.120     35
+ 8 One-month lag Aromatic       Plot-dates (n = 34-35)  0.430     34
+ 9 Concurrent    Amino sugar    Date means (n = 7)      0.321      7
+10 One-month lag Amino sugar    Date means (n = 7)      0.75       7
+11 Concurrent    Amino sugar    Plot-dates (n = 34-35)  0.283     35
+12 One-month lag Amino sugar    Plot-dates (n = 34-35)  0.543     34
+13 Concurrent    Amino acid     Date means (n = 7)     -0.0714     7
+14 One-month lag Amino acid     Date means (n = 7)      0.357      7
+15 Concurrent    Amino acid     Plot-dates (n = 34-35) -0.0291    35
+16 One-month lag Amino acid     Plot-dates (n = 34-35)  0.242     34
+# A tibble: 1 × 6
+  procrustes_correlation protest_p sum_of_squares n_samples permutations        
+                   <dbl>     <dbl>          <dbl>     <int> <chr>               
+1                  0.380     0.007          0.856        35 Cyclic shifts withi…
+# ℹ 1 more variable: n_distinct_permutations <int>
+# A tibble: 28 × 5
+   compound_class date_label   sir_z transcript_z divergence
+   <fct>          <fct>        <dbl>        <dbl>      <dbl>
+ 1 Lipid-like     Jun 23      0.0749     -0.579       0.654 
+ 2 Lipid-like     Jul 23     -1.33       -0.708      -0.623 
+ 3 Lipid-like     Sep 23     -0.281      -0.465       0.185 
+ 4 Lipid-like     Oct 23     -0.522       0.466      -0.988 
+ 5 Lipid-like     Jan 24      1.21       -0.277       1.48  
+ 6 Lipid-like     Mar 24      0.359       0.552      -0.193 
+ 7 Lipid-like     May 24      0.494       1.01       -0.518 
+ 8 Aromatic       Jun 23      0.264      -0.347       0.611 
+ 9 Aromatic       Jul 23     -1.27       -0.506      -0.763 
+10 Aromatic       Sep 23      0.428      -0.327       0.755 
+11 Aromatic       Oct 23     -0.110       0.855      -0.965 
+12 Aromatic       Jan 24      1.06       -0.711       1.77  
+13 Aromatic       Mar 24     -0.0297      0.0820     -0.112 
+14 Aromatic       May 24     -0.341       0.954      -1.30  
+15 Amino sugar    Jun 23     -0.305      -0.621       0.316 
+16 Amino sugar    Jul 23     -1.31       -0.680      -0.626 
+17 Amino sugar    Sep 23      0.237       0.152       0.0852
+18 Amino sugar    Oct 23      0.141       0.0366      0.104 
+19 Amino sugar    Jan 24      0.816      -0.216       1.03  
+20 Amino sugar    Mar 24      0.341       0.00442     0.337 
+21 Amino sugar    May 24      0.0774      1.33       -1.25  
+22 Amino acid     Jun 23     -0.321      -0.234      -0.0871
+23 Amino acid     Jul 23     -1.21        0.0120     -1.22  
+24 Amino acid     Sep 23      0.210      -0.115       0.325 
+25 Amino acid     Oct 23     -0.155       0.445      -0.600 
+26 Amino acid     Jan 24      0.994      -1.36        2.35  
+27 Amino acid     Mar 24      0.0575      0.0268      0.0308
+28 Amino acid     May 24      0.423       1.22       -0.798 
