@@ -1,0 +1,13 @@
+boundary (singular) fit: see help('isSingular')
+boundary (singular) fit: see help('isSingular')
+# A tibble: 8 × 8
+  label                   model estimate    lower  upper  ratio       p singular
+  <chr>                   <chr>    <dbl>    <dbl>  <dbl>  <dbl>   <dbl> <lgl>   
+1 Soil temperature        Welc… -1.14e+1 -14.7    -7.96  NA     3.15e-5 NA      
+2 Gravimetric water cont… lmer…  2.01e-1  -0.0895  0.492  1.22  1.56e-1 TRUE    
+3 Field soil respiration  lmer… -1.98e+0  -2.76   -1.19   0.138 1.74e-4 FALSE   
+4 Root biomass (0-15 cm)  lmer…  1.38e-1  -0.492   0.769  1.15  6.39e-1 FALSE   
+5 Microbial biomass C     lmer…  6.02e-2  -0.679   0.799  1.06  8.61e-1 TRUE    
+6 C-acquiring enzymes (B… lmer… -5.31e-2  -0.403   0.297  0.948 7.45e-1 FALSE   
+7 N-acquiring enzymes (N… lmer…  1.09e-1  -0.279   0.496  1.11  5.50e-1 FALSE   
+8 P-acquiring enzyme (AP) lmer…  2.09e-3  -0.240   0.244  1.00  9.85e-1 FALSE   

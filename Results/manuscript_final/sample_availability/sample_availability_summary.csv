@@ -1,7 +1,0 @@
-data_type,n_observations,n_dates_with_data,first_date,last_date
-matched_microresp_and_transcripts,35,1,2023-06-07,2024-06-05
-matched_root_and_field_respiration,77,1,2023-06-07,2024-06-05
-metatranscriptomes,35,1,2023-06-07,2024-06-05
-microresp,78,1,2023-06-07,2024-06-05
-root_biomass,77,1,2023-06-07,2024-06-05
-total_field_soil_respiration,77,1,2023-06-07,2024-06-05

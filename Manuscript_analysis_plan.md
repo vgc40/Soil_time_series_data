@@ -1,5 +1,7 @@
 # Manuscript analysis plan (draft v1, 2026-10-23)
 
+> **Status (2026-10-23):** implemented on branch `manuscript-v4-analysis`. Scripts are listed in `Scripts/README.md`, results are summarised in `Docs/Storyboard_v4.docx`, and open items are in `Docs/Analysis_notes_v4.docx`. Where they differ, the decision log in section 6 overrides earlier sections.
+
 Goal: bring the analysis pipeline in line with the current storyboard (Q1–Q3), fix known data issues, and produce one main figure per question plus a context figure. Draft for review; nothing below has been implemented yet.
 
 ---

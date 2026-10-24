@@ -1,9 +1,0 @@
-statistic,value,permutation_design
-Procrustes correlation,0.33469131143205666,999 cyclic-shift permutations within Plot_ID; samples ordered chronologically within plot; mirror/reversal disabled. Exploratory because only seven nonstationary seasonal dates are available.
-PROTEST permutation p-value,0.083,999 cyclic-shift permutations within Plot_ID; samples ordered chronologically within plot; mirror/reversal disabled. Exploratory because only seven nonstationary seasonal dates are available.
-Procrustes residual sum of squares,0.8879817260518901,999 cyclic-shift permutations within Plot_ID; samples ordered chronologically within plot; mirror/reversal disabled. Exploratory because only seven nonstationary seasonal dates are available.
-Matched samples,35,999 cyclic-shift permutations within Plot_ID; samples ordered chronologically within plot; mirror/reversal disabled. Exploratory because only seven nonstationary seasonal dates are available.
-Matched plots,5,999 cyclic-shift permutations within Plot_ID; samples ordered chronologically within plot; mirror/reversal disabled. Exploratory because only seven nonstationary seasonal dates are available.
-Matched sampling dates,7,999 cyclic-shift permutations within Plot_ID; samples ordered chronologically within plot; mirror/reversal disabled. Exploratory because only seven nonstationary seasonal dates are available.
-MicroResp matched NMDS stress,0.07646347633649118,999 cyclic-shift permutations within Plot_ID; samples ordered chronologically within plot; mirror/reversal disabled. Exploratory because only seven nonstationary seasonal dates are available.
-Transcript matched NMDS stress,0.08919392629962603,999 cyclic-shift permutations within Plot_ID; samples ordered chronologically within plot; mirror/reversal disabled. Exploratory because only seven nonstationary seasonal dates are available.

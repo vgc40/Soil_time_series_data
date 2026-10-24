@@ -1,0 +1,1271 @@
+{
+  "file": "C:\\Users\\gara009\\OneDrive - PNNL\\Soil Microbiome SFA - A3.1 Rhizosphere and Moisture Effects\\Prosser_Monthly\\Manuscripts\\A3-1-1_Prosser_time_biogeochem\\VGC_Storyboard_v3.docx",
+  "comment_count": 55,
+  "comments": [
+    {
+      "id": "0",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T10:27:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "can we state what this is more clearly?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Suggested Title:\nSoil microbial substrate- induced respiration and field transcript expression show seasonal patterns but limited correspondence"
+            },
+            {
+              "where": "end",
+              "text": "Suggested Title:\nSoil microbial substrate- induced respiration and field transcript expression show seasonal patterns but limited correspondence"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:00:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "I take pause with this statement, but the rest I'm good with",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Framing:\nSoil microbial function varies across the annual cycle as plant activity, temperature, moisture, and resource availability change. These seasonal shifts can alter microbial physiological stat"
+            },
+            {
+              "where": "end",
+              "text": "Framing:\nSoil microbial function varies across the annual cycle as plant activity, temperature, moisture, and resource availability change. These seasonal shifts can alter microbial physiological stat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T10:29:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "I agree with this - considering antecedent conditions affect current status. at any moment with same temp and moisture we may see different virome for example.\nwould be good to add refs to address concern",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Framing:\nSoil microbial function varies across the annual cycle as plant activity, temperature, moisture, and resource availability change. These seasonal shifts can alter microbial physiological stat"
+            },
+            {
+              "where": "end",
+              "text": "Framing:\nSoil microbial function varies across the annual cycle as plant activity, temperature, moisture, and resource availability change. These seasonal shifts can alter microbial physiological stat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T10:43:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "needs better term",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Understanding soil dynamics is further complicated because methodologies for linking the molecular mechanisms that drive ecosystem processes are scarce. This is in part because commonly used measureme"
+            },
+            {
+              "where": "end",
+              "text": "Understanding soil dynamics is further complicated because methodologies for linking the molecular mechanisms that drive ecosystem processes are scarce. This is in part because commonly used measureme"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:06:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "We could highlight one or two efforts that have done this successfully (if exists).",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Understanding soil dynamics is further complicated because methodologies for linking the molecular mechanisms that drive ecosystem processes are scarce. This is in part because commonly used measureme"
+            },
+            {
+              "where": "end",
+              "text": "Understanding soil dynamics is further complicated because methodologies for linking the molecular mechanisms that drive ecosystem processes are scarce. This is in part because commonly used measureme"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:09:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "lead with this",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Here, explore how soil and microbial activity changes across the year. Previous studies (see chat for links) indicate field respiration is primarily plant driven, thus we hypothesize that XXX. To test"
+            },
+            {
+              "where": "end",
+              "text": "Here, explore how soil and microbial activity changes across the year. Previous studies (see chat for links) indicate field respiration is primarily plant driven, thus we hypothesize that XXX. To test"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:15:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "Somewhere, there are more specific hypotheses... expect more labile substrates during active plant growth and perhaps more complex substrates in other periods; we expect community potential to metabolism substrates to align with expected seasonal substrate availability",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Hypothesis 1b: Microbial substrate-induced respiration profiles will differ between plant-active and plant-dormant periods reflecting seasonal changes in microbial substrate-use capacity. We expect gr"
+            },
+            {
+              "where": "end",
+              "text": "Hypothesis 1b: Microbial substrate-induced respiration profiles will differ between plant-active and plant-dormant periods reflecting seasonal changes in microbial substrate-use capacity. We expect gr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:19:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "Could mention some rationale at some point: gene expression is really dynamics (e.g., metaphenome paper 2.6 or some diurnal gene expression paper). By rolling expression up to functional level and taking a taxon-agnostic approach, we help mitigate some of that noise and focus on aggregated responses.",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Research Question 2: To what extent do seasonal changes in microbial substrate-induced respiration under standardized laboratory conditions correspond to seasonal changes in microbial functional expre"
+            },
+            {
+              "where": "end",
+              "text": "Research Question 2: To what extent do seasonal changes in microbial substrate-induced respiration under standardized laboratory conditions correspond to seasonal changes in microbial functional expre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T11:16:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "not sure what this means",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Hypothesis 2: Seasonal changes in microbial substrate-induced respiration will positively correspond with changes in field microbial functional expression. Specifically, we expect overall MicroResp an"
+            },
+            {
+              "where": "end",
+              "text": "Hypothesis 2: Seasonal changes in microbial substrate-induced respiration will positively correspond with changes in field microbial functional expression. Specifically, we expect overall MicroResp an"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T14:15:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "functional categories",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Hypothesis 2: Seasonal changes in microbial substrate-induced respiration will positively correspond with changes in field microbial functional expression. Specifically, we expect overall MicroResp an"
+            },
+            {
+              "where": "end",
+              "text": "Hypothesis 2: Seasonal changes in microbial substrate-induced respiration will positively correspond with changes in field microbial functional expression. Specifically, we expect overall MicroResp an"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:22:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "@Bell, Sheryl L could probably add some insight here",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Sampling dates were classified as plant-active or growing season from April (perennial plant emergence) through October (plant harvest) and plant-dormant or non-growing season from November through Ma"
+            },
+            {
+              "where": "end",
+              "text": "Sampling dates were classified as plant-active or growing season from April (perennial plant emergence) through October (plant harvest) and plant-dormant or non-growing season from November through Ma"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "author": "Garayburu-Caruso, Vanessa A",
+      "date": "2026-10-16T14:01:00Z",
+      "initials": "VG",
+      "resolved": false,
+      "text": "@Bell, Sheryl L",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Sampling dates were classified as plant-active or growing season from April (perennial plant emergence) through October (plant harvest) and plant-dormant or non-growing season from November through Ma"
+            },
+            {
+              "where": "end",
+              "text": "Sampling dates were classified as plant-active or growing season from April (perennial plant emergence) through October (plant harvest) and plant-dormant or non-growing season from November through Ma"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T11:25:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "no outliers, are these hot spot/moments?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Nine observations triggered at least one statistical flag (see plot below). These were spread across several dates, not concentrated on one sampling date. None had independent evidence of being an act"
+            },
+            {
+              "where": "end",
+              "text": "Nine observations triggered at least one statistical flag (see plot below). These were spread across several dates, not concentrated on one sampling date. None had independent evidence of being an act"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "author": "Garayburu-Caruso, Vanessa A",
+      "date": "2026-08-31T11:51:00Z",
+      "initials": "VG",
+      "resolved": false,
+      "text": "Do an outlier detection method using all the samples together and we can say we have 2 lines of evidence where if the sample was flagged as an outlier within the plot and general then we remove it",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure S1. Root biomass trajectories and statistical outlier screening across plots. Root biomass was measured repeatedly across the annual sampling period for each 100% irrigation plot. Points show i"
+            },
+            {
+              "where": "end",
+              "text": "Figure S1. Root biomass trajectories and statistical outlier screening across plots. Root biomass was measured repeatedly across the annual sampling period for each 100% irrigation plot. Points show i"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T11:47:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "clarify- based on annotations?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "To connect field gene expression with the MicroResp results, we used an a priori mapping between each MicroResp substrate and biologically related BRITE C functional categories informed by their funct"
+            },
+            {
+              "where": "end",
+              "text": "To connect field gene expression with the MicroResp results, we used an a priori mapping between each MicroResp substrate and biologically related BRITE C functional categories informed by their funct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T11:47:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "should we contrast with those that are steady all year round?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "We then focused on the three substrates with the strongest temporal responses in Figure 2, identified independently from the transcript data as the FDR-significant MicroResp trajectories with the high"
+            },
+            {
+              "where": "end",
+              "text": "We then focused on the three substrates with the strongest temporal responses in Figure 2, identified independently from the transcript data as the FDR-significant MicroResp trajectories with the high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T12:31:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "@Bell, Sheryl Lwas this after saturating for winter? and super hot summer conditions? are we using sensor data?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            },
+            {
+              "where": "end",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "author": "Bell, Sheryl L",
+      "date": "2026-10-05T12:43:00Z",
+      "initials": "BSL",
+      "resolved": false,
+      "text": "October sampling would be pre-saturation/fall harvest. November sampling is after both",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            },
+            {
+              "where": "end",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T12:59:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "this is 0-15cm root picking?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            },
+            {
+              "where": "end",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "51",
+      "author": "Bell, Sheryl L",
+      "date": "2026-10-05T13:53:00Z",
+      "initials": "BSL",
+      "resolved": false,
+      "text": "yes, the data VGC is using is root picking pooled triplicate 0-15cm cores.",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            },
+            {
+              "where": "end",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "53",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T12:32:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "this is not rhizo data, but root picking. @Bell, Sheryl L. curious about the graphs we've presented in the past (no stats tho)",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            },
+            {
+              "where": "end",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "54",
+      "author": "Bell, Sheryl L",
+      "date": "2026-10-05T12:46:00Z",
+      "initials": "BSL",
+      "resolved": false,
+      "text": "not an amazing plot but I've put the rhizotron data right below (can't put an image as a comment apparently",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            },
+            {
+              "where": "end",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "55",
+      "author": "Bell, Sheryl L",
+      "date": "2026-10-05T12:47:00Z",
+      "initials": "BSL",
+      "resolved": false,
+      "text": "timing is slightly different, but small dip mid summer, and then larger crash in the fall",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            },
+            {
+              "where": "end",
+              "text": "Figure 1. Seasonal variation in total soil respiration and its relationship with root biomass. (A) Total soil respiration across the 13-month sampling period for the 100% irrigation treatment. Plot-le"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "59",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T12:32:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "also wet dry cycle - birch?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Interpretation: Total soil respiration was substantially higher and more variable during the plant-active season and declined sharply during the plant-dormant period. Retaining all observations, root "
+            },
+            {
+              "where": "end",
+              "text": "Interpretation: Total soil respiration was substantially higher and more variable during the plant-active season and declined sharply during the plant-dormant period. Retaining all observations, root "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "author": "Bell, Sheryl L",
+      "date": "2026-10-05T12:49:00Z",
+      "initials": "BSL",
+      "resolved": false,
+      "text": "of note we were very consistent with timing of sampling days. Irrigation was on Mondays and Thursdays, we always sampled on Wed, so that the time since water was applied would be the same",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Interpretation: Total soil respiration was substantially higher and more variable during the plant-active season and declined sharply during the plant-dormant period. Retaining all observations, root "
+            },
+            {
+              "where": "end",
+              "text": "Interpretation: Total soil respiration was substantially higher and more variable during the plant-active season and declined sharply during the plant-dormant period. Retaining all observations, root "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "61",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:32:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "Setting up a clear metabolism/activity dichotomy, which appears to be primarily driven by plant activity",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Interpretation: Total soil respiration was substantially higher and more variable during the plant-active season and declined sharply during the plant-dormant period. Retaining all observations, root "
+            },
+            {
+              "where": "end",
+              "text": "Interpretation: Total soil respiration was substantially higher and more variable during the plant-active season and declined sharply during the plant-dormant period. Retaining all observations, root "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "62",
+      "author": "Garayburu-Caruso, Vanessa A",
+      "date": "2026-08-28T16:52:00Z",
+      "initials": "VG",
+      "resolved": false,
+      "text": "We should discuss this",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Interpretation: Total soil respiration was substantially higher and more variable during the plant-active season and declined sharply during the plant-dormant period. Retaining all observations, root "
+            },
+            {
+              "where": "end",
+              "text": "Interpretation: Total soil respiration was substantially higher and more variable during the plant-active season and declined sharply during the plant-dormant period. Retaining all observations, root "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "64",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T12:40:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "why are we highlighting plots on this graph? date and substrate are the story.",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 2. Seasonal structure in microbial substrate-induced respiration under standardized laboratory conditions. (A) NMDS of the complete MicroResp substrate-response profile for the 100% irrigation "
+            },
+            {
+              "where": "end",
+              "text": "Figure 2. Seasonal structure in microbial substrate-induced respiration under standardized laboratory conditions. (A) NMDS of the complete MicroResp substrate-response profile for the 100% irrigation "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "65",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:35:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "Ok -- so I think these are really cool contrast to field respiration.  Granted, these are response to a nutrient pulse, but for all, potential activity is relatively higher during plant dormancy.",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 2. Seasonal structure in microbial substrate-induced respiration under standardized laboratory conditions. (A) NMDS of the complete MicroResp substrate-response profile for the 100% irrigation "
+            },
+            {
+              "where": "end",
+              "text": "Figure 2. Seasonal structure in microbial substrate-induced respiration under standardized laboratory conditions. (A) NMDS of the complete MicroResp substrate-response profile for the 100% irrigation "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "66",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:33:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "+1!",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 2. Seasonal structure in microbial substrate-induced respiration under standardized laboratory conditions. (A) NMDS of the complete MicroResp substrate-response profile for the 100% irrigation "
+            },
+            {
+              "where": "end",
+              "text": "Figure 2. Seasonal structure in microbial substrate-induced respiration under standardized laboratory conditions. (A) NMDS of the complete MicroResp substrate-response profile for the 100% irrigation "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "67",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:36:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "does seem like they are separating on the NMDS1 axis, but not well",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Interpretation: MicroResp profiles differed between plant-active and plant-dormant samples, although the modest PERMANOVA effect size and significant dispersion test indicate that the result reflects "
+            },
+            {
+              "where": "end",
+              "text": "Interpretation: MicroResp profiles differed between plant-active and plant-dormant samples, although the modest PERMANOVA effect size and significant dispersion test indicate that the result reflects "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:01:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "what does this mean",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Interpretation: MicroResp profiles differed between plant-active and plant-dormant samples, although the modest PERMANOVA effect size and significant dispersion test indicate that the result reflects "
+            },
+            {
+              "where": "end",
+              "text": "Interpretation: MicroResp profiles differed between plant-active and plant-dormant samples, although the modest PERMANOVA effect size and significant dispersion test indicate that the result reflects "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "69",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:37:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "nice!",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Interpretation: MicroResp profiles differed between plant-active and plant-dormant samples, although the modest PERMANOVA effect size and significant dispersion test indicate that the result reflects "
+            },
+            {
+              "where": "end",
+              "text": "Interpretation: MicroResp profiles differed between plant-active and plant-dormant samples, although the modest PERMANOVA effect size and significant dispersion test indicate that the result reflects "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "70",
+      "author": "Garayburu-Caruso, Vanessa A",
+      "date": "2026-10-05T14:32:00Z",
+      "initials": "GV",
+      "resolved": false,
+      "text": "organized this by % explained",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure S2. Substrate-specific temporal trajectories in microbial substrate-induced respiration under standardized laboratory conditions. Generalized additive models were fit separately to each of the "
+            },
+            {
+              "where": "end",
+              "text": "Figure S2. Substrate-specific temporal trajectories in microbial substrate-induced respiration under standardized laboratory conditions. Generalized additive models were fit separately to each of the "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "71",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:03:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "yes - this answers my question above about strong seasonal patterns",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure S2. Substrate-specific temporal trajectories in microbial substrate-induced respiration under standardized laboratory conditions. Generalized additive models were fit separately to each of the "
+            },
+            {
+              "where": "end",
+              "text": "Figure S2. Substrate-specific temporal trajectories in microbial substrate-induced respiration under standardized laboratory conditions. Generalized additive models were fit separately to each of the "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "72",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:05:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "@Garayburu-Caruso, Vanessa A please drop in a version of panel B or add link to file so we can read the text.",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            },
+            {
+              "where": "end",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "74",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:06:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "all pathways? full transcriptomic data rolled up to brite C?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            },
+            {
+              "where": "end",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "75",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:38:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "perhaps higher because no nutrient pulse and reflecting in situ conditions?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            },
+            {
+              "where": "end",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "76",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:39:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "I wonder if that nutrient pulse doesn't have some standardizing effect (diluting differences across months)",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            },
+            {
+              "where": "end",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "77",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:06:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "do we need to remove all the basic cell function that is the majority of the metaT?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            },
+            {
+              "where": "end",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "78",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:07:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "ah - i see we did that in B",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            },
+            {
+              "where": "end",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "79",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:08:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "just 3 - want to include the threshold for this decision",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            },
+            {
+              "where": "end",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:41:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "ok -- this is also cool! Such dramatic differences between functional expression in situ and resource response capacity",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            },
+            {
+              "where": "end",
+              "text": "Figure 3. Seasonal field gene expression is structured but does not directly correspond to laboratory substrate-response capacity. (A) NMDS of BRITE C transcript composition for the 100% irrigation tr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "81",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:42:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "discussion point -- this is a common thread across data streams (coarse-grained seasonality)",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Interpretation: BRITE C transcript functional composition also differed between plant-active and plant-dormant samples, but did not consistently track the strongest seasonal MicroResp responses. Methy"
+            },
+            {
+              "where": "end",
+              "text": "Interpretation: BRITE C transcript functional composition also differed between plant-active and plant-dormant samples, but did not consistently track the strongest seasonal MicroResp responses. Methy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "86",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:43:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "mimic general soil respiration (proxy of overall metabolism/activity?)",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Interpretation: BRITE C transcript functional composition also differed between plant-active and plant-dormant samples, but did not consistently track the strongest seasonal MicroResp responses. Methy"
+            },
+            {
+              "where": "end",
+              "text": "Interpretation: BRITE C transcript functional composition also differed between plant-active and plant-dormant samples, but did not consistently track the strongest seasonal MicroResp responses. Methy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "87",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:10:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "important discussion point for our group - measuring different things",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Interpretation: BRITE C transcript functional composition also differed between plant-active and plant-dormant samples, but did not consistently track the strongest seasonal MicroResp responses. Methy"
+            },
+            {
+              "where": "end",
+              "text": "Interpretation: BRITE C transcript functional composition also differed between plant-active and plant-dormant samples, but did not consistently track the strongest seasonal MicroResp responses. Methy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "88",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:44:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "I'm curious about the mechanism... whether there is shift in regulation, whether there is a bunch of enzyme sitting around, whether there is shift in community members... driving those trends",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Interpretation: BRITE C transcript functional composition also differed between plant-active and plant-dormant samples, but did not consistently track the strongest seasonal MicroResp responses. Methy"
+            },
+            {
+              "where": "end",
+              "text": "Interpretation: BRITE C transcript functional composition also differed between plant-active and plant-dormant samples, but did not consistently track the strongest seasonal MicroResp responses. Methy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "89",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:45:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "so does this indicate that some months there is tighter alignment between data types than others? that seems like useful information to me",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": ""
+            },
+            {
+              "where": "end",
+              "text": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "90",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:12:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "is this the sum or average? we can discuss. respiration (SIR) is the sum of all activity, metaT is each individual - do we sum all that for comparable measurement?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure S3. Correspondence between microbial substrate-response profiles and field transcript functional composition. Procrustes analysis compared the multivariate configuration of MicroResp substrate-"
+            },
+            {
+              "where": "end",
+              "text": "Figure S3. Correspondence between microbial substrate-response profiles and field transcript functional composition. Procrustes analysis compared the multivariate configuration of MicroResp substrate-"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "91",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:13:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "between metaT and microresp",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure S3. Correspondence between microbial substrate-response profiles and field transcript functional composition. Procrustes analysis compared the multivariate configuration of MicroResp substrate-"
+            },
+            {
+              "where": "end",
+              "text": "Figure S3. Correspondence between microbial substrate-response profiles and field transcript functional composition. Procrustes analysis compared the multivariate configuration of MicroResp substrate-"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "92",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:14:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "yes. important message.",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Figure S3. Correspondence between microbial substrate-response profiles and field transcript functional composition. Procrustes analysis compared the multivariate configuration of MicroResp substrate-"
+            },
+            {
+              "where": "end",
+              "text": "Figure S3. Correspondence between microbial substrate-response profiles and field transcript functional composition. Procrustes analysis compared the multivariate configuration of MicroResp substrate-"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "93",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:46:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "so... pointing to a microbial component?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Total soil respiration showed strong seasonality, but standing root biomass did not explain variation in respiration within either the plant-active or plant-dormant period. This indicates that seasona"
+            },
+            {
+              "where": "end",
+              "text": "Total soil respiration showed strong seasonality, but standing root biomass did not explain variation in respiration within either the plant-active or plant-dormant period. This indicates that seasona"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "94",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-03T12:47:00Z",
+      "initials": "ZAE",
+      "resolved": false,
+      "text": "this is the headliner result to me -- actually (well, potential) process rate measurements and how they vary through time",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Microbial substrate-induced respiration changed strongly across the annual cycle under standardized laboratory conditions, but the timing and shape of these responses were substrate-specific. Methyl o"
+            },
+            {
+              "where": "end",
+              "text": "Microbial substrate-induced respiration changed strongly across the annual cycle under standardized laboratory conditions, but the timing and shape of these responses were substrate-specific. Methyl o"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "95",
+      "author": "Zimmerman, Amy E",
+      "date": "2026-09-02T10:28:00Z",
+      "initials": "ZA",
+      "resolved": false,
+      "text": "Weak associations between SIR and transcripts likely reflect distinct biological phenomena (I'd love to be able to say something like this, or suggest is as a hypothesis)",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Field transcript functional expression was season-associated but only weakly aligned with substrate-response capacity. For strongly seasonal substrates such as chitosan and methyl oleate, laboratory M"
+            },
+            {
+              "where": "end",
+              "text": "Field transcript functional expression was season-associated but only weakly aligned with substrate-response capacity. For strongly seasonal substrates such as chitosan and methyl oleate, laboratory M"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "96",
+      "author": "Hofmockel, Kirsten S",
+      "date": "2026-10-05T13:18:00Z",
+      "initials": "kh",
+      "resolved": false,
+      "text": "not parallel measures - we dosing for a response in SIR, so amplifying the signal relative to metaT response with background levels. curious if we have any way of benchmarking the amount of these substrated in field v our dosage @Bell, Sheryl L did you do this already?",
+      "anchors": [
+        {
+          "part": "word/document.xml",
+          "paragraphs": [
+            {
+              "where": "start",
+              "text": "Field transcript functional expression was season-associated but only weakly aligned with substrate-response capacity. For strongly seasonal substrates such as chitosan and methyl oleate, laboratory M"
+            },
+            {
+              "where": "end",
+              "text": "Field transcript functional expression was season-associated but only weakly aligned with substrate-response capacity. For strongly seasonal substrates such as chitosan and methyl oleate, laboratory M"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,3 @@
-# Final manuscript figures
+# Figures
 
-This folder contains the new publication-ready main-text and supplemental figures.
-
-Use manuscript-oriented filenames such as `Figure_1.png`, `Figure_1.pdf`, and `Figure_S1.png`. Draft or diagnostic plots should use clearly labeled subfolders so the final deliverables remain easy to identify.
+Main and supplementary figures written by the scripts in `Scripts/`, as PNG (300 dpi) and PDF, in `manuscript_v4/<Figure>/`. Superseded v3 figures are in `Archive/2026-10-23_pre_v4/Figures/`.

@@ -1,0 +1,46 @@
+
+Sample availability audit complete.
+# A tibble: 13 × 8
+   Sampling_Date Season            total_field_soil_res…¹ root_biomass microresp
+   <date>        <chr>                              <int>        <int>     <int>
+ 1 2023-06-07    Plant-active, Ap…                      6            6         6
+ 2 2023-07-05    Plant-active, Ap…                      6            6         6
+ 3 2023-08-02    Plant-active, Ap…                      6            6         6
+ 4 2023-09-06    Plant-active, Ap…                      6            6         6
+ 5 2023-10-04    Plant-active, Ap…                      6            6         6
+ 6 2023-11-01    Plant-dormant, N…                      6            6         6
+ 7 2023-12-04    Plant-dormant, N…                      6            6         6
+ 8 2024-01-02    Plant-dormant, N…                      6            6         6
+ 9 2024-02-12    Plant-dormant, N…                      6            6         5
+10 2024-03-06    Plant-dormant, N…                      6            6         6
+11 2024-04-03    Plant-active, Ap…                      6            6         6
+12 2024-05-08    Plant-active, Ap…                      6            6         6
+13 2024-06-05    Plant-active, Ap…                      6            6         6
+# ℹ abbreviated name: ¹​total_field_soil_respiration
+# ℹ 3 more variables: metatranscriptomes <int>,
+#   matched_root_and_field_respiration <int>,
+#   matched_microresp_and_transcripts <int>
+
+Design summary:
+# A tibble: 11 × 2
+   item                                              value
+   <chr>                                             <dbl>
+ 1 Blocks in repository metadata                         3
+ 2 Plots across both treatments                         12
+ 3 Plots in 100% treatment                               6
+ 4 Expected monthly sampling points                     13
+ 5 Expected 100% plot-date records                      78
+ 6 Observed 100% field records                          78
+ 7 Observed 100% MicroResp samples                      77
+ 8 Observed 100% transcript samples                     35
+ 9 Observed transcript sampling dates                    7
+10 Field duplicate sample records                        0
+11 MicroResp duplicate sample-substrate measurements     0
+
+Matching issues by type:
+# A tibble: 3 × 2
+  issue_type                              n
+  <chr>                               <int>
+1 MicroResp sample without transcript    42
+2 Field sample unmatched to MicroResp     1
+3 Missing expected MicroResp sample       1

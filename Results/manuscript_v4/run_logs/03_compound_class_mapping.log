@@ -1,0 +1,16 @@
+Substrate classes written for 31 substrates
+# A tibble: 3 × 2
+  availability_class     n
+  <chr>              <int>
+1 Complex                7
+2 Other                 14
+3 Readily available     10
+
+Unique BRITE C categories: 20 
+# A tibble: 4 × 2
+  compound_class     n
+  <fct>          <int>
+1 Lipid-like         4
+2 Aromatic           6
+3 Amino sugar        1
+4 Amino acid         9

@@ -60,13 +60,13 @@ season_bands <- function(dates, pad_days = 15) {
 }
 
 # Season shading as fixed-colour layers, leaving the fill scale free for data.
-season_band_layers <- function(dates, alpha = 0.8) {
+season_band_layers <- function(dates, alpha = 0.8, ymin = -Inf) {
   bands <- season_bands(dates)
   map(season_levels, function(s) {
     geom_rect(
       data = filter(bands, Season == s),
-      aes(xmin = start, xmax = end, ymin = -Inf, ymax = Inf),
-      inherit.aes = FALSE, fill = season_fill[[s]], alpha = alpha
+      aes(xmin = start, xmax = end, ymax = Inf),
+      ymin = ymin, inherit.aes = FALSE, fill = season_fill[[s]], alpha = alpha
     )
   })
 }
@@ -264,4 +264,9 @@ date_level_season_test <- function(profile, sample_dates, method = "bray") {
 
 format_p <- function(p) {
   if_else(p < 0.001, "< 0.001", formatC(p, format = "f", digits = 3))
+}
+
+# "p = 0.012" or "p < 0.001" for figure labels.
+p_label <- function(p) {
+  if_else(p < 0.001, "p < 0.001", paste("p =", formatC(p, format = "f", digits = 3)))
 }

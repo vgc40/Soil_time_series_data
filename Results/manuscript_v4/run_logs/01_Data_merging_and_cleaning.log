@@ -1,0 +1,55 @@
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+=== SOURCE FILES ===
+Biogeochemistry: DataHub March/Soil_Biogeochemistry/SoilMicrobiomeSFA_prosser-time-series_Soil_Biogeochemistry.csv 
+EEA: DataHub March/Soil_Phenotypes/SoilMicrobiomeSFA_prosser-time-series_EEA.csv 
+
+=== SOURCE DATA CHECK ===
+BGC rows: 168 
+EEA rows: 156 
+
+=== MERGE CHECK ===
+Merged rows: 168 
+BGC samples without EEA: 12 
+EEA samples without BGC: 0 
+Samples with respiration data: 156 
+
+=== ANALYSIS DATASET BEFORE CLEANING ===
+Samples with respiration: 156 
+Date range: 2023-06-07 to 2024-06-05 
+
+=== OUTLIER REMOVAL ===
+Outlier samples requested for removal: SM1085, SM1087, SM1088 
+Outlier samples found and removed: 3 
+Samples after outlier removal: 153 
+
+=== ZERO REPLACEMENT ===
+Variables checked for below-detection zeros: MBP_OP_ug_gdw, Oslon_OP_ug_gdw, Olson_IP_ug_gdw, MBP_IP_ug_gdw, SEOC_ug_gdw, MBC_ug_gdw_bgc, SETN_ug_gdw, MBN_ug_gdw_bgc 
+Variables with zeros replaced: 8 
+  MBP_OP_ug_gdw: 50 zeros replaced with 0.195000
+  Oslon_OP_ug_gdw: 38 zeros replaced with 0.055000
+  Olson_IP_ug_gdw: 20 zeros replaced with 0.625000
+  MBP_IP_ug_gdw: 15 zeros replaced with 1.065000
+  SEOC_ug_gdw: 7 zeros replaced with 0.265000
+  MBC_ug_gdw_bgc: 4 zeros replaced with 0.070000
+  SETN_ug_gdw: 3 zeros replaced with 1.075000
+  MBN_ug_gdw_bgc: 1 zeros replaced with 2.390000
+
+=== NEGATIVE RESPIRATION CHECK ===
+Negative respiration values found: 3 
+Replacement value: 0.145985 
+
+=== CLEANED DATASET SUMMARY ===
+Samples before cleaning: 156 
+Samples after outlier removal: 153 
+Samples in cleaned dataset: 153 
+Complete cases after cleaning: 127 

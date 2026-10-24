@@ -1,6 +1,0 @@
-Substrate,target_family,temporal_rank,p_adj_FDR,deviance_explained,Microresp_pathways_mapping_available,supported_temporal_pattern,selected_before_transcript_comparison,selection_rule
-Chitin,Chitin / chitosan / N-acetylglucosamine,5,0,0.5806200236413901,TRUE,TRUE,TRUE,Supported temporal pattern in the Figure 2 GAM plus an interpretable Microresp_pathways mapping; transcript correspondence was not used.
-Chitosan,Chitin / chitosan / N-acetylglucosamine,2,0,0.7676248292907215,TRUE,TRUE,TRUE,Supported temporal pattern in the Figure 2 GAM plus an interpretable Microresp_pathways mapping; transcript correspondence was not used.
-N.Acetyl.D.glucosamine,Chitin / chitosan / N-acetylglucosamine,26,4.5263438849480934e-4,0.26592592210451776,TRUE,TRUE,TRUE,Supported temporal pattern in the Figure 2 GAM plus an interpretable Microresp_pathways mapping; transcript correspondence was not used.
-Glucosamine_hydrochloride,Chitin / chitosan / N-acetylglucosamine,4,0,0.5895052228159812,TRUE,TRUE,TRUE,Supported temporal pattern in the Figure 2 GAM plus an interpretable Microresp_pathways mapping; transcript correspondence was not used.
-Methyl_oleate,Methyl oleate,1,0,0.7887546872007483,TRUE,TRUE,TRUE,Supported temporal pattern in the Figure 2 GAM plus an interpretable Microresp_pathways mapping; transcript correspondence was not used.

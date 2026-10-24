@@ -1,3 +1,0 @@
-target_family,n_dates,pearson_r,pearson_p,spearman_rho,spearman_p,interpretation
-Chitin / chitosan / N-acetylglucosamine,7,-0.7729010558897383,0.04159121703774534,-0.9285714285714283,0.0025194724037947234,Exploratory date-level correlation; descriptive only and not evidence of mechanistic linkage.
-Methyl oleate,7,-0.24321136067113716,0.5992139837589978,-0.28571428571428564,0.5345092286010411,Exploratory date-level correlation; descriptive only and not evidence of mechanistic linkage.
