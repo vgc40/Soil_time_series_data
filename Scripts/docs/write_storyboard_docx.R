@@ -1,6 +1,6 @@
 # =============================================================================
-# Write the v4 storyboard and analysis notes as HTML (converted to .docx by
-# Scripts/docs/html_to_docx.ps1)
+# Write the v4 storyboard and analysis notes as Word documents (.docx)
+# directly from R (no Word automation; see the docx writer below)
 # =============================================================================
 #
 # Every number in the documents is read from Results/manuscript_v4, so the
@@ -83,40 +83,202 @@ temp_env <- filter(envfit, variable == "Soil temperature")
 lag_n <- paste(lagsum$n_pairs, collapse = ", ")
 
 # -----------------------------------------------------------------------------
-# HTML helpers
+# Minimal .docx writer (WordprocessingML), so no Word automation is needed
 # -----------------------------------------------------------------------------
+# Content is written with light inline markup: <b>, <i>, and <span
+# class="caption|note"> are turned into run formatting; other tags (links)
+# are dropped and their text kept.
 
-esc <- function(x) x %>% str_replace_all("&", "&amp;") %>% str_replace_all("<", "&lt;") %>%
-  str_replace_all(">", "&gt;")
-h <- function(level, text) sprintf("<h%d>%s</h%d>", level, text, level)
-h1 <- function(text) h(1, text)
-h2 <- function(text) h(2, text)
-h3 <- function(text) h(3, text)
-p <- function(...) sprintf("<p>%s</p>", paste0(...))
+xml_escape <- function(x) {
+  x %>% str_replace_all("&", "&amp;") %>% str_replace_all("<", "&lt;") %>%
+    str_replace_all(">", "&gt;") %>% str_replace_all('"', "&quot;")
+}
+
+# Split marked-up text into Word runs.
+runs <- function(text, size = NULL) {
+  tokens <- str_split(text, "(?=<)|(?<=>)")[[1]]
+  bold <- FALSE; italic <- FALSE; style <- "plain"
+  out <- character()
+  for (tok in tokens[tokens != ""]) {
+    if (str_detect(tok, "^<b>$")) { bold <- TRUE; next }
+    if (str_detect(tok, "^</b>$")) { bold <- FALSE; next }
+    if (str_detect(tok, "^<i>$")) { italic <- TRUE; next }
+    if (str_detect(tok, "^</i>$")) { italic <- FALSE; next }
+    if (str_detect(tok, '^<span class="caption">$')) { style <- "caption"; next }
+    if (str_detect(tok, '^<span class="note">$')) { style <- "note"; next }
+    if (str_detect(tok, "^</span>$")) { style <- "plain"; next }
+    if (str_detect(tok, "^</?[a-z][^>]*>$")) next
+    props <- c(
+      if (bold) "<w:b/>",
+      if (italic) "<w:i/>",
+      if (style == "note") '<w:color w:val="7F6000"/>',
+      if (style == "caption" || !is.null(size)) sprintf('<w:sz w:val="%d"/>', if (is.null(size)) 19 else size)
+    )
+    out <- c(out, sprintf('<w:r>%s<w:t xml:space="preserve">%s</w:t></w:r>',
+                          if (length(props)) paste0("<w:rPr>", paste(props, collapse = ""), "</w:rPr>") else "",
+                          xml_escape(tok)))
+  }
+  paste(out, collapse = "")
+}
+
+para <- function(text, style = NULL, extra_ppr = "", size = NULL) {
+  ppr <- paste0(if (!is.null(style)) sprintf('<w:pStyle w:val="%s"/>', style), extra_ppr)
+  sprintf("<w:p>%s%s</w:p>", if (nzchar(ppr)) paste0("<w:pPr>", ppr, "</w:pPr>") else "",
+          runs(text, size))
+}
+
+h1 <- function(text) para(text, "Heading1")
+h2 <- function(text) para(text, "Heading2")
+h3 <- function(text) para(text, "Heading3")
+p <- function(...) {
+  text <- paste0(...)
+  if (str_detect(text, 'class="note"')) {
+    para(text, extra_ppr = '<w:shd w:val="clear" w:color="auto" w:fill="FFF5D6"/>')
+  } else {
+    para(text)
+  }
+}
 b <- function(text) sprintf("<b>%s</b>", text)
 i <- function(text) sprintf("<i>%s</i>", text)
-ul <- function(items) paste0("<ul>", paste0("<li>", items, "</li>", collapse = ""), "</ul>")
-# Figures are written as placeholders; html_to_docx.ps1 replaces each with the
-# embedded picture (opening HTML with linked images stalls Word).
-img <- function(path, width_in = 6.5) {
-  sprintf('<p class="figure">[[IMG|%s|%s]]</p>', path, width_in)
+ul <- function(items) {
+  paste(map_chr(items, ~ para(.x, "ListBullet",
+                              '<w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr>')),
+        collapse = "")
 }
+
 tbl <- function(df) {
-  head_row <- paste0("<tr>", paste0("<th>", names(df), "</th>", collapse = ""), "</tr>")
-  body <- apply(df, 1, function(r) paste0("<tr>", paste0("<td>", r, "</td>", collapse = ""), "</tr>"))
-  paste0("<table>", head_row, paste(body, collapse = ""), "</table>")
-}
-page <- function(title, body) {
+  n <- ncol(df)
+  widths <- rep(floor(9360 / n), n)
+  cell <- function(text, header) {
+    sprintf(paste0('<w:tc><w:tcPr><w:tcW w:w="%d" w:type="dxa"/>%s</w:tcPr>%s</w:tc>'),
+            widths[1],
+            if (header) '<w:shd w:val="clear" w:color="auto" w:fill="E7ECF5"/>' else "",
+            para(if (header) b(text) else text, size = 18))
+  }
+  row <- function(values, header = FALSE) {
+    paste0("<w:tr>", paste(map_chr(as.character(values), cell, header = header), collapse = ""), "</w:tr>")
+  }
+  borders <- paste0("<w:tblBorders>",
+                    paste(sprintf('<w:%s w:val="single" w:sz="4" w:space="0" w:color="999999"/>',
+                                  c("top", "left", "bottom", "right", "insideH", "insideV")),
+                          collapse = ""), "</w:tblBorders>")
   paste0(
-    '<html><head><meta charset="utf-8"><title>', title, '</title><style>',
-    'body{font-family:Calibri,Arial,sans-serif;font-size:11pt;line-height:1.25}',
-    'h1{font-size:18pt;color:#1F3864}h2{font-size:14pt;color:#1F3864;margin-top:18pt}',
-    'h3{font-size:12pt;color:#2F5496}p{margin:4pt 0 6pt 0}',
-    'table{border-collapse:collapse;margin:6pt 0}th,td{border:1px solid #999;padding:3pt 5pt;font-size:9.5pt;vertical-align:top}',
-    'th{background:#E7ECF5}p.figure{text-align:center}.caption{font-size:10pt}',
-    '.note{color:#7F6000;background:#FFF5D6;padding:4pt}',
-    '</style></head><body>', paste(body, collapse = "\n"), '</body></html>'
+    '<w:tbl><w:tblPr><w:tblW w:w="9360" w:type="dxa"/>', borders,
+    '<w:tblLayout w:type="fixed"/><w:tblCellMar><w:left w:w="80" w:type="dxa"/><w:right w:w="80" w:type="dxa"/></w:tblCellMar></w:tblPr>',
+    "<w:tblGrid>", paste(sprintf('<w:gridCol w:w="%d"/>', widths), collapse = ""), "</w:tblGrid>",
+    row(names(df), header = TRUE),
+    paste(apply(df, 1, row), collapse = ""),
+    "</w:tbl>", para("")
   )
+}
+
+# Embedded figures: registered here, written to word/media by write_docx().
+media <- new.env()
+media$files <- character()
+
+png_size <- function(path) {
+  con <- file(path, "rb"); on.exit(close(con))
+  header <- readBin(con, "raw", 24)
+  to_int <- function(bytes) sum(as.integer(bytes) * 256^(3:0))
+  c(width = to_int(header[17:20]), height = to_int(header[21:24]))
+}
+
+img <- function(path, width_in = 6.5) {
+  media$files <- c(media$files, path)
+  k <- length(media$files)
+  dims <- png_size(path)
+  cx <- round(min(width_in, 6.5) * 914400)
+  cy <- round(cx * dims[["height"]] / dims[["width"]])
+  sprintf(paste0(
+    '<w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:drawing>',
+    '<wp:inline distT="0" distB="0" distL="0" distR="0"><wp:extent cx="%d" cy="%d"/>',
+    '<wp:docPr id="%d" name="Figure %d"/>',
+    '<a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">',
+    '<a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">',
+    '<pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">',
+    '<pic:nvPicPr><pic:cNvPr id="%d" name="image%d.png"/><pic:cNvPicPr/></pic:nvPicPr>',
+    '<pic:blipFill><a:blip r:embed="rIdImg%d"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill>',
+    '<pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="%d" cy="%d"/></a:xfrm>',
+    '<a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic>',
+    '</a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>'),
+    cx, cy, k, k, k, k, k, cx, cy)
+}
+
+write_docx <- function(blocks, path) {
+  tmp <- file.path(tempdir(), paste0("docx_", basename(path)))
+  unlink(tmp, recursive = TRUE)
+  dir.create(file.path(tmp, "_rels"), recursive = TRUE)
+  dir.create(file.path(tmp, "word", "_rels"), recursive = TRUE)
+  dir.create(file.path(tmp, "word", "media"), recursive = TRUE)
+  ns <- paste0(
+    'xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" ',
+    'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" ',
+    'xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"'
+  )
+  write <- function(text, ...) writeLines(text, file.path(tmp, ...), useBytes = TRUE, sep = "")
+  decl <- '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+
+  write(paste0(decl,
+    '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">',
+    '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>',
+    '<Default Extension="xml" ContentType="application/xml"/>',
+    '<Default Extension="png" ContentType="image/png"/>',
+    '<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>',
+    '<Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/>',
+    '<Override PartName="/word/numbering.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml"/>',
+    '</Types>'), "[Content_Types].xml")
+
+  write(paste0(decl,
+    '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">',
+    '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>',
+    '</Relationships>'), "_rels", ".rels")
+
+  image_rels <- character()
+  for (k in seq_along(media$files)) {
+    file.copy(media$files[k], file.path(tmp, "word", "media", sprintf("image%d.png", k)))
+    image_rels <- c(image_rels, sprintf(
+      '<Relationship Id="rIdImg%d" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image%d.png"/>', k, k))
+  }
+  write(paste0(decl,
+    '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">',
+    '<Relationship Id="rIdStyles" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>',
+    '<Relationship Id="rIdNumbering" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering" Target="numbering.xml"/>',
+    paste(image_rels, collapse = ""), '</Relationships>'), "word", "_rels", "document.xml.rels")
+
+  heading <- function(id, name, size, color, before) {
+    sprintf(paste0('<w:style w:type="paragraph" w:styleId="%s"><w:name w:val="%s"/>',
+                   '<w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/>',
+                   '<w:pPr><w:keepNext/><w:spacing w:before="%d" w:after="80"/><w:outlineLvl w:val="%d"/></w:pPr>',
+                   '<w:rPr><w:b/><w:color w:val="%s"/><w:sz w:val="%d"/></w:rPr></w:style>'),
+            id, name, before, as.integer(str_extract(id, "\\d")) - 1, color, size)
+  }
+  write(paste0(decl, '<w:styles ', ns, '>',
+    '<w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri" w:eastAsia="Calibri"/>',
+    '<w:sz w:val="22"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="120" w:line="264" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults>',
+    '<w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/></w:style>',
+    heading("Heading1", "heading 1", 36, "1F3864", 240),
+    heading("Heading2", "heading 2", 28, "1F3864", 360),
+    heading("Heading3", "heading 3", 24, "2F5496", 240),
+    '<w:style w:type="paragraph" w:styleId="ListBullet"><w:name w:val="List Bullet"/><w:basedOn w:val="Normal"/>',
+    '<w:pPr><w:spacing w:after="60"/></w:pPr></w:style>',
+    '</w:styles>'), "word", "styles.xml")
+
+  write(paste0(decl, '<w:numbering ', ns, '>',
+    '<w:abstractNum w:abstractNumId="0"><w:lvl w:ilvl="0"><w:start w:val="1"/><w:numFmt w:val="bullet"/>',
+    '<w:lvlText w:val="•"/><w:lvlJc w:val="left"/><w:pPr><w:ind w:left="360" w:hanging="360"/></w:pPr></w:lvl></w:abstractNum>',
+    '<w:num w:numId="1"><w:abstractNumId w:val="0"/></w:num></w:numbering>'), "word", "numbering.xml")
+
+  write(paste0(decl, '<w:document ', ns, '><w:body>', paste(blocks, collapse = ""),
+    '<w:sectPr><w:pgSz w:w="12240" w:h="15840"/>',
+    '<w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/>',
+    '</w:sectPr></w:body></w:document>'), "word", "document.xml")
+
+  files <- list.files(tmp, recursive = TRUE, all.files = TRUE)
+  out <- normalizePath(path, winslash = "/", mustWork = FALSE)
+  unlink(out)
+  zip::zip(out, files = files, root = tmp)
+  media$files <- character()
+  invisible(out)
 }
 
 # -----------------------------------------------------------------------------
@@ -173,7 +335,7 @@ storyboard <- c(
   p(b("Metatranscriptomes. "), "Expression rolled up to BRITE C functional categories (taxon-independent), keeping 325 categories after removing hierarchy rows, curated human/non-soil pathways, and all-zero categories, and converted to within-sample proportions. Rolling expression up to functions mitigates the rapid turnover of individual transcripts (AZ comment). Composition: Bray-Curtis NMDS and exact date-level PERMANOVA; dispersion tested the same way."),
   p(b("Substrate-to-function mapping. "), "An a priori table links each MicroResp substrate to KEGG BRITE C pathways containing its catabolic or assimilatory reactions (Data/Microresp_pathways.csv). Four compound classes (lipid-like, aromatic, amino sugar, amino acid including BSA and GABA) were defined, and a category was used only if all substrates it maps to belong to one class, giving 20 categories (4, 6, 1, and 9)."),
   p(b("Correspondence (Q3). "), sprintf("For each class, SIR is the mean within-substrate z-score of the class's substrates and transcript abundance is the summed share of expression of its unique categories, z-scored. These are compared at the seven transcript dates (concurrent) and with SIR at the next sampling date (lag pairs: n plots = %s; all intervals 28 days except January to February, 41 days) using Spearman correlations, reported descriptively. Global correspondence: Procrustes/PROTEST on NMDS configurations, permuting by cyclic shifts within plot (exploratory).", lag_n)),
-  p(b("Supporting measurements. "), "Field soil respiration (CO2 flux, 60-min chamber reading), soil temperature, gravimetric water content, hand-picked root biomass from pooled triplicate 0-15 cm cores (not rhizosphere material), microbial biomass C and N, and potential extracellular enzyme activities (BG, BX, CB, AP, NAG, Leu, Ala)."),
+  p(b("Supporting measurements. "), "Field soil respiration (chamber CO2-C flux, mg m-2 h-1; DataHub column CO2_C_60_m2), soil temperature, gravimetric water content, hand-picked root biomass from pooled triplicate 0-15 cm cores (not rhizosphere material), microbial biomass C and N, and potential extracellular enzyme activities (BG, BX, CB, AP, NAG, Leu, Ala)."),
 
   h2("Key Figures"),
 
@@ -243,7 +405,7 @@ storyboard <- c(
       f2(protest$procrustes_correlation), pv(protest$protest_p))),
 
   h3("Supplementary figures"),
-  p(b("Figure S1. Root biomass and field soil respiration. "), sprintf("Season-specific slopes from a mixed model with a date random intercept (plot variance estimated as zero). All observations: plant-active slope %s (%s), plant-dormant %s (%s). Excluding the three observations flagged by both a global and a within-plot modified z-score screen (SM1621, SM1078, SM1080): plant-active %s (%s). Points are retained in the primary analysis because no measurement error was identified; they may be hot spots or hot moments (KH).",
+  p(b("Figure S1. Root biomass and field soil respiration. "), sprintf("Season-specific slopes from a mixed model with a date random intercept (plot variance estimated as zero). All observations: plant-active slope %s, %s; plant-dormant %s, %s. Excluding the three observations flagged by both a global and a within-plot modified z-score screen (SM1621, SM1078, SM1080): plant-active %s, %s. Points are retained in the primary analysis because no measurement error was identified; they may be hot spots or hot moments (KH).",
     ci(s1v(TRUE, "Plant-active")$slope, s1v(TRUE, "Plant-active")$lower, s1v(TRUE, "Plant-active")$upper), pv(s1v(TRUE, "Plant-active")$p),
     f2(s1v(TRUE, "Plant-dormant")$slope), pv(s1v(TRUE, "Plant-dormant")$p),
     ci(s1v(FALSE, "Plant-active")$slope, s1v(FALSE, "Plant-active")$lower, s1v(FALSE, "Plant-active")$upper), pv(s1v(FALSE, "Plant-active")$p))),
@@ -269,7 +431,7 @@ storyboard <- c(
   ))
 )
 
-writeLines(page("Storyboard v4", storyboard), file.path(out_dir, "Storyboard_v4.html"), useBytes = TRUE)
+write_docx(storyboard, file.path(out_dir, "Storyboard_v4.docx"))
 
 # -----------------------------------------------------------------------------
 # Analysis notes (everything else to document or read)
@@ -316,7 +478,7 @@ data_changes <- c(
 )
 
 open_items <- c(
-  b("BRITE C provenance (needs your input). ") %>% paste0("No code in the repository creates Data/brite_C_expression.csv (committed 2026-07-07). Values are non-integer and per-sample totals vary 2.9-fold over the 325 analysed categories, so they are not raw counts or TPM summing to a constant. For Methods, the upstream pipeline (read mapping, normalization, KO to BRITE roll-up, handling of KOs in several categories) should be added to the repository or cited. If the team member who produced it (David Degnan?) can share the script, add it under Scripts/upstream/."),
+  b("BRITE C provenance (needs your input). ") %>% paste0("No code in the repository creates Data/brite_C_expression.csv (committed 2026-07-07). Values are non-integer and per-sample totals vary 2.9-fold over the 325 analysed categories, so they are not raw counts or TPM summing to a constant. For Methods, the upstream pipeline (read mapping, normalization, KO to BRITE roll-up, handling of KOs in several categories) should be added to the repository or cited. Whoever produced it can add the script under Scripts/upstream/"),
   b("Raw data are not on GitHub. ") %>% paste0("DataHub March/ and Archive/ are in .gitignore. Data/README.md lists each source file with an MD5 checksum, so results can be traced to exact files, but anyone cloning the repository needs the DataHub package. Decide whether to keep this (sensible until the DataHub packages are public) or add the files."),
   b("For S. Bell. ") %>% paste0("(1) Reference for the season definition; (2) harvest, fall-saturation, and irrigation start/stop dates for the Fig. 1 timeline; (3) rhizotron root data if they should appear in Fig. 1 or S1; (4) whether field concentrations of any assay substrates are known, to benchmark the MicroResp dose (KH comment)."),
   b("Data package README errors to report. ") %>% paste0("Soil Phenotypes README: collection-date line reads 2024-06-07 to 2024-07-03 (should be 2023-06-07 to 2024-06-05); EEA text says six MUB and four MUC enzymes but lists five and two; EEA file has Collection_date = #N/A for SM1502."),
@@ -362,7 +524,7 @@ file_map <- tribble(
   "Scripts/30_figure3_transcripts.R", "Figures/Results manuscript_v4/Figure3 (incl. S3)",
   "Scripts/40_figure4_correspondence.R", "Figures/Results manuscript_v4/Figure4 (incl. S4a, S4b)",
   "Scripts/helpers.R", "Season definition, loaders, exact date-level permutation test, plotting theme",
-  "Scripts/docs/", "This document and the storyboard (HTML generated from results, converted to .docx with Word)",
+  "Scripts/docs/", "This document and the storyboard, written as .docx directly from the result tables",
   "Archive/2026-10-23_pre_v4/", "Superseded scripts, figures, and results (kept locally; in git history up to commit 80e0df9)"
 )
 
@@ -382,7 +544,7 @@ notes <- c(
   h2("6. Responses to v3 coauthor comments"),
   tbl(comment_responses),
   h2("7. Reproducing the analysis"),
-  p("From the repository root, with the DataHub March folder in place and R 4.6.1: <i>Rscript Scripts/00_run_all.R</i> (about 10 minutes; Figure 2 permutation tests take most of it). Then regenerate these documents with <i>Rscript Scripts/docs/write_storyboard_html.R</i> followed by <i>powershell -File Scripts/docs/html_to_docx.ps1</i>. Data/README.md lists every input with its origin and MD5 checksum. Package versions are saved to Results/manuscript_v4/sessionInfo.txt."),
+  p("From the repository root, with the DataHub March folder in place and R 4.6.1: <i>Rscript Scripts/00_run_all.R</i> (about 5 minutes; the Figure 2 permutation tests take most of it). Then regenerate these documents with <i>Rscript Scripts/docs/write_storyboard_docx.R</i>. Data/README.md lists every input with its origin and MD5 checksum. Package versions are saved to Results/manuscript_v4/sessionInfo.txt."),
   tbl(file_map),
   h2("8. Statistical methods in brief"),
   ul(c(
@@ -395,5 +557,6 @@ notes <- c(
   ))
 )
 
-writeLines(page("Analysis notes v4", notes), file.path(out_dir, "Analysis_notes_v4.html"), useBytes = TRUE)
-cat("Wrote", file.path(out_dir, c("Storyboard_v4.html", "Analysis_notes_v4.html")), sep = "\n")
+write_docx(notes, file.path(out_dir, "Analysis_notes_v4.docx"))
+cat("Wrote", file.path(out_dir, c("Storyboard_v4.docx", "Analysis_notes_v4.docx")), sep = "
+")

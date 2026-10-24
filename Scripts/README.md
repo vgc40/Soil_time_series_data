@@ -20,10 +20,9 @@ Run everything from the repository root with `Rscript Scripts/00_run_all.R`
 definition, data loaders, the exact date-level season permutation test, and
 the plotting theme.
 
-`docs/` writes the storyboard and analysis notes from the results:
-`Rscript Scripts/docs/write_storyboard_html.R` and then
-`powershell -ExecutionPolicy Bypass -File Scripts/docs/html_to_docx.ps1`
-(needs Microsoft Word). Output goes to `Docs/`.
+`docs/write_storyboard_docx.R` writes the storyboard and analysis notes as .docx
+from the result tables (`Rscript Scripts/docs/write_storyboard_docx.R`; needs
+only R and the `zip` package). Output goes to `Docs/`.
 
 Superseded scripts (the v3 pipeline and the October 2026 outlier exploration)
 are in `Archive/2026-10-23_pre_v4/`, and in git history up to commit `80e0df9`.
