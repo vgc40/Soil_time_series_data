@@ -400,7 +400,8 @@ decisions <- tribble(
   "D9", "Fig. 3A uses all 325 categories; metabolism-only as sensitivity.",
   "D10", "Fig. 1 shows season shading and irrigation window; harvest/saturation markers pending.",
   "D11", "All root observations kept; sensitivity excludes the 3 points flagged by both screens.",
-  "D12 (2026-10-25)", "H1a reported as two separate results, level and mix; NMDS drawn without connecting lines; Q3 includes a leave-one-date-out check."
+  "D12 (2026-10-25)", "H1a reported as two separate results, level and mix; NMDS drawn without connecting lines; Q3 includes a leave-one-date-out check.",
+  "D13 (2026-10-25)", "Date-average PERMANOVA is the main whole-profile test; the all-samples version with whole dates shuffled is the check."
 )
 
 review_answers <- c(

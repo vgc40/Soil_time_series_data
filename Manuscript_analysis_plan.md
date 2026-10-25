@@ -129,6 +129,7 @@ For each of the 4 classes:
 | D9 | Fig 3A uses all 325 categories. SI sensitivity uses metabolism only (KEGG map numbers 00xxx/01xxx). |
 | D10 | Fig 1 timeline shows season shading plus the Apr–Oct irrigation window. Harvest/saturation markers and the rhizotron data are on hold until Sheryl sends dates/files. |
 | D11 | All root observations kept in the primary analysis. Sensitivity excludes only the 3 points flagged by both screens (SM1621, SM1078, SM1080). The 9-point version is dropped. |
+| D13 | *2026-10-25:* The date-average PERMANOVA (exact, 1,287 date choices) is the main whole-profile test. The all-samples version with whole dates shuffled is reported as the check. |
 | D12 | *2026-10-25:* H1a reported as two results, level (mean over substrates) and mix (profiles scaled to each sample's total). NMDS drawn without connecting lines. Q3 adds a leave-one-date-out check. Storyboard rewritten for non-specialist readers. |
 
 **To ask Sheryl:** season-definition reference (D7); harvest, fall-saturation and irrigation start/stop dates, plus rhizotron data (D10); whether field substrate concentrations can be compared with the assay dose (KH 96).

@@ -352,7 +352,7 @@ guide <- c(
 
   h2("11. Decisions and questions still open"),
   ul(c(
-    sprintf("Which whole-profile PERMANOVA to report as the main one: all samples with whole dates shuffled (p = %s, keeps every plot) or date averages (p = %s). Both are correct; the storyboard currently reports date averages.", f2(whole_dates$p, 3), f2(date_avg$p, 3)),
+    sprintf("Decided (2026-10-25): the date-average PERMANOVA (p = %s) is the main whole-profile test; the all-samples version with whole dates shuffled (p = %s) is reported as the check.", f2(date_avg$p, 3), f2(whole_dates$p, 3)),
     "Whether to replace the NMDS in main Figure 2 with a simpler picture of 'same pattern, just louder', keeping the NMDS in the supplement.",
     "For Sheryl: why plot 27 in February 2024 has no MicroResp data; the reference for the season boundaries; harvest and fall-saturation dates; rhizotron data.",
     "Who made Data/brite_C_expression.csv and how (needed for Methods).",
