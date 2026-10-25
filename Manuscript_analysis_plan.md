@@ -118,7 +118,7 @@ For each of the 4 classes:
 
 | # | Decision |
 |---|---|
-| D1 | Strict H1b sets (section 2b). Sensitivity: amino acids moved to "readily available". |
+| D1 | *Revised 2026-10-25:* one rule. Complex = polymers and esters that must be broken apart outside the cell (cellulose, hemicellulose, lignin, chitin, chitosan, BSA, methyl oleate, Tween 40); readily available = the other 23 small molecules; no "other". Sensitivity: only root-exudate types (sugars, organic acids, amino acids) count as readily available. Polymer vs monomer comparisons added within chemical classes. (Section 2b shows the original strict sets.) |
 | D2 | Amino-acid class includes BSA and GABA. Strict uniqueness rule, giving 20 categories (section 2a). |
 | D3 | Root × respiration becomes a short SI analysis. Main Fig 1 shows root biomass only as seasonal context. |
 | D4 | Top-3 panels dropped from the main figures. All 31 GAMs go in Fig S2, and the top 3 are named in the text. |
@@ -129,6 +129,7 @@ For each of the 4 classes:
 | D9 | Fig 3A uses all 325 categories. SI sensitivity uses metabolism only (KEGG map numbers 00xxx/01xxx). |
 | D10 | Fig 1 timeline shows season shading plus the Apr–Oct irrigation window. Harvest/saturation markers and the rhizotron data are on hold until Sheryl sends dates/files. |
 | D11 | All root observations kept in the primary analysis. Sensitivity excludes only the 3 points flagged by both screens (SM1621, SM1078, SM1080). The 9-point version is dropped. |
+| D12 | *2026-10-25:* H1a reported as two results, level (mean over substrates) and mix (profiles scaled to each sample's total). NMDS drawn without connecting lines. Q3 adds a leave-one-date-out check. Storyboard rewritten for non-specialist readers. |
 
 **To ask Sheryl:** season-definition reference (D7); harvest, fall-saturation and irrigation start/stop dates, plus rhizotron data (D10); whether field substrate concentrations can be compared with the assay dose (KH 96).
 

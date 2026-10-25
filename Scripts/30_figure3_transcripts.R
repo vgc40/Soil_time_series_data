@@ -37,6 +37,20 @@ class_levels <- c("Lipid-like", "Aromatic", "Amino sugar", "Amino acid")
 unique_brite <- read_csv(input_files$unique_brite_c, show_col_types = FALSE) %>%
   mutate(compound_class = factor(compound_class, levels = class_levels))
 
+# Panel labels that say what each class contains: its MicroResp substrates and
+# how many uniquely mapped pathways are summed.
+class_labels <- read_csv(input_files$substrate_classes, show_col_types = FALSE) %>%
+  filter(!is.na(compound_class)) %>%
+  group_by(compound_class) %>%
+  summarise(substrates = paste(display_name, collapse = ", "), .groups = "drop") %>%
+  left_join(count(unique_brite, compound_class, name = "n_pathways") %>%
+              mutate(compound_class = as.character(compound_class)),
+            by = "compound_class") %>%
+  mutate(class_label = sprintf("%s (%d pathway%s)", compound_class, n_pathways,
+                               if_else(n_pathways == 1, "", "s")),
+         compound_class = factor(compound_class, levels = class_levels)) %>%
+  arrange(compound_class)
+
 brite <- load_brite_c()
 stopifnot(
   n_distinct(brite$Sample_cat) == 35,
@@ -79,21 +93,19 @@ primary_h2 <- filter(h2_test, level == "Date means (primary)")
 sample_h2 <- filter(h2_test, level != "Date means (primary)")
 
 panel_a <- ggplot(nmds_scores, aes(NMDS1, NMDS2)) +
-  geom_point(aes(colour = Season), alpha = 0.4, size = 1.6) +
-  geom_path(data = date_centroids, colour = "grey45", linewidth = 0.4,
-            arrow = arrow(length = unit(0.12, "cm"), type = "closed")) +
+  geom_point(aes(colour = Season), alpha = 0.45, size = 1.6) +
   geom_point(data = date_centroids, aes(fill = Season), shape = 21,
              size = 3.4, colour = "black", stroke = 0.4) +
   geom_text_repel(data = date_centroids, aes(label = label), size = 2.6,
-                  min.segment.length = 0, seed = 1) +
+                  min.segment.length = 0.2, seed = 1) +
   scale_colour_manual(values = season_colors) +
   scale_fill_manual(values = season_colors) +
   labs(
-    title = "BRITE C transcript composition (325 categories)",
+    title = "Which functions were expressed (all 325 BRITE C categories)",
     subtitle = sprintf(
-      "Date-level PERMANOVA R² = %.2f, exact p = %s (smallest possible %.3f);\nsample-level p = %s; dispersion p = %s; stress = %.2f",
-      primary_h2$R2, format_p(primary_h2$p_permanova), primary_h2$min_possible_p,
-      format_p(sample_h2$p_permanova), format_p(primary_h2$p_dispersion), nmds$stress
+      "Small points: samples; large: date means. Season test with dates as replicates:\nR² = %.2f, %s (smallest p possible with 2 dormant dates = %.3f); spread %s",
+      primary_h2$R2, p_label(primary_h2$p_permanova), primary_h2$min_possible_p,
+      p_label(primary_h2$p_dispersion)
     ),
     colour = NULL, fill = NULL
   ) +
@@ -137,7 +149,8 @@ write_csv(category_summary, file.path(dirs$results, "Figure3B_unique_category_su
 
 row_order <- category_summary %>%
   arrange(compound_class, desc(mean_share_pct)) %>%
-  mutate(row_label = sprintf("%s (%s%%)", brite_C_name, format(signif(mean_share_pct, 2), scientific = FALSE)))
+  mutate(row_label = sprintf("ko%s %s (%s%%)", str_extract(brite_C, "^\\d{5}"), brite_C_name,
+                             formatC(mean_share_pct, format = "fg", digits = 2)))
 
 heat_data <- category_dates %>%
   left_join(select(row_order, brite_C, row_label), by = "brite_C") %>%
@@ -158,8 +171,8 @@ panel_b <- ggplot(heat_data, aes(date_label, row_label, fill = z)) +
   scale_x_discrete(position = "top") +
   facet_grid(compound_class ~ ., scales = "free_y", space = "free_y",
              labeller = label_wrap_gen(width = 6)) +
-  labs(title = "Categories mapped uniquely to one compound class",
-       subtitle = "Row label: mean share of total expression; dormant dates in bold",
+  labs(title = "Each pathway linked to only one compound class: when was it high or low?",
+       subtitle = "Red = above that pathway's own average, blue = below. In brackets: share of all expression. Dormant dates in bold.",
        x = NULL, y = NULL) +
   theme_manuscript +
   theme(
@@ -179,10 +192,12 @@ panel_b <- ggplot(heat_data, aes(date_label, row_label, fill = z)) +
 class_share <- brite %>%
   inner_join(unique_brite, by = "brite_C") %>%
   group_by(Sample_cat, Sampling_Date, Plot_ID, Season, compound_class) %>%
-  summarise(share_pct = 100 * sum(proportion), .groups = "drop")
+  summarise(share_pct = 100 * sum(proportion), .groups = "drop") %>%
+  left_join(select(class_labels, compound_class, class_label), by = "compound_class") %>%
+  mutate(class_label = factor(class_label, levels = class_labels$class_label))
 
 class_share_dates <- class_share %>%
-  group_by(Sampling_Date, Season, compound_class) %>%
+  group_by(Sampling_Date, Season, compound_class, class_label) %>%
   summarise(
     mean = mean(share_pct), n = n(), se = sd(share_pct) / sqrt(n),
     lower = mean - qt(0.975, n - 1) * se, upper = mean + qt(0.975, n - 1) * se,
@@ -201,13 +216,15 @@ panel_c <- ggplot(class_share_dates, aes(Sampling_Date, mean, colour = compound_
              alpha = 0.35) +
   scale_colour_manual(values = class_colors[class_levels]) +
   scale_fill_manual(values = class_colors[class_levels]) +
-  facet_wrap(~ compound_class, scales = "free_y", ncol = 2) +
+  facet_wrap(~ class_label, scales = "free_y", ncol = 2) +
   scale_x_date(breaks = sort(unique(class_share$Sampling_Date)),
                date_labels = "%b %y") +
-  labs(title = "Class share of total transcript expression",
+  labs(title = "Expression of each class's pathways (summed)",
+       subtitle = "Share of all transcript expression; points are plots, line is the date mean",
        x = NULL, y = "% of total BRITE C expression (mean, 95% CI)") +
   theme_manuscript +
-  theme(legend.position = "none",
+  theme(legend.position = "none", strip.text = element_text(size = 6.5),
+        plot.subtitle = element_text(size = 7.5),
         axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 7))
 
 figure3 <- (free(panel_a) | panel_c) / panel_b +

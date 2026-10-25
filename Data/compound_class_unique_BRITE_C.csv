@@ -1,21 +1,21 @@
-compound_class,brite_C_ID,brite_C_name,brite_C,linked_substrates
-Lipid-like,00071,Fatty acid degradation,00071 Fatty acid degradation [PATH:ko00071],Methyl_oleate; Tween40
-Lipid-like,00073,"Cutin, suberine and wax biosynthesis","00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",Methyl_oleate
-Lipid-like,00561,Glycerolipid metabolism,00561 Glycerolipid metabolism [PATH:ko00561],Methyl_oleate; Tween40
-Lipid-like,00564,Glycerophospholipid metabolism,00564 Glycerophospholipid metabolism [PATH:ko00564],Tween40
-Aromatic,00350,Tyrosine metabolism,00350 Tyrosine metabolism [PATH:ko00350],Lignin; Phenylethylamine; Vanillic_acid
-Aromatic,00360,Phenylalanine metabolism,00360 Phenylalanine metabolism [PATH:ko00360],Lignin; Phenylethylamine; Vanillic_acid
-Aromatic,00362,Benzoate degradation,00362 Benzoate degradation [PATH:ko00362],Lignin; Phenylethylamine; Salicylic_acid; Vanillic_acid
-Aromatic,00626,Naphthalene degradation,00626 Naphthalene degradation [PATH:ko00626],Salicylic_acid
-Aromatic,00627,Aminobenzoate degradation,00627 Aminobenzoate degradation [PATH:ko00627],Lignin; Salicylic_acid; Vanillic_acid
-Aromatic,00940,Phenylpropanoid biosynthesis,00940 Phenylpropanoid biosynthesis [PATH:ko00940],Lignin
-Amino sugar,00520,Amino sugar and nucleotide sugar metabolism,00520 Amino sugar and nucleotide sugar metabolism [PATH:ko00520],Chitin; Chitosan; Glucosamine_hydrochloride; N.Acetyl.D.glucosamine
-Amino acid,00220,Arginine biosynthesis,00220 Arginine biosynthesis [PATH:ko00220],Glutamic_acid; L.Arginine
-Amino acid,00250,"Alanine, aspartate and glutamate metabolism","00250 Alanine, aspartate and glutamate metabolism [PATH:ko00250]",BSA; GABA; Glutamic_acid; Glycine; L.Alanine; L.Arginine; L.Glutamine; L.Leucine
-Amino acid,00260,"Glycine, serine and threonine metabolism","00260 Glycine, serine and threonine metabolism [PATH:ko00260]",BSA; Glutamic_acid; Glycine; L.Alanine; L.Arginine; L.Glutamine; L.Leucine
-Amino acid,00270,Cysteine and methionine metabolism,00270 Cysteine and methionine metabolism [PATH:ko00270],BSA
-Amino acid,00280,"Valine, leucine and isoleucine degradation","00280 Valine, leucine and isoleucine degradation [PATH:ko00280]",BSA; L.Leucine
-Amino acid,00330,Arginine and proline metabolism,00330 Arginine and proline metabolism [PATH:ko00330],BSA; GABA; Glutamic_acid; Glycine; L.Alanine; L.Arginine; L.Glutamine; L.Leucine
-Amino acid,00410,beta-Alanine metabolism,00410 beta-Alanine metabolism [PATH:ko00410],GABA
-Amino acid,00650,Butanoate metabolism,00650 Butanoate metabolism [PATH:ko00650],GABA
-Amino acid,00670,One carbon pool by folate,00670 One carbon pool by folate [PATH:ko00670],Glycine
+compound_class,brite_C_ID,brite_C_name,brite_C,linked_substrates,what_it_does,why_linked
+Lipid-like,00071,Fatty acid degradation,00071 Fatty acid degradation [PATH:ko00071],Methyl_oleate; Tween40,Beta-oxidation: breaks fatty acids down to acetyl-CoA for energy.,Fatty acids are released when methyl oleate and Tween 40 esters are split.
+Lipid-like,00073,"Cutin, suberine and wax biosynthesis","00073 Cutin, suberine and wax biosynthesis [PATH:ko00073]",Methyl_oleate,"Builds and modifies plant cuticle and root-barrier lipids (cutin, suberin, waxes).",Methyl oleate stands in for plant wax esters.
+Lipid-like,00561,Glycerolipid metabolism,00561 Glycerolipid metabolism [PATH:ko00561],Methyl_oleate; Tween40,"Makes and breaks down glycerol-based lipids (e.g., triacylglycerols) with lipases.",Lipases and esterases split lipid esters such as methyl oleate and Tween 40.
+Lipid-like,00564,Glycerophospholipid metabolism,00564 Glycerophospholipid metabolism [PATH:ko00564],Tween40,Makes and turns over membrane phospholipids.,"Tween 40 is a fatty acid ester of a polyol, handled by related ester-cleaving enzymes."
+Aromatic,00350,Tyrosine metabolism,00350 Tyrosine metabolism [PATH:ko00350],Lignin; Phenylethylamine; Vanillic_acid,"Breaks down tyrosine and related phenolic rings (e.g., via homogentisate).",Shared ring-cleavage steps for lignin-derived and amine-linked aromatics.
+Aromatic,00360,Phenylalanine metabolism,00360 Phenylalanine metabolism [PATH:ko00360],Lignin; Phenylethylamine; Vanillic_acid,Breaks down phenylalanine and phenylethylamine (phenylacetate route).,Direct route for phenylethylamine; shared steps with lignin-derived aromatics.
+Aromatic,00362,Benzoate degradation,00362 Benzoate degradation [PATH:ko00362],Lignin; Phenylethylamine; Salicylic_acid; Vanillic_acid,Opens and degrades benzene rings of benzoate and related aromatics.,Central route for aromatic acids such as vanillic acid and lignin fragments.
+Aromatic,00626,Naphthalene degradation,00626 Naphthalene degradation [PATH:ko00626],Salicylic_acid,Degrades fused-ring aromatics; salicylate is a key intermediate.,Salicylic acid is processed through this pathway.
+Aromatic,00627,Aminobenzoate degradation,00627 Aminobenzoate degradation [PATH:ko00627],Lignin; Salicylic_acid; Vanillic_acid,Degrades aminobenzoates and related substituted aromatics.,Shared steps for phenolic acids and lignin fragments.
+Aromatic,00940,Phenylpropanoid biosynthesis,00940 Phenylpropanoid biosynthesis [PATH:ko00940],Lignin,"Makes and modifies phenylpropanoids, the building blocks of lignin.",Linked to lignin and its phenylpropanoid units.
+Amino sugar,00520,Amino sugar and nucleotide sugar metabolism,00520 Amino sugar and nucleotide sugar metabolism [PATH:ko00520],Chitin; Chitosan; Glucosamine_hydrochloride; N.Acetyl.D.glucosamine,"Converts amino sugars (glucosamine, N-acetylglucosamine) and builds cell-wall sugars; includes chitin and chitosan breakdown products.","Chitin, chitosan, glucosamine and NAG all enter metabolism here."
+Amino acid,00220,Arginine biosynthesis,00220 Arginine biosynthesis [PATH:ko00220],Glutamic_acid; L.Arginine,Makes arginine and links it to glutamate and urea-cycle intermediates.,Arginine and glutamate metabolism.
+Amino acid,00250,"Alanine, aspartate and glutamate metabolism","00250 Alanine, aspartate and glutamate metabolism [PATH:ko00250]",BSA; GABA; Glutamic_acid; Glycine; L.Alanine; L.Arginine; L.Glutamine; L.Leucine,"Interconverts alanine, aspartate and glutamate; includes the GABA shunt.","Alanine, glutamate, glutamine and GABA; amino acids released from protein."
+Amino acid,00260,"Glycine, serine and threonine metabolism","00260 Glycine, serine and threonine metabolism [PATH:ko00260]",BSA; Glutamic_acid; Glycine; L.Alanine; L.Arginine; L.Glutamine; L.Leucine,"Interconverts glycine, serine and threonine.",Glycine; amino acids released from protein.
+Amino acid,00270,Cysteine and methionine metabolism,00270 Cysteine and methionine metabolism [PATH:ko00270],BSA,Metabolises the sulfur amino acids cysteine and methionine.,Amino acids released from protein (BSA).
+Amino acid,00280,"Valine, leucine and isoleucine degradation","00280 Valine, leucine and isoleucine degradation [PATH:ko00280]",BSA; L.Leucine,"Breaks down the branched-chain amino acids valine, leucine and isoleucine.",Leucine; amino acids released from protein.
+Amino acid,00330,Arginine and proline metabolism,00330 Arginine and proline metabolism [PATH:ko00330],BSA; GABA; Glutamic_acid; Glycine; L.Alanine; L.Arginine; L.Glutamine; L.Leucine,"Interconverts arginine, proline and glutamate; includes polyamines.","Arginine, glutamate and GABA; amino acids released from protein."
+Amino acid,00410,beta-Alanine metabolism,00410 beta-Alanine metabolism [PATH:ko00410],GABA,Metabolises beta-alanine and related compounds.,Linked to GABA metabolism.
+Amino acid,00650,Butanoate metabolism,00650 Butanoate metabolism [PATH:ko00650],GABA,Metabolises butanoate (butyrate); the GABA shunt feeds succinate through here.,GABA is broken down through the GABA shunt.
+Amino acid,00670,One carbon pool by folate,00670 One carbon pool by folate [PATH:ko00670],Glycine,Moves one-carbon units using folate; glycine cleavage feeds this pool.,Glycine is cleaved into one-carbon units here.

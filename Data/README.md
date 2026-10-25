@@ -40,8 +40,8 @@ root before running `Scripts/00_run_all.R`.
 |---|---|---|
 | `Data/Data_merged_cleaned.csv` | `01_Data_merging_and_cleaning.R` | Biogeochemistry + EEA, both treatments, cleaned (153 samples). Decisions are logged in `Results/Data_merging_and_cleaning/cleaning_decisions.csv`. |
 | `Data/Data_merged_cleaned_complete_cases.csv` | same | Complete-case subset (127 samples) |
-| `Data/compound_class_mapping.csv` | `03_compound_class_mapping.R` | H1b availability class and Q2/Q3 compound class for the 31 substrates |
-| `Data/compound_class_unique_BRITE_C.csv` | same | The 20 BRITE C categories linked to substrates of exactly one compound class |
+| `Data/compound_class_mapping.csv` | `03_compound_class_mapping.R` | For each of the 31 substrates: H1b availability group (complex = polymer or ester that must be broken apart outside the cell; otherwise readily available), chemical class, Q2/Q3 compound class, and a one-line description |
+| `Data/compound_class_unique_BRITE_C.csv` | same | The 20 BRITE C categories linked to substrates of exactly one compound class, with a plain-language description of each pathway and why it is linked |
 
 ## Transcript processing applied in this repository
 `helpers.R::load_brite_c()` applies these steps in order:

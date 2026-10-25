@@ -1,10 +1,9 @@
 Substrate classes written for 31 substrates
-# A tibble: 3 × 2
+# A tibble: 2 × 2
   availability_class     n
   <chr>              <int>
-1 Complex                7
-2 Other                 14
-3 Readily available     10
+1 Complex                8
+2 Readily available     23
 
 Unique BRITE C categories: 20 
 # A tibble: 4 × 2

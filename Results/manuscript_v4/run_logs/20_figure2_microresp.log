@@ -1,38 +1,52 @@
 There were 42 warnings (use warnings() to see them)
+There were 42 warnings (use warnings() to see them)
 Warning message:
 Unknown or uninitialised column: `weights`. 
 boundary (singular) fit: see help('isSingular')
+boundary (singular) fit: see help('isSingular')
 There were 50 or more warnings (use warnings() to see the first 50)
-# A tibble: 15 × 2
-   item                                                   value                 
-   <chr>                                                  <chr>                 
- 1 Samples                                                77                    
- 2 Sampling dates (active / dormant)                      13 (8 / 5)            
- 3 Substrates                                             31                    
- 4 NMDS stress                                            0.091                 
- 5 H1a date-level PERMANOVA R2                            0.172                 
- 6 H1a date-level PERMANOVA p (exact, 1287 label sets)    0.112                 
- 7 H1a date-level dispersion p                            0.037                 
- 8 Substrates higher in dormancy (FDR < 0.05)             0                     
- 9 Substrates higher in active period (FDR < 0.05)        0                     
-10 Substrates with dormant > active point estimate        31 of 31              
-11 Overall shift, all substrates (dormant - active, log2) 0.418 [0.010, 0.825],…
-12 Steady substrates (GAM FDR > 0.05)                     Glutamic acid; Hemice…
-13 H1b interaction (complex - readily available), log2    0.157 [-0.132, 0.447]…
-14 H1b exact permutation p (two-sided)                    0.249                 
-15 Class model singular                                   FALSE                 
-# A tibble: 3 × 8
-  availability      contrast         estimate    SE    df   lower upper      p
-  <fct>             <chr>               <dbl> <dbl> <dbl>   <dbl> <dbl>  <dbl>
-1 Readily available Dormant - active    0.410 0.204  15.6 -0.0228 0.843 0.0617
-2 Complex           Dormant - active    0.568 0.206  16.4  0.131  1.00  0.0140
-3 Other             Dormant - active    0.341 0.202  15.1 -0.0894 0.771 0.112 
-# A tibble: 6 × 10
-  contrast     estimate    SE    df   lower upper      p analysis singular n_obs
-  <chr>           <dbl> <dbl> <dbl>   <dbl> <dbl>  <dbl> <chr>    <lgl>    <int>
-1 (Dormant - …   0.157  0.142  30.6 -0.132  0.447 0.276  Primary… FALSE     2387
-2 (Dormant - …   0.180  0.116  31.3 -0.0562 0.415 0.131  Amino a… FALSE     2387
-3 (Dormant - …   0.124  0.164  27.9 -0.211  0.460 0.454  Within-… FALSE     2387
-4 (Dormant - …   0.208  0.149  23.9 -0.0995 0.515 0.176  Transit… FALSE     2015
-5 (Dormant - …   0.320  0.127  31.2  0.0609 0.579 0.0171 24-h in… FALSE     2387
-6 (Dormant - …  -0.0732 0.112  24.3 -0.304  0.157 0.519  Per g d… FALSE     2387
+# A tibble: 17 × 2
+   item                                                  value                  
+   <chr>                                                 <chr>                  
+ 1 Samples                                               77                     
+ 2 Sampling dates (active / dormant)                     13 (8 / 5)             
+ 3 Substrates (complex / readily available)              31 (8 / 23)            
+ 4 Level: all substrates, dormant - active (log2)        0.418 [0.010, 0.825], …
+ 5 Level: percent change                                 +34%                   
+ 6 Share of overall-level variation due to sampling date 52%                    
+ 7 Share due to plot                                     7%                     
+ 8 Whole profile PERMANOVA R2 / p (date level)           0.172 / p = 0.112      
+ 9 Mix only PERMANOVA R2 / p (date level)                0.040 / p = 0.667      
+10 Whole profile dispersion p (date level)               p = 0.037              
+11 NMDS stress                                           0.091                  
+12 Substrates with dormant > active point estimate       31 of 31               
+13 Substrates significant after FDR                      0                      
+14 Steady substrates (GAM FDR > 0.05)                    Glutamic acid; Hemicel…
+15 H1b: complex - readily available (log2)               0.160 [-0.114, 0.434],…
+16 H1b permutation check p                               p = 0.086              
+17 H1b model singular                                    FALSE                  
+# A tibble: 2 × 7
+  availability      estimate    SE    df   lower upper      p
+  <fct>                <dbl> <dbl> <dbl>   <dbl> <dbl>  <dbl>
+1 Readily available    0.373 0.201  13.2 -0.0601 0.806 0.0857
+2 Complex              0.533 0.206  14.6  0.0931 0.973 0.0209
+# A tibble: 6 × 11
+  estimate     SE    df  lower upper     p comparison                   singular
+     <dbl>  <dbl> <dbl>  <dbl> <dbl> <dbl> <chr>                        <lgl>   
+1   0.160  0.128  14.8  -0.114 0.434 0.232 All substrates: complex vs … NA      
+2   0.103  0.0991 11.8  -0.113 0.320 0.318 Amino acid                   TRUE    
+3   0.419  0.216   5.59 -0.120 0.958 0.104 Amino sugar                  FALSE   
+4  -0.0457 0.230   8.25 -0.573 0.481 0.847 Aromatic                     FALSE   
+5  -0.145  0.117  11.7  -0.400 0.109 0.237 Carbohydrate                 FALSE   
+6   0.0671 0.0840 21.1  -0.108 0.242 0.433 Pooled within-class          FALSE   
+# ℹ 3 more variables: complex_substrates <chr>, readily_substrates <chr>,
+#   test <chr>
+# A tibble: 6 × 9
+  estimate     SE    df   lower upper     p analysis              singular n_obs
+     <dbl>  <dbl> <dbl>   <dbl> <dbl> <dbl> <chr>                 <lgl>    <int>
+1   0.160  0.128   14.8 -0.114  0.434 0.232 Primary (5 h, per mg… FALSE     2387
+2   0.159  0.131   15.4 -0.119  0.438 0.241 Root-exudate rule (a… FALSE     1925
+3   0.124  0.131   13.6 -0.158  0.405 0.361 Within-substrate z-s… FALSE     2387
+4   0.203  0.128   11.7 -0.0757 0.482 0.138 Transition dates (Oc… FALSE     2015
+5   0.178  0.128   15.2 -0.0941 0.450 0.184 24-h incubation       FALSE     2387
+6  -0.0417 0.0942  11.6 -0.248  0.164 0.666 Per g dry soil        FALSE     2387

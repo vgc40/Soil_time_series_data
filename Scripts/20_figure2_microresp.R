@@ -14,14 +14,23 @@
 # Data: MicroResp v3, 100% irrigation, 5-h, carbon-normalized SIR
 # (ngCO2-C mgC-1 h-1), 31 substrates, 77 samples on 13 dates.
 #
+# A season difference in an SIR profile can be of two kinds, tested
+# separately:
+#   level - all substrates respond more (or less) in one period;
+#   mix   - the relative pattern across substrates changes (some substrates
+#           go up relative to others).
+#
 # Main figure
-#   A. NMDS of the 31-substrate SIR profile; date-level PERMANOVA (H1a).
-#   B. Per-substrate seasonal difference (dormant - active, log2 fold change).
-#   C. Seasonal difference by availability class; class x season test (H1b).
-#   D. Class trajectories relative to each substrate's annual mean.
+#   A. Level: mean SIR across all 31 substrates through time (H1a, level).
+#   B. Whole profile: NMDS; date-level tests of the whole profile and of the
+#      mix alone (H1a).
+#   C. Seasonal difference for each substrate, grouped by chemistry.
+#   D. H1b: complex vs readily available overall, and polymer vs its
+#      building blocks within each chemical class.
 # Supplement
-#   S2. GAM trajectories of all 31 substrates, grouped by substrate group.
+#   S2.  GAM trajectories of all 31 substrates, grouped by chemistry.
 #   S2b. Sensitivity of the H1b contrast to analysis choices.
+#   S2c. Trajectories of complex and readily available substrates.
 #   Table: environmental vector fitting on date-mean ordination scores.
 #
 # Response scale: log2(SIR) centred on the substrate's mean of date means,
@@ -45,7 +54,9 @@ emm_options(lmer.df = "satterthwaite")
 dirs <- output_dirs("Figure2")
 
 classes <- read_csv(input_files$substrate_classes, show_col_types = FALSE)
-availability_levels <- c("Readily available", "Complex", "Other")
+availability_levels <- c("Readily available", "Complex")
+group_levels <- c("Carbohydrate", "Organic acid", "Amino acid", "Amino sugar",
+                  "Aromatic", "Lipid-like", "Aliphatic amine")
 
 # -----------------------------------------------------------------------------
 # Data preparation
@@ -58,8 +69,10 @@ prepare_sir <- function(sir, availability_col = "availability_class",
     left_join(classes, by = "Substrate") %>%
     mutate(
       availability = factor(.data[[availability_col]], levels = availability_levels),
+      substrate_group = factor(substrate_group, levels = group_levels),
       log2_sir = log2(SIR)
     ) %>%
+    filter(!is.na(availability)) %>%
     group_by(Substrate) %>%
     mutate(
       annual_mean = mean(tapply(log2_sir, Sampling_Date, mean)),
@@ -76,52 +89,129 @@ prepare_sir <- function(sir, availability_col = "availability_class",
 sir_raw <- load_microresp_100()
 stopifnot(n_distinct(sir_raw$Sample_cat) == 77, n_distinct(sir_raw$Substrate) == 31)
 sir <- prepare_sir(sir_raw)
+stopifnot(!anyNA(sir$substrate_group))
 
-sir_wide <- sir_raw %>%
-  select(Sample_cat, Sampling_Date, Plot_ID, Season, Substrate, SIR) %>%
-  pivot_wider(names_from = Substrate, values_from = SIR) %>%
-  arrange(Sampling_Date, Plot_ID)
-sir_matrix <- as.matrix(select(sir_wide, -c(Sample_cat, Sampling_Date, Plot_ID, Season)))
-stopifnot(!anyNA(sir_matrix))
+to_wide <- function(d) {
+  w <- d %>%
+    select(Sample_cat, Sampling_Date, Plot_ID, Substrate, SIR) %>%
+    pivot_wider(names_from = Substrate, values_from = SIR) %>%
+    arrange(Sampling_Date, Plot_ID)
+  list(meta = select(w, Sample_cat, Sampling_Date, Plot_ID),
+       matrix = as.matrix(select(w, -c(Sample_cat, Sampling_Date, Plot_ID))))
+}
+sir_wide <- to_wide(sir_raw)
+stopifnot(!anyNA(sir_wide$matrix))
+
+fit_season_effect <- function(d) {
+  m <- lmer(response ~ Season + (1 | Date_f) + (1 | Plot_ID), data = d)
+  co <- summary(m)$coefficients["SeasonPlant-dormant", ]
+  tibble(
+    estimate = co[["Estimate"]], se = co[["Std. Error"]], df = co[["df"]],
+    p = co[["Pr(>|t|)"]],
+    lower = estimate - qt(0.975, df) * se,
+    upper = estimate + qt(0.975, df) * se,
+    singular = isSingular(m)
+  )
+}
+
+bands_layers <- function() season_band_layers(sir$Sampling_Date)
 
 # -----------------------------------------------------------------------------
-# A. Whole-profile ordination and date-level season test (H1a)
+# A. Level: mean response across all substrates (H1a, level)
 # -----------------------------------------------------------------------------
+# Each sample's mean over the 31 substrates; the season effect is tested with
+# date as the replication unit (mixed model with date and plot intercepts).
 
-nmds <- metaMDS(sir_matrix, distance = "bray", k = 2, trymax = 200,
+sample_level <- sir %>%
+  group_by(Sample_cat, Sampling_Date, Date_f, Plot_ID, Season) %>%
+  summarise(response = mean(response), .groups = "drop")
+
+overall_shift <- fit_season_effect(sample_level) %>%
+  mutate(contrast = "All 31 substrates, dormant - active",
+         percent_change = 100 * (2^estimate - 1))
+write_csv(overall_shift, file.path(dirs$results, "Figure2A_overall_level_shift.csv"))
+
+# How much of the variation in a sample's overall SIR level is shared by all
+# plots on a date (why dates, not plots, are the replicates for season).
+variance_model <- lmer(response ~ 1 + (1 | Date_f) + (1 | Plot_ID), data = sample_level)
+variance_shares <- as.data.frame(VarCorr(variance_model)) %>%
+  transmute(source = recode(grp, Date_f = "Sampling date", Plot_ID = "Plot",
+                            Residual = "Plot x date (residual)"),
+            variance = vcov, share = vcov / sum(vcov))
+write_csv(variance_shares, file.path(dirs$results, "Figure2A_variance_shares_date_vs_plot.csv"))
+
+level_dates <- sample_level %>%
+  group_by(Sampling_Date, Season) %>%
+  summarise(mean = mean(response), n = n(), se = sd(response) / sqrt(n),
+            lower = mean - qt(0.975, n - 1) * se, upper = mean + qt(0.975, n - 1) * se,
+            .groups = "drop")
+write_csv(level_dates, file.path(dirs$results, "Figure2A_overall_level_by_date.csv"))
+write_csv(sample_level, file.path(dirs$results, "Figure2A_overall_level_by_sample.csv"))
+
+panel_a <- ggplot(level_dates, aes(Sampling_Date, mean)) +
+  bands_layers() +
+  geom_hline(yintercept = 0, colour = "grey50", linewidth = 0.3) +
+  geom_point(data = sample_level, aes(y = response), colour = "grey40",
+             alpha = 0.45, size = 1) +
+  geom_ribbon(aes(ymin = lower, ymax = upper), fill = "grey20", alpha = 0.15) +
+  geom_line(linewidth = 0.7) +
+  geom_point(aes(colour = Season), size = 2) +
+  scale_colour_manual(values = season_colors) +
+  date_axis +
+  labs(
+    title = "Level: SIR averaged over all 31 substrates",
+    subtitle = sprintf("Dormant vs active: %+.0f%% (log2 %.2f, 95%% CI %.2f to %.2f), %s",
+                       overall_shift$percent_change, overall_shift$estimate,
+                       overall_shift$lower, overall_shift$upper, p_label(overall_shift$p)),
+    x = NULL, y = "log2 SIR relative to each\nsubstrate's annual mean", colour = NULL
+  ) +
+  theme_manuscript +
+  theme(legend.position = "bottom", plot.subtitle = element_text(size = 7.5))
+
+# -----------------------------------------------------------------------------
+# B. Whole profile and mix (H1a)
+# -----------------------------------------------------------------------------
+# Whole profile: Bray-Curtis on the 31 SIR rates (sensitive to level and mix).
+# Mix only: each sample's rates divided by its own total, so a sample that is
+# uniformly higher has the same profile; differences are in relative pattern.
+
+nmds <- metaMDS(sir_wide$matrix, distance = "bray", k = 2, trymax = 200,
                 autotransform = FALSE, trace = 0)
-
 nmds_scores <- as_tibble(scores(nmds, display = "sites")) %>%
-  bind_cols(select(sir_wide, Sample_cat, Sampling_Date, Plot_ID, Season))
-
+  bind_cols(sir_wide$meta) %>%
+  mutate(Season = assign_season(Sampling_Date))
 date_centroids <- nmds_scores %>%
   group_by(Sampling_Date, Season) %>%
   summarise(NMDS1 = mean(NMDS1), NMDS2 = mean(NMDS2), .groups = "drop") %>%
-  arrange(Sampling_Date) %>%
   mutate(label = format(Sampling_Date, "%b %y"))
 
-h1a_test <- date_level_season_test(sir_matrix, sir_wide$Sampling_Date)
-write_csv(h1a_test, file.path(dirs$results, "Figure2A_season_PERMANOVA_dispersion.csv"))
-write_csv(nmds_scores, file.path(dirs$results, "Figure2A_NMDS_sample_scores.csv"))
+profile_test <- date_level_season_test(sir_wide$matrix, sir_wide$meta$Sampling_Date)
+mix_test <- date_level_season_test(sir_wide$matrix / rowSums(sir_wide$matrix),
+                                   sir_wide$meta$Sampling_Date)
+h1a_tests <- bind_rows(
+  profile_test %>% mutate(analysis = "Whole profile (level + mix)"),
+  mix_test %>% mutate(analysis = "Mix only (profiles scaled to each sample's total)")
+)
+write_csv(h1a_tests, file.path(dirs$results, "Figure2B_season_PERMANOVA_profile_and_mix.csv"))
+write_csv(nmds_scores, file.path(dirs$results, "Figure2B_NMDS_sample_scores.csv"))
 
-primary_h1a <- filter(h1a_test, level == "Date means (primary)")
+primary_profile <- filter(profile_test, level == "Date means (primary)")
+primary_mix <- filter(mix_test, level == "Date means (primary)")
 
-panel_a <- ggplot(nmds_scores, aes(NMDS1, NMDS2)) +
-  geom_point(aes(colour = Season), alpha = 0.35, size = 1.4) +
-  geom_path(data = date_centroids, colour = "grey45", linewidth = 0.4,
-            arrow = arrow(length = unit(0.12, "cm"), type = "closed")) +
+panel_b <- ggplot(nmds_scores, aes(NMDS1, NMDS2)) +
+  geom_point(aes(colour = Season), alpha = 0.45, size = 1.5) +
   geom_point(data = date_centroids, aes(fill = Season), shape = 21,
-             size = 3.2, colour = "black", stroke = 0.4) +
+             size = 3.4, colour = "black", stroke = 0.4) +
   geom_text_repel(data = date_centroids, aes(label = label), size = 2.5,
-                  min.segment.length = 0, seed = 1, max.overlaps = 20) +
+                  min.segment.length = 0.2, seed = 1, max.overlaps = 20) +
   scale_colour_manual(values = season_colors) +
   scale_fill_manual(values = season_colors) +
   labs(
-    title = "SIR profile",
+    title = "Whole profile of 31 substrates (NMDS)",
     subtitle = sprintf(
-      "Date-level PERMANOVA R² = %.2f, p = %s; dispersion p = %s; stress = %.2f",
-      primary_h1a$R2, format_p(primary_h1a$p_permanova),
-      format_p(primary_h1a$p_dispersion), nmds$stress
+      "Small points: samples; large: date means. Season tests with dates as replicates:\nwhole profile R² = %.2f, %s; mix only R² = %.2f, %s",
+      primary_profile$R2, p_label(primary_profile$p_permanova),
+      primary_mix$R2, p_label(primary_mix$p_permanova)
     ),
     colour = NULL, fill = NULL
   ) +
@@ -151,37 +241,21 @@ envfit_table <- tibble(
   variable = names(envfit_result$vectors$r),
   r2 = envfit_result$vectors$r,
   p = envfit_result$vectors$pvals,
-  NMDS1_direction = envfit_result$vectors$arrows[, 1],
-  NMDS2_direction = envfit_result$vectors$arrows[, 2],
   n_dates = nrow(envfit_input),
   note = "Exploratory; date-mean scores and conditions; 9999 free permutations of dates."
 )
 write_csv(envfit_table, file.path(dirs$results, "Figure2_envfit_date_level.csv"))
 
 # -----------------------------------------------------------------------------
-# B. Per-substrate seasonal differences
+# C. Seasonal difference for each substrate
 # -----------------------------------------------------------------------------
 
-fit_season_effect <- function(d) {
-  m <- lmer(response ~ Season + (1 | Date_f) + (1 | Plot_ID), data = d)
-  co <- summary(m)$coefficients["SeasonPlant-dormant", ]
-  tibble(
-    estimate = co[["Estimate"]], se = co[["Std. Error"]], df = co[["df"]],
-    p = co[["Pr(>|t|)"]],
-    lower = estimate - qt(0.975, df) * se,
-    upper = estimate + qt(0.975, df) * se,
-    singular = isSingular(m)
-  )
-}
-
 substrate_effects <- sir %>%
-  group_by(Substrate, display_name, availability, Table_group, compound_class) %>%
+  group_by(Substrate, display_name, availability, substrate_group, compound_class,
+           polymer_monomer_class) %>%
   group_modify(~ fit_season_effect(.x)) %>%
   ungroup() %>%
-  mutate(
-    p_fdr = p.adjust(p, method = "BH"),
-    fold_change = 2^estimate
-  )
+  mutate(p_fdr = p.adjust(p, method = "BH"), fold_change = 2^estimate)
 
 # GAM trajectories (supplement) identify substrates without detectable
 # temporal structure ("steady" substrates, KH comment 47).
@@ -198,10 +272,8 @@ fit_gam <- function(d) {
   pred <- predict(m, grid, exclude = "s(Plot_ID)", se.fit = TRUE)
   list(
     stats = tibble(
-      edf = s_tab["s(time_days)", "edf"],
-      F = s_tab["s(time_days)", "F"],
-      p = s_tab["s(time_days)", "p-value"],
-      deviance_explained = summary(m)$dev.expl
+      edf = s_tab["s(time_days)", "edf"], F = s_tab["s(time_days)", "F"],
+      p = s_tab["s(time_days)", "p-value"], deviance_explained = summary(m)$dev.expl
     ),
     fit = grid %>% mutate(fit = pred$fit, se = pred$se.fit)
   )
@@ -210,7 +282,6 @@ fit_gam <- function(d) {
 gam_fits <- sir %>%
   group_by(Substrate) %>%
   group_map(~ c(list(Substrate = .y$Substrate), fit_gam(.x)))
-
 gam_stats <- map_dfr(gam_fits, ~ mutate(.x$stats, Substrate = .x$Substrate)) %>%
   mutate(p_fdr = p.adjust(p, method = "BH"))
 gam_curves <- map_dfr(gam_fits, ~ mutate(.x$fit, Substrate = .x$Substrate))
@@ -219,186 +290,159 @@ substrate_effects <- substrate_effects %>%
   left_join(select(gam_stats, Substrate, gam_deviance_explained = deviance_explained,
                    gam_p_fdr = p_fdr), by = "Substrate") %>%
   mutate(steady = gam_p_fdr > 0.05)
-
-write_csv(substrate_effects, file.path(dirs$results, "Figure2B_substrate_season_effects.csv"))
+write_csv(substrate_effects, file.path(dirs$results, "Figure2C_substrate_season_effects.csv"))
 write_csv(gam_stats %>% left_join(classes, by = "Substrate"),
           file.path(dirs$results, "FigureS2_GAM_temporal_statistics.csv"))
 
-plot_b_data <- substrate_effects %>%
-  arrange(availability, estimate) %>%
+plot_c_data <- substrate_effects %>%
+  arrange(substrate_group, availability, estimate) %>%
   mutate(
     label = if_else(steady, paste0(display_name, " (steady)"), display_name),
     label = factor(label, levels = label),
-    signif = if_else(p_fdr < 0.05, "FDR < 0.05", "FDR ≥ 0.05")
+    signif = if_else(p_fdr < 0.05, "Significant after FDR", "Not significant after FDR")
   )
 
-panel_b <- ggplot(plot_b_data, aes(estimate, label, colour = availability)) +
+panel_c <- ggplot(plot_c_data, aes(estimate, label, colour = availability)) +
   geom_vline(xintercept = 0, linetype = "dashed", colour = "grey50") +
-  geom_errorbar(aes(xmin = lower, xmax = upper), width = 0, linewidth = 0.5, orientation = "y") +
+  geom_errorbar(aes(xmin = lower, xmax = upper), width = 0, linewidth = 0.5,
+                orientation = "y") +
   geom_point(aes(shape = signif), size = 2) +
-  scale_colour_manual(values = class_colors[availability_levels], drop = FALSE) +
-  scale_shape_manual(values = c("FDR < 0.05" = 16, "FDR ≥ 0.05" = 1)) +
-  facet_grid(availability ~ ., scales = "free_y", space = "free_y") +
+  scale_colour_manual(values = class_colors[availability_levels]) +
+  scale_shape_manual(values = c("Significant after FDR" = 16, "Not significant after FDR" = 1)) +
+  facet_grid(substrate_group ~ ., scales = "free_y", space = "free_y",
+             labeller = label_wrap_gen(width = 9)) +
   labs(
-    title = "Seasonal difference by substrate",
+    title = "Seasonal difference for each substrate",
+    subtitle = "Right of 0 = higher in dormancy; +1 = twice as high",
     x = "Dormant − active (log2 fold change, 95% CI)", y = NULL,
     colour = NULL, shape = NULL
   ) +
   theme_manuscript +
-  theme(legend.position = "bottom", strip.text.y = element_text(size = 7),
-        axis.text.y = element_text(size = 7)) +
-  guides(colour = "none")
+  theme(legend.position = "bottom", legend.box = "vertical",
+        strip.text.y = element_text(size = 6.5, angle = 0),
+        axis.text.y = element_text(size = 7), plot.subtitle = element_text(size = 7.5))
 
 # -----------------------------------------------------------------------------
-# C. Class x season test (H1b)
+# D. H1b: complex vs readily available
 # -----------------------------------------------------------------------------
-# Mixed model on all 31 substrates. Random effects: date (season is a date-
-# level treatment), date x class (the error term for class-specific seasonal
-# change), sample (substrates measured on the same soil), and substrate x
-# season (substrates within a class differ in their seasonal response).
+# Mixed model. Random effects: date (season is a date-level treatment), date
+# x availability (the error term for availability-specific seasonal change),
+# sample (substrates measured on the same soil), and substrate x season
+# (substrates within a group differ in their seasonal response).
 
-fit_class_model <- function(d) {
+fit_availability_model <- function(d, extra_fixed = NULL) {
+  fixed <- paste(c("Season * availability", extra_fixed), collapse = " + ")
   m <- lmer(
-    response ~ Season * availability +
-      (1 | Date_f) + (1 | Date_f:availability) + (1 | Sample_cat) +
-      (1 | Substrate:Season),
-    data = d,
-    control = lmerControl(optimizer = "bobyqa")
+    as.formula(paste("response ~", fixed,
+                     "+ (1 | Date_f) + (1 | Date_f:availability) + (1 | Sample_cat) + (1 | Substrate:Season)")),
+    data = d, control = lmerControl(optimizer = "bobyqa")
   )
-  season_contrasts <- emmeans(m, ~ Season | availability) %>%
-    contrast(method = "revpairwise")
+  season_contrasts <- emmeans(m, ~ Season | availability) %>% contrast(method = "revpairwise")
   season_by_class <- season_contrasts %>%
     summary(infer = TRUE) %>%
     as_tibble() %>%
-    transmute(availability, contrast = "Dormant - active", estimate, SE, df,
-              lower = lower.CL, upper = upper.CL, p = p.value)
-  # Difference of the seasonal contrasts, complex minus readily available
-  # (availability levels: Readily available, Complex, Other).
-  interaction <- contrast(
-    season_contrasts, by = NULL,
-    method = list("(Dormant - active): Complex - Readily available" =
-                    c(-1, 1, 0))
-  ) %>%
+    transmute(availability, estimate, SE, df, lower = lower.CL, upper = upper.CL, p = p.value)
+  interaction <- contrast(season_contrasts, by = NULL,
+                          method = list("Complex - readily available" = c(-1, 1))) %>%
     summary(infer = TRUE) %>%
     as_tibble() %>%
-    transmute(contrast = as.character(contrast), estimate, SE, df,
-              lower = lower.CL, upper = upper.CL, p = p.value)
-  list(model = m, season_by_class = season_by_class, interaction = interaction,
-       singular = isSingular(m))
+    transmute(estimate, SE, df, lower = lower.CL, upper = upper.CL, p = p.value)
+  list(season_by_class = season_by_class, interaction = interaction,
+       singular = isSingular(m), n_obs = nrow(d))
 }
 
-# Distribution-free check: compare substrate-level seasonal effects between
-# the two H1b groups by exact enumeration of group labels.
-class_permutation_test <- function(effects) {
-  e <- filter(effects, availability %in% c("Readily available", "Complex"))
-  obs <- mean(e$estimate[e$availability == "Complex"]) -
-    mean(e$estimate[e$availability == "Readily available"])
-  n_complex <- sum(e$availability == "Complex")
-  perm <- combn(nrow(e), n_complex, function(idx) {
-    mean(e$estimate[idx]) - mean(e$estimate[-idx])
+primary_h1b <- fit_availability_model(sir)
+
+# Within-class versions: the polymer (complex) against its own building
+# blocks (readily available) in the same chemical class, so chemistry is held
+# constant and only availability differs.
+pm_data <- filter(sir, !is.na(polymer_monomer_class))
+within_class <- bind_rows(
+  map_dfr(sort(unique(pm_data$polymer_monomer_class)), function(cls) {
+    d <- filter(pm_data, polymer_monomer_class == cls)
+    fit <- fit_availability_model(d)
+    fit$interaction %>%
+      mutate(comparison = cls, singular = fit$singular,
+             complex_substrates = paste(sort(unique(d$display_name[d$availability == "Complex"])), collapse = ", "),
+             readily_substrates = paste(sort(unique(d$display_name[d$availability == "Readily available"])), collapse = ", "))
+  }),
+  {
+    fit <- fit_availability_model(pm_data, extra_fixed = "Season * polymer_monomer_class")
+    fit$interaction %>% mutate(comparison = "Pooled within-class", singular = fit$singular,
+                               complex_substrates = "", readily_substrates = "")
+  }
+)
+
+# Distribution-free check: random reassignment of the 8 "complex" labels
+# among the 31 substrate-level seasonal effects.
+class_permutation_test <- function(effects, n_perm = 99999) {
+  is_complex <- effects$availability == "Complex"
+  obs <- mean(effects$estimate[is_complex]) - mean(effects$estimate[!is_complex])
+  perm <- replicate(n_perm, {
+    idx <- sample(nrow(effects), sum(is_complex))
+    mean(effects$estimate[idx]) - mean(effects$estimate[-idx])
   })
-  tibble(
-    observed_difference = obs,
-    p_two_sided = mean(abs(perm) >= abs(obs) - 1e-12),
-    p_one_sided_H1b = mean(perm >= obs - 1e-12),
-    n_label_sets = length(perm),
-    n_complex = n_complex,
-    n_readily_available = nrow(e) - n_complex
-  )
+  tibble(observed_difference = obs,
+         p_two_sided = (sum(abs(perm) >= abs(obs) - 1e-12) + 1) / (n_perm + 1),
+         n_permutations = n_perm)
 }
-
-primary_class <- fit_class_model(sir)
 class_perm <- class_permutation_test(substrate_effects)
 
-# Shared seasonal shift across all 31 substrates: each sample's mean
-# response over substrates, with date as the replication unit for season.
-overall_shift <- sir %>%
-  group_by(Sample_cat, Date_f, Plot_ID, Season) %>%
-  summarise(response = mean(response), .groups = "drop") %>%
-  fit_season_effect() %>%
-  mutate(contrast = "All 31 substrates, dormant - active")
-write_csv(overall_shift, file.path(dirs$results, "Figure2C_overall_seasonal_shift.csv"))
+h1b <- primary_h1b$interaction
+h1b_table <- bind_rows(
+  h1b %>% mutate(comparison = "All substrates: complex vs readily available"),
+  within_class
+) %>%
+  mutate(test = "Mixed model")
+write_csv(primary_h1b$season_by_class, file.path(dirs$results, "Figure2D_season_effect_by_availability.csv"))
+write_csv(h1b_table, file.path(dirs$results, "Figure2D_H1b_tests.csv"))
+write_csv(class_perm, file.path(dirs$results, "Figure2D_H1b_permutation_check.csv"))
 
-write_csv(primary_class$season_by_class, file.path(dirs$results, "Figure2C_season_effect_by_class.csv"))
-write_csv(bind_rows(primary_class$interaction %>% mutate(test = "Mixed model"),
-                    class_perm %>% transmute(test = "Exact label permutation (substrate effects)",
-                                             contrast = "(Dormant - active): Complex - Readily available",
-                                             estimate = observed_difference,
-                                             p = p_two_sided, p_one_sided_H1b)),
-          file.path(dirs$results, "Figure2C_H1b_class_by_season_tests.csv"))
-
-h1b <- primary_class$interaction
-
-panel_c <- ggplot(primary_class$season_by_class,
-                  aes(availability, estimate, colour = availability)) +
-  geom_hline(yintercept = 0, linetype = "dashed", colour = "grey50") +
-  geom_jitter(data = substrate_effects, aes(availability, estimate),
-              width = 0.12, alpha = 0.4, size = 1.2, inherit.aes = FALSE,
-              colour = "grey40") +
-  geom_pointrange(aes(ymin = lower, ymax = upper), size = 0.5, linewidth = 0.8) +
-  scale_colour_manual(values = class_colors[availability_levels]) +
-  labs(
-    title = "Seasonal difference by class",
-    subtitle = sprintf(
-      "All substrates: %.2f (95%% CI %.2f to %.2f), p = %s\nComplex − readily available = %.2f (%.2f to %.2f), p = %s; exact permutation p = %s",
-      overall_shift$estimate, overall_shift$lower, overall_shift$upper,
-      format_p(overall_shift$p),
-      h1b$estimate, h1b$lower, h1b$upper, format_p(h1b$p),
-      format_p(class_perm$p_two_sided)
+d_rows <- h1b_table %>%
+  mutate(
+    label = case_when(
+      comparison == "All substrates: complex vs readily available" ~ "All substrates\n(8 complex vs 23 readily available)",
+      comparison == "Pooled within-class" ~ "Pooled within-class",
+      TRUE ~ sprintf("%s: %s\nvs %d small molecules", comparison, complex_substrates,
+                     str_count(readily_substrates, ",") + 1)
     ),
-    x = NULL, y = "Dormant − active (log2 fold change)"
-  ) +
-  theme_manuscript +
-  theme(legend.position = "none", plot.subtitle = element_text(size = 7.5))
-
-# -----------------------------------------------------------------------------
-# D. Class trajectories
-# -----------------------------------------------------------------------------
-
-class_trajectories <- sir %>%
-  group_by(Sample_cat, Sampling_Date, Plot_ID, Season, availability) %>%
-  summarise(response = mean(response), .groups = "drop") %>%
-  group_by(Sampling_Date, Season, availability) %>%
-  summarise(
-    mean = mean(response), n = n(), se = sd(response) / sqrt(n),
-    lower = mean - qt(0.975, n - 1) * se, upper = mean + qt(0.975, n - 1) * se,
-    .groups = "drop"
+    label = fct_rev(fct_inorder(label)),
+    kind = if_else(str_detect(comparison, "All substrates|Pooled"), "Overall", "Within one class")
   )
-write_csv(class_trajectories, file.path(dirs$results, "Figure2D_class_trajectories.csv"))
 
-panel_d <- ggplot(class_trajectories, aes(Sampling_Date, mean, colour = availability)) +
-  season_band_layers(sir$Sampling_Date) +
-  geom_hline(yintercept = 0, colour = "grey50", linewidth = 0.3) +
-  geom_ribbon(aes(ymin = lower, ymax = upper, fill = availability),
-              alpha = 0.12, colour = NA) +
-  geom_line(linewidth = 0.7) +
-  geom_point(size = 1.4) +
-  scale_fill_manual(values = class_colors[availability_levels], guide = "none") +
-  scale_colour_manual(values = class_colors[availability_levels]) +
-  date_axis +
+panel_d <- ggplot(d_rows, aes(estimate, label, colour = kind)) +
+  geom_vline(xintercept = 0, linetype = "dashed", colour = "grey50") +
+  geom_errorbar(aes(xmin = lower, xmax = upper), width = 0, linewidth = 0.7,
+                orientation = "y") +
+  geom_point(size = 2.4) +
+  geom_text(aes(x = upper, label = p_label(p)), hjust = -0.15, size = 2.5,
+            show.legend = FALSE) +
+  scale_x_continuous(expand = expansion(mult = c(0.05, 0.35))) +
+  scale_colour_manual(values = c("Overall" = "grey10", "Within one class" = class_colors[["Complex"]])) +
   labs(
-    title = "Class trajectories",
-    x = NULL, y = "log2 SIR relative to annual mean", colour = NULL
+    title = "H1b: did complex substrates gain more?",
+    subtitle = "Extra dormancy increase of complex over readily available substrates\n(right of 0 supports H1b)",
+    x = "Difference in dormant − active change (log2)", y = NULL, colour = NULL
   ) +
   theme_manuscript +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom", axis.text.y = element_text(size = 7),
+        plot.subtitle = element_text(size = 7.5))
 
-figure2 <- (panel_a + panel_d) / (panel_b + panel_c) +
-  plot_layout(heights = c(1, 1.5), widths = c(1, 1)) +
+figure2 <- (panel_a | panel_b) / (panel_c | panel_d) +
+  plot_layout(heights = c(1, 1.7)) +
   plot_annotation(tag_levels = "A")
-save_figure(figure2, dirs$figures, "Figure2_main", width = 11, height = 11)
+save_figure(figure2, dirs$figures, "Figure2_main", width = 11.5, height = 12)
 
 # -----------------------------------------------------------------------------
-# Supplement S2: all 31 GAM trajectories grouped by substrate group
+# Supplement S2: GAM trajectories grouped by chemistry
 # -----------------------------------------------------------------------------
 
 facet_order <- gam_stats %>%
   left_join(classes, by = "Substrate") %>%
-  arrange(Table_group, desc(deviance_explained)) %>%
-  mutate(
-    facet = sprintf("%s\n%s · %.0f%%, FDR p %s", Table_group, display_name,
-                    100 * deviance_explained, format_p(p_fdr))
-  )
+  mutate(substrate_group = factor(substrate_group, levels = group_levels)) %>%
+  arrange(substrate_group, desc(deviance_explained)) %>%
+  mutate(facet = sprintf("%s: %s\n%.0f%% explained, FDR p %s", substrate_group, display_name,
+                         100 * deviance_explained, format_p(p_fdr)))
 
 s2_points <- sir %>%
   left_join(select(facet_order, Substrate, facet), by = "Substrate") %>%
@@ -408,7 +452,7 @@ s2_curves <- gam_curves %>%
   mutate(facet = factor(facet, levels = facet_order$facet))
 
 figure_s2 <- ggplot(s2_points, aes(Sampling_Date, log2_sir)) +
-  season_band_layers(sir$Sampling_Date) +
+  bands_layers() +
   geom_point(size = 0.6, alpha = 0.5) +
   geom_ribbon(data = s2_curves, aes(Sampling_Date, ymin = fit - 1.96 * se,
                                     ymax = fit + 1.96 * se),
@@ -424,42 +468,33 @@ save_figure(figure_s2, dirs$figures, "FigureS2_substrate_GAM_trajectories",
             width = 12, height = 12)
 
 # -----------------------------------------------------------------------------
-# Supplement S2b: sensitivity of the H1b contrast
+# Supplement S2b: sensitivity of the H1b contrast; S2c: group trajectories
 # -----------------------------------------------------------------------------
 
 run_sensitivity <- function(label, d) {
-  fit <- fit_class_model(d)
-  fit$interaction %>% mutate(analysis = label, singular = fit$singular,
-                             n_obs = nrow(d))
+  fit <- fit_availability_model(d)
+  fit$interaction %>% mutate(analysis = label, singular = fit$singular, n_obs = fit$n_obs)
 }
-
-sir_24h <- prepare_sir(load_microresp_100(timepoint = 24))
-sir_gdw <- prepare_sir(load_microresp_100(normalization = "ngCO2-C_gdw_h"))
 
 sensitivity <- bind_rows(
   run_sensitivity("Primary (5 h, per mg C, centred log2)", sir),
-  run_sensitivity("Amino acids counted as readily available",
+  run_sensitivity("Root-exudate rule (amino sugars, phenolics, amines excluded)",
                   prepare_sir(sir_raw, "availability_class_sensitivity")),
   run_sensitivity("Within-substrate z-score", prepare_sir(sir_raw, standardize = "z")),
   run_sensitivity("Transition dates (Oct 2023, Apr 2024) excluded",
                   prepare_sir(filter(sir_raw, !Sampling_Date %in% transition_dates))),
-  run_sensitivity("24-h incubation", sir_24h),
-  run_sensitivity("Per g dry soil", sir_gdw)
+  run_sensitivity("24-h incubation", prepare_sir(load_microresp_100(timepoint = 24))),
+  run_sensitivity("Per g dry soil", prepare_sir(load_microresp_100(normalization = "ngCO2-C_gdw_h")))
 )
 
-# The H1a test under the same alternatives.
 h1a_sensitivity <- list(
   "Transition dates excluded" = filter(sir_raw, !Sampling_Date %in% transition_dates),
   "24-h incubation" = load_microresp_100(timepoint = 24),
   "Per g dry soil" = load_microresp_100(normalization = "ngCO2-C_gdw_h")
 ) %>%
   imap_dfr(function(d, label) {
-    w <- d %>% select(Sample_cat, Sampling_Date, Plot_ID, Substrate, SIR) %>%
-      pivot_wider(names_from = Substrate, values_from = SIR) %>%
-      arrange(Sampling_Date, Plot_ID)
-    date_level_season_test(as.matrix(select(w, -c(Sample_cat, Sampling_Date, Plot_ID))),
-                           w$Sampling_Date) %>%
-      mutate(analysis = label)
+    w <- to_wide(d)
+    date_level_season_test(w$matrix, w$meta$Sampling_Date) %>% mutate(analysis = label)
   })
 
 write_csv(sensitivity, file.path(dirs$results, "FigureS2b_H1b_sensitivity.csv"))
@@ -471,12 +506,35 @@ figure_s2b <- sensitivity %>%
   geom_vline(xintercept = 0, linetype = "dashed", colour = "grey50") +
   geom_errorbar(aes(xmin = lower, xmax = upper), width = 0, orientation = "y") +
   geom_point(size = 2) +
-  labs(
-    x = "Complex − readily available difference in seasonal effect\n(dormant − active; positive supports H1b)",
-    y = NULL
-  ) +
+  geom_text(aes(x = upper, label = p_label(p)), hjust = -0.15, size = 2.6) +
+  scale_x_continuous(expand = expansion(mult = c(0.05, 0.3))) +
+  labs(x = "Extra dormancy increase of complex over readily available substrates (log2)\npositive supports H1b",
+       y = NULL) +
   theme_manuscript
-save_figure(figure_s2b, dirs$figures, "FigureS2b_H1b_sensitivity", width = 7, height = 3.5)
+save_figure(figure_s2b, dirs$figures, "FigureS2b_H1b_sensitivity", width = 8, height = 3.5)
+
+group_trajectories <- sir %>%
+  group_by(Sample_cat, Sampling_Date, Plot_ID, Season, availability) %>%
+  summarise(response = mean(response), .groups = "drop") %>%
+  group_by(Sampling_Date, Season, availability) %>%
+  summarise(mean = mean(response), n = n(), se = sd(response) / sqrt(n),
+            lower = mean - qt(0.975, n - 1) * se, upper = mean + qt(0.975, n - 1) * se,
+            .groups = "drop")
+write_csv(group_trajectories, file.path(dirs$results, "FigureS2c_availability_trajectories.csv"))
+
+figure_s2c <- ggplot(group_trajectories, aes(Sampling_Date, mean, colour = availability)) +
+  bands_layers() +
+  geom_hline(yintercept = 0, colour = "grey50", linewidth = 0.3) +
+  geom_ribbon(aes(ymin = lower, ymax = upper, fill = availability), alpha = 0.12, colour = NA) +
+  geom_line(linewidth = 0.7) +
+  geom_point(size = 1.5) +
+  scale_colour_manual(values = class_colors[availability_levels]) +
+  scale_fill_manual(values = class_colors[availability_levels], guide = "none") +
+  date_axis +
+  labs(x = NULL, y = "log2 SIR relative to each substrate's annual mean", colour = NULL) +
+  theme_manuscript +
+  theme(legend.position = "bottom")
+save_figure(figure_s2c, dirs$figures, "FigureS2c_availability_trajectories", width = 7, height = 4)
 
 # -----------------------------------------------------------------------------
 # Summary
@@ -485,30 +543,34 @@ save_figure(figure_s2b, dirs$figures, "FigureS2b_H1b_sensitivity", width = 7, he
 summary_table <- tribble(
   ~item, ~value,
   "Samples", as.character(n_distinct(sir$Sample_cat)),
-  "Sampling dates (active / dormant)", sprintf("%d (%d / %d)", primary_h1a$n_units,
-                                               primary_h1a$n_active_dates, primary_h1a$n_dormant_dates),
-  "Substrates", as.character(n_distinct(sir$Substrate)),
+  "Sampling dates (active / dormant)", sprintf("%d (%d / %d)", primary_profile$n_units,
+                                               primary_profile$n_active_dates, primary_profile$n_dormant_dates),
+  "Substrates (complex / readily available)", sprintf("%d (%d / %d)", n_distinct(sir$Substrate),
+                                                      sum(substrate_effects$availability == "Complex"),
+                                                      sum(substrate_effects$availability == "Readily available")),
+  "Level: all substrates, dormant - active (log2)",
+  sprintf("%.3f [%.3f, %.3f], %s", overall_shift$estimate, overall_shift$lower,
+          overall_shift$upper, p_label(overall_shift$p)),
+  "Level: percent change", sprintf("%+.0f%%", overall_shift$percent_change),
+  "Share of overall-level variation due to sampling date",
+  sprintf("%.0f%%", 100 * variance_shares$share[variance_shares$source == "Sampling date"]),
+  "Share due to plot", sprintf("%.0f%%", 100 * variance_shares$share[variance_shares$source == "Plot"]),
+  "Whole profile PERMANOVA R2 / p (date level)", sprintf("%.3f / %s", primary_profile$R2, p_label(primary_profile$p_permanova)),
+  "Mix only PERMANOVA R2 / p (date level)", sprintf("%.3f / %s", primary_mix$R2, p_label(primary_mix$p_permanova)),
+  "Whole profile dispersion p (date level)", p_label(primary_profile$p_dispersion),
   "NMDS stress", sprintf("%.3f", nmds$stress),
-  "H1a date-level PERMANOVA R2", sprintf("%.3f", primary_h1a$R2),
-  "H1a date-level PERMANOVA p (exact, 1287 label sets)", format_p(primary_h1a$p_permanova),
-  "H1a date-level dispersion p", format_p(primary_h1a$p_dispersion),
-  "Substrates higher in dormancy (FDR < 0.05)",
-  as.character(sum(substrate_effects$estimate > 0 & substrate_effects$p_fdr < 0.05)),
-  "Substrates higher in active period (FDR < 0.05)",
-  as.character(sum(substrate_effects$estimate < 0 & substrate_effects$p_fdr < 0.05)),
   "Substrates with dormant > active point estimate",
   sprintf("%d of %d", sum(substrate_effects$estimate > 0), nrow(substrate_effects)),
-  "Overall shift, all substrates (dormant - active, log2)",
-  sprintf("%.3f [%.3f, %.3f], p = %s", overall_shift$estimate, overall_shift$lower,
-          overall_shift$upper, format_p(overall_shift$p)),
+  "Substrates significant after FDR", as.character(sum(substrate_effects$p_fdr < 0.05)),
   "Steady substrates (GAM FDR > 0.05)",
   paste(substrate_effects$display_name[substrate_effects$steady], collapse = "; "),
-  "H1b interaction (complex - readily available), log2",
-  sprintf("%.3f [%.3f, %.3f], p = %s", h1b$estimate, h1b$lower, h1b$upper, format_p(h1b$p)),
-  "H1b exact permutation p (two-sided)", format_p(class_perm$p_two_sided),
-  "Class model singular", as.character(primary_class$singular)
+  "H1b: complex - readily available (log2)",
+  sprintf("%.3f [%.3f, %.3f], %s", h1b$estimate, h1b$lower, h1b$upper, p_label(h1b$p)),
+  "H1b permutation check p", p_label(class_perm$p_two_sided),
+  "H1b model singular", as.character(primary_h1b$singular)
 )
 write_csv(summary_table, file.path(dirs$results, "Figure2_analysis_summary.csv"))
 print(summary_table, n = Inf)
-print(primary_class$season_by_class)
+print(primary_h1b$season_by_class)
+print(h1b_table)
 print(sensitivity)

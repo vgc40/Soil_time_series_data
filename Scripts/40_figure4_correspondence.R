@@ -158,6 +158,41 @@ correlations <- bind_rows(
   )
 write_csv(correlations, file.path(dirs$results, "Figure4B_spearman_correlations.csv"))
 
+# Leave-one-date-out: recompute each date-level correlation seven times, each
+# time without one date, to show how much a single date (e.g., January)
+# drives the result.
+loo <- paired_dates %>%
+  group_by(comparison, compound_class) %>%
+  group_modify(function(d, key) {
+    map_dfr(seq_len(nrow(d)), function(k) {
+      tibble(dropped_date = d$Sampling_Date[k],
+             rho = spearman(d$sir_z[-k], d$transcript_z[-k]))
+    })
+  }) %>%
+  ungroup()
+loo_summary <- loo %>%
+  group_by(comparison, compound_class) %>%
+  summarise(rho_min = min(rho), rho_max = max(rho),
+            rho_without_january = rho[dropped_date == as.Date("2024-01-02")],
+            .groups = "drop") %>%
+  left_join(correlations %>%
+              filter(scale == "Date means (n = 7)",
+                     transcript_metric == "Summed class share (primary)") %>%
+              select(comparison, compound_class, rho_all_dates = rho),
+            by = c("comparison", "compound_class"))
+write_csv(loo, file.path(dirs$results, "Figure4B_leave_one_date_out.csv"))
+write_csv(loo_summary, file.path(dirs$results, "Figure4B_leave_one_date_out_summary.csv"))
+
+class_contents <- substrate_classes %>%
+  group_by(compound_class) %>%
+  summarise(label = sprintf("%s\n(%s)", first(compound_class),
+                            str_wrap(paste(display_name, collapse = ", "), 32)),
+            .groups = "drop")
+class_label <- function(x) {
+  factor(class_contents$label[match(x, class_contents$compound_class)],
+         levels = class_contents$label[match(class_levels, class_contents$compound_class)])
+}
+
 # -----------------------------------------------------------------------------
 # A. Concurrent trajectories
 # -----------------------------------------------------------------------------
@@ -166,12 +201,13 @@ concurrent_dates <- paired_dates %>%
   filter(comparison == "Concurrent") %>%
   select(compound_class, Sampling_Date, Season, SIR = sir_z,
          Transcripts = transcript_z) %>%
-  pivot_longer(c(SIR, Transcripts), names_to = "measure", values_to = "z")
+  pivot_longer(c(SIR, Transcripts), names_to = "measure", values_to = "z") %>%
+  mutate(class_panel = class_label(compound_class))
 
 rho_labels <- correlations %>%
   filter(comparison == "Concurrent", scale == "Date means (n = 7)",
          transcript_metric == "Summed class share (primary)") %>%
-  mutate(label = sprintf("rho = %.2f", rho))
+  mutate(label = sprintf("rho = %.2f", rho), class_panel = class_label(compound_class))
 
 panel_a <- ggplot(concurrent_dates, aes(Sampling_Date, z, colour = measure)) +
   season_band_layers(concurrent_dates$Sampling_Date) +
@@ -181,21 +217,47 @@ panel_a <- ggplot(concurrent_dates, aes(Sampling_Date, z, colour = measure)) +
   geom_text(data = rho_labels, aes(x = min(concurrent_dates$Sampling_Date), y = Inf,
                                    label = label),
             inherit.aes = FALSE, hjust = 0, vjust = 1.4, size = 3) +
-  facet_wrap(~ compound_class, nrow = 1) +
-  scale_colour_manual(values = measure_colors) +
+  facet_wrap(~ class_panel, nrow = 1) +
+  scale_colour_manual(values = measure_colors,
+                      labels = c(SIR = "SIR (mean of the class's substrates)",
+                                 Transcripts = "Transcripts (summed class pathways)")) +
   scale_x_date(breaks = sort(unique(concurrent_dates$Sampling_Date)),
                date_labels = "%b %y") +
-  labs(title = "Concurrent class trajectories at the seven transcript dates",
-       x = NULL, y = "Date-mean z-score", colour = NULL) +
+  labs(title = "Do SIR and expression rise and fall together? Same-date values at the seven transcript dates",
+       subtitle = "Both measures rescaled to their own average (0) and spread (1), so only timing and direction are comparable",
+       x = NULL, y = "Relative level (z-score)", colour = NULL) +
   theme_manuscript +
-  theme(legend.position = "top",
+  theme(legend.position = "top", strip.text = element_text(size = 7),
+        plot.subtitle = element_text(size = 7.5),
         axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size = 7))
 
 # -----------------------------------------------------------------------------
-# B. Correlation summary
+# B. Correlation summary with leave-one-date-out range
 # -----------------------------------------------------------------------------
 
-panel_b <- correlations %>%
+panel_b <- loo_summary %>%
+  mutate(compound_class = factor(compound_class, levels = rev(class_levels))) %>%
+  ggplot(aes(rho_all_dates, compound_class, colour = comparison)) +
+  geom_vline(xintercept = 0, colour = "grey50", linetype = "dashed") +
+  geom_errorbar(aes(xmin = rho_min, xmax = rho_max), width = 0, linewidth = 0.8,
+                orientation = "y", position = position_dodge(width = 0.5), alpha = 0.6) +
+  geom_point(size = 2.6, position = position_dodge(width = 0.5)) +
+  geom_point(aes(x = rho_without_january), shape = 4, size = 2.4, stroke = 1,
+             position = position_dodge(width = 0.5), show.legend = FALSE) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  scale_colour_manual(values = c("Concurrent" = "grey15", "One-month lag" = "#D08C2E"),
+                      labels = c("Concurrent" = "Same date",
+                                 "One-month lag" = "Transcripts vs SIR at the next date")) +
+  labs(title = "How closely they track (Spearman rho, 7 dates)",
+       subtitle = "Dot: all dates. Bar: range when any one date is left out. X: without January.",
+       x = "Spearman rho (descriptive; -1 opposite, +1 same ranking)", y = NULL, colour = NULL) +
+  theme_manuscript +
+  theme(legend.position = "bottom", legend.direction = "vertical",
+        plot.subtitle = element_text(size = 7.5))
+
+# Full correlation set (date and plot level, both transcript metrics) for the
+# supplement.
+figure_s4c <- correlations %>%
   mutate(compound_class = factor(compound_class, levels = rev(class_levels))) %>%
   ggplot(aes(rho, compound_class, colour = comparison, shape = transcript_metric)) +
   geom_vline(xintercept = 0, colour = "grey50", linetype = "dashed") +
@@ -209,6 +271,7 @@ panel_b <- correlations %>%
        x = "Spearman rho (descriptive)", y = NULL, colour = NULL, shape = NULL) +
   theme_manuscript +
   theme(legend.position = "bottom", legend.box = "vertical")
+save_figure(figure_s4c, dirs$figures, "FigureS4c_all_correlations", width = 8, height = 4)
 
 # -----------------------------------------------------------------------------
 # C. Per-date divergence
@@ -226,8 +289,8 @@ panel_c <- ggplot(divergence, aes(date_label, compound_class, fill = divergence)
   geom_text(aes(label = sprintf("%.1f", divergence)), size = 2.8) +
   scale_fill_gradient2(low = "#2B6CB8", mid = "white", high = "#B8562B",
                        midpoint = 0, name = "SIR z −\ntranscript z") +
-  labs(title = "Where SIR and transcripts diverge",
-       subtitle = "Positive: SIR relatively higher than expression; dormant dates in bold",
+  labs(title = "Where they disagree: SIR minus transcripts at each date",
+       subtitle = "Brown: SIR relatively higher than expression; blue: the reverse. Dormant dates in bold.",
        x = NULL, y = NULL) +
   theme_manuscript +
   theme(panel.grid = element_blank(), plot.subtitle = element_text(size = 7.5),

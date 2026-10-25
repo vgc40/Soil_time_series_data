@@ -1,16 +1,18 @@
 item,value
 Samples,77
 Sampling dates (active / dormant),13 (8 / 5)
-Substrates,31
+Substrates (complex / readily available),31 (8 / 23)
+"Level: all substrates, dormant - active (log2)","0.418 [0.010, 0.825], p = 0.045"
+Level: percent change,+34%
+Share of overall-level variation due to sampling date,52%
+Share due to plot,7%
+Whole profile PERMANOVA R2 / p (date level),0.172 / p = 0.112
+Mix only PERMANOVA R2 / p (date level),0.040 / p = 0.667
+Whole profile dispersion p (date level),p = 0.037
 NMDS stress,0.091
-H1a date-level PERMANOVA R2,0.172
-"H1a date-level PERMANOVA p (exact, 1287 label sets)",0.112
-H1a date-level dispersion p,0.037
-Substrates higher in dormancy (FDR < 0.05),0
-Substrates higher in active period (FDR < 0.05),0
 Substrates with dormant > active point estimate,31 of 31
-"Overall shift, all substrates (dormant - active, log2)","0.418 [0.010, 0.825], p = 0.045"
+Substrates significant after FDR,0
 Steady substrates (GAM FDR > 0.05),Glutamic acid; Hemicellulose; Malic acid
-"H1b interaction (complex - readily available), log2","0.157 [-0.132, 0.447], p = 0.276"
-H1b exact permutation p (two-sided),0.249
-Class model singular,FALSE
+H1b: complex - readily available (log2),"0.160 [-0.114, 0.434], p = 0.232"
+H1b permutation check p,p = 0.086
+H1b model singular,FALSE

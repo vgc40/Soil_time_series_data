@@ -1,0 +1,57 @@
+comparison,compound_class,dropped_date,rho
+Concurrent,Lipid-like,2023-06-07,0.5428571428571428
+Concurrent,Lipid-like,2023-07-05,0.31428571428571433
+Concurrent,Lipid-like,2023-09-06,0.5428571428571428
+Concurrent,Lipid-like,2023-10-04,0.7714285714285715
+Concurrent,Lipid-like,2024-01-02,0.7714285714285715
+Concurrent,Lipid-like,2024-03-06,0.4857142857142857
+Concurrent,Lipid-like,2024-05-08,0.4857142857142857
+Concurrent,Aromatic,2023-06-07,-0.42857142857142855
+Concurrent,Aromatic,2023-07-05,-0.9428571428571428
+Concurrent,Aromatic,2023-09-06,-0.42857142857142855
+Concurrent,Aromatic,2023-10-04,-0.37142857142857144
+Concurrent,Aromatic,2024-01-02,-0.08571428571428572
+Concurrent,Aromatic,2024-03-06,-0.37142857142857144
+Concurrent,Aromatic,2024-05-08,-0.37142857142857144
+Concurrent,Amino sugar,2023-06-07,-0.08571428571428572
+Concurrent,Amino sugar,2023-07-05,-0.08571428571428572
+Concurrent,Amino sugar,2023-09-06,0.42857142857142855
+Concurrent,Amino sugar,2023-10-04,0.42857142857142855
+Concurrent,Amino sugar,2024-01-02,0.4857142857142857
+Concurrent,Amino sugar,2024-03-06,0.4857142857142857
+Concurrent,Amino sugar,2024-05-08,0.4857142857142857
+Concurrent,Amino acid,2023-06-07,-0.2571428571428572
+Concurrent,Amino acid,2023-07-05,-0.08571428571428572
+Concurrent,Amino acid,2023-09-06,0.028571428571428574
+Concurrent,Amino acid,2023-10-04,-0.14285714285714285
+Concurrent,Amino acid,2024-01-02,0.4857142857142857
+Concurrent,Amino acid,2024-03-06,-0.14285714285714285
+Concurrent,Amino acid,2024-05-08,-0.37142857142857144
+One-month lag,Lipid-like,2023-06-07,0.6571428571428571
+One-month lag,Lipid-like,2023-07-05,0.6571428571428571
+One-month lag,Lipid-like,2023-09-06,0.6
+One-month lag,Lipid-like,2023-10-04,0.7714285714285715
+One-month lag,Lipid-like,2024-01-02,0.9428571428571428
+One-month lag,Lipid-like,2024-03-06,0.7714285714285715
+One-month lag,Lipid-like,2024-05-08,0.7714285714285715
+One-month lag,Aromatic,2023-06-07,0.08571428571428572
+One-month lag,Aromatic,2023-07-05,-0.028571428571428574
+One-month lag,Aromatic,2023-09-06,0.14285714285714285
+One-month lag,Aromatic,2023-10-04,0.028571428571428574
+One-month lag,Aromatic,2024-01-02,0.6
+One-month lag,Aromatic,2024-03-06,0.2571428571428572
+One-month lag,Aromatic,2024-05-08,-0.08571428571428572
+One-month lag,Amino sugar,2023-06-07,0.6571428571428571
+One-month lag,Amino sugar,2023-07-05,0.6571428571428571
+One-month lag,Amino sugar,2023-09-06,0.7714285714285715
+One-month lag,Amino sugar,2023-10-04,0.7714285714285715
+One-month lag,Amino sugar,2024-01-02,0.9428571428571428
+One-month lag,Amino sugar,2024-03-06,0.7714285714285715
+One-month lag,Amino sugar,2024-05-08,0.6
+One-month lag,Amino acid,2023-06-07,0.2571428571428572
+One-month lag,Amino acid,2023-07-05,0.37142857142857144
+One-month lag,Amino acid,2023-09-06,0.42857142857142855
+One-month lag,Amino acid,2023-10-04,0.2571428571428572
+One-month lag,Amino acid,2024-01-02,0.8285714285714285
+One-month lag,Amino acid,2024-03-06,0.37142857142857144
+One-month lag,Amino acid,2024-05-08,-0.028571428571428574
