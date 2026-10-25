@@ -13,6 +13,7 @@ Run everything from the repository root with `Rscript Scripts/00_run_all.R`
 | 4 | `10_figure1_context.R` | Figure 1: design and seasonal field context | `Figures|Results/manuscript_v4/Figure1/` |
 | 5 | `11_figureS1_root_respiration.R` | Figure S1: root biomass vs field respiration | `.../FigureS1/` |
 | 6 | `20_figure2_microresp.R` | Figure 2 and S2: seasonal SIR (Q1, H1a, H1b) | `.../Figure2/` |
+| 6b | `21_permanova_explainers.R` | Checks behind the plain-language guide: sample counts per release, the PERMANOVA run five ways, made-up seasons, distance scale | `Results/manuscript_v4/Figure2/explainers/` |
 | 7 | `30_figure3_transcripts.R` | Figure 3 and S3: seasonal BRITE C expression (Q2, H2) | `.../Figure3/` |
 | 8 | `40_figure4_correspondence.R` | Figure 4 and S4: SIR-transcript correspondence (Q3) | `.../Figure4/` |
 
@@ -20,9 +21,12 @@ Run everything from the repository root with `Rscript Scripts/00_run_all.R`
 definition, data loaders, the exact date-level season permutation test, and
 the plotting theme.
 
-`docs/write_storyboard_docx.R` writes the storyboard and analysis notes as .docx
-from the result tables (`Rscript Scripts/docs/write_storyboard_docx.R`; needs
-only R and the `zip` package). Output goes to `Docs/`.
+`docs/` writes three Word documents from the result tables (needs only R and the
+`zip` package; output in `Docs/`):
+
+- `write_storyboard_docx.R`: storyboard and analysis notes
+- `write_plain_guide_docx.R`: plain-language guide to every analysis and data issue
+- `docx_writer.R`: the shared .docx writer
 
 Superseded scripts (the v3 pipeline and the October 2026 outlier exploration)
 are in `Archive/2026-10-23_pre_v4/`, and in git history up to commit `80e0df9`.

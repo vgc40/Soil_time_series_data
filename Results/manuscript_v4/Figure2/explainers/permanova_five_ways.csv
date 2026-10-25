@@ -1,0 +1,6 @@
+version,what_counts_as_a_replicate,n_rows,R2,p
+v3 method: plots shuffled one by one,Each sample (plot-date),77,0.09464405102311983,2e-4
+"All samples, whole dates shuffled",Each date,77,0.09464405102311983,0.07925407925407925
+Date averages,Each date,13,0.17181736684321294,0.11188811188811189
+"Built-in vegan, whole dates shuffled, February dropped",Each date,72,0.07543934129877973,0.1688
+"Mix only (date averages, profiles scaled to their total)",Each date,13,0.040301253834776056,0.6666666666666666

@@ -1,0 +1,29 @@
+There were 42 warnings (use warnings() to see them)
+There were 42 warnings (use warnings() to see them)
+# A tibble: 4 × 4
+  Sampling_Date n_samples plots_listed             release               
+  <date>            <int> <chr>                    <chr>                 
+1 2024-01-02            7 1, 1, 25, 27, 40, 46, 57 Original release      
+2 2024-02-12            5 1, 25, 40, 46, 57        Original release      
+3 2024-01-02            6 1, 25, 27, 40, 46, 57    Corrected release (v3)
+4 2024-02-12            5 1, 25, 40, 46, 57        Corrected release (v3)
+# A tibble: 5 × 5
+  version                            what_counts_as_a_rep…¹ n_rows     R2      p
+  <chr>                              <chr>                   <int>  <dbl>  <dbl>
+1 v3 method: plots shuffled one by … Each sample (plot-dat…     77 0.0946 0.0002
+2 All samples, whole dates shuffled  Each date                  77 0.0946 0.0793
+3 Date averages                      Each date                  13 0.172  0.112 
+4 Built-in vegan, whole dates shuff… Each date                  72 0.0754 0.169 
+5 Mix only (date averages, profiles… Each date                  13 0.0403 0.667 
+# ℹ abbreviated name: ¹​what_counts_as_a_replicate
+# A tibble: 1 × 4
+  n_fake_seasons pct_significant_v3_method pct_significant_date_method
+           <dbl>                     <dbl>                       <dbl>
+1            200                      48.5                         3.5
+# ℹ 1 more variable: expected_pct_for_a_fair_test <dbl>
+# A tibble: 3 × 2
+  comparison                                    bray_curtis
+  <chr>                                               <dbl>
+1 A sample vs itself with every substrate x1.34       0.144
+2 Two plots sampled on the same date (median)         0.158
+3 Two samples from different dates (median)           0.219

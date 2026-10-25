@@ -14,6 +14,7 @@ steps <- c(
   "10_figure1_context.R",             # Figure 1
   "11_figureS1_root_respiration.R",   # Figure S1
   "20_figure2_microresp.R",           # Figure 2, S2 (Q1)
+  "21_permanova_explainers.R",        # checks behind the plain-language guide
   "30_figure3_transcripts.R",         # Figure 3, S3 (Q2)
   "40_figure4_correspondence.R"       # Figure 4, S4 (Q3)
 )

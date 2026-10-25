@@ -1,0 +1,4 @@
+comparison,bray_curtis
+A sample vs itself with every substrate x1.34,0.14374537215330768
+Two plots sampled on the same date (median),0.1582996332819675
+Two samples from different dates (median),0.2189762408231692
