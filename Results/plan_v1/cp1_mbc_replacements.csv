@@ -1,0 +1,6 @@
+Sample_cat,MBC_ug_gdw,MBC_flag,MBC_used,Collection_date,Plot,Irrigation_trmt_pct,season
+SM1062,0,replaced_zero,0.07,2023-06-07,33,25,Active
+SM1083,0,replaced_zero,0.07,2023-07-05,8,25,Active
+SM1632,0,replaced_zero,0.07,2024-05-08,53,25,Active
+SM1539,0.14,lowest_measured,0.14,2024-02-12,57,100,Dormant
+SM1625,0,replaced_zero,0.07,2024-05-08,46,100,Active
