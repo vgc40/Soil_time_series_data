@@ -186,6 +186,17 @@ Choices taken by Claude where plan §5 does not specify:
 - **Approved by:** taken by Claude while implementing; for VGC review at
   Checkpoint 4.
 
+## D10. Sensitivity: biomass-normalized analyses without the two lowest-MBC samples
+
+- **Addition (not in plan):** Q1 test 6 (tests 1, 3, 4 on per-MBC scores)
+  and Q2 H2b and H2c rerun without SM1625 (MBC 0, replaced with 0.07) and
+  SM1539 (MBC 0.14). Per-MBC z-scores recomputed without them (75 samples;
+  2024-02-12 has 4 plots, 2024-05-08 has 5). Enzyme potential does not use
+  MBC and is unchanged. The plan's main results are not replaced.
+- **Script:** `Scripts/plan_v1/08_sensitivity_low_mbc.R`; outputs
+  `Results/plan_v1/sens_*.csv`.
+- **Requested by:** VGC, 2026-10-26, after Checkpoint 4.
+
 ## Open items (not yet decided)
 
 - **O3. Per-C conversion check fails for three substrates (plan §2.2; STOP).**

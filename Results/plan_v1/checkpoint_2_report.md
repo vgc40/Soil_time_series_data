@@ -257,3 +257,33 @@ The robustness table is `Results/plan_v1/cp2_robustness.csv`.
    your approval.
 3. **Open items:** O1 (24 h meaning), O2 (transcript units), O3 (mg C for
    succinic acid, chitin, methyl oleate).
+
+---
+
+## Addendum: test 6 without SM1625 and SM1539 (D10)
+
+Added after Checkpoint 4 at VGC's request. Per-MBC z-scores recomputed
+without the two samples (75 samples, 13 dates; 2024-02-12 has 4 plots and
+2024-05-08 has 5). Script `08_sensitivity_low_mbc.R`.
+
+| Test | Variant | n samples | Difference | 95% CI | p Welch | p Wilcoxon |
+|---|---|---|---|---|---|---|
+| 1. Simple score | All samples | 77 | 0.048 | −0.484 to 0.580 | 0.841 | 0.435 |
+| 1. Simple score | Without the two | 75 | 0.248 | −0.363 to 0.859 | 0.326 | 0.284 |
+| 3. Polymer − simple | All samples | 77 | 0.166 | −0.096 to 0.428 | 0.190 | 0.222 |
+| 3. Polymer − simple | Without the two | 75 | 0.090 | −0.181 to 0.361 | 0.459 | 0.833 |
+| Polymer score | All samples | 77 | 0.214 | −0.487 to 0.916 | 0.451 | 0.222 |
+| Polymer score | Without the two | 75 | 0.338 | −0.273 to 0.949 | 0.206 | 0.127 |
+
+| Coupling (test 4), without the two | n | Pearson r | p | Spearman rho | p |
+|---|---|---|---|---|---|
+| All 13 dates | 13 | 0.846 | < 0.001 | 0.379 | 0.202 |
+| Dormant only | 5 | 0.904 | 0.035 | 0.700 | 0.233 |
+
+**Note (factual).** Without SM1625 and SM1539, the next-lowest MBC sample,
+SM1420 (2023-12-04, MBC 7.78 µg C/g), has per-MBC scores of 6.89 (simple) and
+6.97 (polymer); the next-highest sample scores 0.38 (simple). The
+2023-12-04 date means are 1.02 (simple) and 0.98 (polymer); the other 12
+date means lie between −0.18 and 0.04 (simple) and −0.40 and 0.29
+(polymer). Files: `sens_q1_test6_season.csv`, `sens_q1_test6_coupling.csv`,
+`sens_q1_date_scores_per_MBC.csv`.

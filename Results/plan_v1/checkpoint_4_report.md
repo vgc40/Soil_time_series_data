@@ -165,3 +165,44 @@ Approved gene-set table: `Results/plan_v1/KO_gene_sets_APPROVED.csv`.
    open. In Q2 it affects only the per-C variant; z-scores and correlations
    do not depend on a constant per-substrate amount unless chitin's amount
    varied by well.
+
+---
+
+## Addendum: H2b and H2c without SM1625 and SM1539 (D10)
+
+Added at VGC's request. Potential per MBC with the two samples removed and
+z-scores recomputed. Expression and enzyme potential are unchanged. Script
+`08_sensitivity_low_mbc.R`.
+
+### H2b
+
+| Variant | n | Concordant | Share | Sign test p | Spearman rho | p |
+|---|---|---|---|---|---|---|
+| Main (all samples) | 19 | 13 | 0.684 | 0.167 | 0.335 | 0.161 |
+| Without the two | 19 | 12 | 0.632 | 0.359 | 0.286 | 0.234 |
+
+Potential season effects without the two range from −0.739 (glutamic acid)
+to 1.27 (chitin); 7 of 19 are negative. Per compound:
+`sens_q2_h2b_compound_effects.csv`.
+
+### H2c
+
+| Variant | n ext | n int | Mean ext | Mean int | Difference | Permutation p |
+|---|---|---|---|---|---|---|
+| Main (all samples) | 10 | 16 | 0.326 | −0.053 | 0.379 | 0.077 |
+| Without the two | 10 | 16 | 0.296 | 0.107 | 0.189 | 0.427 |
+
+- Only r_same changes for compound sets: SM1625 is on a transcript date
+  (2024-05-08); SM1539 is plot 57, which has no transcripts, so it never
+  entered the plot-matched lag pairs.
+- Positive lag advantage: 7 of 10 extracellular, 10 of 16 intracellular.
+- CI excludes 0: AP (1.16, 0.10 to 1.68), Ala (1.12, 0.28 to 1.80), lactic
+  acid (0.99, 0.24 to 1.51) above; NAG compound (−1.15, −1.64 to −0.20)
+  below.
+- Per set: `sens_q2_h2c_lag_advantage.csv`; summary
+  `sens_q2_h2c_step_permutation.csv`.
+
+**Note (factual).** SM1420 (2023-12-04, MBC 7.78), which dominates the
+per-MBC Q1 scores once the two samples are removed (Checkpoint 2 addendum),
+does not enter H2b or H2c: 2023-12-04 is neither a transcript date nor a
+next date in the lag pairs.
