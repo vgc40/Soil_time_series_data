@@ -60,7 +60,7 @@ means.
 | a. Potential per C | 19 | 11 | 0.579 | 0.648 | 0.156 | 0.522 |
 | b. High-confidence KOs only | 17 | 13 | 0.765 | 0.049 | 0.218 | 0.399 |
 
-**Note (factual).** In the main variant, 17 of 19 compounds have a potential
+**Note (factual).** In the main variant, 16 of 19 compounds have a potential
 season effect between −0.219 and −0.212; the exceptions are cellulose
 (0.221), cellobiose (0.225) and chitin (0.039). The spread of the per-C
 effects is −0.59 to 1.59. Per-compound effects for every variant:
@@ -120,7 +120,8 @@ excludes 0: Ala and AP (above), NAG compound (below).
 
 Per set: potential(t+1) ~ expression(t) + (1|date) vs potential(t) ~
 expression(t) + (1|date); ML fits on the same rows (34 plot-dates for SIR
-sets, 35 for enzyme sets); variables z-scored. 17 of 52 fits are singular.
+sets, 35 for enzyme sets); variables z-scored. 21 of 52 fits are singular
+(date variance estimated at zero).
 Full table: `cp4_lag_models_compare.csv`.
 
 | Step | Sets | Lag model lower AIC | Lag AIC lower by > 2 | Same-date AIC lower by > 2 | Lag marginal R² higher |
