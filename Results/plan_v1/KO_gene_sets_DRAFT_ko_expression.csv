@@ -1,0 +1,182 @@
+set,KO,KEGG_name,confidence,mean_value,n_samples_nonzero
+Cellulose,K01179,E3.2.1.4; endoglucanase [EC:3.2.1.4],high,484.61714608066563,35
+Cellulose,K19668,"CBH2, cbhA; cellulose 1,4-beta-cellobiosidase [EC:3.2.1.91]",high,113.81093602125046,35
+Cellulose,K20542,bcsZ; endoglucanase [EC:3.2.1.4],low,2.686467510673419,23
+Hemicellulose,K01181,"Xyn, EIX; endo-1,4-beta-xylanase [EC:3.2.1.8]",high,102.48387202662957,35
+Hemicellulose,K15924,"xynC; glucuronoarabinoxylan endo-1,4-beta-xylanase [EC:3.2.1.136]",high,19.270555199526598,35
+Hemicellulose,K01218,"gmuG; mannan endo-1,4-beta-mannosidase [EC:3.2.1.78]",medium,38.24596623088561,35
+Hemicellulose,K19355,"MAN; mannan endo-1,4-beta-mannosidase [EC:3.2.1.78]",medium,2.768398337057281,24
+Hemicellulose,K01209,abfA; alpha-L-arabinofuranosidase [EC:3.2.1.55],medium,17.368272353692447,35
+Hemicellulose,K15921,xynD; arabinoxylan arabinofuranohydrolase [EC:3.2.1.55],medium,5.323528048662204,29
+Hemicellulose,K20844,abf1; non-reducing end alpha-L-arabinofuranosidase [EC:3.2.1.55],medium,14.344977339088258,32
+Hemicellulose,K05972,AXE1; acetylxylan esterase [EC:3.1.1.72],medium,0.36398999238706886,4
+Lignin,K15733,E1.11.1.19; dye decolorizing peroxidase [EC:1.11.1.19],medium,0.11190812454053028,2
+Lignin,K16301,efeB; deferrochelatase/peroxidase EfeB [EC:1.11.1.-],low,2.674884715042183,21
+Chitin,K01183,E3.2.1.14; chitinase [EC:3.2.1.14],high,158.07813765525114,35
+Chitin,K13381,chiA; bifunctional chitinase/lysozyme [EC:3.2.1.14 3.2.1.17],high,1.199510967067892,6
+Chitin,K20547,CHIB; basic endochitinase B [EC:3.2.1.14],high,0,0
+Chitin,K21606,endo_I; endo-chitodextinase [EC:3.2.1.202],high,4.590040192725949,31
+Chitin,K03791,K03791; putative chitinase,medium,21.703360395275723,31
+Chitin,K03933,cpbD; chitin-binding protein,medium,64.39653916248785,35
+Chitin,K01452,E3.5.1.41; chitin deacetylase [EC:3.5.1.41],low,8.441021092396479,31
+Chitosan,K01233,csn; chitosanase [EC:3.2.1.132],high,1.3667591669939836,8
+Chitosan,K15855,"csxA; exo-1,4-beta-D-glucosaminidase [EC:3.2.1.165]",medium,0.21261991568538616,9
+D.Fructose,K10552,frcB; fructose transport system substrate-binding protein,high,698.6937201902058,35
+D.Fructose,K10553,frcC; fructose transport system permease protein,high,146.28461865923,35
+D.Fructose,K10554,frcA; fructose transport system ATP-binding protein,high,71.49811365431194,35
+D.Fructose,K02770,fruA; fructose PTS system EIIBC or EIIC component [EC:2.7.1.202],high,153.65782705252715,34
+D.Fructose,K02769,fruAb; fructose PTS system EIIB component [EC:2.7.1.202],high,153.65782705252715,34
+D.Fructose,K02768,fruB; fructose PTS system EIIA component [EC:2.7.1.202],high,218.33130035834864,35
+D.Fructose,K11183,"fruB, fpr; multiphosphoryl transfer protein [EC:2.7.1.202]",medium,31.40113442774726,34
+D.Fructose,K11195,levE; fructose PTS system EIIB component [EC:2.7.1.202],medium,0,0
+D.Fructose,K02771,levG; fructose PTS system EIID component,medium,0,0
+D.Fructose,K00882,fruK; 1-phosphofructokinase [EC:2.7.1.56],high,26.131401530943798,30
+D.Fructose,K00847,"E2.7.1.4, scrK; fructokinase [EC:2.7.1.4]",medium,26.17287242937084,31
+D.Xylose,K10543,xylF; D-xylose transport system substrate-binding protein,high,718.282634280096,35
+D.Xylose,K10544,xylH; D-xylose transport system permease protein,high,44.37724889510519,34
+D.Xylose,K10545,xylG; D-xylose transport system ATP-binding protein [EC:7.5.2.10],high,60.23775635116221,35
+D.Xylose,K08138,"xylE; MFS transporter, SP family, xylose:H+ symportor",high,8.33859456562188,34
+D.Xylose,K01805,xylA; xylose isomerase [EC:5.3.1.5],high,222.18395416517035,35
+D.Xylose,K00854,"xylB, XYLB; xylulokinase [EC:2.7.1.17]",medium,17.43398664103439,34
+D.Trehalose,K02819,"treB, treP; trehalose PTS system EIIBC or EIIBCA component [EC:2.7.1.201]",high,0.8544183671964815,4
+D.Trehalose,K17311,treS; trehalose transport system substrate-binding protein,high,0.3142688620028874,3
+D.Trehalose,K17312,treT; trehalose transport system permease protein,high,1.3833937835904628,12
+D.Trehalose,K17314,treV; trehalose transport system ATP-binding protein,high,0.9145598234562325,8
+D.Trehalose,K10236,"thuE, lpqY; trehalose/maltose transport system substrate-binding protein",medium,42.33206277193373,34
+D.Trehalose,K10237,"thuF, sugA; trehalose/maltose transport system permease protein",medium,38.66823741034959,33
+D.Trehalose,K10238,"thuG, sugB; trehalose/maltose transport system permease protein",medium,5.442948380160552,22
+D.Trehalose,K01226,treC; trehalose-6-phosphate hydrolase [EC:3.2.1.93],high,0.05706930783664,1
+D.Trehalose,K01194,"TREH, treA, treF; alpha,alpha-trehalase [EC:3.2.1.28]",high,8.687192077006882,27
+D.Trehalose,K05342,"treP; alpha,alpha-trehalose phosphorylase [EC:2.4.1.64]",high,12.087970977201838,33
+D.Cellobiose,K10240,cebE; cellobiose transport system substrate-binding protein,high,164.03325497659537,35
+D.Cellobiose,K10241,cebF; cellobiose transport system permease protein,high,39.75750783818309,32
+D.Cellobiose,K10242,cebG; cellobiose transport system permease protein,high,7.473695400631437,20
+D.Cellobiose,K02759,"celC, chbA; cellobiose PTS system EIIA component [EC:2.7.1.196 2.7.1.205]",medium,0,0
+D.Cellobiose,K02760,"celA, chbB; cellobiose PTS system EIIB component [EC:2.7.1.196 2.7.1.205]",medium,10.449816024305523,17
+D.Cellobiose,K02761,"celB, chbC; cellobiose PTS system EIIC component",medium,0,0
+D.Cellobiose,K00702,E2.4.1.20; cellobiose phosphorylase [EC:2.4.1.20],high,22.384267040089167,35
+D.Cellobiose,K01222,"E3.2.1.86A, celF; 6-phospho-beta-glucosidase [EC:3.2.1.86]",medium,1.343721283984094,10
+D.Cellobiose,K01223,"E3.2.1.86B, bglA; 6-phospho-beta-glucosidase [EC:3.2.1.86]",medium,0.7621532130971956,8
+Citric_acid,K03288,"citA, tcuC; MFS transporter, MHS family, citrate/tricarballylate:H+ symporter",high,0,0
+Citric_acid,K03300,"TC.CITMHS; citrate-Mg2+:H+ or citrate-Ca2+:H+ symporter, CitMHS family",high,28.583022448786828,29
+Citric_acid,K09477,citT; citrate:succinate antiporter,high,0.30092926686126287,3
+Citric_acid,K07793,tctA; putative tricarboxylic transport membrane protein,medium,72.45600779750013,35
+Citric_acid,K07794,tctB; putative tricarboxylic transport membrane protein,medium,36.70396695290905,31
+Citric_acid,K07795,tctC; putative tricarboxylic transport membrane protein,medium,298.209276702606,35
+Citric_acid,K01643,citF; citrate lyase subunit alpha / citrate CoA-transferase [EC:2.8.3.10],high,0,0
+Citric_acid,K01644,citE; citrate lyase subunit beta / citryl-CoA lyase [EC:4.1.3.34],high,11.580522579587148,33
+Malic_acid,K11616,maeN; malate:Na+ symporter,high,0,0
+Malic_acid,K11103,dctA; aerobic C4-dicarboxylate transport protein,low,218.57635030812224,34
+Malic_acid,K00027,"ME2, sfcA, maeA; malate dehydrogenase (oxaloacetate-decarboxylating) [EC:1.1.1.38]",medium,108.68713548587458,35
+Malic_acid,K00029,maeB; malate dehydrogenase (oxaloacetate-decarboxylating)(NADP+) [EC:1.1.1.40],medium,134.41110685756516,35
+Oxalic_acid,K08177,"oxlT; MFS transporter, OFA family, oxalate/formate antiporter",high,8.858567377968614,29
+Oxalic_acid,K07749,frc; formyl-CoA transferase [EC:2.8.3.16],high,37.60524514012266,35
+Oxalic_acid,K18702,uctC; CoA:oxalate CoA-transferase [EC:2.8.3.19],medium,4.706011901580894,27
+Oxalic_acid,K01577,oxc; oxalyl-CoA decarboxylase [EC:4.1.1.8],high,13.490963712701205,33
+Oxalic_acid,K01569,oxdD; oxalate decarboxylase [EC:4.1.1.2],high,0.38524540557535425,3
+Succinic_acid,K11103,dctA; aerobic C4-dicarboxylate transport protein,low,218.57635030812224,34
+Succinic_acid,K07791,dcuA; anaerobic C4-dicarboxylate transporter DcuA,low,2.218894723108151,19
+Succinic_acid,K07792,dcuB; anaerobic C4-dicarboxylate transporter DcuB,low,7.426119881324043,23
+Succinic_acid,K03326,"TC.DCUC, dcuC, dcuD; C4-dicarboxylate transporter, DcuC family",low,0.126738886754764,2
+Succinic_acid,K11106,ttdT; L-tartrate/succinate antiporter,low,4.102620270066724,24
+Lactic_acid,K00427,"lldP, lctP; L-lactate permease",high,0.040736931917572855,1
+Lactic_acid,K03303,"lutP, lctP; lactate permease",high,13.280860480395745,33
+Lactic_acid,K08178,"JEN; MFS transporter, SHS family, lactate transporter",medium,0.10797589802515006,3
+Lactic_acid,K00101,lldD; L-lactate dehydrogenase (cytochrome) [EC:1.1.2.3],high,9.976234274756308,33
+Lactic_acid,K18928,lldE; L-lactate dehydrogenase complex protein LldE,high,7.626341718790694,20
+Lactic_acid,K18929,lldF; L-lactate dehydrogenase complex protein LldF,high,2.6191775351509476,22
+Lactic_acid,K00782,lldG; L-lactate dehydrogenase complex protein LldG,high,1.9970664561141462,13
+Lactic_acid,K03777,dld; D-lactate dehydrogenase (quinone) [EC:1.1.5.12],high,5.66083957162697,32
+Lactic_acid,K00102,"LDHD, dld; D-lactate dehydrogenase (cytochrome) [EC:1.1.2.4]",medium,23.16861244858982,35
+Glutamic_acid,K11102,"gltP, gltT; proton glutamate symport protein",high,50.448989695197,33
+Glutamic_acid,K03312,"gltS; glutamate:Na+ symporter, ESS family",high,2.340086272613793,21
+Glutamic_acid,K10005,gluB; glutamate transport system substrate-binding protein,high,93.4351136549523,35
+Glutamic_acid,K10006,gluC; glutamate transport system permease protein,high,1.6746092214348967,8
+Glutamic_acid,K10007,gluD; glutamate transport system permease protein,high,0.6752830112520806,5
+Glutamic_acid,K10008,gluA; glutamate transport system ATP-binding protein [EC:7.4.2.1],high,17.289542466720334,28
+Glutamic_acid,K10001,"gltI, aatJ; glutamate/aspartate transport system substrate-binding protein",medium,837.317616094697,35
+Glutamic_acid,K10002,"gltK, aatM; glutamate/aspartate transport system permease protein",medium,28.8984861642622,27
+Glutamic_acid,K10003,"gltJ, aatQ; glutamate/aspartate transport system permease protein",medium,62.61573101590081,32
+Glutamic_acid,K10004,"gltL, aatP; glutamate/aspartate transport system ATP-binding protein [EC:7.4.2.1]",medium,37.477656195735555,29
+Glutamic_acid,K00260,"gudB, rocG; glutamate dehydrogenase [EC:1.4.1.2]",low,57.81310581110288,33
+Glutamic_acid,K15371,GDH2; glutamate dehydrogenase [EC:1.4.1.2],low,88.40638058979052,35
+Glutamic_acid,K01580,"E4.1.1.15, gadB, gadA, GAD; glutamate decarboxylase [EC:4.1.1.15]",low,44.33276218651451,31
+L.Arginine,K09996,artJ; arginine transport system substrate-binding protein,high,0,0
+L.Arginine,K09997,artI; arginine transport system substrate-binding protein,high,106.36492609261452,35
+L.Arginine,K09999,artQ; arginine transport system permease protein,high,0,0
+L.Arginine,K10022,aotJ; arginine/ornithine transport system substrate-binding protein,high,101.64305048570519,34
+L.Arginine,K10023,aotM; arginine/ornithine transport system permease protein,high,0.273960763084368,2
+L.Arginine,K10024,aotQ; arginine/ornithine transport system permease protein,high,2.7623176681660384,11
+L.Arginine,K10025,aotP; arginine/ornithine transport system ATP-binding protein [EC:7.4.2.1],high,0.2629880987347097,1
+L.Arginine,K02205,"rocE, rocC; arginine/ornithine permease",high,0,0
+L.Arginine,K10013,argT; lysine/arginine/ornithine transport system substrate-binding protein,medium,55.6137466990952,34
+L.Arginine,K03758,"arcD, lysl, lysP; arginine:ornithine antiporter / lysine permease",medium,4.051800545429063,25
+L.Arginine,K01478,arcA; arginine deiminase [EC:3.5.3.6],high,13.059327242531536,35
+L.Arginine,K01476,"rocF, arg; arginase [EC:3.5.3.1]",high,79.4751820855787,34
+L.Arginine,K00673,astA; arginine N-succinyltransferase [EC:2.3.1.109],high,17.849102134706264,31
+L.Glutamine,K10036,glnH; glutamine transport system substrate-binding protein,high,2.129168446796778,7
+L.Glutamine,K10037,glnP; glutamine transport system permease protein,high,0,0
+L.Glutamine,K10038,glnQ; glutamine transport system ATP-binding protein [EC:7.4.2.1],high,2.4104426134747956,13
+L.Glutamine,K11626,glnT; putative sodium/glutamine symporter,medium,0,0
+L.Glutamine,K10039,"peb1A, glnH; aspartate/glutamate/glutamine transport system substrate-binding protein",medium,24.19968883216695,33
+L.Glutamine,K10040,"peb1B, glnP, glnM; aspartate/glutamate/glutamine transport system permease protein",medium,1.359062826696188,8
+L.Glutamine,K10041,"peb1C, glnQ; aspartate/glutamate/glutamine transport system ATP-binding protein [EC:7.4.2.1]",medium,2.3109231608139225,13
+L.Glutamine,K01425,"glsA, GLS; glutaminase [EC:3.5.1.2]",high,855.6979307046398,35
+L.Glutamine,K05597,"aspQ, ansB, ansA; glutamin-(asparagin-)ase [EC:3.5.1.38]",medium,67.63448424684059,32
+Glycine,K11737,cycA; D-serine/D-alanine/glycine transporter,medium,0.6627296215165969,11
+Glycine,K03310,"TC.AGCS; alanine or glycine:cation symporter, AGCS family",medium,5.298343135656164,23
+Glycine,K00281,"GLDC, gcvP; glycine cleavage system P protein (glycine dehydrogenase) [EC:1.4.4.2]",high,131.93424261132697,35
+Glycine,K00282,gcvPA; glycine cleavage system P protein (glycine dehydrogenase) subunit 1 [EC:1.4.4.2],high,80.00659939620601,34
+Glycine,K00283,gcvPB; glycine cleavage system P protein (glycine dehydrogenase) subunit 2 [EC:1.4.4.2],high,179.0303188301556,35
+Glycine,K00605,"gcvT, AMT; glycine cleavage system T protein (aminomethyltransferase) [EC:2.1.2.10]",high,353.6254276441823,35
+Glycine,K02437,"gcvH, GCSH; glycine cleavage system H protein",high,284.8544581484093,35
+L.Alanine,K03310,"TC.AGCS; alanine or glycine:cation symporter, AGCS family",medium,5.298343135656164,23
+L.Alanine,K11737,cycA; D-serine/D-alanine/glycine transporter,low,0.6627296215165969,11
+L.Alanine,K00259,ald; alanine dehydrogenase [EC:1.4.1.1],high,349.2379880967307,35
+L.Alanine,K19244,ala; alanine dehydrogenase [EC:1.4.1.1],high,6.069700551388053,23
+L.Alanine,K00285,dadA; D-amino-acid dehydrogenase [EC:1.4.5.1],low,203.646295770459,35
+L.Leucine,K01999,livK; branched-chain amino acid transport system substrate-binding protein,medium,10719.139582602098,35
+L.Leucine,K01997,livH; branched-chain amino acid transport system permease protein,medium,352.3527899291302,35
+L.Leucine,K01998,livM; branched-chain amino acid transport system permease protein,medium,178.77881852613797,35
+L.Leucine,K01995,livG; branched-chain amino acid transport system ATP-binding protein,medium,149.41937147288476,35
+L.Leucine,K01996,livF; branched-chain amino acid transport system ATP-binding protein,medium,140.3089894249529,35
+L.Leucine,K03311,"TC.LIVCS; branched-chain amino acid:cation transporter, LIVCS family",medium,7.445639475971357,28
+L.Leucine,K00263,E1.4.1.9; leucine dehydrogenase [EC:1.4.1.9],medium,63.79026029457486,35
+L.Leucine,K00253,"IVD, ivd; isovaleryl-CoA dehydrogenase [EC:1.3.8.4]",high,9.8953932100415,32
+L.Leucine,K01968,"MCCC1, accA1; 3-methylcrotonyl-CoA carboxylase alpha subunit [EC:6.4.1.4]",high,4.851996879471336,31
+L.Leucine,K01969,"MCCC2, accD1; 3-methylcrotonyl-CoA carboxylase beta subunit [EC:6.4.1.4]",high,8.58386898693482,32
+N.Acetyl.D.glucosamine,K02803,nagEb; N-acetylglucosamine PTS system EIIB component [EC:2.7.1.193],high,2.0133769450375523,17
+N.Acetyl.D.glucosamine,K02804,nagE; N-acetylglucosamine PTS system EIICBA or EIICB component [EC:2.7.1.193],high,9.595541518460434,23
+N.Acetyl.D.glucosamine,K10200,ngcE; N-acetylglucosamine transport system substrate-binding protein,high,15.163959064046013,32
+N.Acetyl.D.glucosamine,K10201,ngcF; N-acetylglucosamine transport system permease protein,high,5.623795667760162,22
+N.Acetyl.D.glucosamine,K10202,ngcG; N-acetylglucosamine transport system permease protein,high,1.2263024622565304,7
+N.Acetyl.D.glucosamine,K00884,NAGK; N-acetylglucosamine kinase [EC:2.7.1.59],high,0.255781189899756,4
+N.Acetyl.D.glucosamine,K01443,"nagA, AMDHD2; N-acetylglucosamine-6-phosphate deacetylase [EC:3.5.1.25]",high,3.269729616225497,26
+Glucosamine_hydrochloride,K18676,gspK; glucosamine kinase [EC:2.7.1.8],high,0.6691975078886477,8
+Glucosamine_hydrochloride,K02564,"nagB, GNPDA; glucosamine-6-phosphate deaminase [EC:3.5.99.6]",medium,3.6702931044874383,30
+Glucosamine_hydrochloride,K02793,manXa; mannose PTS system EIIA component [EC:2.7.1.191],low,50.49956801014419,31
+Glucosamine_hydrochloride,K02794,manX; mannose PTS system EIIAB component [EC:2.7.1.191],low,6.440089891922177,10
+Glucosamine_hydrochloride,K02795,manY; mannose PTS system EIIC component,low,5.828796584652824,14
+Glucosamine_hydrochloride,K02796,manZ; mannose PTS system EIID component,low,0,0
+CB,K19668,"CBH2, cbhA; cellulose 1,4-beta-cellobiosidase [EC:3.2.1.91]",high,113.81093602125046,35
+BG,K01188,E3.2.1.21; beta-glucosidase [EC:3.2.1.21],high,0,0
+BG,K05349,bglX; beta-glucosidase [EC:3.2.1.21],high,219.45439978194463,35
+BG,K05350,bglB; beta-glucosidase [EC:3.2.1.21],medium,41.95721728784656,34
+BX,K01198,"xynB; xylan 1,4-beta-xylosidase [EC:3.2.1.37]",high,5.509720803257067,32
+BX,K15920,"XYL4; xylan 1,4-beta-xylosidase [EC:3.2.1.37]",high,0.016914723718030943,1
+BX,K22268,"xylA; xylan 1,4-beta-xylosidase [EC:3.2.1.37]",high,0.08216396617901657,1
+NAG,K01207,nagZ; beta-N-acetylhexosaminidase [EC:3.2.1.52],high,42.105499828779465,34
+NAG,K12373,HEXA_B; hexosaminidase [EC:3.2.1.52],medium,544.578123314923,35
+NAG,K14459,HEX; hexosaminidase [EC:3.2.1.52],medium,0,0
+Leu,K01255,"CARP, pepA; leucyl aminopeptidase [EC:3.4.11.1]",high,64.19191658763265,35
+Leu,K11142,LAP3; cytosol aminopeptidase [EC:3.4.11.1 3.4.11.5],medium,0,0
+Leu,K01256,pepN; aminopeptidase N [EC:3.4.11.2],medium,65.83033519916852,35
+Ala,K01256,pepN; aminopeptidase N [EC:3.4.11.2],high,65.83033519916852,35
+Ala,K08776,NPEPPS; puromycin-sensitive aminopeptidase [EC:3.4.11.14],medium,25.329208046663414,35
+AP,K09474,phoN; acid phosphatase (class A) [EC:3.1.3.2],high,33.20374774496329,35
+AP,K03788,aphA; acid phosphatase (class B) [EC:3.1.3.2],high,0,0
+AP,K01093,appA; 4-phytase / acid phosphatase [EC:3.1.3.26 3.1.3.2],high,0,0
+AP,K14379,ACP5; tartrate-resistant acid phosphatase type 5 [EC:3.1.3.2],medium,3.013458291760308,12
+AP,K14410,ACP2; lysosomal acid phosphatase [EC:3.1.3.2],medium,0,0
+AP,K01077,"E3.1.3.1, phoA, phoB; alkaline phosphatase [EC:3.1.3.1]",low,87.6558497272745,35
+AP,K01113,phoD; alkaline phosphatase D [EC:3.1.3.1],low,47.391469769467015,35
