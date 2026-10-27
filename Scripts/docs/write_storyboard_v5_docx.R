@@ -18,7 +18,7 @@ res <- function(f) read_csv(file.path("Results", "plan_v1", f), show_col_types =
 fig <- function(f) normalizePath(file.path("Figures", "plan_v1", f), winslash = "/")
 
 f2 <- function(x, d = 2) formatC(x, format = "f", digits = d)
-pv <- function(p) if_else(p < 0.001, "p < 0.001", paste0("p = ", formatC(p, format = "fg", digits = 2)))
+pv <- function(p) if_else(p < 0.001, "p < 0.001", paste0("p = ", trimws(formatC(p, format = "fg", digits = 2))))
 ci <- function(lo, hi, d = 2) sprintf("95%% CI %s to %s", f2(lo, d), f2(hi, d))
 
 # -----------------------------------------------------------------------------
@@ -80,13 +80,14 @@ h2a_p <- filter(h2a, score == "Polymer")
 h2a_d <- filter(h2a, score == "Polymer_minus_Simple")
 h2b_sum <- res("cp4_h2b_summary_and_robustness.csv")
 h2b_main <- h2b_sum[1, ]
-h2b_perC <- filter(h2b_sum, str_starts(variant, "a"))
+h2b_mbc <- filter(h2b_sum, str_starts(variant, "a"))
 h2b_high <- filter(h2b_sum, str_starts(variant, "b"))
 h2b_sens <- res("sens_q2_h2b_summary.csv") |> filter(str_starts(variant, "without"))
 h2b_eff <- res("cp4_h2b_compound_effects.csv")
 lag <- res("cp4_h2c_lag_advantage.csv")
 step <- res("cp4_h2c_step_permutation_and_robustness.csv")
 step_main <- step[1, ]
+step_mbc <- filter(step, str_starts(variant, "a"))
 step_sens <- res("sens_q2_h2c_step_permutation.csv") |> filter(str_starts(variant, "without"))
 lag_models <- res("cp4_lag_models_compare.csv")
 lm_cnt <- lag_models |> group_by(pathway_step) |>
@@ -293,7 +294,7 @@ storyboard <- c(
   h3("4. Measuring gene expression (Q2)"),
   p("For each compound, we listed the genes specific to using it, following a written rule. For polymers, these are the enzymes that cut them. For simple compounds, the transporter that brings them into the cell plus the first step that commits them to being used. Shared, general metabolism was left out. Genes for the seven measured soil enzymes formed seven more sets. Three compounds had no usable set: succinic acid has no specific genes, and the lignin and chitosan genes were barely expressed. Expression of each set was expressed as its share of all expression in that sample, on a log scale."),
   h3("5. Linking the two (Q2)"),
-  p("We compared each compound's change between seasons in genes and in readiness (H2b). We also asked whether readiness matched gene expression from the same month or from the month before (H2c). In the plan, readiness for Q2 is divided by microbial biomass. As explained below, two samples with almost no measured biomass dominated that version, so we also show the version without that step."),
+  p("We compared each compound's change between seasons in genes and in readiness (H2b). We also asked whether readiness matched gene expression from the same month or from the month before (H2c). The plan divided readiness by microbial biomass for Q2. Two samples with almost no measured biomass dominated that version, so we use readiness per unit carbon as the main version. This was a change to the plan, decided after seeing the results; the biomass version is shown as a check."),
 
   h2("Key Figures"),
 
@@ -361,14 +362,17 @@ storyboard <- c(
   h3("Figure 5. Q2, H2b: Did genes and readiness change in the same direction?"),
   img(fig("Fig4_H2b_quadrant.png")),
   p('<span class="caption">', b("How to read Figure 5. "),
-    "Each point is one compound. Across: how much readiness changed from summer to winter. Up: how much its genes changed. Points in the top-right or bottom-left boxes changed the same way in both (a match). Left panel: readiness divided by microbial biomass, as in the plan. Right panel: readiness per unit carbon, without that step.</span>"),
+    "Each point is one compound. Across: how much readiness changed from summer to winter. Up: how much its genes changed. Points in the top-right or bottom-left boxes changed the same way in both (a match). Left panel: readiness per unit carbon (main version). Right panel: readiness divided by microbial biomass, as first planned.</span>"),
   p(b("What we found. ")),
   ul(c(
-    sprintf("Left panel: %d of %d compounds matched (%s); the correlation was weak (rho = %s, %s). Almost every compound sits at the same spot across, because one sample with almost no biomass drives all of them.",
+    sprintf("Left panel: %d of %d compounds matched, about what chance would give (%s). The correlation was weak (rho = %s, %s).",
             h2b_main$n_concordant, h2b_main$n_compounds, pv(h2b_main$binom_p), f2(h2b_main$spearman_rho), pv(h2b_main$spearman_p)),
-    sprintf("Right panel: %d of %d matched (%s; rho = %s).", h2b_perC$n_concordant, h2b_perC$n_compounds, pv(h2b_perC$binom_p), f2(h2b_perC$spearman_rho)),
-    sprintf("Without the two low-biomass samples: %d of %d matched (%s).", h2b_sens$n_concordant, h2b_sens$n_compounds, pv(h2b_sens$binom_p)),
-    "A typical pattern (right panel): readiness for glycine, alanine, and leucine went up in winter while their genes went down."
+    sprintf("Readiness rose in winter for %d of %d compounds, while genes fell for %d of %d.",
+            sum(h2b_eff$pot_effect > 0), nrow(h2b_eff), sum(h2b_eff$expr_effect < 0), nrow(h2b_eff)),
+    sprintf("Right panel (biomass version): %d of %d matched (%s), but almost every compound sits at the same spot across, because one sample with almost no biomass drives all of them.",
+            h2b_mbc$n_concordant, h2b_mbc$n_compounds, pv(h2b_mbc$binom_p)),
+    sprintf("Using only the most certain genes: %d of %d matched (%s).", h2b_high$n_concordant, h2b_high$n_compounds, pv(h2b_high$binom_p)),
+    "A typical pattern (left panel): readiness for glycine, alanine, and leucine went up in winter while their genes went down."
   )),
   p(b("Verdict on H2b. "), "Not supported. Genes and readiness did not change in the same direction more often than chance."),
   p(b("What this means. "), "Of the outcomes listed in the hypotheses, the closest is 'only potential shifts': readiness rose in winter while the genes for many of the same compounds were expressed less. Readiness may reflect machinery built earlier, rather than what microbes were doing at the moment of sampling."),
@@ -384,10 +388,11 @@ storyboard <- c(
             lag_pos$pos[lag_pos$pathway_step == "intracellular"], lag_pos$n[lag_pos$pathway_step == "intracellular"]),
     sprintf("On average, outside-the-cell sets had a larger lag advantage than inside-the-cell sets (by %s, %s). This is the direction H2c predicted, but it is above the usual 0.05 line.",
             f2(step_main$diff), pv(step_main$p_perm)),
-    sprintf("Only two sets showed a clear lag on their own: the %s enzymes. One showed the reverse: the N-acetylglucosamine uptake set.",
+    sprintf("Only two sets showed a clear lag on their own: the %s enzymes. No set showed a clear reverse.",
             paste(lag_ci_pos, collapse = " and ")),
-    sprintf("Without the two low-biomass samples, the group difference shrank to %s (%s).", f2(step_sens$diff), pv(step_sens$p_perm)),
-    sprintf("A second check, sample by sample, pointed the other way: the previous month fit better for %d of %d inside-the-cell sets but only %d of %d outside-the-cell sets.",
+    sprintf("With the biomass version of readiness, the group difference was %s (%s); using only the most certain genes, %s (%s).",
+            f2(step_mbc$diff), pv(step_mbc$p_perm), f2(step$diff[3]), pv(step$p_perm[3])),
+    sprintf("A second check, sample by sample, mostly favoured the same month: the previous month fit better for only %d of %d inside-the-cell sets and %d of %d outside-the-cell sets.",
             lm_cnt$lag_better[lm_cnt$pathway_step == "intracellular"], lm_cnt$n[lm_cnt$pathway_step == "intracellular"],
             lm_cnt$lag_better[lm_cnt$pathway_step == "extracellular"], lm_cnt$n[lm_cnt$pathway_step == "extracellular"])
   )),
@@ -475,7 +480,6 @@ rob_rows <- tribble(
 questions <- c(
   b("Figure 1. ") %>% paste0("I reused the field-conditions figure from v4 (made with the earlier pipeline and its cleaned data table). Should it be redone with the plan v1 inputs, or is v4's version fine as context?"),
   b("Root-dense cores. ") %>% paste0(sprintf("Your framing document mentions three root-dense cores; the plan's rule flags %d (%s). Figure 3 marks all %d. Is that what you want?", nrow(root_flags), paste(root_flags$Sample_cat, collapse = ", "), nrow(root_flags))),
-  b("Biomass-normalized potential. ") %>% paste0("The plan uses it as the main potential for Q2, but it is unreliable here (see section 2). The storyboard shows both versions. Do you want to make the per-carbon version the main one? That would be a change to the locked plan and would go in the deviation log."),
   b("Titles. ") %>% paste0("Both title options state the main Q1 result. Edit freely."),
   b("Citations. ") %>% paste0("The hypotheses keep your note 'Allison & Vitousek 2005, to verify'.")
 )
@@ -487,10 +491,10 @@ notes <- c(
   h2("1. Questions for you"),
   ul(questions),
 
-  h2("2. Why the biomass-divided results are not used in the main story"),
+  h2("2. Why the biomass-divided results are not the main version"),
   p("The plan divides readiness by microbial biomass (MBC) for one Q1 check and for all of Q2. Four samples had MBC recorded as 0 (below the lab blank). Following an earlier project rule, these were set to half the lowest measured value (0.07 µg C per g). The lowest measured value was 0.14 (SM1539)."),
   p("Dividing by a number close to zero makes a huge result. SM1625 (May 2024, set to 0.07) and SM1539 (February 2024, 0.14) came out about 1,000 times higher than any other sample. Every biomass-divided score is therefore driven by these two samples (storyboard Figure S4)."),
-  p(sprintf("We reran those analyses without them. The Q1 simple-score difference became %s (%s), and the H2b match count %d of %d (%s). But the next-lowest sample, SM1420 (December 2023, MBC 7.78), then took over the Q1 scores in the same way. Removing samples one at a time does not fix the problem, because dividing by biomass always magnifies the samples with the least biomass.",
+  p(sprintf("We reran those analyses without them. The Q1 simple-score difference became %s (%s), and the H2b match count %d of %d (%s). But the next-lowest sample, SM1420 (December 2023, MBC 7.78), then took over the Q1 scores in the same way. Removing samples one at a time does not fix the problem, because dividing by biomass always magnifies the samples with the least biomass. For this reason, and with VGC's approval (deviation D11), Q2 now uses readiness per unit carbon as its main version, with the biomass-divided version as a check. Q1 already used per-carbon values for its main tests.",
             f2(sens_q1$diff[sens_q1$test == "6_H1a_simple_score" & str_starts(sens_q1$variant, "without")]),
             pv(sens_q1$p_welch[sens_q1$test == "6_H1a_simple_score" & str_starts(sens_q1$variant, "without")]),
             h2b_sens$n_concordant, h2b_sens$n_compounds, pv(h2b_sens$binom_p))),
@@ -509,12 +513,14 @@ notes <- c(
 
   h2("4. Q2 checks"),
   ul(c(
-    sprintf("H2b with high-confidence genes only: %d of %d matched (%s). This is the only version at p < 0.05, and it is the one that drops the most genes.",
-            h2b_high$n_concordant, h2b_high$n_compounds, pv(h2b_high$binom_p)),
-    sprintf("H2c group difference across versions: main %s (%s); per unit carbon %s (%s); high-confidence genes %s (%s); without the two low-biomass samples %s (%s).",
+    sprintf("H2b across versions: main (per unit carbon) %d of %d (%s); biomass version %d of %d (%s); biomass version without the two low-biomass samples %d of %d (%s); most certain genes only %d of %d (%s).",
+            h2b_main$n_concordant, h2b_main$n_compounds, pv(h2b_main$binom_p), h2b_mbc$n_concordant, h2b_mbc$n_compounds, pv(h2b_mbc$binom_p),
+            h2b_sens$n_concordant, h2b_sens$n_compounds, pv(h2b_sens$binom_p), h2b_high$n_concordant, h2b_high$n_compounds, pv(h2b_high$binom_p)),
+    sprintf("H2c group difference across versions: main %s (%s); biomass version %s (%s); most certain genes only %s (%s); biomass version without the two low-biomass samples %s (%s).",
             f2(step$diff[1]), pv(step$p_perm[1]), f2(step$diff[2]), pv(step$p_perm[2]), f2(step$diff[3]), pv(step$p_perm[3]),
             f2(step_sens$diff), pv(step_sens$p_perm)),
-    "Sample-by-sample lag models: most fits explained very little (marginal R² mostly below 0.1), and in 21 of 52 fits the model found no difference between dates.",
+    sprintf("Sample-by-sample lag models: most fits explained very little (marginal R² at most %s), and in %d of 52 fits the model found no difference between dates.",
+            f2(max(c(lag_models$marginal_R2_lag, lag_models$marginal_R2_same))), sum(lag_models$singular_lag) + sum(lag_models$singular_same)),
     "Gene expression units are geTMM (length-corrected, normalized counts), added up for each gene family (KO). The script that did that adding up was not found."
   )),
 

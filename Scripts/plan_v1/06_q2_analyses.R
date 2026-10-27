@@ -3,7 +3,7 @@
 # =============================================================================
 #
 # Expression values from the approved gene sets (D8), potential values
-# (biomass-normalized per-C SIR and enzyme activities), the bridge to Q1,
+# (per-C SIR as main, D11; per-MBC SIR as robustness; enzyme activities), the bridge to Q1,
 # H2a, H2b, H2c (lag and pathway step), plot-level lag models, and the two
 # robustness variants. Expression is geTMM summed per KO (O2).
 
@@ -87,7 +87,8 @@ transcript_plots <- expr_clr |> distinct(Collection_date, Plot)
 # -----------------------------------------------------------------------------
 # §5.2 Potential values (sample level)
 # -----------------------------------------------------------------------------
-# Compounds: biomass-normalized per-C SIR (§2.7). Enzymes: measured activity.
+# Compounds: water-subtracted per-C SIR (main, D11) and per-MBC SIR (§2.7,
+# robustness a). Enzymes: measured activity.
 
 compound_sets <- set_info |> filter(set_type == "compound") |> pull(set)
 enzyme_sets <- set_info |> filter(set_type == "enzyme") |> pull(set)
@@ -107,9 +108,11 @@ potential_samples <- function(sir_value) {
   )
 }
 
-pot_main <- potential_samples("induced_C_per_MBC")
-pot_perC <- potential_samples("induced_C")
+# Main potential is per mg C (D11); the plan's per-MBC version is robustness (a)
+pot_main <- potential_samples("induced_C")
+pot_mbc <- potential_samples("induced_C_per_MBC")
 write_csv(pot_main, file.path(dir_results, "cp4_potential_samples.csv"))
+write_csv(pot_mbc, file.path(dir_results, "cp4_potential_samples_per_MBC.csv"))
 
 # -----------------------------------------------------------------------------
 # §5.3.1 Bridge to Q1: tests 1 and 3 on the 7 transcript dates
@@ -223,7 +226,7 @@ h2b_summary <- function(eff, variant) {
 
 h2b <- h2b_effects(pot_main, expr_clr)
 write_csv(h2b, file.path(dir_results, "cp4_h2b_compound_effects.csv"))
-h2b_main <- h2b_summary(h2b, "main (potential per MBC)")
+h2b_main <- h2b_summary(h2b, "main (potential per C; D11)")
 
 # -----------------------------------------------------------------------------
 # §5.3.4 H2c: lag (date means, plot-matched)
@@ -264,6 +267,7 @@ lag_date_means <- function(pp) {
 }
 
 lag_stats <- function(dm, n_boot = 2000) {
+  set.seed(2026)  # same draws for every variant, so results do not depend on run order
   dm |>
     group_by(set) |>
     group_modify(\(d, k) {
@@ -300,6 +304,7 @@ write_csv(lag_main, file.path(dir_results, "cp4_h2c_lag_advantage.csv"))
 # -----------------------------------------------------------------------------
 
 step_permutation <- function(lag, variant, n_perm = 10000) {
+  set.seed(2026)
   x <- lag$lag_advantage
   lab <- lag$pathway_step
   stat <- function(l) mean(x[l == "extracellular"]) - mean(x[l == "intracellular"])
@@ -313,7 +318,7 @@ step_permutation <- function(lag, variant, n_perm = 10000) {
          diff = obs, p_perm = mean(abs(perm) >= abs(obs)), n_perm = n_perm)
 }
 
-step_main <- step_permutation(lag_main, "main (potential per MBC)")
+step_main <- step_permutation(lag_main, "main (potential per C; D11)")
 
 # -----------------------------------------------------------------------------
 # §5.4 Plot-level lag model
@@ -363,9 +368,9 @@ write_csv(lag_model_compare, file.path(dir_results, "cp4_lag_models_compare.csv"
 # (b) high-confidence KOs only
 # -----------------------------------------------------------------------------
 
-# (a)
-h2b_perC <- h2b_effects(pot_perC, expr_clr)
-lag_perC <- lag_stats(lag_date_means(plot_pairs(pot_perC, expr_clr)))
+# (a) Potential per MBC, the plan's original main version (D11)
+h2b_mbc <- h2b_effects(pot_mbc, expr_clr)
+lag_mbc <- lag_stats(lag_date_means(plot_pairs(pot_mbc, expr_clr)))
 
 # (b) High-confidence KOs only; sets that become near-zero (sum 0 in 9 or more
 # samples, D8 rule 4) are left out.
@@ -382,22 +387,22 @@ lag_high <- lag_stats(lag_date_means(plot_pairs(pot_main, expr_clr_high)))
 
 robust_h2b <- bind_rows(
   h2b_main,
-  h2b_summary(h2b_perC, "a: potential per C (no biomass normalization)"),
+  h2b_summary(h2b_mbc, "a: potential per MBC (plan original)"),
   h2b_summary(h2b_high, "b: high-confidence KOs only")
 )
 robust_step <- bind_rows(
   step_main,
-  step_permutation(lag_perC, "a: potential per C (no biomass normalization)"),
+  step_permutation(lag_mbc, "a: potential per MBC (plan original)"),
   step_permutation(lag_high, "b: high-confidence KOs only")
 )
 write_csv(robust_h2b, file.path(dir_results, "cp4_h2b_summary_and_robustness.csv"))
 write_csv(robust_step, file.path(dir_results, "cp4_h2c_step_permutation_and_robustness.csv"))
 write_csv(bind_rows(lag_main |> mutate(variant = "main"),
-                    lag_perC |> mutate(variant = "a: potential per C"),
+                    lag_mbc |> mutate(variant = "a: potential per MBC"),
                     lag_high |> mutate(variant = "b: high-confidence KOs")),
           file.path(dir_results, "cp4_h2c_lag_advantage_all_variants.csv"))
 write_csv(bind_rows(h2b |> mutate(variant = "main"),
-                    h2b_perC |> mutate(variant = "a: potential per C"),
+                    h2b_mbc |> mutate(variant = "a: potential per MBC"),
                     h2b_high |> mutate(variant = "b: high-confidence KOs")),
           file.path(dir_results, "cp4_h2b_compound_effects_all_variants.csv"))
 write_csv(high_zero |> mutate(kept = set %in% high_keep),

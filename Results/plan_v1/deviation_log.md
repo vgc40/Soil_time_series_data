@@ -197,6 +197,31 @@ Choices taken by Claude where plan §5 does not specify:
   `Results/plan_v1/sens_*.csv`.
 - **Requested by:** VGC, 2026-10-26, after Checkpoint 4.
 
+## D11. Q2 main potential changed to per mg C (plan §5.2)
+
+- **Issue:** the plan sets biomass-normalized per-C SIR (§2.7) as the
+  potential for Q2. After D1, SM1625 (MBC 0 set to 0.07) and SM1539 (MBC
+  0.14) have per-MBC values about 1,000 times any other sample and dominate
+  every compound's per-MBC z-scores (Checkpoint 4). Removing them (D10) lets
+  the next-lowest sample, SM1420 (MBC 7.78), dominate the Q1 per-MBC scores
+  in the same way.
+- **Decision:** the main Q2 potential for compound gene sets is the
+  water-subtracted 5 h SIR per mg C (`induced_C`, §2.2), without dividing by
+  MBC. The plan's per-MBC version becomes robustness variant (a). Enzyme
+  potential (measured activity) is unchanged. The high-confidence robustness
+  variant (b) now uses per-C potential. The plot-level lag models use per-C
+  potential. Q1 is unchanged (its main tests were already per C).
+- **This decision was made after seeing results.** It reverses the plan's
+  rule that no analysis decision changes after results are seen; it is
+  recorded here for that reason. Both versions are reported.
+- **Also changed:** permutation and bootstrap calls are now seeded once per
+  call (`set.seed(2026)` inside `step_permutation()` and `lag_stats()`), so a
+  variant gives the same p-value and CIs whichever order it runs in. The
+  per-MBC permutation p moved from 0.077 to 0.079 as a result.
+- Supersedes the D9 bullet on Figure 4 (panel A is now per C, panel B per
+  MBC).
+- **Approved by:** VGC, 2026-10-26.
+
 ## Open items (not yet decided)
 
 - **O3. Per-C conversion check fails for three substrates (plan §2.2; STOP).**

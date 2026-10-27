@@ -7,7 +7,9 @@
 # SM1539 (MBC 0.14):
 #   Q1 test 6 (tests 1, 3, 4 on per-MBC scores, 13 dates)
 #   Q2 H2b (seasonal concordance) and H2c (lag advantage, pathway step)
-# Per-MBC z-scores are recomputed without the two samples. Run after 06.
+# Per-MBC z-scores are recomputed without the two samples. Since D11 the
+# per-MBC potential is robustness (a) in Q2, so the comparison here is with
+# that variant. Run after 06.
 
 source(file.path("Scripts", "plan_v1", "06_q2_analyses.R"))
 set.seed(2026)
@@ -56,12 +58,12 @@ write_csv(coupling_sens, file.path(dir_results, "sens_q1_test6_coupling.csv"))
 # Enzyme potential does not use MBC, so enzyme sets are unchanged; they stay
 # in the pathway-step comparison.
 
-pot_sens <- pot_main |> filter(!Sample_cat %in% low_mbc)
+pot_sens <- pot_mbc |> filter(!Sample_cat %in% low_mbc)
 
 h2b_sens <- h2b_effects(pot_sens, expr_clr)
 write_csv(h2b_sens, file.path(dir_results, "sens_q2_h2b_compound_effects.csv"))
 h2b_sens_summary <- bind_rows(
-  h2b_main,
+  h2b_summary(h2b_mbc, "potential per MBC, all samples"),
   h2b_summary(h2b_sens, "without SM1625, SM1539 (potential per MBC)")
 )
 write_csv(h2b_sens_summary, file.path(dir_results, "sens_q2_h2b_summary.csv"))
@@ -69,7 +71,7 @@ write_csv(h2b_sens_summary, file.path(dir_results, "sens_q2_h2b_summary.csv"))
 lag_sens <- lag_stats(lag_date_means(plot_pairs(pot_sens, expr_clr)))
 write_csv(lag_sens, file.path(dir_results, "sens_q2_h2c_lag_advantage.csv"))
 step_sens <- bind_rows(
-  step_main,
+  step_permutation(lag_mbc, "potential per MBC, all samples"),
   step_permutation(lag_sens, "without SM1625, SM1539 (potential per MBC)")
 )
 write_csv(step_sens, file.path(dir_results, "sens_q2_h2c_step_permutation.csv"))

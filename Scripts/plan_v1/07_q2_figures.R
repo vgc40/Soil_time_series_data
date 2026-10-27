@@ -22,16 +22,16 @@ nice_label <- function(x) {
 # -----------------------------------------------------------------------------
 
 h2b_all <- read_res("cp4_h2b_compound_effects_all_variants.csv") |>
-  filter(variant %in% c("main", "a: potential per C")) |>
+  filter(variant %in% c("main", "a: potential per MBC")) |>
   mutate(panel = if_else(variant == "main",
-                         "A. Potential per µg MBC (plan main)",
-                         "B. Potential per mg C (robustness a)"),
+                         "A. Potential per mg C (main; D11)",
+                         "B. Potential per µg MBC (plan original; robustness a)"),
          label = nice_label(set))
 h2b_sum <- read_res("cp4_h2b_summary_and_robustness.csv") |>
   filter(!str_starts(variant, "b")) |>
   mutate(panel = if_else(str_starts(variant, "main"),
-                         "A. Potential per µg MBC (plan main)",
-                         "B. Potential per mg C (robustness a)"),
+                         "A. Potential per mg C (main; D11)",
+                         "B. Potential per µg MBC (plan original; robustness a)"),
          label = sprintf("%d of %d concordant, sign test p = %.2f\nSpearman rho = %.2f, p = %.2f",
                          n_concordant, n_compounds, binom_p, spearman_rho, spearman_p))
 
@@ -62,11 +62,11 @@ save_plan_figure(
     "(2 dormant, 5 active; 100% irrigation). Expression: centred log ratio of ",
     "the gene-set sum (35 samples, 5 plots per date). Potential: water-",
     "subtracted 5 h SIR (MicroResp samples on the same dates, 6 plots per ",
-    "date). (A) Potential per µg MBC, as specified in the plan; the effects are ",
-    "nearly identical across compounds because one sample (SM1625, 2024-05-08, ",
-    "MBC replaced with 0.07 µg C/g) dominates every compound's z-scores. ",
-    "(B) Potential per mg C without biomass normalization (robustness variant ",
-    "a, shown for comparison; deviation log D9). Concordant compounds fall in ",
+    "date). (A) Potential per mg C, the main version since deviation D11. ",
+    "(B) Potential per µg MBC, the plan's original version (robustness a); the ",
+    "effects are nearly identical across compounds because one sample (SM1625, ",
+    "2024-05-08, MBC replaced with 0.07 µg C/g) dominates every compound's ",
+    "z-scores. Concordant compounds fall in ",
     "the upper-right and lower-left quadrants. Sign test: two-sided binomial ",
     "test against 50%. No error bars."
   )
@@ -115,7 +115,7 @@ save_plan_figure(
     "date pairs with plots matched (5 plots per pair; 4 for 2024-01-02 to ",
     "2024-02-12 for SIR sets). Points: r_lag − r_same; bars: 95% percentile ",
     "bootstrap CI from 2,000 resamples of date pairs. Potential: water-",
-    "subtracted 5 h SIR per µg MBC for compound sets (n = 16 intracellular, 3 ",
+    "subtracted 5 h SIR per mg C for compound sets (D11; n = 16 intracellular, 3 ",
     "extracellular) and measured activity for enzyme sets (n = 7, ",
     "extracellular). Vertical coloured lines: group means. Subtitle: ",
     "permutation test of the difference in means (10,000 label shuffles)."
@@ -129,7 +129,7 @@ save_plan_figure(
 expr_dates <- read_res("cp4_expression_clr_samples.csv") |>
   group_by(set, Collection_date) |>
   summarise(value = mean(clr), .groups = "drop")
-pot_dates <- read_res("cp4_potential_samples.csv") |>
+pot_dates <- read_res("cp4_potential_samples_per_MBC.csv") |>
   group_by(set, Collection_date) |>
   summarise(value = mean(potential), .groups = "drop")
 pot_perC_dates <- read_res("sir_prepared_long.csv") |>
@@ -187,9 +187,9 @@ save_plan_figure(
     "series is z-scored across its own date means for display. (A) Chitin ",
     "gene-set expression (chitinases and chitin-binding protein; centred log ",
     "ratio; 7 transcript dates, 5 plots each), chitin potential (water-",
-    "subtracted 5 h SIR per µg MBC, and per mg C for comparison; 13 dates), and ",
+    "subtracted 5 h SIR per mg C, the main version, and per µg MBC for comparison; 13 dates), and ",
     "NAG enzyme activity (13 dates). (B) NAG uptake and catabolism expression ",
-    "(7 dates) with NAG potential per µg MBC and per mg C (13 dates). 100% ",
+    "(7 dates) with NAG potential per mg C and per µg MBC (13 dates). 100% ",
     "irrigation; 5-6 plots per date. The per-MBC series peak on 2024-02-12 and ",
     "2024-05-08 because of samples SM1539 and SM1625 (lowest and replaced MBC; ",
     "deviation log D1). Grey shading: plant-dormant period. No error bars."
