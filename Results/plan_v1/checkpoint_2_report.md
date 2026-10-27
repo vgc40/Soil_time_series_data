@@ -133,11 +133,12 @@ Spearman correlation across 13 date means, enzyme vs matching substrate z:
 
 ### Test 8. Later (24 h) to early (5 h) rate ratio
 
-**What the 24 h value represents:** not stated. The data package defines
-`Timepoint` only as the "end point of the measurement period in hours (5 or
-24)" and does not say whether the 24 h rate covers 5–24 h or 0–24 h (open
-item O1). Ratio computed per date and group as mean `induced_C` at 24 h over
-mean at 5 h (D6).
+**What the 24 h value represents:** the rate over 5–24 h. The indicator
+plate was replaced at 5 h and the new plate read at 24 h (earlier manuscript
+methods; see deviation log, resolution of O1). Whether the 5–24 h CO2 was
+divided by 19 h or 24 h is not stated; that constant does not affect the
+season comparison. Ratio computed per date and group as mean `induced_C` at
+24 h over mean at 5 h (D6).
 
 | Group | Mean ratio dormant | Mean ratio active | Difference | 95% CI | p Welch | p Wilcoxon |
 |---|---|---|---|---|---|---|

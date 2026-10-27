@@ -14,7 +14,8 @@ run.**
 | `KO_gene_sets_DRAFT_ko_expression.csv` | Mean expression and number of nonzero samples for every KO in the draft |
 | `KO_gene_sets_DRAFT_notes.csv` | Compounds proposed as "no specific gene set" |
 
-Expression units are still unconfirmed (open item O2). Values below are the
+Expression values are geTMM (gene-length-corrected TMM counts per million)
+summed per KO; see the deviation log, resolution of O2. Values below are the
 file's values summed over the KOs in a set. "Share" is the set's sum as parts
 per million of the sample's total over all KOs.
 
@@ -121,6 +122,6 @@ per million of the sample's total over all KOs.
 
 ## Open items carried forward
 
-- **O1:** 24 h reading meaning (affects Checkpoint 2 test 8 only).
-- **O2:** units of `brite_D_expression.csv`. Needed before Q2 (§5.1).
+- **O1:** resolved, 5–24 h rate.
+- **O2:** resolved, geTMM summed per KO (generating code not found).
 - **O3:** mg C per well for succinic acid, chitin, methyl oleate.

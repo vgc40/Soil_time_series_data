@@ -98,6 +98,37 @@ in the order they arise and are never edited after the fact.
   figures. It adds no test.
 - **Approved by:** requested by VGC, 2026-10-26.
 
+## Resolutions of open items (2026-10-26)
+
+Source folder: `OneDrive - PNNL/Soil Microbiome SFA - A3.1 Rhizosphere and
+Moisture Effects/Prosser_Monthly/Manuscripts/A3-1-1_Prosser_time_biogeochem/`
+(pointed to by VGC).
+
+- **O1 resolved: the 24 h value is the rate over 5–24 h.** The MicroResp
+  methods in `Archive/SFA3-1-1_StoichiometryManuscript.docx` state that the
+  indicator plate was removed after 5 h and replaced with a new one, which
+  was read again at 24 h "to calculate the rates of respiration early and
+  late in the incubation". The text does not say whether the 5–24 h CO2 was
+  divided by 19 h or 24 h. Either way the factor is the same constant for
+  every sample, so the season comparison in test 8 (D6) is unaffected; only
+  the absolute ratio would shift.
+- **O2 resolved (strong evidence, generating code not found): expression
+  values are geTMM.** `Transcriptomic_abundance/geTMM_normalization.R`
+  converts featureCounts (counts < 5 set to 0) to reads per kilobase, then
+  applies edgeR TMM and `cpm()`: gene-length-corrected TMM counts per million
+  (geTMM). Per-sample totals of `brite_D_expression.csv` are 1.13 to 1.79
+  times the gene-level geTMM totals (median 1.57; Pearson r = 0.98 across 35
+  samples), consistent with gene-level geTMM summed per KO, with genes that
+  carry more than one KO counted once per KO. The script that rolled genes up
+  to KOs is not in either location. The centred log ratio in plan §5.1 is
+  scale-free, so the per-sample total does not affect it.
+- **Support for D1.** `Archive/SFA3-1-1_Storyboard_VGC.docx` records the
+  same rule used earlier in the project: zeros below detection limit
+  replaced with half the minimum detected value for each variable.
+- **O3 not resolved.** The methods state that per-C values are per-gram
+  rates divided by mg C added per g dry soil, which matches the formula used
+  here, but give no per-substrate amounts. Still waiting on Sheryl Bell.
+
 ## Open items (not yet decided)
 
 - **O3. Per-C conversion check fails for three substrates (plan §2.2; STOP).**
