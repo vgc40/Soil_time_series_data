@@ -76,6 +76,28 @@ in the order they arise and are never edited after the fact.
   varied by well, chitin z-scores would change.
 - **Approved by:** VGC, 2026-10-26.
 
+## D6. How the later-to-early rate ratio is computed (plan §3.2.8)
+
+- **Issue:** the plan asks for "the ratio of the later rate to the 5 h
+  rate" for each group and season, without saying at which level it is
+  formed. Water-subtracted rates can be zero or negative for single
+  compound-sample pairs (cellobiose median 1.6), so ratios formed per sample
+  and compound are unstable.
+- **Decision:** for each date and group, divide the mean `induced_C` at 24 h
+  (over all plots and group compounds) by the same mean at 5 h. The 13 date
+  ratios are then compared between seasons with the tests of §3.1.1.
+- **Note:** O1 (whether 24 h is a 5–24 h or 0–24 h rate) is still open; the
+  ratio uses the 24 h values as reported.
+- **Approved by:** taken by Claude while implementing; for VGC review at
+  Checkpoint 2.
+
+## D7. Extra diagnostic figure (not in plan)
+
+- **Addition:** Figure S4 shows the biomass-normalized sample scores with
+  the D1-flagged samples marked, as VGC asked for a way to see them in
+  figures. It adds no test.
+- **Approved by:** requested by VGC, 2026-10-26.
+
 ## Open items (not yet decided)
 
 - **O3. Per-C conversion check fails for three substrates (plan §2.2; STOP).**

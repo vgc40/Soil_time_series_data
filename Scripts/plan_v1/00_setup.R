@@ -102,6 +102,17 @@ make_scores <- function(df, value) {
     rename(simple_score = score_Simple, polymer_score = score_Polymer)
 }
 
+# Long table of per-compound z-scores, for compound-level effects and the
+# mixed models
+make_z_long <- function(df, value, compounds) {
+  df |>
+    filter(Substrate %in% compounds) |>
+    group_by(Substrate) |>
+    mutate(z = (.data[[value]] - mean(.data[[value]], na.rm = TRUE)) /
+             sd(.data[[value]], na.rm = TRUE)) |>
+    ungroup()
+}
+
 date_means <- function(scores) {
   scores |>
     group_by(Collection_date, season) |>
@@ -109,4 +120,73 @@ date_means <- function(scores) {
               across(c(simple_score, polymer_score), \(x) mean(x, na.rm = TRUE)),
               .groups = "drop") |>
     mutate(diff_score = polymer_score - simple_score)
+}
+
+# -----------------------------------------------------------------------------
+# Season comparison on date means (plan §3.1.1, §6)
+# -----------------------------------------------------------------------------
+# Dormant minus active, Welch 95% CI, Welch and Wilcoxon rank-sum p-values.
+# The date is the unit of replication.
+
+season_test <- function(value, season) {
+  d <- value[season == "Dormant"]
+  a <- value[season == "Active"]
+  welch <- t.test(d, a, var.equal = FALSE)
+  wil <- wilcox.test(d, a, exact = TRUE)
+  tibble(n_dormant = length(d), n_active = length(a),
+         mean_dormant = mean(d), mean_active = mean(a),
+         diff = mean(d) - mean(a),
+         ci_low = welch$conf.int[1], ci_high = welch$conf.int[2],
+         t = unname(welch$statistic), df = unname(welch$parameter),
+         p_welch = welch$p.value, W = unname(wil$statistic),
+         p_wilcox = wil$p.value)
+}
+
+cor_both <- function(x, y) {
+  p <- cor.test(x, y, method = "pearson")
+  s <- suppressWarnings(cor.test(x, y, method = "spearman", exact = TRUE))
+  tibble(n = sum(complete.cases(x, y)),
+         pearson_r = unname(p$estimate), pearson_p = p$p.value,
+         spearman_rho = unname(s$estimate), spearman_p = s$p.value)
+}
+
+# -----------------------------------------------------------------------------
+# Figure style (plan §7; matches Figures/manuscript_v4, see D3)
+# -----------------------------------------------------------------------------
+
+group_colors <- c(Simple = "#0072B2", Polymer = "#E69F00",
+                  Reference = "grey30", Summary = "black")
+season_colors <- c(Active = "#009E73", Dormant = "#56B4E9")
+dormant_shade <- "grey90"
+
+theme_plan <- theme_bw(base_size = 9, base_family = "sans") +
+  theme(
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(linewidth = 0.25, colour = "grey90"),
+    strip.background = element_rect(fill = "grey95", colour = "grey70"),
+    strip.text = element_text(size = 9),
+    plot.title = element_text(face = "bold", size = 10),
+    plot.tag = element_text(face = "bold", size = 10),
+    axis.text = element_text(size = 8),
+    legend.text = element_text(size = 8),
+    legend.title = element_text(size = 9),
+    legend.key.size = unit(0.4, "cm")
+  )
+
+date_axis <- scale_x_date(date_breaks = "1 month", date_labels = "%b\n%y")
+
+# Saves PDF and 300 dpi PNG at a journal width (85 or 180 mm) plus a caption
+save_plan_figure <- function(plot, name, width_mm, height_mm, caption) {
+  stopifnot(width_mm %in% c(85, 180))
+  for (ext in c("png", "pdf")) {
+    ggsave(file.path(dir_figures, paste0(name, ".", ext)), plot,
+           width = width_mm, height = height_mm, units = "mm", dpi = 300,
+           bg = "white")
+  }
+  writeLines(caption, file.path(dir_figures, paste0(name, ".txt")))
+}
+
+dormant_rect <- function() {
+  annotate("rect", xmin = as.Date("2023-10-19"), xmax = as.Date("2024-03-20"),
+           ymin = -Inf, ymax = Inf, fill = dormant_shade)
 }
