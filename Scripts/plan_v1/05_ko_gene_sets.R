@@ -307,3 +307,66 @@ cat("Samples:", length(sample_cols), " KOs in file:", n_distinct(expr$KO),
     " KOs in draft:", n_distinct(draft$KO), "\n")
 print(set_expression, n = Inf)
 print(ko_detail |> filter(n_samples_nonzero == 0) |> select(set, KO, KEGG_name), n = Inf)
+
+# =============================================================================
+# Recommended version of the gene sets (D8, proposed for approval)
+# =============================================================================
+# Rules, applied in order:
+#   1. Drop every low-confidence KO.
+#   2. Leucine: drop the shared branched-chain transporters (liv, BrnQ),
+#      which carry 92% of the draft set and also serve Ile and Val.
+#   3. Succinic acid: no specific gene set (transporters only; catabolism is
+#      the TCA cycle).
+#   4. Near-zero rule: a set whose summed expression is 0 in more than a
+#      quarter of samples (9 or more of 35) is marked "insufficient
+#      expression" and left out of Q2 tests.
+
+shared_bcaa_transport <- c("K01999", "K01997", "K01998", "K01995", "K01996", "K03311")
+near_zero_limit <- ceiling(length(sample_cols) / 4)
+
+recommended <- draft_out |>
+  filter(confidence != "low",
+         !(set == "L.Leucine" & KO %in% shared_bcaa_transport),
+         set != "Succinic_acid") |>
+  mutate(shared_with = map2_chr(KO, set, \(k, s) {
+    paste(setdiff(set[KO == k], s), collapse = ", ")
+  }))
+
+rec_sums <- recommended |>
+  distinct(set, set_type, group, pathway_step, KO) |>
+  inner_join(expr_long, by = "KO", relationship = "many-to-many") |>
+  summarise(value = sum(value), .by = c(set, set_type, group, pathway_step, sample))
+
+rec_expression <- summarise_sets(rec_sums) |>
+  left_join(recommended |> summarise(n_KOs = n(), n_high = sum(confidence == "high"),
+                                     .by = set),
+            by = "set") |>
+  mutate(status = if_else(n_samples_zero >= near_zero_limit,
+                          "insufficient expression", "use in Q2"))
+
+rec_status <- bind_rows(
+  rec_expression |> select(set, set_type, group, pathway_step, n_KOs, n_high,
+                           mean_sum, n_samples_zero, mean_share_ppm, status),
+  tibble(set = "Succinic_acid", set_type = "compound", group = "Simple",
+         pathway_step = "intracellular", n_KOs = 0L, n_high = 0L,
+         status = "no specific gene set")
+) |>
+  arrange(factor(set_type, c("compound", "enzyme")),
+          factor(group, c("Polymer", "Simple", "Q2", "Enzyme")), set)
+
+recommended <- recommended |>
+  left_join(rec_status |> select(set, status), by = "set")
+
+write_csv(recommended, file.path(dir_results, "KO_gene_sets_RECOMMENDED.csv"))
+write_csv(rec_status, file.path(dir_results, "KO_gene_sets_RECOMMENDED_expression.csv"))
+
+dropped <- anti_join(draft_out, recommended, by = c("set", "KO")) |>
+  mutate(why = case_when(
+    set == "Succinic_acid" ~ "set marked no specific gene set",
+    set == "L.Leucine" & KO %in% shared_bcaa_transport ~ "shared branched-chain transporter",
+    confidence == "low" ~ "low confidence"
+  ))
+write_csv(dropped, file.path(dir_results, "KO_gene_sets_RECOMMENDED_dropped.csv"))
+
+print(rec_status, n = Inf)
+print(dropped |> count(why))

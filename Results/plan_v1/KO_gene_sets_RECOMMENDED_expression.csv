@@ -1,0 +1,30 @@
+set,set_type,group,pathway_step,n_KOs,n_high,mean_sum,n_samples_zero,mean_share_ppm,status
+Cellulose,compound,Polymer,extracellular,2,2,598.4280821019161,0,753.9128234871139,use in Q2
+Chitin,compound,Polymer,extracellular,6,4,249.96758837280856,0,299.5147255176422,use in Q2
+Chitosan,compound,Polymer,extracellular,2,1,1.5793790826793699,20,2.097976223907655,insufficient expression
+Hemicellulose,compound,Polymer,extracellular,8,2,200.16955952792904,0,252.0377739827553,use in Q2
+Lignin,compound,Polymer,extracellular,1,0,0.11190812454053028,33,0.11333199202133376,insufficient expression
+Citric_acid,compound,Simple,intracellular,8,5,447.83372574825046,0,527.7836759658779,use in Q2
+D.Cellobiose,compound,Simple,intracellular,9,4,246.20441577688587,0,295.0695647112693,use in Q2
+D.Fructose,compound,Simple,intracellular,11,7,1525.8288153552126,0,1676.4535045652476,use in Q2
+D.Trehalose,compound,Simple,intracellular,10,7,110.7421217607353,0,135.61008895780932,use in Q2
+D.Xylose,compound,Simple,intracellular,6,5,1070.85417489819,0,1311.5476560925035,use in Q2
+Glutamic_acid,compound,Simple,intracellular,10,6,1132.173113792766,0,1337.995056047524,use in Q2
+Glycine,compound,Simple,intracellular,7,5,1035.412119387453,0,1191.2212449762217,use in Q2
+L.Alanine,compound,Simple,intracellular,3,2,360.60603178377494,0,429.6390011264038,use in Q2
+L.Arginine,compound,Simple,intracellular,13,11,381.3564018156456,0,437.1616898671689,use in Q2
+L.Glutamine,compound,Simple,intracellular,9,4,955.7417008314291,0,1182.6406466356011,use in Q2
+L.Leucine,compound,Simple,intracellular,4,3,87.12151937102252,0,100.91667523123274,use in Q2
+Lactic_acid,compound,Simple,intracellular,9,7,64.47784531536736,0,74.2983325260012,use in Q2
+Malic_acid,compound,Simple,intracellular,3,1,243.09824234343975,0,287.44175707486613,use in Q2
+Oxalic_acid,compound,Simple,intracellular,5,4,65.04603353794873,0,76.13453053125362,use in Q2
+Succinic_acid,compound,Simple,intracellular,0,0,NA,NA,NA,no specific gene set
+Glucosamine_hydrochloride,compound,Q2,intracellular,2,1,4.339490612376086,3,5.386275480527752,use in Q2
+N.Acetyl.D.glucosamine,compound,Q2,intracellular,7,7,37.14848646368595,2,42.51433909428811,use in Q2
+AP,enzyme,Enzyme,extracellular,5,3,36.217206036723596,0,43.48174206585074,use in Q2
+Ala,enzyme,Enzyme,extracellular,2,1,91.15954324583194,0,107.22773162546255,use in Q2
+BG,enzyme,Enzyme,extracellular,3,2,261.4116170697912,0,310.8783526087158,use in Q2
+BX,enzyme,Enzyme,extracellular,3,3,5.608799493154114,3,6.831399122382814,use in Q2
+CB,enzyme,Enzyme,extracellular,1,1,113.81093602125046,0,146.98829662696878,use in Q2
+Leu,enzyme,Enzyme,extracellular,3,1,130.02225178680118,0,151.65055882332933,use in Q2
+NAG,enzyme,Enzyme,extracellular,3,1,586.6836231437026,0,742.7951919561651,use in Q2

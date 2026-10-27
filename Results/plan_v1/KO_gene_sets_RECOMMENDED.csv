@@ -1,0 +1,156 @@
+set,set_type,group,pathway_step,KO,KEGG_name,step,reason,confidence,shared_with,status
+Cellulose,compound,Polymer,extracellular,K01179,E3.2.1.4; endoglucanase [EC:3.2.1.4],depolymerization,"endo-1,4-beta-glucanase cleaves cellulose chains",high,,use in Q2
+Cellulose,compound,Polymer,extracellular,K19668,"CBH2, cbhA; cellulose 1,4-beta-cellobiosidase [EC:3.2.1.91]",depolymerization,cellobiohydrolase releases cellobiose from cellulose ends (also in CB set),high,CB,use in Q2
+Hemicellulose,compound,Polymer,extracellular,K01181,"Xyn, EIX; endo-1,4-beta-xylanase [EC:3.2.1.8]",depolymerization,"endo-1,4-beta-xylanase cleaves the xylan backbone",high,,use in Q2
+Hemicellulose,compound,Polymer,extracellular,K15924,"xynC; glucuronoarabinoxylan endo-1,4-beta-xylanase [EC:3.2.1.136]",depolymerization,"glucuronoarabinoxylan endo-1,4-beta-xylanase",high,,use in Q2
+Hemicellulose,compound,Polymer,extracellular,K01218,"gmuG; mannan endo-1,4-beta-mannosidase [EC:3.2.1.78]",depolymerization,"endo-1,4-beta-mannanase; mannan-type hemicellulose",medium,,use in Q2
+Hemicellulose,compound,Polymer,extracellular,K19355,"MAN; mannan endo-1,4-beta-mannosidase [EC:3.2.1.78]",depolymerization,"endo-1,4-beta-mannanase (MAN)",medium,,use in Q2
+Hemicellulose,compound,Polymer,extracellular,K01209,abfA; alpha-L-arabinofuranosidase [EC:3.2.1.55],side-chain removal,alpha-L-arabinofuranosidase removes arabinose side chains of arabinoxylan,medium,,use in Q2
+Hemicellulose,compound,Polymer,extracellular,K15921,xynD; arabinoxylan arabinofuranohydrolase [EC:3.2.1.55],side-chain removal,arabinoxylan arabinofuranohydrolase,medium,,use in Q2
+Hemicellulose,compound,Polymer,extracellular,K20844,abf1; non-reducing end alpha-L-arabinofuranosidase [EC:3.2.1.55],side-chain removal,non-reducing end alpha-L-arabinofuranosidase,medium,,use in Q2
+Hemicellulose,compound,Polymer,extracellular,K05972,AXE1; acetylxylan esterase [EC:3.1.1.72],side-chain removal,acetylxylan esterase removes acetyl groups from xylan,medium,,use in Q2
+Lignin,compound,Polymer,extracellular,K15733,E1.11.1.19; dye decolorizing peroxidase [EC:1.11.1.19],oxidative depolymerization,dye-decolorizing (DyP-type) peroxidase; bacterial lignin oxidation,medium,,insufficient expression
+Chitin,compound,Polymer,extracellular,K01183,E3.2.1.14; chitinase [EC:3.2.1.14],depolymerization,chitinase (curated list),high,,use in Q2
+Chitin,compound,Polymer,extracellular,K13381,chiA; bifunctional chitinase/lysozyme [EC:3.2.1.14 3.2.1.17],depolymerization,bifunctional chitinase/lysozyme ChiA (curated list),high,,use in Q2
+Chitin,compound,Polymer,extracellular,K20547,CHIB; basic endochitinase B [EC:3.2.1.14],depolymerization,basic endochitinase B (curated list),high,,use in Q2
+Chitin,compound,Polymer,extracellular,K21606,endo_I; endo-chitodextinase [EC:3.2.1.202],depolymerization,endo-chitodextinase (curated list),high,,use in Q2
+Chitin,compound,Polymer,extracellular,K03791,K03791; putative chitinase,depolymerization,putative chitinase (curated list),medium,,use in Q2
+Chitin,compound,Polymer,extracellular,K03933,cpbD; chitin-binding protein,depolymerization,"chitin-binding protein CbpD, lytic polysaccharide monooxygenase (AA10)",medium,,use in Q2
+Chitosan,compound,Polymer,extracellular,K01233,csn; chitosanase [EC:3.2.1.132],depolymerization,chitosanase (curated list),high,,insufficient expression
+Chitosan,compound,Polymer,extracellular,K15855,"csxA; exo-1,4-beta-D-glucosaminidase [EC:3.2.1.165]",depolymerization,"exo-1,4-beta-D-glucosaminidase releases glucosamine from chitosan",medium,,insufficient expression
+D.Fructose,compound,Simple,intracellular,K10552,frcB; fructose transport system substrate-binding protein,transport,"fructose ABC transporter, substrate-binding FrcB",high,,use in Q2
+D.Fructose,compound,Simple,intracellular,K10553,frcC; fructose transport system permease protein,transport,"fructose ABC transporter, permease FrcC",high,,use in Q2
+D.Fructose,compound,Simple,intracellular,K10554,frcA; fructose transport system ATP-binding protein,transport,"fructose ABC transporter, ATPase FrcA",high,,use in Q2
+D.Fructose,compound,Simple,intracellular,K02770,fruA; fructose PTS system EIIBC or EIIC component [EC:2.7.1.202],transport,fructose PTS EIIBC/EIIC FruA,high,,use in Q2
+D.Fructose,compound,Simple,intracellular,K02769,fruAb; fructose PTS system EIIB component [EC:2.7.1.202],transport,fructose PTS EIIB,high,,use in Q2
+D.Fructose,compound,Simple,intracellular,K02768,fruB; fructose PTS system EIIA component [EC:2.7.1.202],transport,fructose PTS EIIA FruB,high,,use in Q2
+D.Fructose,compound,Simple,intracellular,K11183,"fruB, fpr; multiphosphoryl transfer protein [EC:2.7.1.202]",transport,fructose PTS multiphosphoryl transfer protein FruB/Fpr,medium,,use in Q2
+D.Fructose,compound,Simple,intracellular,K11195,levE; fructose PTS system EIIB component [EC:2.7.1.202],transport,fructose PTS EIIB LevE (lev family also takes mannose),medium,,use in Q2
+D.Fructose,compound,Simple,intracellular,K02771,levG; fructose PTS system EIID component,transport,fructose PTS EIID LevG (lev family also takes mannose),medium,,use in Q2
+D.Fructose,compound,Simple,intracellular,K00882,fruK; 1-phosphofructokinase [EC:2.7.1.56],first committed step,1-phosphofructokinase phosphorylates PTS-derived fructose-1-P,high,,use in Q2
+D.Fructose,compound,Simple,intracellular,K00847,"E2.7.1.4, scrK; fructokinase [EC:2.7.1.4]",first committed step,fructokinase; also acts on fructose from sucrose,medium,,use in Q2
+D.Xylose,compound,Simple,intracellular,K10543,xylF; D-xylose transport system substrate-binding protein,transport,"D-xylose ABC transporter, substrate-binding XylF",high,,use in Q2
+D.Xylose,compound,Simple,intracellular,K10544,xylH; D-xylose transport system permease protein,transport,"D-xylose ABC transporter, permease XylH",high,,use in Q2
+D.Xylose,compound,Simple,intracellular,K10545,xylG; D-xylose transport system ATP-binding protein [EC:7.5.2.10],transport,"D-xylose ABC transporter, ATPase XylG",high,,use in Q2
+D.Xylose,compound,Simple,intracellular,K08138,"xylE; MFS transporter, SP family, xylose:H+ symportor",transport,xylose:H+ symporter XylE,high,,use in Q2
+D.Xylose,compound,Simple,intracellular,K01805,xylA; xylose isomerase [EC:5.3.1.5],first committed step,xylose isomerase XylA,high,,use in Q2
+D.Xylose,compound,Simple,intracellular,K00854,"xylB, XYLB; xylulokinase [EC:2.7.1.17]",second step,xylulokinase XylB; xylulose can also come from other pentoses,medium,,use in Q2
+D.Trehalose,compound,Simple,intracellular,K02819,"treB, treP; trehalose PTS system EIIBC or EIIBCA component [EC:2.7.1.201]",transport,trehalose PTS EIIBC TreB,high,,use in Q2
+D.Trehalose,compound,Simple,intracellular,K17311,treS; trehalose transport system substrate-binding protein,transport,"trehalose ABC transporter, substrate-binding TreS",high,,use in Q2
+D.Trehalose,compound,Simple,intracellular,K17312,treT; trehalose transport system permease protein,transport,"trehalose ABC transporter, permease TreT",high,,use in Q2
+D.Trehalose,compound,Simple,intracellular,K17314,treV; trehalose transport system ATP-binding protein,transport,"trehalose ABC transporter, ATPase TreV",high,,use in Q2
+D.Trehalose,compound,Simple,intracellular,K10236,"thuE, lpqY; trehalose/maltose transport system substrate-binding protein",transport,"trehalose/maltose ABC transporter, substrate-binding ThuE; shared with maltose",medium,,use in Q2
+D.Trehalose,compound,Simple,intracellular,K10237,"thuF, sugA; trehalose/maltose transport system permease protein",transport,"trehalose/maltose ABC transporter, permease ThuF/SugA; shared with maltose",medium,,use in Q2
+D.Trehalose,compound,Simple,intracellular,K10238,"thuG, sugB; trehalose/maltose transport system permease protein",transport,"trehalose/maltose ABC transporter, permease ThuG/SugB; shared with maltose",medium,,use in Q2
+D.Trehalose,compound,Simple,intracellular,K01226,treC; trehalose-6-phosphate hydrolase [EC:3.2.1.93],first committed step,trehalose-6-phosphate hydrolase TreC (after PTS uptake),high,,use in Q2
+D.Trehalose,compound,Simple,intracellular,K01194,"TREH, treA, treF; alpha,alpha-trehalase [EC:3.2.1.28]",first committed step,"alpha,alpha-trehalase TreA/TreF",high,,use in Q2
+D.Trehalose,compound,Simple,intracellular,K05342,"treP; alpha,alpha-trehalose phosphorylase [EC:2.4.1.64]",first committed step,trehalose phosphorylase,high,,use in Q2
+D.Cellobiose,compound,Simple,intracellular,K10240,cebE; cellobiose transport system substrate-binding protein,transport,"cellobiose ABC transporter, substrate-binding CebE",high,,use in Q2
+D.Cellobiose,compound,Simple,intracellular,K10241,cebF; cellobiose transport system permease protein,transport,"cellobiose ABC transporter, permease CebF",high,,use in Q2
+D.Cellobiose,compound,Simple,intracellular,K10242,cebG; cellobiose transport system permease protein,transport,"cellobiose ABC transporter, permease CebG",high,,use in Q2
+D.Cellobiose,compound,Simple,intracellular,K02759,"celC, chbA; cellobiose PTS system EIIA component [EC:2.7.1.196 2.7.1.205]",transport,cellobiose PTS EIIA CelC/ChbA; also chitobiose,medium,,use in Q2
+D.Cellobiose,compound,Simple,intracellular,K02760,"celA, chbB; cellobiose PTS system EIIB component [EC:2.7.1.196 2.7.1.205]",transport,cellobiose PTS EIIB CelA/ChbB; also chitobiose,medium,,use in Q2
+D.Cellobiose,compound,Simple,intracellular,K02761,"celB, chbC; cellobiose PTS system EIIC component",transport,cellobiose PTS EIIC CelB/ChbC; also chitobiose,medium,,use in Q2
+D.Cellobiose,compound,Simple,intracellular,K00702,E2.4.1.20; cellobiose phosphorylase [EC:2.4.1.20],first committed step,cellobiose phosphorylase,high,,use in Q2
+D.Cellobiose,compound,Simple,intracellular,K01222,"E3.2.1.86A, celF; 6-phospho-beta-glucosidase [EC:3.2.1.86]",first committed step,6-phospho-beta-glucosidase CelF (after PTS uptake); other aryl-glucosides too,medium,,use in Q2
+D.Cellobiose,compound,Simple,intracellular,K01223,"E3.2.1.86B, bglA; 6-phospho-beta-glucosidase [EC:3.2.1.86]",first committed step,6-phospho-beta-glucosidase BglA (after PTS uptake); other aryl-glucosides too,medium,,use in Q2
+Citric_acid,compound,Simple,intracellular,K03288,"citA, tcuC; MFS transporter, MHS family, citrate/tricarballylate:H+ symporter",transport,citrate/tricarballylate:H+ symporter CitA/TcuC,high,,use in Q2
+Citric_acid,compound,Simple,intracellular,K03300,"TC.CITMHS; citrate-Mg2+:H+ or citrate-Ca2+:H+ symporter, CitMHS family",transport,"citrate-metal:H+ symporter, CitMHS family",high,,use in Q2
+Citric_acid,compound,Simple,intracellular,K09477,citT; citrate:succinate antiporter,transport,citrate:succinate antiporter CitT,high,,use in Q2
+Citric_acid,compound,Simple,intracellular,K07793,tctA; putative tricarboxylic transport membrane protein,transport,tripartite tricarboxylate transporter TctA (putative),medium,,use in Q2
+Citric_acid,compound,Simple,intracellular,K07794,tctB; putative tricarboxylic transport membrane protein,transport,tripartite tricarboxylate transporter TctB (putative),medium,,use in Q2
+Citric_acid,compound,Simple,intracellular,K07795,tctC; putative tricarboxylic transport membrane protein,transport,tripartite tricarboxylate transporter TctC (putative),medium,,use in Q2
+Citric_acid,compound,Simple,intracellular,K01643,citF; citrate lyase subunit alpha / citrate CoA-transferase [EC:2.8.3.10],first committed step,citrate lyase alpha subunit CitF (citrate cleavage outside the TCA cycle),high,,use in Q2
+Citric_acid,compound,Simple,intracellular,K01644,citE; citrate lyase subunit beta / citryl-CoA lyase [EC:4.1.3.34],first committed step,citrate lyase beta subunit CitE,high,,use in Q2
+Malic_acid,compound,Simple,intracellular,K11616,maeN; malate:Na+ symporter,transport,malate:Na+ symporter MaeN,high,,use in Q2
+Malic_acid,compound,Simple,intracellular,K00027,"ME2, sfcA, maeA; malate dehydrogenase (oxaloacetate-decarboxylating) [EC:1.1.1.38]",first committed step,"NAD malic enzyme MaeA; anaplerotic node, malate decarboxylation",medium,,use in Q2
+Malic_acid,compound,Simple,intracellular,K00029,maeB; malate dehydrogenase (oxaloacetate-decarboxylating)(NADP+) [EC:1.1.1.40],first committed step,"NADP malic enzyme MaeB; anaplerotic node, malate decarboxylation",medium,,use in Q2
+Oxalic_acid,compound,Simple,intracellular,K08177,"oxlT; MFS transporter, OFA family, oxalate/formate antiporter",transport,oxalate/formate antiporter OxlT,high,,use in Q2
+Oxalic_acid,compound,Simple,intracellular,K07749,frc; formyl-CoA transferase [EC:2.8.3.16],first committed step,formyl-CoA transferase Frc activates oxalate to oxalyl-CoA,high,,use in Q2
+Oxalic_acid,compound,Simple,intracellular,K18702,uctC; CoA:oxalate CoA-transferase [EC:2.8.3.19],first committed step,CoA:oxalate CoA-transferase UctC,medium,,use in Q2
+Oxalic_acid,compound,Simple,intracellular,K01577,oxc; oxalyl-CoA decarboxylase [EC:4.1.1.8],second step,oxalyl-CoA decarboxylase Oxc,high,,use in Q2
+Oxalic_acid,compound,Simple,intracellular,K01569,oxdD; oxalate decarboxylase [EC:4.1.1.2],first committed step,oxalate decarboxylase OxdD,high,,use in Q2
+Lactic_acid,compound,Simple,intracellular,K00427,"lldP, lctP; L-lactate permease",transport,L-lactate permease LldP/LctP,high,,use in Q2
+Lactic_acid,compound,Simple,intracellular,K03303,"lutP, lctP; lactate permease",transport,lactate permease LutP/LctP,high,,use in Q2
+Lactic_acid,compound,Simple,intracellular,K08178,"JEN; MFS transporter, SHS family, lactate transporter",transport,lactate transporter JEN (fungal),medium,,use in Q2
+Lactic_acid,compound,Simple,intracellular,K00101,lldD; L-lactate dehydrogenase (cytochrome) [EC:1.1.2.3],first committed step,"L-lactate dehydrogenase (cytochrome) LldD, oxidizes lactate to pyruvate",high,,use in Q2
+Lactic_acid,compound,Simple,intracellular,K18928,lldE; L-lactate dehydrogenase complex protein LldE,first committed step,L-lactate dehydrogenase complex LldE (LutA),high,,use in Q2
+Lactic_acid,compound,Simple,intracellular,K18929,lldF; L-lactate dehydrogenase complex protein LldF,first committed step,L-lactate dehydrogenase complex LldF (LutB),high,,use in Q2
+Lactic_acid,compound,Simple,intracellular,K00782,lldG; L-lactate dehydrogenase complex protein LldG,first committed step,L-lactate dehydrogenase complex LldG (LutC),high,,use in Q2
+Lactic_acid,compound,Simple,intracellular,K03777,dld; D-lactate dehydrogenase (quinone) [EC:1.1.5.12],first committed step,D-lactate dehydrogenase (quinone) Dld,high,,use in Q2
+Lactic_acid,compound,Simple,intracellular,K00102,"LDHD, dld; D-lactate dehydrogenase (cytochrome) [EC:1.1.2.4]",first committed step,D-lactate dehydrogenase (cytochrome) LDHD,medium,,use in Q2
+Glutamic_acid,compound,Simple,intracellular,K11102,"gltP, gltT; proton glutamate symport protein",transport,proton/glutamate symporter GltP,high,,use in Q2
+Glutamic_acid,compound,Simple,intracellular,K03312,"gltS; glutamate:Na+ symporter, ESS family",transport,glutamate:Na+ symporter GltS,high,,use in Q2
+Glutamic_acid,compound,Simple,intracellular,K10005,gluB; glutamate transport system substrate-binding protein,transport,"glutamate ABC transporter, substrate-binding GluB",high,,use in Q2
+Glutamic_acid,compound,Simple,intracellular,K10006,gluC; glutamate transport system permease protein,transport,"glutamate ABC transporter, permease GluC",high,,use in Q2
+Glutamic_acid,compound,Simple,intracellular,K10007,gluD; glutamate transport system permease protein,transport,"glutamate ABC transporter, permease GluD",high,,use in Q2
+Glutamic_acid,compound,Simple,intracellular,K10008,gluA; glutamate transport system ATP-binding protein [EC:7.4.2.1],transport,"glutamate ABC transporter, ATPase GluA",high,,use in Q2
+Glutamic_acid,compound,Simple,intracellular,K10001,"gltI, aatJ; glutamate/aspartate transport system substrate-binding protein",transport,glutamate/aspartate ABC transporter GltI; also aspartate,medium,,use in Q2
+Glutamic_acid,compound,Simple,intracellular,K10002,"gltK, aatM; glutamate/aspartate transport system permease protein",transport,glutamate/aspartate ABC transporter GltK; also aspartate,medium,,use in Q2
+Glutamic_acid,compound,Simple,intracellular,K10003,"gltJ, aatQ; glutamate/aspartate transport system permease protein",transport,glutamate/aspartate ABC transporter GltJ; also aspartate,medium,,use in Q2
+Glutamic_acid,compound,Simple,intracellular,K10004,"gltL, aatP; glutamate/aspartate transport system ATP-binding protein [EC:7.4.2.1]",transport,glutamate/aspartate ABC transporter GltL; also aspartate,medium,,use in Q2
+L.Arginine,compound,Simple,intracellular,K09996,artJ; arginine transport system substrate-binding protein,transport,"arginine ABC transporter, substrate-binding ArtJ",high,,use in Q2
+L.Arginine,compound,Simple,intracellular,K09997,artI; arginine transport system substrate-binding protein,transport,"arginine ABC transporter, substrate-binding ArtI",high,,use in Q2
+L.Arginine,compound,Simple,intracellular,K09999,artQ; arginine transport system permease protein,transport,"arginine ABC transporter, permease ArtQ",high,,use in Q2
+L.Arginine,compound,Simple,intracellular,K10022,aotJ; arginine/ornithine transport system substrate-binding protein,transport,"arginine/ornithine ABC transporter, substrate-binding AotJ",high,,use in Q2
+L.Arginine,compound,Simple,intracellular,K10023,aotM; arginine/ornithine transport system permease protein,transport,"arginine/ornithine ABC transporter, permease AotM",high,,use in Q2
+L.Arginine,compound,Simple,intracellular,K10024,aotQ; arginine/ornithine transport system permease protein,transport,"arginine/ornithine ABC transporter, permease AotQ",high,,use in Q2
+L.Arginine,compound,Simple,intracellular,K10025,aotP; arginine/ornithine transport system ATP-binding protein [EC:7.4.2.1],transport,"arginine/ornithine ABC transporter, ATPase AotP",high,,use in Q2
+L.Arginine,compound,Simple,intracellular,K02205,"rocE, rocC; arginine/ornithine permease",transport,arginine/ornithine permease RocE/RocC,high,,use in Q2
+L.Arginine,compound,Simple,intracellular,K10013,argT; lysine/arginine/ornithine transport system substrate-binding protein,transport,lysine/arginine/ornithine ABC transporter ArgT; also lysine,medium,,use in Q2
+L.Arginine,compound,Simple,intracellular,K03758,"arcD, lysl, lysP; arginine:ornithine antiporter / lysine permease",transport,arginine:ornithine antiporter ArcD; also lysine permease,medium,,use in Q2
+L.Arginine,compound,Simple,intracellular,K01478,arcA; arginine deiminase [EC:3.5.3.6],first committed step,arginine deiminase ArcA,high,,use in Q2
+L.Arginine,compound,Simple,intracellular,K01476,"rocF, arg; arginase [EC:3.5.3.1]",first committed step,arginase RocF,high,,use in Q2
+L.Arginine,compound,Simple,intracellular,K00673,astA; arginine N-succinyltransferase [EC:2.3.1.109],first committed step,arginine N-succinyltransferase AstA,high,,use in Q2
+L.Glutamine,compound,Simple,intracellular,K10036,glnH; glutamine transport system substrate-binding protein,transport,"glutamine ABC transporter, substrate-binding GlnH",high,,use in Q2
+L.Glutamine,compound,Simple,intracellular,K10037,glnP; glutamine transport system permease protein,transport,"glutamine ABC transporter, permease GlnP",high,,use in Q2
+L.Glutamine,compound,Simple,intracellular,K10038,glnQ; glutamine transport system ATP-binding protein [EC:7.4.2.1],transport,"glutamine ABC transporter, ATPase GlnQ",high,,use in Q2
+L.Glutamine,compound,Simple,intracellular,K11626,glnT; putative sodium/glutamine symporter,transport,putative sodium/glutamine symporter GlnT,medium,,use in Q2
+L.Glutamine,compound,Simple,intracellular,K10039,"peb1A, glnH; aspartate/glutamate/glutamine transport system substrate-binding protein",transport,"aspartate/glutamate/glutamine ABC transporter Peb1A; also Asp, Glu",medium,,use in Q2
+L.Glutamine,compound,Simple,intracellular,K10040,"peb1B, glnP, glnM; aspartate/glutamate/glutamine transport system permease protein",transport,"aspartate/glutamate/glutamine ABC transporter Peb1B; also Asp, Glu",medium,,use in Q2
+L.Glutamine,compound,Simple,intracellular,K10041,"peb1C, glnQ; aspartate/glutamate/glutamine transport system ATP-binding protein [EC:7.4.2.1]",transport,"aspartate/glutamate/glutamine ABC transporter Peb1C; also Asp, Glu",medium,,use in Q2
+L.Glutamine,compound,Simple,intracellular,K01425,"glsA, GLS; glutaminase [EC:3.5.1.2]",first committed step,glutaminase GlsA,high,,use in Q2
+L.Glutamine,compound,Simple,intracellular,K05597,"aspQ, ansB, ansA; glutamin-(asparagin-)ase [EC:3.5.1.38]",first committed step,glutaminase-asparaginase AnsB; also asparagine,medium,,use in Q2
+Glycine,compound,Simple,intracellular,K11737,cycA; D-serine/D-alanine/glycine transporter,transport,"D-serine/D-alanine/glycine transporter CycA; also D-Ser, D-Ala (also in alanine set)",medium,,use in Q2
+Glycine,compound,Simple,intracellular,K03310,"TC.AGCS; alanine or glycine:cation symporter, AGCS family",transport,"alanine or glycine:cation symporter, AGCS family (also in alanine set)",medium,L.Alanine,use in Q2
+Glycine,compound,Simple,intracellular,K00281,"GLDC, gcvP; glycine cleavage system P protein (glycine dehydrogenase) [EC:1.4.4.2]",first committed step,glycine cleavage system P protein GcvP,high,,use in Q2
+Glycine,compound,Simple,intracellular,K00282,gcvPA; glycine cleavage system P protein (glycine dehydrogenase) subunit 1 [EC:1.4.4.2],first committed step,glycine cleavage system P protein subunit 1 GcvPA,high,,use in Q2
+Glycine,compound,Simple,intracellular,K00283,gcvPB; glycine cleavage system P protein (glycine dehydrogenase) subunit 2 [EC:1.4.4.2],first committed step,glycine cleavage system P protein subunit 2 GcvPB,high,,use in Q2
+Glycine,compound,Simple,intracellular,K00605,"gcvT, AMT; glycine cleavage system T protein (aminomethyltransferase) [EC:2.1.2.10]",first committed step,glycine cleavage system T protein GcvT,high,,use in Q2
+Glycine,compound,Simple,intracellular,K02437,"gcvH, GCSH; glycine cleavage system H protein",first committed step,glycine cleavage system H protein GcvH,high,,use in Q2
+L.Alanine,compound,Simple,intracellular,K03310,"TC.AGCS; alanine or glycine:cation symporter, AGCS family",transport,"alanine or glycine:cation symporter, AGCS family (also in glycine set)",medium,Glycine,use in Q2
+L.Alanine,compound,Simple,intracellular,K00259,ald; alanine dehydrogenase [EC:1.4.1.1],first committed step,alanine dehydrogenase Ald,high,,use in Q2
+L.Alanine,compound,Simple,intracellular,K19244,ala; alanine dehydrogenase [EC:1.4.1.1],first committed step,alanine dehydrogenase Ala,high,,use in Q2
+L.Leucine,compound,Simple,intracellular,K00263,E1.4.1.9; leucine dehydrogenase [EC:1.4.1.9],first committed step,"leucine dehydrogenase; also Ile, Val",medium,,use in Q2
+L.Leucine,compound,Simple,intracellular,K00253,"IVD, ivd; isovaleryl-CoA dehydrogenase [EC:1.3.8.4]",first leucine-specific step,isovaleryl-CoA dehydrogenase Ivd,high,,use in Q2
+L.Leucine,compound,Simple,intracellular,K01968,"MCCC1, accA1; 3-methylcrotonyl-CoA carboxylase alpha subunit [EC:6.4.1.4]",leucine-specific step,3-methylcrotonyl-CoA carboxylase alpha MccA,high,,use in Q2
+L.Leucine,compound,Simple,intracellular,K01969,"MCCC2, accD1; 3-methylcrotonyl-CoA carboxylase beta subunit [EC:6.4.1.4]",leucine-specific step,3-methylcrotonyl-CoA carboxylase beta MccB,high,,use in Q2
+N.Acetyl.D.glucosamine,compound,Q2,intracellular,K02803,nagEb; N-acetylglucosamine PTS system EIIB component [EC:2.7.1.193],transport,N-acetylglucosamine PTS EIIB NagE (curated list),high,,use in Q2
+N.Acetyl.D.glucosamine,compound,Q2,intracellular,K02804,nagE; N-acetylglucosamine PTS system EIICBA or EIICB component [EC:2.7.1.193],transport,N-acetylglucosamine PTS EIICB(A) NagE (curated list),high,,use in Q2
+N.Acetyl.D.glucosamine,compound,Q2,intracellular,K10200,ngcE; N-acetylglucosamine transport system substrate-binding protein,transport,"N-acetylglucosamine ABC transporter, substrate-binding NgcE",high,,use in Q2
+N.Acetyl.D.glucosamine,compound,Q2,intracellular,K10201,ngcF; N-acetylglucosamine transport system permease protein,transport,"N-acetylglucosamine ABC transporter, permease NgcF",high,,use in Q2
+N.Acetyl.D.glucosamine,compound,Q2,intracellular,K10202,ngcG; N-acetylglucosamine transport system permease protein,transport,"N-acetylglucosamine ABC transporter, permease NgcG",high,,use in Q2
+N.Acetyl.D.glucosamine,compound,Q2,intracellular,K00884,NAGK; N-acetylglucosamine kinase [EC:2.7.1.59],first committed step,N-acetylglucosamine kinase NagK (curated list),high,,use in Q2
+N.Acetyl.D.glucosamine,compound,Q2,intracellular,K01443,"nagA, AMDHD2; N-acetylglucosamine-6-phosphate deacetylase [EC:3.5.1.25]",second step,N-acetylglucosamine-6-phosphate deacetylase NagA (curated list),high,,use in Q2
+Glucosamine_hydrochloride,compound,Q2,intracellular,K18676,gspK; glucosamine kinase [EC:2.7.1.8],first committed step,glucosamine kinase GspK (curated list),high,,use in Q2
+Glucosamine_hydrochloride,compound,Q2,intracellular,K02564,"nagB, GNPDA; glucosamine-6-phosphate deaminase [EC:3.5.99.6]",second step,glucosamine-6-phosphate deaminase NagB; also downstream of NAG (curated list),medium,,use in Q2
+CB,enzyme,Enzyme,extracellular,K19668,"CBH2, cbhA; cellulose 1,4-beta-cellobiosidase [EC:3.2.1.91]",assayed activity,"cellulose 1,4-beta-cellobiosidase, EC 3.2.1.91 (also in cellulose set)",high,Cellulose,use in Q2
+BG,enzyme,Enzyme,extracellular,K01188,E3.2.1.21; beta-glucosidase [EC:3.2.1.21],assayed activity,"beta-glucosidase, EC 3.2.1.21",high,,use in Q2
+BG,enzyme,Enzyme,extracellular,K05349,bglX; beta-glucosidase [EC:3.2.1.21],assayed activity,"beta-glucosidase BglX, EC 3.2.1.21 (periplasmic)",high,,use in Q2
+BG,enzyme,Enzyme,extracellular,K05350,bglB; beta-glucosidase [EC:3.2.1.21],assayed activity,"beta-glucosidase BglB, EC 3.2.1.21 (mostly cytoplasmic)",medium,,use in Q2
+BX,enzyme,Enzyme,extracellular,K01198,"xynB; xylan 1,4-beta-xylosidase [EC:3.2.1.37]",assayed activity,"xylan 1,4-beta-xylosidase XynB, EC 3.2.1.37",high,,use in Q2
+BX,enzyme,Enzyme,extracellular,K15920,"XYL4; xylan 1,4-beta-xylosidase [EC:3.2.1.37]",assayed activity,"xylan 1,4-beta-xylosidase XYL4, EC 3.2.1.37",high,,use in Q2
+BX,enzyme,Enzyme,extracellular,K22268,"xylA; xylan 1,4-beta-xylosidase [EC:3.2.1.37]",assayed activity,"xylan 1,4-beta-xylosidase XylA, EC 3.2.1.37",high,,use in Q2
+NAG,enzyme,Enzyme,extracellular,K01207,nagZ; beta-N-acetylhexosaminidase [EC:3.2.1.52],assayed activity,"beta-N-acetylhexosaminidase NagZ, EC 3.2.1.52 (curated list)",high,,use in Q2
+NAG,enzyme,Enzyme,extracellular,K12373,HEXA_B; hexosaminidase [EC:3.2.1.52],assayed activity,"hexosaminidase HEXA_B, EC 3.2.1.52 (eukaryotic)",medium,,use in Q2
+NAG,enzyme,Enzyme,extracellular,K14459,HEX; hexosaminidase [EC:3.2.1.52],assayed activity,"hexosaminidase HEX, EC 3.2.1.52 (fungal)",medium,,use in Q2
+Leu,enzyme,Enzyme,extracellular,K01255,"CARP, pepA; leucyl aminopeptidase [EC:3.4.11.1]",assayed activity,"leucyl aminopeptidase PepA, EC 3.4.11.1",high,,use in Q2
+Leu,enzyme,Enzyme,extracellular,K11142,LAP3; cytosol aminopeptidase [EC:3.4.11.1 3.4.11.5],assayed activity,"cytosol aminopeptidase LAP3, EC 3.4.11.1",medium,,use in Q2
+Leu,enzyme,Enzyme,extracellular,K01256,pepN; aminopeptidase N [EC:3.4.11.2],assayed activity,aminopeptidase N PepN; also hydrolyses Leu-AMC (also in Ala set),medium,Ala,use in Q2
+Ala,enzyme,Enzyme,extracellular,K01256,pepN; aminopeptidase N [EC:3.4.11.2],assayed activity,"aminopeptidase N PepN (alanyl aminopeptidase), EC 3.4.11.2 (also in Leu set)",high,Leu,use in Q2
+Ala,enzyme,Enzyme,extracellular,K08776,NPEPPS; puromycin-sensitive aminopeptidase [EC:3.4.11.14],assayed activity,"puromycin-sensitive aminopeptidase, EC 3.4.11.14",medium,,use in Q2
+AP,enzyme,Enzyme,extracellular,K09474,phoN; acid phosphatase (class A) [EC:3.1.3.2],assayed activity,"acid phosphatase class A PhoN, EC 3.1.3.2",high,,use in Q2
+AP,enzyme,Enzyme,extracellular,K03788,aphA; acid phosphatase (class B) [EC:3.1.3.2],assayed activity,"acid phosphatase class B AphA, EC 3.1.3.2",high,,use in Q2
+AP,enzyme,Enzyme,extracellular,K01093,appA; 4-phytase / acid phosphatase [EC:3.1.3.26 3.1.3.2],assayed activity,"4-phytase / acid phosphatase AppA, EC 3.1.3.26 3.1.3.2",high,,use in Q2
+AP,enzyme,Enzyme,extracellular,K14379,ACP5; tartrate-resistant acid phosphatase type 5 [EC:3.1.3.2],assayed activity,"tartrate-resistant acid phosphatase ACP5, EC 3.1.3.2 (eukaryotic)",medium,,use in Q2
+AP,enzyme,Enzyme,extracellular,K14410,ACP2; lysosomal acid phosphatase [EC:3.1.3.2],assayed activity,"lysosomal acid phosphatase ACP2, EC 3.1.3.2 (eukaryotic)",medium,,use in Q2

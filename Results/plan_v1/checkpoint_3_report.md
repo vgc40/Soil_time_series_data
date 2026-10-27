@@ -125,3 +125,72 @@ per million of the sample's total over all KOs.
 - **O1:** resolved, 5–24 h rate.
 - **O2:** resolved, geTMM summed per KO (generating code not found).
 - **O3:** mg C per well for succinic acid, chitin, methyl oleate.
+
+---
+
+## Addendum: recommended gene sets (D8)
+
+At VGC's request, Claude applied its recommended choice for each decision
+above. Rules and reasons are in the deviation log (D8). **Still a proposal;
+Q2 does not start until approved.**
+
+### Choice for each decision
+
+| # | Decision | Recommended choice |
+|---|---|---|
+| 1 | Succinic acid | No specific gene set |
+| 2 | Lignin | Insufficient expression (near-zero rule); not used in Q2 |
+| 3 | Chitosan | Insufficient expression (near-zero rule); not used in Q2 |
+| 4 | BX enzyme | Keep (zero in 3 of 35 samples, under the rule's limit of 9); flagged as low expression |
+| 5 | Leucine | Drop shared branched-chain transporters; keep leucine dehydrogenase, Ivd, MccA, MccB |
+| 6 | Sets carried by medium or low KOs | Drop all low-confidence KOs; keep medium |
+| 7 | AP alkaline phosphatases | Dropped (low confidence, by rule 1) |
+| 8 | Shared KOs | Keep in each set they belong to |
+| 9 | Extracellular label for enzymes | Keep, as the plan states |
+
+### Recommended sets
+
+| Set | Group | Step | KOs (high) | Mean sum | Samples with sum 0 | Status |
+|---|---|---|---|---|---|---|
+| Cellulose | Polymer | extracellular | 2 (2) | 598 | 0 | use in Q2 |
+| Hemicellulose | Polymer | extracellular | 8 (2) | 200 | 0 | use in Q2 |
+| Chitin | Polymer | extracellular | 6 (4) | 250 | 0 | use in Q2 |
+| Lignin | Polymer | extracellular | 1 (0) | 0.1 | 33 | insufficient expression |
+| Chitosan | Polymer | extracellular | 2 (1) | 1.6 | 20 | insufficient expression |
+| D.Fructose | Simple | intracellular | 11 (7) | 1,526 | 0 | use in Q2 |
+| D.Xylose | Simple | intracellular | 6 (5) | 1,071 | 0 | use in Q2 |
+| D.Trehalose | Simple | intracellular | 10 (7) | 111 | 0 | use in Q2 |
+| D.Cellobiose | Simple | intracellular | 9 (4) | 246 | 0 | use in Q2 |
+| Citric_acid | Simple | intracellular | 8 (5) | 448 | 0 | use in Q2 |
+| Malic_acid | Simple | intracellular | 3 (1) | 243 | 0 | use in Q2 |
+| Oxalic_acid | Simple | intracellular | 5 (4) | 65 | 0 | use in Q2 |
+| Succinic_acid | Simple | intracellular | 0 | — | — | no specific gene set |
+| Lactic_acid | Simple | intracellular | 9 (7) | 65 | 0 | use in Q2 |
+| Glutamic_acid | Simple | intracellular | 10 (6) | 1,132 | 0 | use in Q2 |
+| L.Arginine | Simple | intracellular | 13 (11) | 381 | 0 | use in Q2 |
+| L.Glutamine | Simple | intracellular | 9 (4) | 956 | 0 | use in Q2 |
+| Glycine | Simple | intracellular | 7 (5) | 1,035 | 0 | use in Q2 |
+| L.Alanine | Simple | intracellular | 3 (2) | 361 | 0 | use in Q2 |
+| L.Leucine | Simple | intracellular | 4 (3) | 87 | 0 | use in Q2 |
+| N.Acetyl.D.glucosamine | Q2 | intracellular | 7 (7) | 37 | 2 | use in Q2 |
+| Glucosamine_hydrochloride | Q2 | intracellular | 2 (1) | 4.3 | 3 | use in Q2 |
+| AP | Enzyme | extracellular | 5 (3) | 36 | 0 | use in Q2 |
+| Ala | Enzyme | extracellular | 2 (1) | 91 | 0 | use in Q2 |
+| BG | Enzyme | extracellular | 3 (2) | 261 | 0 | use in Q2 |
+| BX | Enzyme | extracellular | 3 (3) | 5.6 | 3 | use in Q2 |
+| CB | Enzyme | extracellular | 1 (1) | 114 | 0 | use in Q2 |
+| Leu | Enzyme | extracellular | 3 (1) | 130 | 0 | use in Q2 |
+| NAG | Enzyme | extracellular | 3 (1) | 587 | 0 | use in Q2 |
+
+### What this means for Q2 (counts only)
+
+- **Compound sets used in Q2:** 19 (3 polymers, 14 simple compounds, NAG,
+  glucosamine). These are the compounds in H2b and the SIR sets in H2c.
+- **Pathway-step groups for H2c (test 5):** extracellular = 3 polymers + 7
+  enzymes = 10 sets; intracellular = 16 sets.
+- **H2a polymer expression score** rests on 3 sets (cellulose,
+  hemicellulose, chitin).
+- **Lowest-expression sets kept:** BX (mean 5.6), glucosamine (4.3), NAG
+  compound (37); their centred log ratios will lean on the zero replacement
+  in §5.1.
+- AP drops from a mean of 171 to 36 without the alkaline phosphatases.

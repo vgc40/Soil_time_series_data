@@ -129,6 +129,31 @@ Moisture Effects/Prosser_Monthly/Manuscripts/A3-1-1_Prosser_time_biogeochem/`
   rates divided by mg C added per g dry soil, which matches the formula used
   here, but give no per-substrate amounts. Still waiting on Sheryl Bell.
 
+## D8. Recommended gene sets (plan §4; proposed, awaiting approval)
+
+VGC asked Claude to make its recommended choices for the Checkpoint 3
+decisions. Rules, applied in order, to `KO_gene_sets_DRAFT.csv`:
+
+1. Drop every low-confidence KO (15 KOs).
+2. Leucine: drop the shared branched-chain amino acid transporters (LivKHMGF,
+   BrnQ; 6 KOs). Set becomes leucine dehydrogenase, Ivd, MccA, MccB.
+3. Succinic acid: "no specific gene set" (only shared transporters; first
+   catabolic step is in the TCA cycle).
+4. Near-zero rule: a set whose sum is 0 in 9 or more of 35 samples (more
+   than a quarter) is marked "insufficient expression" and is not used in
+   Q2 tests. This marks lignin (0 in 33 samples after rule 1) and chitosan
+   (0 in 20).
+
+Kept as they are: KOs shared between sets (cellulose/CB, Leu/Ala,
+glycine/alanine); the eukaryotic hexosaminidase in the NAG enzyme set; the
+"extracellular" label for all enzyme sets, as the plan states.
+
+Output: `KO_gene_sets_RECOMMENDED.csv`, `..._expression.csv`,
+`..._dropped.csv`.
+
+- **Approved by:** proposed by Claude, 2026-10-26; awaiting VGC approval at
+  Checkpoint 3.
+
 ## Open items (not yet decided)
 
 - **O3. Per-C conversion check fails for three substrates (plan §2.2; STOP).**
