@@ -1,0 +1,1 @@
+Figure S6. Bridge between Q1 and Q2 (test 5.3.1). Q1 tests 1 and 3 on all 13 dates (8 active, 5 dormant; 77 samples) and on the 7 transcript dates only (5 active, 2 dormant; 41 samples), using the same date-mean scores (100% irrigation, 5 h, water-subtracted per C). Points: dormant minus active difference; bars: Welch 95% CI.

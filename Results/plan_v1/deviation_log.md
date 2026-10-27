@@ -154,6 +154,38 @@ Output: `KO_gene_sets_RECOMMENDED.csv`, `..._expression.csv`,
 - **Approved by:** proposed by Claude, 2026-10-26; awaiting VGC approval at
   Checkpoint 3.
 
+## D9. Q2 implementation choices (plan §5; for VGC review at Checkpoint 4)
+
+Choices taken by Claude where plan §5 does not specify:
+
+- **Rows without a KO identifier** in `brite_D_expression.csv` are not KOs
+  and are left out of the per-sample mean log expression (§5.1).
+- **Potential on transcript dates (H2b)** uses every 100% plot with
+  MicroResp on those dates (6 per date), not only the 5 plots with
+  transcripts. Plots are matched only in the lag analysis, where the plan
+  asks for it.
+- **Bridge (§5.3.1)** subsets the Q1 date-mean scores (z-scores from all 77
+  samples) to the 7 transcript dates; z-scores are not recomputed.
+- **H2c lag and same-date correlations** use, for each date pair, the plots
+  with transcripts at t; potential at t and at t+1 is averaged over those
+  plots (4 plots for 2024-01-02 to 2024-02-12, SIR sets).
+- **Bootstrap CI** for the lag advantage: percentile interval; resamples in
+  which a correlation is undefined (zero variance) are dropped (count in
+  `n_boot_valid`).
+- **Plot-level lag models:** both models fitted by maximum likelihood on the
+  same rows (plot-dates with potential at t and t+1), with response and
+  predictor z-scored, so AIC and marginal R² are comparable. Marginal R² is
+  var(fixed) / (var(fixed) + var(date) + var(residual)).
+- **High-confidence robustness (§5.4b):** sets that become near-zero under
+  D8 rule 4 are left out (glucosamine: 0 in 27 samples; malic acid: 0 in
+  35).
+- **Figure 4** shows the per-C robustness result as a second panel next to
+  the plan's per-MBC result, because the per-MBC effects are nearly
+  identical across compounds (see Checkpoint 4 report).
+
+- **Approved by:** taken by Claude while implementing; for VGC review at
+  Checkpoint 4.
+
 ## Open items (not yet decided)
 
 - **O3. Per-C conversion check fails for three substrates (plan §2.2; STOP).**
