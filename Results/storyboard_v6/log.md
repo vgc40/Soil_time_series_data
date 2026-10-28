@@ -142,3 +142,59 @@ xylose 2, glucose 1, lactic acid 1. All other substrates 0.
 where `notes` says otherwise (Fig S7: leave-one-date-out min and max; Fig S8B:
 min and max across samples). Date-mean rows have `n_dates = 1` and
 `n_samples` = plots on that date.
+
+## Round 2
+
+Changes from `Figure_brief_v6_fixes_for_ClaudeCode.md`. Figures 1, 2, 4A, S1,
+S2, S3, S5, S6, S7, S8, and S9 have no method or layout changes. Fig 2C has new
+annotation text, and Fig 2 and Fig 3 were regenerated from the updated class
+file.
+
+1. **Fig S4 rebuilt at the date level.** For each substrate and date: the
+   date-mean response per mg C added (all MicroResp plots on that date), divided
+   by the date-mean MBC (plots with MBC after the Step 0 rule; SM1625 and SM1539
+   missing). Each substrate is z-scored across the 13 dates, and the z-scores
+   are averaged across the 31 substrates per date. Panel A has no plot points or
+   CIs because the values exist only at the date level. Panel B uses the Fig 2B
+   season test. Panel C repeats the test without SM1420 for:
+   - the primary version, which reruns the Fig 2B pipeline with SM1420 removed
+     before z-scoring (76 samples). The brief calls this "per gram soil";
+     the primary response is per mg C added, so that is what is shown;
+   - the date-level per-biomass version, which drops SM1420 from both date
+     means.
+   Results: per-biomass 0.36 (95% CI −0.22 to 0.94), p = 0.179; per-biomass
+   without SM1420 0.28 (−0.36 to 0.92), p = 0.315; primary without SM1420 0.46
+   (0.10 to 0.83), p = 0.018.
+   - The primary-without-SM1420 test is also a row under Fig 2, panel B, marked
+     as a sensitivity. It is not drawn in Fig 2.
+   - The earlier sample-level per-MBC z-scores (`per_MBC_5h` in
+     `data/microresp_z.csv`) are still written but no longer used in any figure.
+2. **Phenylethylamine sensitivity:** the Fig 2B overall-level test with
+   phenylethylamine removed (mean z of the other 30 substrates; the
+   per-substrate z-scores are unchanged): 0.48 (0.13 to 0.84), p = 0.014. This
+   is one row under Fig 2, panel B. There is no figure.
+3. **Fig 3C:** the x-axis is limited to −3 to 3, and CIs that go past the limit
+   end in arrows. The figure caption gives the full CIs:
+   - plant structural polymers 0.40 (−7.4 to 8.2);
+   - chitinous structural polymers −1.05 (−3.2 to 1.1).
+
+   The chitinous CI also crosses −3, so it gets an arrow too.
+4. **eco_association updated** in `Data/substrate_classes.csv` (still
+   provisional):
+   - Trehalose: "microbial / plant storage–stress sugar"
+   - Lactic acid: "microbial metabolite; root-exudate-associated"
+   - Salicylic acid: "plant signaling; root-exudate-associated"
+   - Phenylethylamine and Diethylamine: "microbial / other"
+
+   Fig 3B has no annotation column, so its content is unchanged.
+5. **Plant calendar markers: NOT updated.** The round 2 brief has blank date
+   fields for both harvests and emergence. The approximate dates (15 Jul 2023,
+   15 Oct 2023, 1 Apr 2024) and the "approximate" note above remain until the
+   dates are supplied.
+6. **Fig 4B/C:**
+   - x-axis ticks every second sampling date (no overlapping labels);
+   - lines between dates more than 45 days apart are dashed. This affects only
+     the transcript series (Oct→Jan and Mar→May). MicroResp and enzyme series
+     have at most 41 days between dates (Jan→Feb).
+
+The results table now has 2,005 rows.

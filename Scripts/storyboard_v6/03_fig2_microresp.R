@@ -311,25 +311,106 @@ write_parts(cell_rows(sub_dm, "FigS3", "", "z date mean"), "FigS3")
 # Figure S4. Per-biomass version of Figure 2A-B
 # =============================================================================
 
-z_mbc <- get_z("per_MBC_5h")
-mbc_pts <- sample_level(z_mbc)
-mbc_dm <- level_dates(z_mbc)
+# Round 2: date-level version. For each substrate and date, the date-mean
+# response per mg C (all MicroResp plots) is divided by the date-mean MBC
+# (plots with MBC after the Step 0 rule). Each substrate is z-scored across
+# the 13 dates; the overall level is the mean z across substrates per date.
+# A sample-level per-MBC z is dominated by SM1420 (MBC 7.78).
+
+mr5 <- read_csv(file.path(dir_v6_data, "microresp_long.csv"), show_col_types = FALSE) |>
+  filter(Timepoint == 5) |>
+  mutate(season = factor(season, season_levels))
+
+mbc_date_level <- function(drop = character()) {
+  d <- filter(mr5, !Sample_cat %in% drop)
+  mbc <- d |>
+    distinct(Sample_cat, Collection_date, MBC_used) |>
+    group_by(Collection_date) |>
+    summarise(mbc = mean(MBC_used, na.rm = TRUE), n_mbc = sum(!is.na(MBC_used)),
+              .groups = "drop")
+  d |>
+    group_by(Substrate, Collection_date, season) |>
+    summarise(resp = mean(primary), n = n(), .groups = "drop") |>
+    left_join(mbc, by = "Collection_date") |>
+    mutate(value = resp / mbc) |>
+    group_by(Substrate) |>
+    mutate(z = zscore(value)) |>
+    group_by(Collection_date, season) |>
+    summarise(mean = mean(z), n = first(n), n_mbc = first(n_mbc), .groups = "drop") |>
+    mutate(ci_low = NA_real_, ci_high = NA_real_)
+}
+
+# Fig 2B pipeline (sample-level z per substrate) without some samples
+primary_level <- function(drop = character()) {
+  mr5 |>
+    filter(!Sample_cat %in% drop) |>
+    group_by(Substrate) |>
+    mutate(z = zscore(primary)) |>
+    group_by(Sample_cat, Collection_date, season) |>
+    summarise(level = mean(z), .groups = "drop") |>
+    date_mean_ci("level")
+}
+
+mbc_dm <- mbc_date_level()
 mbc_test <- season_test(mbc_dm$mean, mbc_dm$season)
-s4 <- (timeline_panel(mbc_pts, mbc_dm, "level",
-                      "Overall level per unit biomass: mean z across 31 substrates",
-                      "Mean z-score") +
-         season_panel(mbc_dm, "Season comparison", "Date mean of overall level (z)",
-                      mbc_test) +
-         plot_layout(widths = c(3, 1))) +
-  plot_annotation(tag_levels = "A",
-                  caption = "Response per mg C added per µg MBC. SM1625 (MBC 0) and SM1539 (MBC 0.14) set to missing (Step 0 rule); 75 samples.")
-save_v6(s4, "FigS4", 180, 75)
+mbc_dm_no1420 <- mbc_date_level("SM1420")
+mbc_test_no1420 <- season_test(mbc_dm_no1420$mean, mbc_dm_no1420$season)
+prim_dm_no1420 <- primary_level("SM1420")
+prim_test_no1420 <- season_test(prim_dm_no1420$mean, prim_dm_no1420$season)
+
+no_points <- tibble(Collection_date = as.Date(character()), level = numeric())
+s4 <- (timeline_panel(no_points, mbc_dm, "level",
+                      "Overall level per unit biomass (date level): mean z across 31 substrates",
+                      "Mean z-score (across 13 dates)") +
+         season_panel(mbc_dm, "Season comparison", "Overall level (z)", mbc_test) +
+         plot_layout(widths = c(3, 1))) /
+  (season_panel(prim_dm_no1420, "Without SM1420:\nprimary (per mg C)",
+                "Date mean of overall level (z)", prim_test_no1420) +
+     season_panel(mbc_dm_no1420, "Without SM1420:\nper biomass (date level)",
+                  "Overall level (z)", mbc_test_no1420) +
+     plot_spacer() + plot_layout(widths = c(1, 1, 1))) +
+  plot_annotation(tag_levels = list(c("A", "B", "C", "")),
+                  caption = "Per biomass: date-mean response per mg C added / date-mean MBC (SM1625 and SM1539 MBC set to missing, Step 0),\nz-scored per substrate across the 13 dates. No plot-level points or CIs in A: values exist only at the date level.")
+save_v6(s4, "FigS4", 180, 150)
 write_parts(bind_rows(
-  date_rows(mbc_dm, "FigS4", "A", "overall level per MBC date mean"),
-  season_rows(mbc_test, "FigS4", "B", "overall level per MBC dormant - active",
-              n_samples = n_distinct(z_mbc$Sample_cat),
-              notes = "SM1625 and SM1539 missing (Step 0)")
+  result_rows("FigS4", "A", paste0("overall level per MBC (date level) | ", mbc_dm$Collection_date),
+              mbc_dm$mean, n_dates = 1, n_samples = mbc_dm$n,
+              notes = paste0("mean z across 31 substrates; date-mean MBC from ",
+                             mbc_dm$n_mbc, " plots")),
+  season_rows(mbc_test, "FigS4", "B", "overall level per MBC (date level) dormant - active",
+              n_samples = n_distinct(mr5$Sample_cat),
+              notes = "SM1625 and SM1539 MBC missing (Step 0)"),
+  season_rows(prim_test_no1420, "FigS4", "C",
+              "overall level (primary, per mg C) dormant - active, without SM1420",
+              n_samples = n_distinct(mr5$Sample_cat) - 1,
+              notes = "Fig 2B pipeline with SM1420 removed before z-scoring"),
+  season_rows(mbc_test_no1420, "FigS4", "C",
+              "overall level per MBC (date level) dormant - active, without SM1420",
+              n_samples = n_distinct(mr5$Sample_cat) - 1,
+              notes = "SM1625 and SM1539 MBC missing (Step 0)")
 ), "FigS4")
+
+# -----------------------------------------------------------------------------
+# Round 2 sensitivity rows for Fig 2B (no new figure)
+# -----------------------------------------------------------------------------
+
+no_pea_dm <- z5 |>
+  filter(Substrate != "Phenylethylamine") |>
+  group_by(Sample_cat, Collection_date, Plot, season) |>
+  summarise(level = mean(z), n_substrates = n(), .groups = "drop") |>
+  date_mean_ci("level")
+stopifnot(all(count(filter(z5, Substrate != "Phenylethylamine"), Sample_cat)$n == 30))
+no_pea_test <- season_test(no_pea_dm$mean, no_pea_dm$season)
+
+write_parts(bind_rows(
+  season_rows(prim_test_no1420, "Fig2", "B",
+              "overall level dormant - active, without SM1420 (sensitivity)",
+              n_samples = n_samples_5h - 1,
+              notes = "not drawn in Fig 2; same value as Fig S4C primary"),
+  season_rows(no_pea_test, "Fig2", "B",
+              "overall level dormant - active, without phenylethylamine (30 substrates; sensitivity)",
+              n_samples = n_samples_5h, notes = "not drawn in any figure")
+), "Fig2_sensitivity")
 
 # =============================================================================
 # Figure S5. Figure 2B with the 5-24 h reading
@@ -423,3 +504,6 @@ print(pair_ci)
 print(pooled_test)
 print(mbc_test); print(test24); print(water_test)
 print(version_tests |> select(version, test) |> unnest(test) |> select(version, diff, ci_low, ci_high, p_welch))
+print(bind_rows(mbc = mbc_test, mbc_no1420 = mbc_test_no1420,
+                primary_no1420 = prim_test_no1420, no_phenylethylamine = no_pea_test,
+                .id = "test") |> select(test, diff, ci_low, ci_high, p_welch, p_wilcox))

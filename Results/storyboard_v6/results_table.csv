@@ -665,6 +665,8 @@ Fig2,E,"polymer z - product z, dormant - active | chitosan-glucosamine",0.423447
 Fig2,E,"polymer z - product z, dormant - active | hemicellulose-xylose",-0.930332786197072,-1.8623443162959934,0.0016787439018491471,,,13,77,descriptive; Welch CI on date means
 Fig2,E,"polymer z - product z, dormant - active | lignin-vanillic acid",0.5930475254483148,-0.1560519779077113,1.3421470288043411,,,13,77,descriptive; Welch CI on date means
 Fig2,E,"polymer z - product z, dormant - active | pooled over 5 pairs",0.2745057705023602,-0.11695333014186568,0.6659648711465861,0.14978984862146877,,13,77,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.222; n dormant = 5, n active = 8; per date: mean over the 5 pairs of (polymer z - product z)"
+Fig2,B,"overall level dormant - active, without SM1420 (sensitivity)",0.46465924885160403,0.1018053476569525,0.8275131500462555,0.018320089002965393,,13,76,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.0186; n dormant = 5, n active = 8; not drawn in Fig 2; same value as Fig S4C primary"
+Fig2,B,"overall level dormant - active, without phenylethylamine (30 substrates; sensitivity)",0.48213309807146887,0.12720007628876412,0.8370661198541737,0.013713130995863939,,13,77,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.0186; n dormant = 5, n active = 8; not drawn in any figure"
 Fig3,A,class expression z date mean | Plant structural polymers | 2023-06-07,-0.27317262685924715,-1.1570514144433286,0.6107061607248343,,,1,5,
 Fig3,A,class expression z date mean | Simple sugars and oligosaccharides | 2023-06-07,0.32671169488175783,0.01620812600431709,0.6372152637591986,,,1,5,
 Fig3,A,class expression z date mean | Chitinous structural polymers | 2023-06-07,0.31992985465669893,-0.4673226352634832,1.1071823445768811,,,1,5,
@@ -1914,20 +1916,22 @@ FigS3,,z date mean | Diethylamine | 2024-06-05,-0.9028440107061071,-1.4237678510
 FigS3,,z date mean | BSA | 2024-06-05,0.5618457659880951,-0.18712308072157313,1.3108146126977633,,,1,6,
 FigS3,,z date mean | Methyl_oleate | 2024-06-05,0.24972128007089542,-0.5176872976107761,1.017129857752567,,,1,6,
 FigS3,,z date mean | Tween40 | 2024-06-05,-0.33315960294695995,-0.9540471365791168,0.2877279306851969,,,1,6,
-FigS4,A,overall level per MBC date mean | 2023-06-07,-0.0700901364259285,-0.14504953275227106,0.004869259900414077,,,1,6,
-FigS4,A,overall level per MBC date mean | 2023-07-05,-0.01701737755804816,-0.2668486899586444,0.2328139348425481,,,1,6,
-FigS4,A,overall level per MBC date mean | 2023-08-02,-0.15339070629219684,-0.25691552121570055,-0.04986589136869314,,,1,6,
-FigS4,A,overall level per MBC date mean | 2023-09-06,-0.026247820572140923,-0.30104853872006865,0.2485528975757868,,,1,6,
-FigS4,A,overall level per MBC date mean | 2023-10-04,-0.08458352667696864,-0.2577126897037076,0.088545636349770307,,,1,6,
-FigS4,A,overall level per MBC date mean | 2023-11-01,-0.19413876496086607,-0.25937904115435073,-0.12889848876738141,,,1,6,
-FigS4,A,overall level per MBC date mean | 2023-12-04,0.7739807142982879,-1.5871818970712037,3.1351433256677796,,,1,6,
-FigS4,A,overall level per MBC date mean | 2024-01-02,0.017603231921761053,-0.1029264085543694,0.13813287239789152,,,1,6,
-FigS4,A,overall level per MBC date mean | 2024-02-12,-0.021688022652491843,-0.08285759754402397,0.03948155223904028,,,1,4,
-FigS4,A,overall level per MBC date mean | 2024-03-06,0.06162809827939688,-0.11007530851464836,0.23333150507344214,,,1,6,
-FigS4,A,overall level per MBC date mean | 2024-04-03,-0.11636106442376855,-0.2172045608826667,-0.015517567964870388,,,1,6,
-FigS4,A,overall level per MBC date mean | 2024-05-08,-0.12233099149882422,-0.2919201984396265,0.0472582154419781,,,1,5,
-FigS4,A,overall level per MBC date mean | 2024-06-05,-0.07498147290551328,-0.26991407990367255,0.119951134092646,,,1,6,
-FigS4,B,overall level per MBC dormant - active,0.2106024384213912,-0.25275296551102394,0.6739578423538063,0.2774355534225843,,13,75,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.127; n dormant = 5, n active = 8; SM1625 and SM1539 missing (Step 0)"
+FigS4,A,overall level per MBC (date level) | 2023-06-07,0.17306353274121494,,,,,1,6,mean z across 31 substrates; date-mean MBC from 6 plots
+FigS4,A,overall level per MBC (date level) | 2023-07-05,-0.09253556185249294,,,,,1,6,mean z across 31 substrates; date-mean MBC from 6 plots
+FigS4,A,overall level per MBC (date level) | 2023-08-02,-0.5204875259702528,,,,,1,6,mean z across 31 substrates; date-mean MBC from 6 plots
+FigS4,A,overall level per MBC (date level) | 2023-09-06,0.24326910081506797,,,,,1,6,mean z across 31 substrates; date-mean MBC from 6 plots
+FigS4,A,overall level per MBC (date level) | 2023-10-04,-0.1335063393799331,,,,,1,6,mean z across 31 substrates; date-mean MBC from 6 plots
+FigS4,A,overall level per MBC (date level) | 2023-11-01,-0.5643167368657711,,,,,1,6,mean z across 31 substrates; date-mean MBC from 6 plots
+FigS4,A,overall level per MBC (date level) | 2023-12-04,0.21966284534131045,,,,,1,6,mean z across 31 substrates; date-mean MBC from 6 plots
+FigS4,A,overall level per MBC (date level) | 2024-01-02,0.4561212034528227,,,,,1,6,mean z across 31 substrates; date-mean MBC from 6 plots
+FigS4,A,overall level per MBC (date level) | 2024-02-12,0.28483052297156897,,,,,1,5,mean z across 31 substrates; date-mean MBC from 4 plots
+FigS4,A,overall level per MBC (date level) | 2024-03-06,0.7050683965941966,,,,,1,6,mean z across 31 substrates; date-mean MBC from 6 plots
+FigS4,A,overall level per MBC (date level) | 2024-04-03,-0.3925206529818465,,,,,1,6,mean z across 31 substrates; date-mean MBC from 6 plots
+FigS4,A,overall level per MBC (date level) | 2024-05-08,-0.06570140682965804,,,,,1,6,mean z across 31 substrates; date-mean MBC from 5 plots
+FigS4,A,overall level per MBC (date level) | 2024-06-05,-0.31294737803622713,,,,,1,6,mean z across 31 substrates; date-mean MBC from 6 plots
+FigS4,B,overall level per MBC (date level) dormant - active,0.3579440252355915,-0.22298868082855736,0.9388767312997404,0.17913779803511004,,13,77,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.127; n dormant = 5, n active = 8; SM1625 and SM1539 MBC missing (Step 0)"
+FigS4,C,"overall level (primary, per mg C) dormant - active, without SM1420",0.46465924885160403,0.1018053476569525,0.8275131500462555,0.018320089002965393,,13,76,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.0186; n dormant = 5, n active = 8; Fig 2B pipeline with SM1420 removed before z-scoring"
+FigS4,C,"overall level per MBC (date level) dormant - active, without SM1420",0.2809474286534038,-0.35875234851736704,0.9206472058241745,0.3146184590068968,,13,76,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.354; n dormant = 5, n active = 8; SM1625 and SM1539 MBC missing (Step 0)"
 FigS5,,overall level 5-24 h date mean | 2023-06-07,-0.445579146012599,-0.7247875619713857,-0.1663707300538123,,,1,6,
 FigS5,,overall level 5-24 h date mean | 2023-07-05,0.16818014279612892,-0.4403193690409495,0.7766796546332073,,,1,6,
 FigS5,,overall level 5-24 h date mean | 2023-08-02,0.08353983707988602,-0.17465618903782718,0.3417358631975992,,,1,6,

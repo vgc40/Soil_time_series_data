@@ -6,9 +6,9 @@ D.Cellobiose,Simple sugars and oligosaccharides,TRUE,plant structural,cellulose-
 D.Xylose,Simple sugars and oligosaccharides,TRUE,root-exudate-associated; plant structural,hemicellulose-xylose,TRUE
 D.Glucose,Simple sugars and oligosaccharides,TRUE,root-exudate-associated,,TRUE
 D.Fructose,Simple sugars and oligosaccharides,TRUE,root-exudate-associated,,TRUE
-D.Trehalose,Simple sugars and oligosaccharides,TRUE,fungal / microbial structural,,TRUE
+D.Trehalose,Simple sugars and oligosaccharides,TRUE,microbial / plant storage–stress sugar,,TRUE
 Vanillic_acid,Aromatic / phenolic acids,FALSE,plant structural,lignin-vanillic acid,TRUE
-Salicylic_acid,Aromatic / phenolic acids,FALSE,root-exudate-associated,,TRUE
+Salicylic_acid,Aromatic / phenolic acids,FALSE,plant signaling; root-exudate-associated,,TRUE
 Chitin,Chitinous structural polymers,FALSE,fungal / microbial structural,chitin-N-acetylglucosamine,TRUE
 Chitosan,Chitinous structural polymers,FALSE,fungal / microbial structural,chitosan-glucosamine,TRUE
 N.Acetyl.D.glucosamine,Amino sugars,FALSE,fungal / microbial structural,chitin-N-acetylglucosamine,TRUE
@@ -17,7 +17,7 @@ Citric_acid,Organic acids,TRUE,root-exudate-associated,,TRUE
 Malic_acid,Organic acids,TRUE,root-exudate-associated,,TRUE
 Oxalic_acid,Organic acids,TRUE,root-exudate-associated,,TRUE
 Succinic_acid,Organic acids,TRUE,root-exudate-associated,,TRUE
-Lactic_acid,Organic acids,TRUE,root-exudate-associated,,TRUE
+Lactic_acid,Organic acids,TRUE,microbial metabolite; root-exudate-associated,,TRUE
 Glutamic_acid,Amino acids and related compounds,TRUE,root-exudate-associated,,TRUE
 L.Glutamine,Amino acids and related compounds,TRUE,root-exudate-associated,,TRUE
 L.Alanine,Amino acids and related compounds,TRUE,root-exudate-associated,,TRUE
@@ -25,8 +25,8 @@ Glycine,Amino acids and related compounds,TRUE,root-exudate-associated,,TRUE
 L.Leucine,Amino acids and related compounds,TRUE,root-exudate-associated,,TRUE
 L.Arginine,Amino acids and related compounds,TRUE,root-exudate-associated,,TRUE
 GABA,Amino acids and related compounds,TRUE,root-exudate-associated,,TRUE
-Phenylethylamine,Amines,FALSE,,,TRUE
-Diethylamine,Amines,FALSE,,,TRUE
+Phenylethylamine,Amines,FALSE,microbial / other,,TRUE
+Diethylamine,Amines,FALSE,microbial / other,,TRUE
 BSA,Protein,FALSE,protein proxy,,TRUE
 Methyl_oleate,Fatty acid esters / surfactants,FALSE,synthetic lipid proxy,,TRUE
 Tween40,Fatty acid esters / surfactants,FALSE,synthetic lipid proxy,,TRUE

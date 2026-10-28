@@ -137,13 +137,38 @@ panel_b <- ggplot(heat_data, aes(factor(format(Collection_date, "%b\n%y"),
   theme_v6 +
   theme(strip.placement = "outside", panel.spacing = unit(0.6, "mm"))
 
-panel_c <- ggplot(class_ci, aes(diff, fct_rev(chem_class), colour = chem_class)) +
+# Axis limited to -3..3; CIs past the limit end in an arrow (round 2)
+ci_limit <- 3
+class_ci_plot <- class_ci |>
+  mutate(lo = pmax(ci_low, -ci_limit), hi = pmin(ci_high, ci_limit),
+         cut_lo = ci_low < -ci_limit, cut_hi = ci_high > ci_limit)
+clipped <- filter(class_ci_plot, cut_lo | cut_hi)
+clip_note <- if (nrow(clipped) > 0) {
+  paste0("Arrows: CI extends past ±", ci_limit, ".\n",
+         paste(sprintf("%s: %.2f (95%% CI %.1f to %.1f)", clipped$chem_class, clipped$diff,
+                       clipped$ci_low, clipped$ci_high), collapse = "\n"))
+} else ""
+arrow_end <- arrow(length = unit(1.2, "mm"), type = "closed")
+
+panel_c <- ggplot(class_ci_plot, aes(diff, fct_rev(chem_class), colour = chem_class)) +
   geom_vline(xintercept = 0, linewidth = 0.25, colour = "grey50") +
-  geom_errorbar(aes(xmin = ci_low, xmax = ci_high), width = 0.2, orientation = "y",
-                linewidth = 0.45) +
+  geom_segment(aes(x = lo, xend = hi, yend = fct_rev(chem_class)), linewidth = 0.45) +
+  geom_segment(data = filter(class_ci_plot, !cut_lo),
+               aes(x = lo, xend = lo, y = as.numeric(fct_rev(chem_class)) - 0.1,
+                   yend = as.numeric(fct_rev(chem_class)) + 0.1), linewidth = 0.45) +
+  geom_segment(data = filter(class_ci_plot, !cut_hi),
+               aes(x = hi, xend = hi, y = as.numeric(fct_rev(chem_class)) - 0.1,
+                   yend = as.numeric(fct_rev(chem_class)) + 0.1), linewidth = 0.45) +
+  geom_segment(data = filter(class_ci_plot, cut_lo),
+               aes(x = 0.9 * lo, xend = lo, yend = fct_rev(chem_class)),
+               linewidth = 0.45, arrow = arrow_end) +
+  geom_segment(data = filter(class_ci_plot, cut_hi),
+               aes(x = 0.9 * hi, xend = hi, yend = fct_rev(chem_class)),
+               linewidth = 0.45, arrow = arrow_end) +
   geom_point(size = 1.8) +
   scale_colour_manual(values = class_colors, guide = "none") +
   scale_y_discrete(labels = label_wrap_gen(22)) +
+  scale_x_continuous(limits = c(-ci_limit, ci_limit)) +
   labs(title = "Dormant − active",
        subtitle = "Descriptive: date means,\nWelch 95% CI; 2 dormant,\n5 active dates; no p",
        x = "D − A expression (z)", y = NULL) +
@@ -152,7 +177,7 @@ panel_c <- ggplot(class_ci, aes(diff, fct_rev(chem_class), colour = chem_class))
 fig3 <- wrap_elements(full = panel_a) /
   (panel_b + panel_c + plot_layout(widths = c(1.7, 1))) +
   plot_layout(heights = c(1.2, 2)) +
-  plot_annotation(tag_levels = "A")
+  plot_annotation(tag_levels = "A", caption = paste("C:", clip_note))
 save_v6(fig3, "Fig3", 180, 230)
 
 write_parts(bind_rows(
@@ -266,16 +291,27 @@ pathway_series <- function(steps) {
            measure = factor(measure, names(measure_colors)))
 }
 
+# Lines between consecutive dates; dashed where dates are more than 45 days
+# apart (transcripts: Oct -> Jan and Mar -> May), as there is no data between
 pathway_panel <- function(d, title) {
+  segs <- d |>
+    arrange(step, Collection_date) |>
+    group_by(step, measure) |>
+    mutate(x_end = lead(Collection_date), y_end = lead(mean)) |>
+    ungroup() |>
+    filter(!is.na(x_end)) |>
+    mutate(gap = if_else(as.numeric(x_end - Collection_date) > 45, "gap", "adjacent"))
   ggplot(d, aes(Collection_date, mean, colour = measure)) +
     timeline_layers(marker_labels = FALSE) +
     geom_vline(xintercept = transcript_dates, linewidth = 0.2, colour = "grey80") +
     geom_hline(yintercept = 0, linewidth = 0.25, colour = "grey50") +
     geom_errorbar(aes(ymin = ci_low, ymax = ci_high), width = 0, linewidth = 0.3) +
-    geom_line(linewidth = 0.5) +
+    geom_segment(data = segs, aes(xend = x_end, yend = y_end, linetype = gap),
+                 linewidth = 0.5) +
     geom_point(size = 1) +
     scale_colour_manual(values = measure_colors, name = NULL, drop = FALSE) +
-    timeline_x +
+    scale_linetype_manual(values = c(adjacent = "solid", gap = "22"), guide = "none") +
+    timeline_x_small +
     facet_grid(step ~ ., labeller = label_wrap_gen(22)) +
     labs(title = title, x = NULL, y = "z-score (date mean ± 95% CI)") +
     theme_v6 +
@@ -309,7 +345,7 @@ fig4 <- fig4a /
      pathway_panel(cellulose_data, "Cellulose pathway")) +
   plot_layout(heights = c(1, 1.5)) +
   plot_annotation(tag_levels = "A",
-                  caption = "MicroResp: water-subtracted response per mg C added (per-biomass version in Figure S4).\nTranscripts on 7 dates (thin grey lines); MicroResp and enzymes on 13.")
+                  caption = "MicroResp: water-subtracted response per mg C added (per-biomass version in Figure S4).\nTranscripts on 7 dates (thin grey lines); MicroResp and enzymes on 13.\nIn B and C, dashed lines join dates more than 45 days apart (no data between).")
 save_v6(fig4, "Fig4", 180, 240)
 
 series_rows <- function(d, panel, prefix) {

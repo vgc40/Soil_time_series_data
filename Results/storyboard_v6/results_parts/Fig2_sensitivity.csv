@@ -1,0 +1,3 @@
+figure,panel,quantity,estimate,ci_low,ci_high,p,p_holm,n_dates,n_samples,notes
+Fig2,B,"overall level dormant - active, without SM1420 (sensitivity)",0.46465924885160403,0.1018053476569525,0.8275131500462555,0.018320089002965393,,13,76,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.0186; n dormant = 5, n active = 8; not drawn in Fig 2; same value as Fig S4C primary"
+Fig2,B,"overall level dormant - active, without phenylethylamine (30 substrates; sensitivity)",0.48213309807146887,0.12720007628876412,0.8370661198541737,0.013713130995863939,,13,77,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.0186; n dormant = 5, n active = 8; not drawn in any figure"
