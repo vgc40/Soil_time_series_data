@@ -1,0 +1,5 @@
+figure,panel,quantity,estimate,ci_low,ci_high,p,p_holm,n_dates,n_samples,notes
+FigS1,,root biomass slope | Active | All observations,0.24085659007553273,-0.49675000943732506,0.9784631895883905,0.5172671417877062,,13,78,lmer CO2 ~ roots x season + (1 | date); plot variance estimated as zero; emtrends Satterthwaite
+FigS1,,root biomass slope | Dormant | All observations,0.09761577559879778,-2.162197024237212,2.357428575434808,0.93155993501095,,13,78,lmer CO2 ~ roots x season + (1 | date); plot variance estimated as zero; emtrends Satterthwaite
+FigS1,,"root biomass slope | Active | Without SM1078, SM1080, SM1621",2.121503364410841,0.4906511421600397,3.7523555866616425,0.011571585824192779,,13,75,lmer CO2 ~ roots x season + (1 | date); plot variance estimated as zero; emtrends Satterthwaite
+FigS1,,"root biomass slope | Dormant | Without SM1078, SM1080, SM1621",0.11628953959961175,-2.1317026093608025,2.364281688560026,0.9180396897670866,,13,75,lmer CO2 ~ roots x season + (1 | date); plot variance estimated as zero; emtrends Satterthwaite

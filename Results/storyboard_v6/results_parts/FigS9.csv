@@ -1,0 +1,18 @@
+figure,panel,quantity,estimate,ci_low,ci_high,p,p_holm,n_dates,n_samples,notes
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-06-07,70.48666666666666,55.1303732844164,85.84296004891692,,,1,6,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-07-05,55.87833333333333,23.038149218478914,88.71851744818775,,,1,6,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-08-02,60.013333333333335,50.742020737017896,69.28464592964878,,,1,6,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-09-06,94.57333333333334,65.48457304574795,123.66209362091872,,,1,6,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-10-04,76.82333333333334,60.77615403269046,92.87051263397622,,,1,6,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-11-01,70.41666666666667,64.93461470346593,75.89871862986742,,,1,6,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-12-04,73.18666666666667,54.28079463056473,92.092538702768607,,,1,6,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-01-02,96.79666666666667,69.82399952503332,123.76933380830002,,,1,6,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-02-12,95.268,62.4809170798038,128.05508292019618,,,1,5,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-03-06,55.50666666666667,42.00592996985218,69.00740336348115,,,1,6,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-04-03,45.96,30.306888728970947,61.613111271029055,,,1,6,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-05-08,76.34,63.22512760881833,89.45487239118167,,,1,6,
+FigS9,A,water-only CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-06-05,90.93833333333333,64.8598315692134,117.01683509745327,,,1,6,
+FigS9,A,water-only CO2 5 h dormant - active (ng CO2-C/gdw/h),6.858266666666665,-15.743995885683264,29.460529219016596,0.5060998173691436,,13,77,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.622; n dormant = 5, n active = 8"
+FigS9,B,overall level dormant - active | Primary: (substrate − water) / C added,0.4770281407776428,0.12901921191798188,0.8250370696373036,0.013104700835569723,,13,77,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.0186; n dormant = 5, n active = 8; same as Fig2 B"
+FigS9,B,overall level dormant - active | Gross: substrate / C added,0.5330001009310618,-0.04528146841895437,1.111281670281078,0.06707219035585577,,13,77,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.0932; n dormant = 5, n active = 8"
+FigS9,B,overall level dormant - active | Fold over water: substrate / water,0.33964875283394313,-0.15515931477142325,0.8344568204393095,0.14861449648227837,,13,77,"dormant - active of date means; Welch CI and p; Wilcoxon p = 0.0932; n dormant = 5, n active = 8"

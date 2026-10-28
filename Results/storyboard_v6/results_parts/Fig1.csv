@@ -1,0 +1,104 @@
+figure,panel,quantity,estimate,ci_low,ci_high,p,p_holm,n_dates,n_samples,notes
+Fig1,A,plots sampled | Field and enzymes | 2023-06-07,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2023-07-05,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2023-08-02,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2023-09-06,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2023-10-04,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2023-11-01,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2023-12-04,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2024-01-02,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2024-02-12,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2024-03-06,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2024-04-03,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2024-05-08,6,,,,,1,6,
+Fig1,A,plots sampled | Field and enzymes | 2024-06-05,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2023-06-07,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2023-07-05,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2023-08-02,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2023-09-06,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2023-10-04,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2023-11-01,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2023-12-04,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2024-01-02,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2024-02-12,5,,,,,1,5,
+Fig1,A,plots sampled | MicroResp | 2024-03-06,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2024-04-03,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2024-05-08,6,,,,,1,6,
+Fig1,A,plots sampled | MicroResp | 2024-06-05,6,,,,,1,6,
+Fig1,A,plots sampled | Transcripts | 2023-06-07,5,,,,,1,5,
+Fig1,A,plots sampled | Transcripts | 2023-07-05,5,,,,,1,5,
+Fig1,A,plots sampled | Transcripts | 2023-09-06,5,,,,,1,5,
+Fig1,A,plots sampled | Transcripts | 2023-10-04,5,,,,,1,5,
+Fig1,A,plots sampled | Transcripts | 2024-01-02,5,,,,,1,5,
+Fig1,A,plots sampled | Transcripts | 2024-03-06,5,,,,,1,5,
+Fig1,A,plots sampled | Transcripts | 2024-05-08,5,,,,,1,5,
+Fig1,B,Soil temperature date mean | 2023-06-07,16.92,16.92,16.92,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2023-07-05,19.24,19.24,19.24,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2023-08-02,21.69,21.69,21.69,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2023-09-06,19.92,19.92,19.92,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2023-10-04,14.86,14.86,14.86,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2023-11-01,7.16,7.16,7.16,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2023-12-04,4.33,4.33,4.33,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2024-01-02,3.81,3.81,3.81,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2024-02-12,4.56,4.56,4.56,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2024-03-06,4.9,4.9,4.9,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2024-04-03,10.38,10.38,10.38,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2024-05-08,11.99,11.99,11.99,,,1,6,"mean, t-based 95% CI"
+Fig1,B,Soil temperature date mean | 2024-06-05,15.42,15.42,15.42,,,1,6,"mean, t-based 95% CI"
+Fig1,C,Gravimetric water content date mean | 2023-06-07,13.019044165423695,6.993163058174606,24.237317158381174,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2023-07-05,15.332861750687208,14.086825762328727,16.689114597724842,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2023-08-02,14.35298440844029,12.724644564334064,16.189698689608264,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2023-09-06,16.145874686655958,14.485276815392044,17.99684415559041,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2023-10-04,16.599860125090018,13.921297858369293,19.793797889820556,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2023-11-01,16.953526674564127,15.237473228983358,18.862843096481964,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2023-12-04,16.668826146615388,15.173128489200712,18.311962842985544,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2024-01-02,19.445341616785687,16.77665665942514,22.53853781892047,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2024-02-12,16.936808380267223,15.861732368969252,18.084750860572672,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2024-03-06,10.883833080975128,9.848665739493661,12.027804137925658,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2024-04-03,10.883833080975128,9.848665739493661,12.027804137925658,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2024-05-08,11.858574196249869,10.335696841469742,13.605834625850557,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,C,Gravimetric water content date mean | 2024-06-05,8.207758039254772,5.531919327173231,12.17792379943753,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2023-06-07,156.87016350998394,113.2917631636452,217.21127390438363,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2023-07-05,62.42616989082198,29.34764478344471,132.78839634300465,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2023-08-02,160.49195678286534,117.93844506462695,218.39925206643719,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2023-09-06,146.80741098389376,102.81746408789493,209.61824054879932,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2023-10-04,169.3165747403607,107.55719740203935,266.53820640797574,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2023-11-01,199.3234572040536,124.991837842525,317.85948008726064,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2023-12-04,109.42723979555502,26.24725724517176,456.2122700068635,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2024-01-02,197.3212466995781,134.4916723735413,289.5024926966081,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2024-02-12,163.68445216328578,107.85508221832285,248.4129568021725,,,1,5,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2024-03-06,171.82520928876636,129.8659128749932,227.34143158526587,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2024-04-03,177.56081237268694,124.46936062910882,253.29801592212345,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2024-05-08,133.19192159944734,85.35020208424224,207.85056796753133,,,1,5,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,D,Microbial biomass C date mean | 2024-06-05,193.38332623764222,130.62230513606877,286.29957822117694,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2023-06-07,36.37778653538751,10.746279326512456,123.1443286560924,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2023-07-05,45.25192848117537,13.398004730268957,152.8389541943612,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2023-08-02,23.58451179064819,8.927056206820803,62.30824400749614,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2023-09-06,40.224247900368916,23.582629224846777,68.6094032910296,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2023-10-04,77.31213227376527,52.032789955910424,114.87305988744563,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2023-11-01,8.985531984351821,5.44948370761865,14.816043018704937,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2023-12-04,5.147966050886474,0.8170666137572264,32.434998585016274,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2024-01-02,3.292296432855748,1.6989880350128581,6.379807025370048,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2024-02-12,1.8030145248234555,0.5970164395829151,5.4451789953982725,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2024-03-06,5.526334370473469,3.3712643539168363,9.059026041311082,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2024-04-03,8.474083153071835,2.896030729553818,24.79603705594637,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2024-05-08,28.226145534036213,11.147399390401723,71.47095603254249,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,E,Field soil CO2 (context only) date mean | 2024-06-05,31.63647111442659,15.680496207743,63.82873930225003,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2023-06-07,8.020572235519516,4.0240799449751705,15.986158293279994,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2023-07-05,13.691321937567904,4.573998168418021,40.98215379543124,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2023-08-02,2.6683114585490095,0.9985296305982058,7.130370318163232,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2023-09-06,6.854509208289995,3.7679811521245816,12.469355495592161,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2023-10-04,9.321698961400562,5.429058234417066,16.005367372211733,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2023-11-01,8.283378593843544,5.32527707603111,12.884655568022241,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2023-12-04,6.674327582013048,3.105069256101283,14.346426761492848,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2024-01-02,7.134112030435324,3.701967639791873,13.748244019135562,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2024-02-12,5.2964574139035605,3.060900432938527,9.164774141432316,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2024-03-06,4.810603202478774,2.525010739482459,9.16507118557537,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2024-04-03,2.5389556200101553,1.2832574367025413,5.023384596114679,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2024-05-08,4.514738001896565,1.4724414620171102,13.842899532213888,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,F,Root biomass (0-15 cm) date mean | 2024-06-05,3.901364633779151,2.4050016517800357,6.328746591270461,,,1,6,"geometric mean, t-based 95% CI on log10 scale"
+Fig1,B,Soil temperature dormant - active (°C),-11.350500000000002,-14.740520985450289,-7.960479014549715,3.1503126990312397e-5,,13,78,Welch t-test on date means
+Fig1,C,Gravimetric water content dormant/active ratio,1.2227147180785685,0.9144181548898005,1.6349536301432293,0.15591960367205776,,13,78,lmer: log(y) ~ season + (1|date) + (1|plot); singular fit
+Fig1,D,Microbial biomass C dormant/active ratio,1.1445941332827554,0.7649149198685402,1.7127339210097479,0.47712467238831624,,13,76,lmer: log(y) ~ season + (1|date) + (1|plot); SM1625 and SM1539 set to missing (Step 0)
+Fig1,E,Field soil CO2 (context only) dormant/active ratio,0.13839708271259177,0.06314394499399416,0.3033347457967309,1.735563739783203e-4,,13,78,lmer: log(y) ~ season + (1|date) + (1|plot)
+Fig1,F,Root biomass (0-15 cm) dormant/active ratio,1.1483390472077528,0.6114564295088213,2.1566255643125682,0.6385298579138412,,13,78,lmer: log(y) ~ season + (1|date) + (1|plot)

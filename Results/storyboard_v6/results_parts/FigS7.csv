@@ -1,0 +1,13 @@
+figure,panel,quantity,estimate,ci_low,ci_high,p,p_holm,n_dates,n_samples,notes
+FigS7,,Spearman rho transcripts vs MicroResp | Amino acids and related compounds | Next date,-0.7499999999999998,-0.9428571428571428,-0.6,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value
+FigS7,,Spearman rho transcripts vs MicroResp | Amino acids and related compounds | Same date,-0.5357142857142856,-0.7142857142857143,-0.31428571428571433,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value
+FigS7,,Spearman rho transcripts vs MicroResp | Amino sugars | Next date,0.42857142857142844,0.14285714285714285,0.6571428571428571,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value
+FigS7,,Spearman rho transcripts vs MicroResp | Amino sugars | Same date,0.6785714285714284,0.6,0.8285714285714285,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value
+FigS7,,Spearman rho transcripts vs MicroResp | Chitinous structural polymers | Next date,-0.7499999999999998,-0.7714285714285715,-0.6,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value
+FigS7,,Spearman rho transcripts vs MicroResp | Chitinous structural polymers | Same date,-0.21428571428571422,-0.6571428571428571,0.14285714285714285,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value
+FigS7,,Spearman rho transcripts vs MicroResp | Organic acids | Next date,-0.035714285714285705,-0.42857142857142855,0.14285714285714285,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value
+FigS7,,Spearman rho transcripts vs MicroResp | Organic acids | Same date,0.17857142857142855,-0.028571428571428574,0.4857142857142857,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value
+FigS7,,Spearman rho transcripts vs MicroResp | Plant structural polymers | Next date,0.17857142857142855,-0.31428571428571433,0.37142857142857144,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value
+FigS7,,Spearman rho transcripts vs MicroResp | Plant structural polymers | Same date,0.035714285714285705,-0.5428571428571428,0.2571428571428572,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value
+FigS7,,Spearman rho transcripts vs MicroResp | Simple sugars and oligosaccharides | Next date,-0.21428571428571422,-0.6,0.2571428571428572,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value
+FigS7,,Spearman rho transcripts vs MicroResp | Simple sugars and oligosaccharides | Same date,-0.3571428571428571,-0.6,-0.08571428571428572,,,7,,exploratory; ci columns hold the leave-one-date-out min and max; no p-value

@@ -1,0 +1,27 @@
+figure,panel,quantity,estimate,ci_low,ci_high,p,p_holm,n_dates,n_samples,notes
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-06-07,70.48666666666666,55.1303732844164,85.84296004891692,,,1,6,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-07-05,55.87833333333333,23.038149218478914,88.71851744818775,,,1,6,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-08-02,60.013333333333335,50.742020737017896,69.28464592964878,,,1,6,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-09-06,94.57333333333334,65.48457304574795,123.66209362091872,,,1,6,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-10-04,76.82333333333334,60.77615403269046,92.87051263397622,,,1,6,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-11-01,70.41666666666667,64.93461470346593,75.89871862986742,,,1,6,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2023-12-04,73.18666666666667,54.28079463056473,92.092538702768607,,,1,6,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-01-02,96.79666666666667,69.82399952503332,123.76933380830002,,,1,6,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-02-12,95.268,62.4809170798038,128.05508292019618,,,1,5,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-03-06,55.50666666666667,42.00592996985218,69.00740336348115,,,1,6,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-04-03,45.96,30.306888728970947,61.613111271029055,,,1,6,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-05-08,76.34,63.22512760881833,89.45487239118167,,,1,6,
+FigS8,A,water-control CO2 5 h (ng CO2-C/gdw/h) date mean | 2024-06-05,90.93833333333333,64.8598315692134,117.01683509745327,,,1,6,
+FigS8,B,glucose mg C per g dry soil | 2023-06-07,1.9612522742957528,1.7714285714285716,2.6956521739130435,,,1,6,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2023-07-05,1.744223137973138,1.5897435897435896,1.9375,,,1,6,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2023-08-02,1.7418139029013642,1.5897435897435896,1.9375,,,1,6,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2023-09-06,1.6577474603790394,1.4090909090909092,1.878787878787879,,,1,6,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2023-10-04,1.6110381636697426,1.5897435897435896,1.6756756756756757,,,1,6,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2023-11-01,1.6702452452452452,1.5499999999999998,1.7222222222222223,,,1,6,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2023-12-04,1.5768443544759334,1.5499999999999998,1.631578947368421,,,1,6,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2024-01-02,1.6203730480046268,1.5499999999999998,1.7714285714285716,,,1,6,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2024-02-12,1.6320312215049058,1.5897435897435896,1.6756756756756757,,,1,5,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2024-03-06,1.5698717948717946,1.5499999999999998,1.5897435897435896,,,1,6,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2024-04-03,1.5728102307049676,1.4761904761904765,1.631578947368421,,,1,6,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2024-05-08,1.564542767174346,1.4761904761904765,1.631578947368421,,,1,6,mean; ci columns hold the min and max across samples
+FigS8,B,glucose mg C per g dry soil | 2024-06-05,1.6279509488752106,1.5121951219512195,1.7222222222222223,,,1,6,mean; ci columns hold the min and max across samples

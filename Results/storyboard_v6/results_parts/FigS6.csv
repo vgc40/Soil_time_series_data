@@ -1,0 +1,4 @@
+figure,panel,quantity,estimate,ci_low,ci_high,p,p_holm,n_dates,n_samples,notes
+FigS6,,"PERMANOVA R2, season, date means",0.5179297999976735,,,0.047619047619047616,,7,35,exact permutation over 21 label sets; F = 5.372; p is the smallest possible
+FigS6,,"PERMANOVA dispersion F, date means",0.023912205358186594,,,1,,7,35,betadisper on date means
+FigS6,,"PERMANOVA R2, samples with labels permuted by date",0.31498807159085485,,,0.047619047619047616,,7,35,sensitivity (not shown in the figure)

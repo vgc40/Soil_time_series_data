@@ -1,0 +1,2 @@
+Classes without gene sets (left out of Figure 3): Aromatic / phenolic acids; Amines; Protein; Fatty acid esters / surfactants
+Substrates in Figure 3 classes without a usable gene set: Lignin; D.Glucose; Chitosan; Succinic_acid; GABA

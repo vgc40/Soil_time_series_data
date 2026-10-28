@@ -1,0 +1,245 @@
+figure,panel,quantity,estimate,ci_low,ci_high,p,p_holm,n_dates,n_samples,notes
+Fig4,A,class z | MicroResp | Amino acids and related compounds | 2023-06-07,-0.1732374342586876,-0.5386333931466118,0.19215852462923672,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino sugars | 2023-06-07,-0.041071297463104645,-0.5772585546865227,0.4951159597603133,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Chitinous structural polymers | 2023-06-07,-0.3145975416402364,-0.6734300705095538,0.044234987229081035,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Organic acids | 2023-06-07,0.45195799440704193,-0.11562878562681705,1.019544774440901,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Plant structural polymers | 2023-06-07,-0.10211743885321438,-0.6894188356147873,0.4851839579083586,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Simple sugars and oligosaccharides | 2023-06-07,-0.1765579061680497,-0.678091563376673,0.32497575104057363,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino acids and related compounds | 2023-07-05,-0.7536611209372936,-1.0771594972610805,-0.43016274461350673,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino sugars | 2023-07-05,-0.5829973688278921,-1.0791205832693838,-0.08687415438640045,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Chitinous structural polymers | 2023-07-05,-0.7494618635494648,-0.9831389153800295,-0.5157848117189,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Organic acids | 2023-07-05,-0.6152797441663923,-1.0473923905732148,-0.1831670977595698,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Plant structural polymers | 2023-07-05,-0.5859966011377633,-1.2644286128369,0.09243541056137328,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Simple sugars and oligosaccharides | 2023-07-05,-0.9469731833516623,-1.3464026989348346,-0.54754366776849,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino acids and related compounds | 2023-09-06,-0.38054042691359247,-1.098301282416203,0.33722042858901824,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino sugars | 2023-09-06,-0.3036445702055585,-1.2871367638948676,0.6798476234837505,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Chitinous structural polymers | 2023-09-06,-0.42040478529640324,-1.1137622702324417,0.2729526996396351,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Organic acids | 2023-09-06,0.9999337428098027,0.09005576152041006,1.9098117240991954,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Plant structural polymers | 2023-09-06,0.18461823795435758,-1.2138562250468183,1.5830927009555333,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Simple sugars and oligosaccharides | 2023-09-06,-0.09847895058888546,-1.3654665134689659,1.168508612291195,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino acids and related compounds | 2023-10-04,-0.21005971825339467,-1.0597132121978297,0.6395937756910404,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino sugars | 2023-10-04,0.035519153073812,-0.9476808659176386,1.0187191720652626,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Chitinous structural polymers | 2023-10-04,0.3333707263186917,-0.4670931477219322,1.1338346003593156,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Organic acids | 2023-10-04,0.4931933320331794,-1.2254492895479563,2.2118359536143153,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Plant structural polymers | 2023-10-04,0.04856552613437252,-0.9872560187185477,1.0843870709872927,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Simple sugars and oligosaccharides | 2023-10-04,-0.4397706908182297,-1.1998411560326776,0.32029977439621804,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino acids and related compounds | 2024-01-02,0.7515335784693994,0.2669575140339179,1.2361096429048808,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino sugars | 2024-01-02,0.24573740178597078,-0.3550268257168969,0.8465016292888385,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Chitinous structural polymers | 2024-01-02,0.12061472368558294,-0.16437387995843528,0.4056033273296012,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Organic acids | 2024-01-02,-0.32922229752942156,-0.6128460937855342,-0.045598501273308945,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Plant structural polymers | 2024-01-02,0.9290096336424467,0.24948715167185265,1.6085321156130408,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Simple sugars and oligosaccharides | 2024-01-02,1.2108348245266014,0.4800095067693242,1.9416601422838786,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino acids and related compounds | 2024-03-06,0.5645485648086445,0.015653198451656802,1.1134439311656321,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino sugars | 2024-03-06,0.3300425984951554,-0.03313790010003037,0.6932230970903411,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Chitinous structural polymers | 2024-03-06,1.2398539123405132,0.4296547519985554,2.050053072682471,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Organic acids | 2024-03-06,0.10801224651769784,-0.4028989196915925,0.6189234127269881,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Plant structural polymers | 2024-03-06,0.5338194585884011,-0.11913729300824083,1.186776210185043,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Simple sugars and oligosaccharides | 2024-03-06,0.5914153899955544,0.01987740958400175,1.1629533704071071,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino acids and related compounds | 2024-05-08,0.11352692310879006,-0.30565993334005603,0.5327137795576361,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Amino sugars | 2024-05-08,0.12242359653365677,0.004646181939030158,0.24020101112828338,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Chitinous structural polymers | 2024-05-08,-0.9073796823223779,-1.0415868809898696,-0.7731724836548861,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Organic acids | 2024-05-08,-0.6023377618579872,-0.906584185559888,-0.29809133815608635,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Plant structural polymers | 2024-05-08,-0.4409214833812658,-0.7290502745814835,-0.15279269218104813,,,1,6,z-score date mean
+Fig4,A,class z | MicroResp | Simple sugars and oligosaccharides | 2024-05-08,0.10993575180471264,-0.35534675634916263,0.5752182599585879,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Amino acids and related compounds | 2023-06-07,-1.0391092448648183,-1.2726165394611548,-0.8056019502684817,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Chitinous structural polymers | 2023-06-07,-0.5527110864459783,-1.1362712697624051,0.030849096870448456,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Plant structural polymers | 2023-06-07,-0.23391920812206746,-0.7486583867154062,0.2808199704712713,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Simple sugars and oligosaccharides | 2023-06-07,-0.9089988710913648,-1.0508589327795395,-0.7671388094031901,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Amino acids and related compounds | 2023-07-05,-0.6287107195868726,-0.9309623440321992,-0.32645909514154603,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Chitinous structural polymers | 2023-07-05,-0.0355980122818137,-0.8143006752825686,0.7431046507189412,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Plant structural polymers | 2023-07-05,-0.2380879324734366,-0.7028309120795839,0.22665504713271076,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Simple sugars and oligosaccharides | 2023-07-05,-0.35176450349234406,-0.8213017707434112,0.11777276375872303,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Amino acids and related compounds | 2023-09-06,-0.7262979366646901,-1.08653927884533,-0.36605659448405004,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Chitinous structural polymers | 2023-09-06,-0.2781786982921576,-0.859457005493914,0.30309960890959886,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Plant structural polymers | 2023-09-06,-0.5005699301575047,-0.8193420164340646,-0.18179784388094483,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Simple sugars and oligosaccharides | 2023-09-06,0.15972368389707745,-0.621010426138393,0.9404577939325479,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Amino acids and related compounds | 2023-10-04,0.2738844609027175,-0.22566881996408428,0.7734377417695193,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Chitinous structural polymers | 2023-10-04,-0.849630686956906,-1.395406771064565,-0.30385460284924715,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Plant structural polymers | 2023-10-04,-0.4824664606364564,-1.0828229382203354,0.11789001694742274,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Simple sugars and oligosaccharides | 2023-10-04,-0.4582940288043458,-0.9358483032135996,0.019260245604908022,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Amino acids and related compounds | 2024-01-02,0.014561983329240885,-0.6280563232231109,0.6571802898815926,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Chitinous structural polymers | 2024-01-02,1.2308034980035558,0.12366451742070694,2.3379424785864047,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Plant structural polymers | 2024-01-02,0.716946041141613,-0.4505730220533949,1.8844651043366207,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Simple sugars and oligosaccharides | 2024-01-02,0.3639654878339373,-0.9502051893784977,1.6781361650463724,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Amino acids and related compounds | 2024-03-06,-0.08269692700488178,-0.7021236031732337,0.5367297491634703,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Chitinous structural polymers | 2024-03-06,0.02777987058830637,-0.7571322498411494,0.812691991017762,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Plant structural polymers | 2024-03-06,-0.17881167537399342,-0.7357528390332767,0.3781294882852898,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Simple sugars and oligosaccharides | 2024-03-06,0.38790777894897194,-1.033521045611362,1.809336603509306,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Amino acids and related compounds | 2024-05-08,-0.31326676610601406,-0.6085830960903063,-0.017950436121721813,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Chitinous structural polymers | 2024-05-08,-0.05535761755475339,-0.7509662517151401,0.6402510166056332,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Plant structural polymers | 2024-05-08,0.788971828740571,-1.2595110785174173,2.837454735998559,,,1,6,z-score date mean
+Fig4,A,class z | Enzyme | Simple sugars and oligosaccharides | 2024-05-08,0.35081285074912816,-0.42926988233266283,1.1308955838309191,,,1,6,z-score date mean
+Fig4,A,class z | Transcripts | Plant structural polymers | 2023-06-07,-0.27317262685924715,-1.1570514144433286,0.6107061607248343,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Simple sugars and oligosaccharides | 2023-06-07,0.32671169488175783,0.01620812600431709,0.6372152637591986,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Chitinous structural polymers | 2023-06-07,0.31992985465669893,-0.4673226352634832,1.1071823445768811,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino sugars | 2023-06-07,-0.724707710780154,-1.8946309002727597,0.4452154787124517,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Organic acids | 2023-06-07,0.5926109175545687,-0.2591013629149158,1.4443231980240534,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino acids and related compounds | 2023-06-07,0.5319916465303297,0.09297648024249106,0.9710068128181684,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Plant structural polymers | 2023-07-05,-0.005938762181773916,-1.8107337196337274,1.7988561952701796,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Simple sugars and oligosaccharides | 2023-07-05,0.2689751145782544,-0.43797513948874534,0.9759253686452541,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Chitinous structural polymers | 2023-07-05,0.5906614596581627,-0.04111620443827824,1.2224391237546037,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino sugars | 2023-07-05,-0.15090974712701397,-1.378706052249685,1.076886557995657,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Organic acids | 2023-07-05,0.14022224963850477,-0.9532899827429793,1.233734482019989,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino acids and related compounds | 2023-07-05,0.43928219039385513,-0.13809238663077,1.0166567674184803,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Plant structural polymers | 2023-09-06,-0.5714425671992641,-2.1043380949731945,0.9614529605746661,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Simple sugars and oligosaccharides | 2023-09-06,-0.7173454376142446,-1.983760194125944,0.5490693188974548,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Chitinous structural polymers | 2023-09-06,-0.18502987915707983,-0.9123627136354567,0.5423029553212971,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino sugars | 2023-09-06,0.039908914561847586,-1.1209064879931732,1.2007243171168684,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Organic acids | 2023-09-06,-0.100225096698508,-0.38196831305137463,0.18151811965435866,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino acids and related compounds | 2023-09-06,-0.10600074451738449,-0.6961295671381196,0.48412807810335057,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Plant structural polymers | 2023-10-04,0.25333885711931464,-0.5086669007090046,1.015344614947634,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Simple sugars and oligosaccharides | 2023-10-04,0.09267863816920968,-0.6876213674743938,0.8729786438128131,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Chitinous structural polymers | 2023-10-04,0.690307644907401,-0.33686473562910524,1.7174800254439073,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino sugars | 2023-10-04,0.29843739324199847,-0.7830727664752913,1.3799475529592882,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Organic acids | 2023-10-04,0.534438640765995,-0.4315495449946697,1.5004268265266596,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino acids and related compounds | 2023-10-04,0.45489862578797635,-0.30162167564360687,1.2114189272195595,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Plant structural polymers | 2024-01-02,1.0051027303657727,0.2377352798454394,1.7724701808861059,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Simple sugars and oligosaccharides | 2024-01-02,0.23332197402488983,-0.7030097792831393,1.169653727332919,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Chitinous structural polymers | 2024-01-02,-1.07411816990635,-2.5047612987457644,0.3565249589330646,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino sugars | 2024-01-02,0.16845314707454762,-0.18926906942867922,0.5261753635777744,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Organic acids | 2024-01-02,-0.7721850726597892,-1.4080239253220608,-0.13634621999751761,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino acids and related compounds | 2024-01-02,-0.7427308268185469,-1.4339432489466595,-0.051518404690434116,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Plant structural polymers | 2024-03-06,-0.4289802589898698,-1.0925866765413526,0.23462615856161306,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Simple sugars and oligosaccharides | 2024-03-06,-0.08908380724932076,-0.6469659254351168,0.4687983109364753,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Chitinous structural polymers | 2024-03-06,-0.42757565258658137,-1.7511901955472857,0.8960388903741231,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino sugars | 2024-03-06,0.23002458674302437,-0.2238390897130539,0.6838882631991027,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Organic acids | 2024-03-06,-0.6957929120536507,-1.276651585411531,-0.11493423869577035,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino acids and related compounds | 2024-03-06,-0.7784315583209974,-1.1233625891275465,-0.4335005275144483,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Plant structural polymers | 2024-05-08,0.02109262774507009,-0.9959889148806607,1.0381741703708007,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Simple sugars and oligosaccharides | 2024-05-08,-0.11525817679054265,-1.28728171891067,1.0567653653295845,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Chitinous structural polymers | 2024-05-08,0.08582474242774428,-1.417215949332051,1.5888654341875397,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino sugars | 2024-05-08,0.1387934162857498,-0.040649826565021835,0.31823665913652144,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Organic acids | 2024-05-08,0.3009312734528776,-0.27275505373013365,0.8746176006358889,,,1,5,z-score date mean
+Fig4,A,class z | Transcripts | Amino acids and related compounds | 2024-05-08,0.2009906669447662,-0.7441177608665079,1.1460990947560403,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | Chitinase genes | 2023-06-07,0.31992985465669893,-0.4673226352634832,1.1071823445768811,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | Chitinase genes | 2023-07-05,0.5906614596581627,-0.04111620443827824,1.2224391237546037,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | Chitinase genes | 2023-09-06,-0.18502987915707983,-0.9123627136354567,0.5423029553212971,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | Chitinase genes | 2023-10-04,0.690307644907401,-0.33686473562910524,1.7174800254439073,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | Chitinase genes | 2024-01-02,-1.07411816990635,-2.5047612987457644,0.3565249589330646,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | Chitinase genes | 2024-03-06,-0.42757565258658137,-1.7511901955472857,0.8960388903741231,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | Chitinase genes | 2024-05-08,0.08582474242774428,-1.417215949332051,1.5888654341875397,,,1,5,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2023-06-07,-0.5437927758822343,-1.0193976664680604,-0.06818788529640823,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2023-07-05,-0.5628206237432832,-0.9331957432835166,-0.19244550420304984,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2023-08-02,-0.5234654164782715,-1.1114276900916154,0.06449685713507247,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2023-09-06,-1.060053725032645,-1.9148803944191162,-0.20522705564617372,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2023-10-04,-0.3013888900369449,-1.2958640105934955,0.6930862305196057,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2023-11-01,0.14368131810772589,-0.1339786569882176,0.42134129320366936,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2023-12-04,1.9358776719106652,0.832847651605551,3.0389076922157794,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2024-01-02,0.4674321274787581,0.10767745323671513,0.8271868017208011,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2024-02-12,0.18845648813095156,-0.8149862583997523,1.1918992346616555,,,1,5,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2024-03-06,0.7663622663801373,-0.2667002710017816,1.7994248037620562,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2024-04-03,0.18567803248977593,-0.05815228179481127,0.4295083467743631,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2024-05-08,-0.6611961466025156,-0.8971073030308524,-0.42528499017417876,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | Chitin response | 2024-06-05,-0.0033609120336272565,-1.2863762045243787,1.279654380457124,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2023-06-07,-0.5527110864459783,-1.1362712697624051,0.030849096870448456,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2023-07-05,-0.0355980122818137,-0.8143006752825686,0.7431046507189412,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2023-08-02,0.2606909625289139,-1.1401257256857305,1.661507650743558,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2023-09-06,-0.2781786982921576,-0.859457005493914,0.30309960890959886,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2023-10-04,-0.849630686956906,-1.395406771064565,-0.30385460284924715,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2023-11-01,-0.42500938215543765,-1.1735692711809942,0.32355050687011894,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2023-12-04,0.5269201122967652,-0.7843277680026973,1.8381679925962278,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2024-01-02,1.2308034980035558,0.12366451742070694,2.3379424785864047,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2024-02-12,-0.3217969758893382,-1.0058204398848285,0.3622264881061522,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2024-03-06,0.02777987058830637,-0.7571322498411494,0.812691991017762,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2024-04-03,-0.2904758994460615,-0.7360817936843644,0.1551299947922415,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2024-05-08,-0.05535761755475339,-0.7509662517151401,0.6402510166056332,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Enzyme | NAG enzyme activity | 2024-06-05,0.762563915604907,-0.9585689100534643,2.4836967412632784,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2023-06-07,0.22305284649458823,-0.48197441637688687,0.9280801093660633,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2023-07-05,-0.716921293655191,-1.4902578237126844,0.056415236402302504,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2023-08-02,-0.8424083772055987,-1.9016838512033143,0.21686709679211702,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2023-09-06,-0.4152452051343365,-1.5375292843434925,0.7070388740748195,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2023-10-04,0.0011034830328984732,-1.3661346776281136,1.3683416436939104,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2023-11-01,-0.09149441762810825,-0.945901175979286,0.7629123407230695,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2023-12-04,0.5199717176970193,-0.9430465406336623,1.982989976027701,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2024-01-02,-0.3955559933757256,-1.0531434932845372,0.2620315065330859,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2024-02-12,-0.3990505808344471,-1.3772879160286586,0.5791867543597644,,,1,5,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2024-03-06,0.4840889822093277,0.0834723051226739,0.8847056592959816,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2024-04-03,0.3519682081125238,-0.5756838789898562,1.2796202952149036,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2024-05-08,0.6753558072520479,0.3745956386352115,0.9761159758688843,,,1,6,z-score date mean
+Fig4,B,chitin pathway | MicroResp | N-acetylglucosamine response | 2024-06-05,0.5386263928959265,-0.9818475972252145,2.0591003830170678,,,1,6,z-score date mean
+Fig4,B,chitin pathway | Transcripts | NAG uptake genes | 2023-06-07,-0.2891513365514219,-1.9631558206505626,1.384853147547719,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | NAG uptake genes | 2023-07-05,0.2803340951964253,-0.7195871380799512,1.2802553284728018,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | NAG uptake genes | 2023-09-06,-0.07067032023383099,-1.6851807298233135,1.5438400893556514,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | NAG uptake genes | 2023-10-04,-0.15456850864557908,-2.2115420826537693,1.902405065362611,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | NAG uptake genes | 2024-01-02,-0.020073385133292602,-1.0663613354509331,1.026214565184348,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | NAG uptake genes | 2024-03-06,-2.2441466665307843e-4,-0.8171183826403589,0.8166695533070526,,,1,5,z-score date mean
+Fig4,B,chitin pathway | Transcripts | NAG uptake genes | 2024-05-08,0.2543538700343519,-0.20286364023724085,0.7115713803059447,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | Cellulase / cellobiohydrolase genes | 2023-06-07,-0.26992882892401515,-1.110143401600872,0.5702857437528416,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | Cellulase / cellobiohydrolase genes | 2023-07-05,-0.07902745373146221,-1.9435701551508977,1.7855152476879734,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | Cellulase / cellobiohydrolase genes | 2023-09-06,-0.7448093463436574,-2.2915432319945825,0.8019245393072676,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | Cellulase / cellobiohydrolase genes | 2023-10-04,0.25880040052284875,-0.6299622858038065,1.147563086849504,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | Cellulase / cellobiohydrolase genes | 2024-01-02,0.8889620620846079,0.021294921430294322,1.7566292027389214,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | Cellulase / cellobiohydrolase genes | 2024-03-06,-0.3172449611732594,-0.8514351437534657,0.21694522140694694,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | Cellulase / cellobiohydrolase genes | 2024-05-08,0.2632481275649386,-0.9617703102304744,1.4882665653603515,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2023-06-07,-0.2943397793600024,-0.6875265653498003,0.09884700662979551,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2023-07-05,-0.375199381034828,-0.7342846658005361,-0.01611409626911986,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2023-08-02,-0.01619154587982802,-0.6148659677725675,0.5824828760129114,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2023-09-06,-0.12458009176280258,-1.9319097994621368,1.6827496159365316,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2023-10-04,0.09023278186513663,-0.9321839538667648,1.1126495175970381,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2023-11-01,-0.5556576524250353,-0.8655051077877234,-0.24581019706234714,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2023-12-04,0.26727075167154857,-0.5719402479055782,1.1064817512486753,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2024-01-02,1.4575677281279646,0.6828058526404407,2.2323296036154887,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2024-02-12,1.300399959807236,-0.10710265518984818,2.7079025748043204,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2024-03-06,0.11088269255082076,-0.7319565352397353,0.9537219203413767,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2024-04-03,-0.4567720792945402,-0.9470033983888191,0.033459239799738694,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2024-05-08,-1.1155580326646883,-1.4295781246955723,-0.8015379406338043,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellulose response | 2024-06-05,-0.07132202496644245,-0.9409494905274434,0.7983054405945584,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2023-06-07,-0.31293228290145897,-0.7971984048609916,0.17133383905807364,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2023-07-05,-0.22558813887756446,-0.6860695584354577,0.23489328068032878,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2023-08-02,0.24009160225517803,-0.7195308520926837,1.1997140566030398,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2023-09-06,-0.3976296346822052,-0.6823299903404341,-0.11292927902397631,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2023-10-04,-0.501165919487713,-1.065589982906009,0.06325814393058282,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2023-11-01,-0.4706499618608264,-1.03313444081028,0.09183451708862722,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2023-12-04,0.07240952896866393,-0.7350763787386537,0.8798954366759816,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2024-01-02,0.9984754267478523,-0.32673255652752065,2.323683410023225,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2024-02-12,-0.11551272029486677,-1.1545665387689414,0.9235410981792079,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2024-03-06,-0.24909788174317593,-0.7262578206831175,0.22806205719676564,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2024-04-03,-0.2079947551436962,-0.8351170782285626,0.4191275679411703,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2024-05-08,0.9318385396850591,-1.5199826668893897,3.383659746259508,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | CB enzyme activity | 2024-06-05,0.23775619733475306,-0.7351390759729532,1.2106514706424594,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2023-06-07,0.005887701612098874,-0.44144229337236285,0.45321769659656064,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2023-07-05,-0.3098049328612591,-0.5777862378788194,-0.041823627843698696,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2023-08-02,-0.19917335302228234,-0.49596357574159794,0.09761686969703326,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2023-09-06,0.10692084528599484,-1.4795751784561202,1.69341686902811,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2023-10-04,0.17956810333485884,-0.8534557197146664,1.212591926384384,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2023-11-01,-0.5917339813132371,-1.480123406061121,0.296655443434647,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2023-12-04,-0.4090807783731322,-1.5243358705133923,0.7061743137671277,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2024-01-02,1.5263485339897112,0.641667393509031,2.411029674470391,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2024-02-12,1.1476121379152355,-0.3210276918666497,2.6162519676971208,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2024-03-06,0.28566152967426583,-0.40545792698079053,0.9767809863293222,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2024-04-03,-0.12614657377350527,-0.8727601962618072,0.6204670487147967,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2024-05-08,-0.6496075141072927,-1.1172374184776634,-0.18197760973692179,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Cellobiose response | 2024-06-05,-0.7751830287089175,-1.5253714270418954,-0.02499463037593952,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2023-06-07,-0.9089988710913648,-1.0508589327795395,-0.7671388094031901,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2023-07-05,-0.35176450349234406,-0.8213017707434112,0.11777276375872303,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2023-08-02,1.1175617943902774,-0.7955831063561556,3.0307066951367103,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2023-09-06,0.15972368389707745,-0.621010426138393,0.9404577939325479,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2023-10-04,-0.4582940288043458,-0.9358483032135996,0.019260245604908022,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2023-11-01,-0.5430684869857205,-1.260410325456082,0.17427335148464096,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2023-12-04,0.14175720116801382,-0.7794726780557447,1.0629870803917725,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2024-01-02,0.3639654878339373,-0.9502051893784977,1.6781361650463724,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2024-02-12,-0.5333529161621238,-1.3112492623137526,0.24454342998950496,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2024-03-06,0.38790777894897194,-1.033521045611362,1.809336603509306,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2024-04-03,-0.07628168977763225,-0.8102538970606016,0.657690517505337,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2024-05-08,0.35081285074912816,-0.42926988233266283,1.1308955838309191,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Enzyme | BG enzyme activity | 2024-06-05,0.3500316993261255,-0.45182560168790714,1.151889000340158,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | β-glucosidase genes | 2023-06-07,0.4021286772744345,-0.28653081263810226,1.0907881671869712,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | β-glucosidase genes | 2023-07-05,0.4867118203973707,-0.8434663094263636,1.816889950221105,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | β-glucosidase genes | 2023-09-06,-0.33824687935120434,-2.1064030887738365,1.4299093300714276,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | β-glucosidase genes | 2023-10-04,0.09255080776583266,-0.9804775159889133,1.1655791315205786,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | β-glucosidase genes | 2024-01-02,0.5915529613403246,-0.34190005512726585,1.5250059778079152,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | β-glucosidase genes | 2024-03-06,-0.5883473927394727,-1.2881952975709923,0.11150051209204681,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | Transcripts | β-glucosidase genes | 2024-05-08,-0.646349994687283,-2.085256505845095,0.7925565164705288,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2023-06-07,0.1222839453859847,-0.6695164982329902,0.9140843890049595,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2023-07-05,-1.0533413740821738,-1.2936883355126552,-0.8129944126516925,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2023-08-02,0.008177324963565826,-0.7145610351009102,0.7309156850280418,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2023-09-06,0.38175147882818045,-0.9389053418936415,1.7024082995500023,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2023-10-04,-0.4556181912875772,-1.592313551322044,0.6810771687468897,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2023-11-01,0.3438648578815363,-0.7777651159585294,1.4654948317216019,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2023-12-04,0.711462519583077,-0.0032434044290611252,1.4261684435952153,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2024-01-02,0.5638372458361686,-0.18683794293086997,1.314512434603207,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2024-02-12,-0.07592986897177526,-0.9074984058551805,0.75563866791163,,,1,5,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2024-03-06,1.0254512438258068,0.7791861620506948,1.2717163256009187,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2024-04-03,-0.4001433259125066,-1.093835342138876,0.2935486903138628,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2024-05-08,0.41668042650798304,-0.44287873489420276,1.276239587910169,,,1,6,z-score date mean
+Fig4,C,cellulose pathway | MicroResp | Glucose response | 2024-06-05,-1.601131260720233,-1.8557672299031522,-1.3464952915373138,,,1,6,z-score date mean
